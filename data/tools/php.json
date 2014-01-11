@@ -67,6 +67,7 @@
 		"dates": {
 			"date-object": {
 				"code": "new DateTime()",
+				"version": "5.2",
 				"api": "http://www.php.net/manual/en/datetime.construct.php"
 			},
 			"timestamp": {
@@ -75,11 +76,13 @@
 			},
 			"format": {
 				"code": "$mydate->format($myformat)",
+				"version": "5.2",
 				"api": "http://www.php.net/manual/en/datetime.format.php"
 			},
 			"parse": [
 				{
 					"code": "$dateobj = new DateTime($datestring)",
+					"version": "5.2",
 					"api": "http://www.php.net/manual/en/datetime.construct.php"
 				},
 				{
@@ -93,6 +96,7 @@
 			},
 			"offset": {
 				"code": "$mydate->add( DateInterval::createFromDateString('3 months + 1 day') )",
+				"version": "5.3",
 				"api": "http://www.php.net/manual/en/dateinterval.createfromdatestring.php"
 			}
 		},
