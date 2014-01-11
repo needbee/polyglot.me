@@ -64,6 +64,30 @@
 				"api": "http://www.php.net/manual/en/function.preg-replace.php"
 			}
 		},
+		"dates": {
+			"date-object": {
+				"code": "new DateTime()",
+				"api": "http://www.php.net/manual/en/datetime.construct.php"
+			},
+			"timestamp": {
+				"code": "time()",
+				"api": "http://www.php.net/manual/en/function.time.php"
+			},
+			"format": {
+				"code": "$mydate->format($myformat)",
+				"api": "http://www.php.net/manual/en/datetime.format.php"
+			},
+			"parse": [
+				{
+					"code": "$dateobj = new DateTime($datestring)",
+					"api": "http://www.php.net/manual/en/datetime.construct.php"
+				},
+				{
+					"code": "$timestamp = strtotime($datestring)",
+					"api": "http://www.php.net/manual/en/function.strtotime.php"
+				}
+			]
+		},
 		"collections": {
 			"define": [
 				{

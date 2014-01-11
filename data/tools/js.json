@@ -65,6 +65,16 @@
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"
 			}
 		},
+		"dates": {
+			"date-object": {
+				"code": "new Date()",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+			},
+			"timestamp": {
+				"code": "new Date().getTime()",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime"
+			}
+		},
 		"collections": {
 			"define": {
 				"code": "[1,2,3,…]",

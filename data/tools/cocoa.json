@@ -57,6 +57,25 @@
 				"api": "https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSRegularExpression_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40009708-CH1-SW12"
 			}
 		},
+		"dates": {
+			"date-object": {
+				"code": "[NSDate date]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/doc/uid/20000188-date"
+			},
+			"timestamp": {
+				"code": "[[NSDate date] timeIntervalSince1970]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/doc/uid/20000188-SW15"
+			},
+			"format": {
+				"code": "NSDateFormatter formatter = [[NSDateFormatter alloc] init];\n[formatter setDateFormat:myformat];\n[formatter stringFromDate:mydate];",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html#//apple_ref/doc/uid/20000447-CJBEDIHH"
+			},
+			"parse":
+			{
+				"code": "NSDateFormatter formatter = [[NSDateFormatter alloc] init];\n[formatter setDateFormat:myformat];\n[formatter dateFromString:datestring];",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html#//apple_ref/doc/uid/20000447-CJBEDIHH"
+			}
+		},
 		"collections": {
 			"define": [
 				{

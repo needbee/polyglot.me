@@ -72,6 +72,32 @@
 			]
 		},
 		{
+			"id": "dates",
+			"name": "Dates",
+			"features": [
+				{
+					"id": "date-object",
+					"name": "Date Object",
+					"description": "get an object representing the current date and time"
+				},
+				{
+					"id": "timestamp",
+					"name": "Timestamp",
+					"description": "get time in milliseconds from date object mydate"
+				},
+				{
+					"id": "format",
+					"name": "Format",
+					"description": "format date mydate into a string using format specifier myformat (details on format specifier in the API docs)"
+				},
+				{
+					"id": "parse",
+					"name": "Parse",
+					"description": "parse a string $datestring into a date object"
+				}
+			]
+		},
+		{
 			"id": "collections",
 			"name": "Collections",
 			"features": [
