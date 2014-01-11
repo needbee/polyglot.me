@@ -1,0 +1,155 @@
+{
+	"id": "js",
+	"name": "JavaScript",
+	"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
+	"featuresets": {
+		"strings": {
+			"length": {
+				"code": "mystring.length",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length"
+			},
+			"comparison": {
+				"code": "a == b",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Operators",
+				"sample": "http://jsfiddle.net/needbee/v6Tky/2/"
+			},
+			"lowercase": {
+				"code": "str.toLowerCase()",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase"
+			},
+			"uppercase": {
+				"code": "str.toUpperCase()",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase"
+			},
+			"substring": [
+				{
+					"code": "str.substring( start, end )",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring"
+				},
+				{
+					"code": "str.substr( start, length )",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr"
+				}
+			],
+			"concatenate":
+			{
+				"code": "a + b",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FOperators%2FString_Operators"
+			},
+			"index-of": {
+				"code": "str.indexOf( mysubstring )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf"
+			},
+			"split-on-string": {
+				"code": "str.split( delim )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split"
+			},
+			"split-on-regex": {
+				"code": "str.split( myregex )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split"
+			},
+			"join": {
+				"code": "myarray.join( delim )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
+			},
+			"regex-match": {
+				"code": "var myregex = //;\nmyregex.test(str)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test"
+			},
+			"regex-find": {
+				"code": "var myregex = /…/g;\nwhile( match = myregex.exec(str) ) { … }",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec"
+			},
+			"regex-replace": {
+				"code": "var myregex = /…/g;\nstr.replace(myregex, tmpl);",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"
+			}
+		},
+		"collections": {
+			"define": {
+				"code": "[1,2,3,…]",
+				"api": "http://php.net/manual/en/language.types.array.php"
+			},
+			"define-associative": {
+				"code": "{\"key1\": \"val1\", \"key2\": \"val2\", …}",
+				"api": "http://php.net/manual/en/language.types.array.php"
+			},
+			"length": {
+				"code": "myarray.length",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length"
+			},
+			"push": {
+				"code": "myarray.push( myval )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"
+			},
+			"pop": {
+				"code": "myarray.pop()",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"
+			},
+			"merge": {
+				"code": "a.concat( b )",
+				"api": "Array.prototype.concat()"
+			},
+			"slice": {
+				"code": "myarray.slice( start, end )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
+			},
+			"for-each": [
+				{
+					"code": "for( var mykey in myarray ) { val myval = myarray[mykey]; …}",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"
+				},
+				{
+					"code": "myarray.forEach( function( myval ) {…} )",
+					"version": "1.6",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
+				}
+			],
+			"for-each-associative": [
+				{
+					"code": "for( var mykey in myarray ) { val myval = myarray[mykey]; …}",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"
+				},
+				{
+					"code": "myarray.forEach( function( myval, mykey ) {…} )",
+					"version": "1.6",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
+				}
+			],
+			"keys": {
+				"code": "Object.keys( myarray )",
+				"version": "1.8.5",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
+			},
+			"contains": {
+				"code": "-1 != myarray.indexOf(val)",
+				"version": "1.6",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"
+			},
+			"index-of": {
+				"code": "myarray.indexOf(val)",
+				"version": "1.6",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"
+			},
+			"filter": {
+				"code": "myarray.filter( function(val) {…} )",
+				"version": "1.6",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+			},
+			"map": {
+				"code": "myarray.map( function(val) {…} )",
+				"version": "1.6",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+			},
+			"reduce": {
+				"code": "myarray.reduce( function(val) {…}, myinitial )",
+				"version": "1.8",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
+			},
+			"sort": {
+				"code": "myarray.sort(function(a,b) {…} )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
+			}
+		}
+	}
+}

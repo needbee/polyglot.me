@@ -1,0 +1,50 @@
+{
+	"id": "underscore",
+	"name": "Underscore.js",
+	"api": "http://underscorejs.org/",
+	"featuresets": {
+		"collections": {
+			"for-each":
+			{
+				"code": "_.each( myarray, function( myval ) {…} )",
+				"api": "http://underscorejs.org/#each"
+			},
+			"for-each-associative": {
+				"code": "_.each( myarray, function( myvalue, mykey ) {…} )",
+				"api": "http://underscorejs.org/#each"
+			},
+			"keys": {
+				"code": "_.keys(myarray)",
+				"api": "http://underscorejs.org/#keys"
+			},
+			"values": {
+				"code": "_.values(myarray)",
+				"api": "http://underscorejs.org/#values"
+			},
+			"contains": {
+				"code": "_.contains(myarray, val)",
+				"api": "http://underscorejs.org/#contains"
+			},
+			"index-of": {
+				"code": "_.indexOf(myarray, val)",
+				"api": "http://underscorejs.org/#indexOf"
+			},
+			"filter": {
+				"code": "_.filter( myarray, function(val) {…} )",
+				"api": "http://underscorejs.org/#filter"
+			},
+			"map": {
+				"code": "_.map( myarray, function(val) {…} )",
+				"api": "http://underscorejs.org/#map"
+			},
+			"reduce": {
+				"code": "_.reduce( myarray, function(val) {…}, myinitial )",
+				"api": "http://underscorejs.org/#reduce"
+			},
+			"sort": {
+				"code": "_.sortBy( myarray, function(a,b) {…} )",
+				"api": "http://underscorejs.org/#sortBy"
+			}
+		}
+	}
+}

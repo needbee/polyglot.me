@@ -1,0 +1,22 @@
+body { padding-top: 50px; }
+
+div.orig {
+	display:none;
+}
+
+pre {
+	margin-bottom: 0;
+}
+
+div.code-links {
+	padding-bottom: 10px;
+}
+
+div.code-links a:link,
+div.code-links a:visited {
+	color: #999;
+}
+
+ul.list-inline {
+	margin-left: 8px;
+}

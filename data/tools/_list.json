@@ -1,0 +1,9 @@
+{
+	"tools": [
+		"php",
+		"js",
+		"jquery",
+		"underscore",
+		"cocoa"
+	]
+}

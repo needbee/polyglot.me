@@ -1,0 +1,141 @@
+{
+	"id": "cocoa",
+	"name": "Cocoa",
+	"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/ObjC_classic/_index.html",
+	"featuresets": {
+		"strings": {
+			"length": {
+				"code": "mystring.length",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-length"
+			},
+			"comparison": {
+				"code": "[a isEqualToString:b]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-isEqualToString_"
+			},
+			"lowercase": {
+				"code": "[str lowercaseString]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-lowercaseString"
+			},
+			"uppercase": {
+				"code": "[str uppercaseString]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-uppercaseString"
+			},
+			"substring": {
+				"code": "[str substringWithRange:NSRangeMake( start, length )]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-substringWithRange_"
+			},
+			"concatenate": {
+				"code": "[NSString stringWithFormat:@\"fixed text %@ %@\", a, b]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-stringWithFormat_"
+			},
+			"index-of": {
+				"code": "[str rangeOfString:mysubstring]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-rangeOfString_"
+			},
+			"split-on-string": {
+				"code": "[str componentsSeparatedByString:delim]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-componentsSeparatedByString_"
+			},
+			"split-on-regex": {
+				"code": "[myarray componentsJoinedByString:delim]",
+				"api": "http://www.php.net/manual/en/function.preg-split.php"
+			},
+			"join": {
+				"code": "[myarray componentsJoinedByString:delim]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABDECEE"
+			},
+			"regex-match": {
+				"code": "NSError *error = NULL;\nNSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:myregex options:0 error:&error];\n[regex numberOfMatchesInString:str options:0 range:NSMakeRange(0, str.length)];",
+				"api": "https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSRegularExpression_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40009708-CH1-SW7"
+			},
+			"regex-find": {
+				"code": "NSError *error = NULL;\nNSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:myregex options:0 error:&error];\n[regex matchesInString:str options:0 range:NSMakeRange(0, str.length)];",
+				"api": "https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSRegularExpression_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40009708-CH1-SW6"
+			},
+			"regex-replace": {
+				"code": "NSError *error = NULL;\nNSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:myregex options:0 error:&error];\nNSMutableString *mutstr = [str mutableCopyWithZone:nil];\n[regex replaceMatchesInString:mutstr options:0 range:NSMakeRange(0, str.length) withTemplate:tmpl];",
+				"api": "https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSRegularExpression_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40009708-CH1-SW12"
+			}
+		},
+		"collections": {
+			"define": [
+				{
+					"code": "[NSArray arrayWithObjects:…, nil]",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABEADJJ"
+				},
+				{
+					"code": "[[NSMutableArray alloc] init]",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/doc/uid/20000138-SW39"
+				}
+			],
+			"define-associative": [
+				{
+					"code": "[NSDictionary dictionaryWithObjectsAndKeys:@\"val1\", @\"key1\", @\"val2\", @\"key2\",…,nil]",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html#//apple_ref/doc/uid/20000140-CBHCIFDD"
+				},
+				{
+					"code": "[[NSMutableDictionary alloc] init]",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableDictionary_Class/Reference/Reference.html#//apple_ref/doc/uid/20000141-SW74"
+				}
+			],
+			"length": {
+				"code": "myarray.count",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABDBHHI"
+			},
+			"push": {
+				"code": "[mymutablearray addObject:myval]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/doc/uid/20000138-BABDEFAA"
+			},
+			"pop": {
+				"code": "id elm = [mymutablearray lastObject];\n[myarray removeLastObject];",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/doc/uid/20000138-BABCACEB"
+			},
+			"merge": {
+				"code": "[a arrayByAddingObjectsFromArray:b]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABCAAED"
+			},
+			"slice": {
+				"code": "[NSArray subarrayWithRange:NSRangeMake( start, length )]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABDBFIA"
+			},
+			"for-each": {
+				"code": "for( id myval in myarray ) {…}",
+				"api": "https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/FoundationTypesandCollections/FoundationTypesandCollections.html#//apple_ref/doc/uid/TP40011210-CH7-SW28"
+			},
+			"for-each-associative": {
+				"code": "for( id mykey in [myarray allKeys] ) { id myval = [myarray objectAtIndex:mykey]; …}",
+				"api": "https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/FoundationTypesandCollections/FoundationTypesandCollections.html#//apple_ref/doc/uid/TP40011210-CH7-SW28"
+			},
+			"keys": {
+				"code": "[mydict allKeys]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html#//apple_ref/doc/uid/20000140-CBHBEJJB"
+			},
+			"values": {
+				"code": "[mydict allValues]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html#//apple_ref/doc/uid/20000140-CBHCHCEI"
+			},
+			"contains": [
+				{
+					"code": "[myarray containsObject:val]",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABCEJDI"
+				},
+				{
+					"code": "[[mydict allValues] containsObject:val]",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABCEJDI"
+				}
+			],
+			"index-of": {
+				"code": "[myarray indexOfObject:val]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABDHGFB"
+			},
+			"filter": {
+				"code": "[myarray filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id val, NSDictionary * bindings) {…}];",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BAJJDBEB"
+			},
+			"sort": {
+				"code": "[myarray sortedArrayUsingComparator: ^(id a, id b) {…}]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-SW28"
+			}
+		}
+	}
+}

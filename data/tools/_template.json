@@ -1,0 +1,28 @@
+// featureset
+		{
+			"id": "",
+			"name": "",
+			"features": [
+				{
+					"id": "",
+					"name": "",
+					"description": ""
+				},
+			]
+		}
+
+// tool
+{
+	"id": "",
+	"name": "",
+	"api": "",
+	"featuresets": {
+		"": {
+			"": {
+				"code": "",
+				"version": "",
+				"api": ""
+			},
+		},
+	}
+}

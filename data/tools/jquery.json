@@ -1,0 +1,38 @@
+{
+	"id": "jquery",
+	"name": "jQuery",
+	"api": "http://api.jquery.com/",
+	"featuresets": {
+		"collections": {
+			"merge": {
+				"code": "$.merge( [], a, b )",
+				"api": "http://api.jquery.com/jQuery.merge/"
+			},
+			"for-each":
+			{
+				"code": "$.each( myarray, function( mykey, myval ) {…} )",
+				"api": "http://api.jquery.com/jQuery.each/"
+			},
+			"for-each-associative": {
+				"code": "$.each( myarray, function( mykey, myvalue ) {…} )",
+				"api": "http://api.jquery.com/jQuery.each/"
+			},
+			"contains": {
+				"code": "-1 != $.inArray(val, myarray)",
+				"api": "http://api.jquery.com/jQuery.inArray/"
+			},
+			"index-of": {
+				"code": "$.inArray(val, myarray)",
+				"api": "http://api.jquery.com/jQuery.inArray/"
+			},
+			"filter": {
+				"code": "$.grep( myarray, function(val) {…} )",
+				"api": "http://api.jquery.com/jQuery.grep/"
+			},
+			"map": {
+				"code": "$.map( myarray, function(val) {…} )",
+				"api": "http://api.jquery.com/jQuery.map/"
+			}
+		}
+	}
+}

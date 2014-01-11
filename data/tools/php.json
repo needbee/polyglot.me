@@ -1,0 +1,156 @@
+{
+	"id": "php",
+	"name": "PHP",
+	"api": "http://www.php.net/manual/en/",
+	"featuresets": {
+		"strings": {
+			"length": {
+				"code": "strlen($mystring)",
+				"api": "http://php.net/manual/en/function.strlen.php"
+			},
+			"comparison": {
+				"code": "$a == $b",
+				"api": "http://php.net/manual/en/language.operators.comparison.php",
+				"sample": "https://gist.github.com/needbee/8259118"
+			},
+			"lowercase": {
+				"code": "strtolower($str)",
+				"api": "http://us2.php.net/strtolower"
+			},
+			"uppercase": {
+				"code": "strtoupper($str)",
+				"api": "http://us2.php.net/strtoupper"
+			},
+			"substring": {
+				"code": "substr( $str, $start[, $length] )",
+				"api": "http://php.net/manual/en/function.substr.php"
+			},
+			"concatenate": [
+				{
+					"code": "$a . $b",
+					"api": "http://php.net/manual/en/language.operators.string.php"
+				},
+				{
+					"code": "\"fixed text $a $b\"",
+					"api": "http://www.php.net/manual/en/language.types.string.php#language.types.string.parsing"
+				}
+			],
+			"index-of": {
+				"code": "strpos( $str, $mysubstring )",
+				"api": "http://www.php.net/manual/en/function.strpos.php"
+			},
+			"split-on-string": {
+				"code": "explode( $delim, $str )",
+				"api": "http://www.php.net/manual/en/function.explode.php"
+			},
+			"split-on-regex": {
+				"code": "preg_split( $myregex, $str )",
+				"api": "http://www.php.net/manual/en/function.preg-split.php"
+			},
+			"join": {
+				"code": "implode( $delim, $myarray )",
+				"api": "http://www.php.net/manual/en/function.implode.php"
+			},
+			"regex-match": {
+				"code": "preg_match( $myregex, $str )",
+				"api": "http://www.php.net/manual/en/function.preg-match.php"
+			},
+			"regex-find": {
+				"code": "preg_match_all( $myregex, $str, $matches )",
+				"api": "http://www.php.net/manual/en/function.preg-match-all.php"
+			},
+			"regex-replace": {
+				"code": "preg_replace( $myregex, $tmpl, $str )",
+				"api": "http://www.php.net/manual/en/function.preg-replace.php"
+			}
+		},
+		"collections": {
+			"define": [
+				{
+					"code": "array(1,2,3,…)",
+					"api": "http://php.net/manual/en/language.types.array.php"
+				},
+				{
+					"code": "[1,2,3]",
+					"version": "5.4",
+					"api": "http://php.net/manual/en/language.types.array.php"
+				}
+			],
+			"define-associative": [
+				{
+					"code": "array(\"key1\"=>\"val1\", \"key2\"=>\"val2\",…)",
+					"api": "http://php.net/manual/en/language.types.array.php"
+				},
+				{
+					"code": "[\"key1\"=>\"val1\", \"key2\"=>\"val2\",…]",
+					"version": "5.4",
+					"api": "http://php.net/manual/en/language.types.array.php"
+				}
+			],
+			"length": {
+				"code": "count($myarray)",
+				"api": "http://www.php.net/manual/en/function.count.php"
+			},
+			"push": {
+				"code": "array_push( $myarray, $myval )",
+				"api": "http://php.net/manual/en/function.array-push.php"
+			},
+			"pop": {
+				"code": "array_pop( $myarray )",
+				"api": "http://www.php.net/manual/en/function.array-pop.php"
+			},
+			"merge": {
+				"code": "array_merge( $a, $b )",
+				"api": "http://php.net/manual/en/function.array-merge.php"
+			},
+			"slice": {
+				"code": "array_slice( $myarray, $start, $length )",
+				"api": "http://www.php.net/manual/en/function.array-slice.php"
+			},
+			"for-each": {
+				"code": "foreach( $myarray as $myval ) {…}",
+				"api": "http://www.php.net/manual/en/control-structures.foreach.php"
+			},
+			"for-each-associative": {
+				"code": "foreach( $myarray as $mykey => $myval ) {…}",
+				"api": "http://www.php.net/manual/en/control-structures.foreach.php"
+			},
+			"keys": {
+				"code": "array_keys( $myarray )",
+				"api": "http://www.php.net/manual/en/function.array-keys.php"
+			},
+			"values": {
+				"code": "array_values( $myarray )",
+				"api": "http://www.php.net/manual/en/function.array-values.php"
+			},
+			"contains": {
+				"code": "in_array( $val, $myarray )",
+				"api": "http://www.php.net/manual/en/function.in-array.php"
+			},
+			"index-of": {
+				"code": "array_search( $val, $myarray )",
+				"version": "4.0.5",
+				"api": "http://www.php.net/manual/en/function.array-search.php"
+			},
+			"filter": {
+				"code": "array_filter( $myarray, function($val) {…} )",
+				"version": "4.0.6",
+				"api": "http://www.php.net/manual/en/function.array-filter.php"
+			},
+			"map": {
+				"code": "array_map( function($val) {…}, $myarray )",
+				"version": "4.0.6",
+				"api": "http://www.php.net/manual/en/function.array-map.php"
+			},
+			"reduce": {
+				"code": "array_reduce( $myarray, function($val) {…}, $myinitial )",
+				"version": "4.0.5",
+				"api": "http://www.php.net/manual/en/function.array-reduce.php"
+			},
+			"sort": {
+				"code": "usort( $myarray, function($a, $b) {…} )",
+				"api": "http://www.php.net/manual/en/function.usort.php"
+			}
+		}
+	}
+}

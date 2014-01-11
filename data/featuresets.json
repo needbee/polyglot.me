@@ -1,0 +1,166 @@
+{
+	"featuresets": [
+		{
+			"id": "strings",
+			"name": "Strings",
+			"features": [
+				{
+					"id": "length",
+					"name": "String Length",
+					"description": "return number of characters in string"
+				},
+				{
+					"id": "comparison",
+					"name": "String Comparison",
+					"description": "check if string variables a and b are the same string"
+				},
+				{
+					"id": "lowercase",
+					"name": "Lower Case",
+					"description": "convert string str to lower case"
+				},
+				{
+					"id": "uppercase",
+					"name": "Upper Case",
+					"description": "convert string str to upper case"
+				},
+				{
+					"id": "concatenate",
+					"name": "Concatenate",
+					"description": "join string a and b into a single string"
+				},
+				{
+					"id": "substring",
+					"name": "Substring",
+					"description": "retrieve characters start thru end (or length) of string str"
+				},
+				{
+					"id": "index-of",
+					"name": "Index of Substring",
+					"description": "find out what position a substring mysubstring is within a string str"
+				},
+				{
+					"id": "split-on-string",
+					"name": "Split on String",
+					"description": "split a string str into multiple strings wherever a delimiter string delim is found"
+				},
+				{
+					"id": "split-on-regex",
+					"name": "Split on Regex",
+					"description": "split a string str into multiple strings wherever a delimiter regex myregex matches"
+				},
+				{
+					"id": "join",
+					"name": "Join",
+					"description": "joins elements in array myarray into a single string, joined by delimiter string delim"
+				},
+				{
+					"id": "regex-match",
+					"name": "Regex Match",
+					"description": "returns whether or not a given regex myregex matches in a string str"
+				},
+				{
+					"id": "regex-find",
+					"name": "Regex Find",
+					"description": "find all the matches to a regex myregex in a string str"
+				},
+				{
+					"id": "regex-replace",
+					"name": "Regex Replace",
+					"description": "replaces all regex myregex matches in string str with a replacement template tmpl (containing placeholders $1, $2 etc)"
+				}
+			]
+		},
+		{
+			"id": "collections",
+			"name": "Collections",
+			"features": [
+				{
+					"id": "define",
+					"name": "Define Array",
+					"description": "creates a new array from static values"
+				},
+				{
+					"id": "define-associative",
+					"name": "Define Associative Array",
+					"description": "creates a new associative array from static values"
+				},
+				{
+					"id": "length",
+					"name": "Array Length",
+					"description": "return the number of elements in array myarray (a.k.a. size, count)"
+				},
+				{
+					"id": "push",
+					"name": "Push",
+					"description": "add value myval onto end of array myarray"
+				},
+				{
+					"id": "pop",
+					"name": "Pop",
+					"description": "remove value from end of array myarray and return it"
+				},
+				{
+					"id": "merge",
+					"name": "Merge",
+					"description": "join array a and b into a single array with all the elements of each"
+				},
+				{
+					"id": "slice",
+					"name": "Slice",
+					"description": "retrieve elements start through end (or length) of array myarray"
+				},
+				{
+					"id": "for-each",
+					"name": "For Each",
+					"description": "execute code for each element in array myarray, setting the variable myval to each element"
+				},
+				{
+					"id": "for-each-associative",
+					"name": "For Each Associative",
+					"description": "execute code for each element in array myarray, setting the variable myval to each value and mykey to the corresponding key"
+				},
+				{
+					"id": "keys",
+					"name": "Keys",
+					"description": "get all keys in associative array myarray"
+				},
+				{
+					"id": "values",
+					"name": "Values",
+					"description": "get all values in associative array myarray"
+				},
+				{
+					"id": "contains",
+					"name": "Contains",
+					"description": "returns true if array myarray contains value val"
+				},
+				{
+					"id": "index-of",
+					"name": "Index Of",
+					"description": "returns the index of first instance of value val in array myarray"
+				},
+				{
+					"id": "filter",
+					"name": "Filter",
+					"description": "returns all elements in array myarray for which closure mycond returns true"
+				},
+				{
+					"id": "map",
+					"name": "Map",
+					"description": "create a new array by running code on each value val of original array myarray"
+				},
+				{
+					"id": "reduce",
+					"name": "Reduce",
+					"description": "loops through values val in array myarray, using a function to apply it to a single resulting value, starting with initial value myinitial"
+				},
+				{
+					"id": "sort",
+					"name": "Sort",
+					"description": "sorts values in myarray by running a comparison function"
+				}
+			]
+		}
+	]
+}
