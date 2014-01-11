@@ -4,6 +4,7 @@
 		"js",
 		"jquery",
 		"underscore",
+		"datejs",
 		"cocoa"
 	]
 }

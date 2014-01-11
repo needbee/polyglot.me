@@ -73,6 +73,10 @@
 			"timestamp": {
 				"code": "new Date().getTime()",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime"
+			},
+			"compare": {
+				"code": "a < b\na > b\n+a == +b // convert to millisecond so doesn't do object equality",
+				"api": "http://stackoverflow.com/questions/492994/compare-dates-with-javascript"
 			}
 		},
 		"collections": {

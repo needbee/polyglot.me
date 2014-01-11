@@ -86,7 +86,15 @@
 					"code": "$timestamp = strtotime($datestring)",
 					"api": "http://www.php.net/manual/en/function.strtotime.php"
 				}
-			]
+			],
+			"compare": {
+				"code": "$a->diff($b)",
+				"api": "http://php.net/manual/en/datetime.diff.php"
+			},
+			"offset": {
+				"code": "$mydate->add( DateInterval::createFromDateString('3 months + 1 day') )",
+				"api": "http://www.php.net/manual/en/dateinterval.createfromdatestring.php"
+			}
 		},
 		"collections": {
 			"define": [

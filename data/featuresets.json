@@ -94,6 +94,16 @@
 					"id": "parse",
 					"name": "Parse",
 					"description": "parse a string $datestring into a date object"
+				},
+				{
+					"id": "compare",
+					"name": "Compare",
+					"description": "determine if date a is equal to, earlier than, or later than date b"
+				},
+				{
+					"id": "offset",
+					"name": "Offset",
+					"description": "alter the date mydate by a fixed interval"
 				}
 			]
 		},
