@@ -4,11 +4,11 @@ polyglot.me
 Consistent cheat sheets for multiple programming languages.
 
 
-Adding Tools or Features
-========================
+Contributing
+============
 
 Please contribute by making corrections or additions to existing tools,
-adding new tools, or adding entirely new features or feature sets!
+or adding examples, tools, features, or feature sets!
 
 The list of features and tools (i.e. programming languages or
 frameworks) is driven from a set of JSON files in the 'data' folder:
@@ -22,6 +22,17 @@ frameworks) is driven from a set of JSON files in the 'data' folder:
 - tools/*.json are the different tools. The file contains some basic
   information about the tool, then the definitions for each feature it
   provides.
+
+Each tool feature has the following fields:
+
+- code: The code snippet. Should be as brief as possible to communicate
+  what is needed.
+- api: The URL of the most relevant API reference document for that
+  code.
+- version: The first version of the tool that had this feature.
+- sample: A URL to a fully-functional code example, on JSFiddle, Gist,
+  or some other service. Should be fully-functional as-is for a user to
+  see the tool feature in action.
 
 To add or modify a feature or tool:
 
