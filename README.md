@@ -7,9 +7,23 @@ Consistent cheat sheets for multiple programming languages.
 Adding Tools or Features
 ========================
 
+Please contribute by making corrections or additions to existing tools,
+adding new tools, or adding entirely new features or feature sets!
+
 The list of features and tools (i.e. programming languages or
-frameworks) is driven from a set of JSON files in the 'data' folder. To
-add or modify a feature or tool:
+frameworks) is driven from a set of JSON files in the 'data' folder:
+
+- featuresets.json lists all the features that will be described for
+  different tools, such as string comparison and pushing to an array.
+  Features are grouped into feature sets, such as Strings and
+  Collections.
+- tools/_list.json is a list of all the tools. A tool is a language or
+  framework: anything that provides some "features."
+- tools/*.json are the different tools. The file contains some basic
+  information about the tool, then the definitions for each feature it
+  provides.
+
+To add or modify a feature or tool:
 
 - Fork this repository
 - Make the appropriate changes
