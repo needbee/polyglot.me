@@ -70,10 +70,17 @@
 				"code": "NSDateFormatter formatter = [[NSDateFormatter alloc] init];\n[formatter setDateFormat:myformat];\n[formatter stringFromDate:mydate];",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html#//apple_ref/doc/uid/20000447-CJBEDIHH"
 			},
-			"parse":
-			{
+			"parse": {
 				"code": "NSDateFormatter formatter = [[NSDateFormatter alloc] init];\n[formatter setDateFormat:myformat];\n[formatter dateFromString:datestring];",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html#//apple_ref/doc/uid/20000447-CJBEDIHH"
+			},
+			"compare": {
+				"code": "[a isEqualToDate:b]\n[a earlierDate:b]\n[a laterDate:b]\n[a compare:b]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/doc/uid/20000188-compare_"
+			},
+			"offset": {
+				"code": "[NSDate dateWithTimeInterval:seconds sinceDate:mydate]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/doc/uid/20000188-SW14"
 			}
 		},
 		"collections": {

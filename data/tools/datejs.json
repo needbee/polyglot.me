@@ -1,0 +1,24 @@
+{
+	"id": "datejs",
+	"name": "Datejs",
+	"api": "http://www.datejs.com/",
+	"featuresets": {
+		"dates": {
+			"format": {
+				"code": "mydate"
+			},
+			"parse": {
+				"code": "Date.parse(datestring)",
+				"api": "https://code.google.com/p/datejs/wiki/APIDocumentation#parse"
+			},
+			"compare": {
+				"code": "a.equals(b)\na.isBefore(b)\na.isAfter(b)\na.compareTo(b)",
+				"api": "https://code.google.com/p/datejs/wiki/APIDocumentation#compareTo"
+			}
+			"offset": {
+				"code": "mydate.add({ days: numdays, months: nummonths })",
+				"api": "https://code.google.com/p/datejs/wiki/APIDocumentation#add"
+			}
+		},
+	}
+}
