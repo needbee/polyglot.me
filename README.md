@@ -28,6 +28,8 @@ To add or modify a feature or tool:
 - Fork this repository
 - Make the appropriate changes
 - If you added a new tool, add it to the _list.json file
+- Validate your json using the JsonLint [web site](http://jsonlint.com)
+  or [command line tool](https://github.com/zaach/jsonlint)
 - Submit a pull request
 
 **Please use hard tabs, not spaces, when adding entries to the JSON
