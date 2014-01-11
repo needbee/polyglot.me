@@ -9,8 +9,12 @@ Adding Tools or Features
 
 The list of features and tools (i.e. programming languages or
 frameworks) is driven from a set of JSON files in the 'data' folder. To
-add or modify a feature or tool, fork this repository, make the
-appropriate changes, and submit a pull request.
+add or modify a feature or tool:
+
+- Fork this repository
+- Make the appropriate changes
+- If you added a new tool, add it to the _list.json file
+- Submit a pull request
 
 **Please use hard tabs, not spaces, when adding entries to the JSON
 file, just to keep things consistent.**
