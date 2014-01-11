@@ -36,6 +36,8 @@ file, just to keep things consistent.**
 More instructions:
 - [Forking a repository](https://help.github.com/articles/fork-a-repo)
 - [Submitting a pull request](https://help.github.com/articles/using-pull-requests)
+- If you don't yet have a GUI Git client, I recommend the free
+  [SourceTree](http://www.sourcetreeapp.com/)
 
 
 Private Installations
