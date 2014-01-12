@@ -20,3 +20,16 @@ div.code-links a:visited {
 ul.list-inline {
 	margin-left: 8px;
 }
+
+.navbar-default .navbar-nav>li>a:link,
+.navbar-default .navbar-nav>li>a:visited {
+	color: #428bca;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+	color: #2a6496;
+	text-decoration: underline;
+}
