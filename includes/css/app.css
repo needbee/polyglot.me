@@ -33,3 +33,11 @@ ul.list-inline {
 	color: #2a6496;
 	text-decoration: underline;
 }
+
+footer {
+	border-top: solid 1px #999;
+	padding-top: 20px;
+	margin: 9px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
