@@ -41,3 +41,7 @@ footer {
 	margin-top: 20px;
 	margin-bottom: 40px;
 }
+
+.navbar-nav.navbar-right:last-child {
+	margin-right: 0;
+}
