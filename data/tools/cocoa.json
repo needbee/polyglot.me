@@ -94,7 +94,7 @@
 				"code": "ceil(myfloat)",
 				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.7.html#ceil"
 			},
-			"round": {
+			"random": {
 				"code": "arc4random_uniform( max - min + 1 ) + min;",
 				"api": "http://stackoverflow.com/questions/12119399/how-do-i-seed-the-rand-function-in-objective-c"
 			},
