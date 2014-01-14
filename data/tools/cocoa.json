@@ -57,6 +57,24 @@
 				"api": "https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSRegularExpression_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40009708-CH1-SW12"
 			}
 		},
+		"math": {
+			"floor": {
+				"code": "floor(myfloat)",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.7.html#floor"
+			},
+			"ceiling": {
+				"code": "ceil(myfloat)",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.7.html#ceil"
+			},
+			"round": {
+				"code": "(int)(myfloat + 0.5)",
+				"api": "http://www.cprogramming.com/tips/tip/rounding-to-an-integer"
+			},
+			"fraction-part": {
+				"code": "int intval;\nmodf( mynum, &intval );",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.7.html#modf"
+			}
+		},
 		"dates": {
 			"date-object": {
 				"code": "[NSDate date]",

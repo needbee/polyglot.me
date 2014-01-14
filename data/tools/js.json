@@ -78,6 +78,10 @@
 				"code": "Math.round($myfloat)",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"
 			},
+			"fraction-part": {
+				"code": "mynum % 1",
+				"api": "http://stackoverflow.com/questions/4512306/get-decimal-portion-of-a-number-with-javascript"
+			},
 			"min": {
 				"code": "Math.min.apply( null, myarray )",
 				"api": "http://stackoverflow.com/questions/1669190/javascript-min-max-array-values"

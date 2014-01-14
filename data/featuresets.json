@@ -93,7 +93,7 @@
 				{
 					"id": "fraction-part",
 					"name": "Fraction Part",
-					"description": "finds the fraction part of the decimal number"
+					"description": "finds the fraction part of the decimal number mynum"
 				},
 				{
 					"id": "random",
