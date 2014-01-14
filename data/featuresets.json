@@ -1,13 +1,6 @@
 {
 	"featuresets": [
 		{
-			"id": "types",
-			"name": "Types",
-			"features": {
-
-			}
-		},
-		{
 			"id": "strings",
 			"name": "Strings",
 			"features": [
