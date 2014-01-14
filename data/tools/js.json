@@ -3,6 +3,26 @@
 	"name": "JavaScript",
 	"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
 	"featuresets": {
+		"types": {
+			"string-to-int": {
+				"code": "parseInt( mystr )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt"
+			},
+			"int-to-string": {
+				"code": "'' + myint"
+			},
+			"string-to-float": {
+				"code": "parseFloat( mystr )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat"
+			},
+			"float-to-string": {
+				"code": "'' + $myfloat"
+			},
+			"float-to-int": {
+				"code": "intval( $myfloat )",
+				"api": "http://php.net/manual/en/function.intval.php"
+			}
+		},
 		"strings": {
 			"length": {
 				"code": "mystring.length",

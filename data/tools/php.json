@@ -3,6 +3,26 @@
 	"name": "PHP",
 	"api": "http://www.php.net/manual/en/",
 	"featuresets": {
+		"types": {
+			"string-to-int": {
+				"code": "intval( $mystr )",
+				"api": "http://php.net/manual/en/function.intval.php"
+			},
+			"int-to-string": {
+				"code": "'' . $myint"
+			},
+			"string-to-float": {
+				"code": "floatval( $mystr )",
+				"api": "http://www.php.net/manual/en/function.floatval.php"
+			},
+			"float-to-string": {
+				"code": "'' . $myfloat"
+			},
+			"float-to-int": {
+				"code": "intval( $myfloat )",
+				"api": "http://php.net/manual/en/function.intval.php"
+			}
+		},
 		"strings": {
 			"length": {
 				"code": "strlen($mystring)",

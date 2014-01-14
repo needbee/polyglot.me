@@ -1,6 +1,37 @@
 {
 	"featuresets": [
 		{
+			"id": "types",
+			"name": "Types",
+			"features": [
+				{
+					"id": "string-to-int",
+					"name": "String to Integer",
+					"description": "converts string mystr into an integer"
+				},
+				{
+					"id": "int-to-string",
+					"name": "Integer to String",
+					"description": "converts integer myint into a string"
+				},
+				{
+					"id": "string-to-float",
+					"name": "String to Float",
+					"description": "converts string mystr into a floating point number"
+				},
+				{
+					"id": "float-to-string",
+					"name": "Float to String",
+					"description": "converts floating point number myfloat into a string"
+				},
+				{
+					"id": "float-to-int",
+					"name": "Float to Integer",
+					"description": "converts floating point number myfloat into an integer"
+				}
+			]
+		},
+		{
 			"id": "strings",
 			"name": "Strings",
 			"features": [

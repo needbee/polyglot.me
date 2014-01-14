@@ -3,6 +3,34 @@
 	"name": "Cocoa",
 	"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/ObjC_classic/_index.html",
 	"featuresets": {
+		"types": {
+			"string-to-int": {
+				"code": "[mystr intValue]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-intValue"
+			},
+			"int-to-string": {
+				"code": "[NSString stringWithFormat:@\"%d\", myint]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-stringWithFormat_"
+			},
+			"string-to-float": [
+				{
+					"code": "[mystr floatValue]",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-floatValue"
+				},
+				{
+					"code": "[mystr doubleValue]",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-doubleValue"
+				}
+			],
+			"float-to-string": {
+				"code": "[NSString stringWithFormat:@\"%f\", myfloat]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-stringWithFormat_"
+			},
+			"float-to-int": {
+				"code": "(int)myfloat",
+				"api": "http://php.net/manual/en/function.intval.php"
+			}
+		},
 		"strings": {
 			"length": {
 				"code": "mystring.length",
