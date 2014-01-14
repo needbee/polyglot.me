@@ -64,6 +64,28 @@
 				"api": "http://www.php.net/manual/en/function.preg-replace.php"
 			}
 		},
+		"math": {
+			"floor": {
+				"code": "floor($myfloat)",
+				"api": "http://php.net/manual/en/function.floor.php"
+			},
+			"ceiling": {
+				"code": "ceil($myfloat)",
+				"api": "http://www.php.net/manual/en/function.ceil.php"
+			},
+			"round": {
+				"code": "round($myfloat)",
+				"api": "http://php.net/manual/en/function.round.php"
+			},
+			"min": {
+				"code": "min($myarray)",
+				"api": "http://php.net/manual/en/function.min.php"
+			},
+			"max": {
+				"code": "max($myarray)",
+				"api": "http://www.php.net/manual/en/function.max.php"
+			}
+		},
 		"dates": {
 			"date-object": {
 				"code": "new DateTime()",

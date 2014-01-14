@@ -72,6 +72,52 @@
 			]
 		},
 		{
+			"id": "math",
+			"name": "Math",
+			"features": [
+				{
+					"id": "floor",
+					"name": "Floor",
+					"description": "rounds down float myfloat to the nearest integer below the decimal"
+				},
+				{
+					"id": "ceiling",
+					"name": "Ceiling",
+					"description": "rounds up float myfloatto the nearest integer below the decimal"
+				},
+				{
+					"id": "round",
+					"name": "Round",
+					"description": "rounds float myfloat to the nearest integer to the decimal, up or down"
+				},
+				{
+					"id": "fraction-part",
+					"name": "Fraction Part",
+					"description": "finds the fraction part of the decimal number"
+				},
+				{
+					"id": "random",
+					"name": "Random",
+					"description": "returns a random number"
+				},
+				{
+					"id": "min",
+					"name": "Min",
+					"description": "finds the minimum value in the array myarray"
+				},
+				{
+					"id": "max",
+					"name": "Max",
+					"description": "finds the maximum value in the array myarray"
+				},
+				{
+					"id": "average",
+					"name": "Average",
+					"description": "finds the average value of the array myarray"
+				},
+			]
+		},
+		{
 			"id": "dates",
 			"name": "Dates",
 			"features": [

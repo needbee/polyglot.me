@@ -65,6 +65,28 @@
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"
 			}
 		},
+		"math": {
+			"floor": {
+				"code": "Math.floor(myfloat)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"
+			},
+			"ceiling": {
+				"code": "Math.ceil(myfloat)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil"
+			},
+			"round": {
+				"code": "Math.round($myfloat)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"
+			},
+			"min": {
+				"code": "Math.min.apply( null, myarray )",
+				"api": "http://stackoverflow.com/questions/1669190/javascript-min-max-array-values"
+			},
+			"max": {
+				"code": "Math.max.apply( null, myarray )",
+				"api": "http://stackoverflow.com/questions/1669190/javascript-min-max-array-values"
+			}
+		},
 		"dates": {
 			"date-object": {
 				"code": "new Date()",
