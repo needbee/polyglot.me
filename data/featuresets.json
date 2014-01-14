@@ -114,7 +114,7 @@
 					"id": "average",
 					"name": "Average",
 					"description": "finds the average value of the array myarray"
-				},
+				}
 			]
 		},
 		{
