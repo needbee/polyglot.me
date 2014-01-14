@@ -1,6 +1,13 @@
 {
 	"featuresets": [
 		{
+			"id": "types",
+			"name": "Types",
+			"features": {
+
+			}
+		},
+		{
 			"id": "strings",
 			"name": "Strings",
 			"features": [
@@ -109,11 +116,6 @@
 					"id": "max",
 					"name": "Max",
 					"description": "finds the maximum value in the array myarray"
-				},
-				{
-					"id": "average",
-					"name": "Average",
-					"description": "finds the average value of the array myarray"
 				}
 			]
 		},
