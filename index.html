@@ -82,7 +82,7 @@
 				</thead>
 				<tbody>
 					<% _.each(featureSets,function(featureSet) { %>
-						<tr>
+						<tr class="featureset">
 							<th colspan="<%= 1+tools.length %>"><%= featureSet.name %></th>
 						</tr>
 						<% _.each(featureSet.features, function(feature) { %>
