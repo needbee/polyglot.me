@@ -20,3 +20,28 @@ div.code-links a:visited {
 ul.list-inline {
 	margin-left: 8px;
 }
+
+.navbar-default .navbar-nav>li>a:link,
+.navbar-default .navbar-nav>li>a:visited {
+	color: #428bca;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+	color: #2a6496;
+	text-decoration: underline;
+}
+
+footer {
+	border-top: solid 1px #999;
+	padding-top: 20px;
+	margin: 9px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.navbar-nav.navbar-right:last-child {
+	margin-right: 0;
+}

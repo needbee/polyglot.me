@@ -1,4 +1,4 @@
 RewriteEngine on
-RewriteBase /cheatsheet/
+RewriteBase /
 RewriteCond $1 !^(includes|node_modules|data)
 RewriteRule ^(.*)$ index.html?$1 [NC]
