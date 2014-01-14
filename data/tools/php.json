@@ -77,6 +77,10 @@
 				"code": "round($myfloat)",
 				"api": "http://php.net/manual/en/function.round.php"
 			},
+			"random": {
+				"code": "rand( min, max )",
+				"api": "http://php.net/manual/en/function.rand.php"
+			},
 			"min": {
 				"code": "min($myarray)",
 				"api": "http://php.net/manual/en/function.min.php"
