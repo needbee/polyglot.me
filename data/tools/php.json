@@ -272,6 +272,100 @@
 				"code": "$closurevar( $val1, $val2 )",
 				"api": "http://www.php.net/manual/en/functions.anonymous.php"
 			}
+		},
+		"objects": {
+			"define-class": {
+				"code": "class MyClass {…}",
+				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
+			},
+			"instantiate-class": {
+				"code": "$myinstance = new MyClass();",
+				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
+			},
+			"define-field": {
+				"code": "class MyClass {\n    var $myfield = 'default value';\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
+			},
+			"access-field": {
+				"code": "$myinstance->myfield",
+				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
+			},
+			"define-method": {
+				"code": "class MyClass {\n    function mymethod() {…}\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
+			},
+			"call-method": {
+				"code": "$myinstance->mymethod()",
+				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
+			},
+			"this": {
+				"code": "$this",
+				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
+			},
+			"define-constant": {
+				"code": "class MyClass {\n    const MYCONSTANT = 'thevalue';\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.constants.php"
+			},
+			"access-constant": {
+				"code": "class MyClass::MYCONSTANT",
+				"api": "http://www.php.net/manual/en/language.oop5.constants.php"
+			},
+			"define-static-field": {
+				"code": "class MyClass {\n    public static $mystaticfield = 'default value';\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.static.php"
+			},
+			"access-static-field": {
+				"code": "MyClass::$mystaticfield",
+				"api": "http://www.php.net/manual/en/language.oop5.static.php"
+			},
+			"define-static-method": {
+				"code": "class MyClass {\n    public static function mystaticmethod() {…}\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.static.php"
+			},
+			"call-static-method": {
+				"code": "MyClass::mystaticmethod()",
+				"api": "http://www.php.net/manual/en/language.oop5.static.php"
+			},
+			"constructor": {
+				"code": "class MyClass {\n    function __construct() {…}\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.decon.php"
+			},
+			"inheritance": {
+				"code": "class MyChildClass extends MyParentClass {…}",
+				"api": "http://www.php.net/manual/en/language.oop5.inheritance.php"
+			},
+			"parent-method": {
+				"code": "class MyChildClass extends MyParentClass {\n    function mymethod() {\n        parent::mymethod();\n    }\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.paamayim-nekudotayim.php"
+			},
+			"declare-public": {
+				"code": "class MyClass {\n    public $myfield;\n    public function mymethod() {…}\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.visibility.php"
+			},
+			"declare-protected": {
+				"code": "class MyClass {\n    protected $myfield;\n    protected function mymethod() {…}\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.visibility.php"
+			},
+			"declare-private": {
+				"code": "class MyClass {\n    private $myfield;\n    private function mymethod() {…}\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.visibility.php"
+			},
+			"declare-final": {
+				"code": "class MyClass {\n    final public function mymethod() {…}\n    …\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.final.php"
+			},
+			"declare-interface": {
+				"code": "interface MyInterface {\n    public function myfunction();\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.interfaces.php"
+			},
+			"implement-interface": {
+				"code": "class MyClass implements MyInterface {\n    public function myfunction() {…}\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.interfaces.php"
+			},
+			"abstract-class": {
+				"code": "abstract class MyClass {\n    abstract protected function myAbstractFunction();\n\n    public function myConcreteFunction(…);\n}",
+				"api": "http://www.php.net/manual/en/language.oop5.abstract.php"
+			}
 		}
 	}
 }

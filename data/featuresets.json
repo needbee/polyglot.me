@@ -315,6 +315,127 @@
 					"description": "call an anonymous function stored in a variable"
 				}
 			]
+		},
+		{
+			"id": "objects",
+			"name": "Objects",
+			"features": [
+				{
+					"id": "define-class",
+					"name": "Define Class",
+					"description": "define a class with variables and methods"
+				},
+				{
+					"id": "instantiate-class",
+					"name": "Instantiate Class",
+					"description": "create a new instance of a class"
+				},
+				{
+					"id": "define-field",
+					"name": "Define Field",
+					"description": "define a member variable/property/attribute/field on a class"
+				},
+				{
+					"id": "access-field",
+					"name": "Access Field",
+					"description": "access a field on an object"
+				},
+				{
+					"id": "define-method",
+					"name": "Define Method",
+					"description": "define a member function/method/procedure on a class"
+				},
+				{
+					"id": "call-method",
+					"name": "Call Method",
+					"description": "call a method on an object"
+				},
+				{
+					"id": "this",
+					"name": "This",
+					"description": "refer to the current object within a method"
+				},
+				{
+					"id": "define-constant",
+					"name": "Define Constant",
+					"description": "defines a constant value for a class"
+				},
+				{
+					"id": "access-constant",
+					"name": "Access Constant",
+					"description": "accesses a constant value for a class"
+				},
+				{
+					"id": "define-static-field",
+					"name": "Define Static Field",
+					"description": "defines a field shared across all instances of a class"
+				},
+				{
+					"id": "access-static-field",
+					"name": "Access Static Field",
+					"description": "access a static field on a class"
+				},
+				{
+					"id": "define-static-method",
+					"name": "Define Static Method",
+					"description": "define a method called on a class, not an instance of it"
+				},
+				{
+					"id": "call-static-method",
+					"name": "Call Static Method",
+					"description": "call a static method on a class"
+				},
+				{
+					"id": "constructor",
+					"name": "Constructor",
+					"description": "define a method called when the class is instantiated, to set it up"
+				},
+				{
+					"id": "inheritance",
+					"name": "Inheritance",
+					"description": "Define a subclass of a parent class, inheriting its variables and methods"
+				},
+				{
+					"id": "parent-method",
+					"name": "Parent Method",
+					"description": "call the parent class's version of a method"
+				},
+				{
+					"id": "declare-public",
+					"name": "Declare Public",
+					"description": "declare a field or method to be accessible from anywhere"
+				},
+				{
+					"id": "declare-protected",
+					"name": "Declare Protected",
+					"description": "declare a field or method to be accessible only from this class, parent, and child classes"
+				},
+				{
+					"id": "declare-private",
+					"name": "Declare Private",
+					"description": "declare a field or method to be accessible only from this class"
+				},
+				{
+					"id": "declare-final",
+					"name": "Declare Final",
+					"description": "declare that a method cannot be overridden by child classes"
+				},
+				{
+					"id": "declare-interface",
+					"name": "Declare Interface",
+					"description": "declare a set of methods a class will provide without implementing them"
+				},
+				{
+					"id": "implement-interface",
+					"name": "Implement Interface",
+					"description": "define a class that implements the method an interface declares"
+				},
+				{
+					"id": "abstract-class",
+					"name": "Abstract Class",
+					"description": "declare a class that provides some functionality but leaves other functionality for child classes to implement, and therefore cannot be instantiated itself"
+				}
+			]
 		}
 	]
 }
