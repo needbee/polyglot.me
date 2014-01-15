@@ -233,6 +233,45 @@
 				"code": "usort( $myarray, function($a, $b) {…} )",
 				"api": "http://www.php.net/manual/en/function.usort.php"
 			}
+		},
+		"functions": {
+			"define": {
+				"code": "function myfunc( $arg1, $arg2 ) {…}",
+				"api": "http://www.php.net/manual/en/functions.user-defined.php"
+			},
+			"call": {
+				"code": "myfunc( $val1, $val2 )",
+				"api": "http://www.php.net/manual/en/functions.user-defined.php"
+			},
+			"default-arguments": {
+				"code": "function myfunc( $arg1 = 'default', $arg2 = null ) {…}",
+				"api": "http://www.php.net/manual/en/functions.arguments.php"
+			},
+			"n-arguments": {
+				"code": "function myfunc() {\n    $args = func_get_args();\n    …\n}",
+				"api": "http://www.php.net/manual/en/function.func-get-args.php"
+			},
+			"named-arguments": {
+				"code": "function myfunc( $arg_associative_array ) {…}\n\nmyfunc( array( \"foo\"=>27, \"bar\"=>\"baz\" ) );"
+			},
+			"overloading": [
+				{
+					"code": "function myfunc( $arg1 = 'default', $arg2 = null ) {…}",
+					"api": "http://www.php.net/manual/en/functions.arguments.php"
+				},
+				{
+					"code": "function myfunc() {\n    $args = func_get_args();\n    …\n}",
+					"api": "http://www.php.net/manual/en/function.func-get-args.php"
+				}
+			],
+			"define-closure": {
+				"code": "$closurevar = function( $arg1, $arg2 ) {…};",
+				"api": "http://www.php.net/manual/en/functions.anonymous.php"
+			},
+			"call-closure": {
+				"code": "$closurevar( $val1, $val2 )",
+				"api": "http://www.php.net/manual/en/functions.anonymous.php"
+			}
 		}
 	}
 }

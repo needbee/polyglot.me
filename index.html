@@ -105,8 +105,8 @@
 											if( null != toolFeature ) {
 												utils.one_or_many( toolFeature, function(tf) {
 													%>
-													<pre class="prettyprint"><%= tf.code %></pre>
-													<div class="orig"><%= tf.code %></div>
+													<pre class="prettyprint"><%= _.escape(tf.code) %></pre>
+													<div class="orig"><%= _.escape(tf.code) %></div>
 													<% if( tf.version ) { %>
 														<div class="text-muted pull-right small">since <%= tf.version %></div>
 													<% } %>

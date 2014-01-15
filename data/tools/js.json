@@ -214,6 +214,45 @@
 				"code": "myarray.sort(function(a,b) {…} )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
 			}
+		},
+		"functions": {
+			"define": {
+				"code": "function myfunc( arg1, arg2 ) {…}",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope"
+			},
+			"call": {
+				"code": "myfunc( val1, val2 )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope"
+			},
+			"default-arguments": {
+				"code": "function myfunc( arg1, arg2 ) {\n    if( !arg1 ) { arg1 = 'default'; }\n    …\n}",
+				"api": "http://www.openjs.com/articles/optional_function_arguments.php"
+			},
+			"n-arguments": {
+				"code": "function myfunc() {\n    for( var i = 0; i < arguments.length; i++ ) {…}\n    …\n}",
+				"api": "http://www.openjs.com/articles/optional_function_arguments.php"
+			},
+			"named-arguments": {
+				"code": "function myfunc( arg_associative_array ) {…}\n\nmyfunc({ foo: 27, bar:\"baz\"});"
+			},
+			"overloading": [
+				{
+					"code": "function myfunc( arg1, arg2 ) {\n    if( !arg1 ) { arg1 = 'default'; }\n    …\n}",
+					"api": "http://www.openjs.com/articles/optional_function_arguments.php"
+				},
+				{
+					"code": "function myfunc() {\n    for( var i = 0; i < arguments.length; i++ ) {…}\n    …\n}",
+					"api": "http://www.openjs.com/articles/optional_function_arguments.php"
+				}
+			],
+			"define-closure": {
+				"code": "var closurevar = function( $arg1, $arg2 ) {…};",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope"
+			},
+			"call-closure": {
+				"code": "closurevar( $val1, $val2 )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope"
+			}
 		}
 	}
 }

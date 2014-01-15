@@ -27,8 +27,7 @@
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-stringWithFormat_"
 			},
 			"float-to-int": {
-				"code": "(int)myfloat",
-				"api": "http://php.net/manual/en/function.intval.php"
+				"code": "(int)myfloat"
 			}
 		},
 		"strings": {
@@ -207,6 +206,34 @@
 			"sort": {
 				"code": "[myarray sortedArrayUsingComparator: ^(id a, id b) {…}]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-SW28"
+			}
+		},
+		"functions": {
+			"define": {
+				"code": "int myfunc( int arg1, int arg2 ) {…}",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/1.3.html"
+			},
+			"call": {
+				"code": "myfunc( val1, val2 )",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/1.3.html"
+			},
+			"n-arguments": {
+				"code": "#include <stdarg.h>\nfunction myfunc( int argcount, ... ) {\n    va_list ap;\n    int j;\n    va_start(ap, count); /* Requires the last fixed parameter (to get the address) */\n    for(j = 0; j < count; j++) {\n        va_arg(ap,j);\n        …\n    }\n    va_end(ap);\n}",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.10.html"
+			},
+			"define-closure": [
+				{
+					"code": "void (^myfunc)(void) = ^{…}",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html#//apple_ref/doc/uid/TP40011210-CH8-SW1"
+				},
+				{
+					"code": "int (^myfunc)(int, int) = ^ (int arg1, int arg2) {…}",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html#//apple_ref/doc/uid/TP40011210-CH8-SW1"
+				}
+			],
+			"call-closure": {
+				"code": "myfunc( val1, val2 )",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html#//apple_ref/doc/uid/TP40011210-CH8-SW1"
 			}
 		}
 	}

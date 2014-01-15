@@ -269,6 +269,52 @@
 					"description": "sorts values in myarray by running a comparison function"
 				}
 			]
+		},
+		{
+			"id": "functions",
+			"name": "Functions",
+			"features": [
+				{
+					"id": "define",
+					"name": "Define",
+					"description": "define a function myfunc with integer arguments arg1 and arg2, returning an integer"
+				},
+				{
+					"id": "call",
+					"name": "Call",
+					"description": "call a function myfunc passing in arguments val1 and val2"
+				},
+				{
+					"id": "default-arguments",
+					"name": "Default Arguments",
+					"description": "allows default values to be set for some arguments, so they do not need to be passed in"
+				},
+				{
+					"id": "n-arguments",
+					"name": "N Arguments",
+					"description": "allow a variable number of arguments"
+				},
+				{
+					"id": "named-arguments",
+					"name": "Named Arguments",
+					"description": "clarify arguments with names"
+				},
+				{
+					"id": "overloading",
+					"name": "Overloading",
+					"description": "define multiple functions with the same name but different arguments"
+				},
+				{
+					"id": "define-closure",
+					"name": "Define Closure",
+					"description": "create an anonymous function (a.k.a. a block), which can't be called by name but is instead stored in a variable"
+				},
+				{
+					"id": "call-closure",
+					"name": "Call Closure",
+					"description": "call an anonymous function stored in a variable"
+				}
+			]
 		}
 	]
 }
