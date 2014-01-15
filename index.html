@@ -105,22 +105,46 @@
 											if( null != toolFeature ) {
 												utils.one_or_many( toolFeature, function(tf) {
 													%>
-													<pre class="prettyprint"><%= _.escape(tf.code) %></pre>
-													<div class="orig"><%= _.escape(tf.code) %></div>
-													<% if( tf.version ) { %>
-														<div class="text-muted pull-right small">since <%= tf.version %></div>
+													<% if( _.isArray(tf.code) ) { %>
+														<% _.each( tf.code, function(file) { %>
+															<div><%= file.name %></div>
+															<pre class="prettyprint"><%= _.escape(file.contents) %></pre>
+															<div class="orig"><%= _.escape(file.contents) %></div>
+															<% if( utils.has_flash() ) { %>
+																<div class="code-links small">
+																	<a href="#" class="copy">copy</a>
+																</div>
+															<% } %>
+														<% }); %>
+														<% if( tf.version ) { %>
+															<div class="text-muted pull-right small">since <%= tf.version %></div>
+														<% } %>
+														<div class="code-links small">
+															<% if( tf.api ) { %>
+																<a href="<%= tf.api %>" target="_blank">api</a>
+															<% } %>
+															<% if( tf.sample ) { %>
+																<%= utils.sample_link(tf.sample) %>
+															<% } %>
+														</div>
+													<% } else { %>
+														<pre class="prettyprint"><%= _.escape(tf.code) %></pre>
+														<div class="orig"><%= _.escape(tf.code) %></div>
+														<% if( tf.version ) { %>
+															<div class="text-muted pull-right small">since <%= tf.version %></div>
+														<% } %>
+														<div class="code-links small">
+															<% if( utils.has_flash() ) { %>
+																<a href="#" class="copy">copy</a>
+															<% } %>
+															<% if( tf.api ) { %>
+																<a href="<%= tf.api %>" target="_blank">api</a>
+															<% } %>
+															<% if( tf.sample ) { %>
+																<%= utils.sample_link(tf.sample) %>
+															<% } %>
+														</div>
 													<% } %>
-													<div class="code-links small">
-														<% if( utils.has_flash() ) { %>
-															<a href="#" class="copy">copy</a>
-														<% } %>
-														<% if( tf.api ) { %>
-															<a href="<%= tf.api %>" target="_blank">api</a>
-														<% } %>
-														<% if( tf.sample ) { %>
-															<%= utils.sample_link(tf.sample) %>
-														<% } %>
-													</div>
 													<%
 												});
 											}
