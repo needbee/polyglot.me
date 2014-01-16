@@ -70,6 +70,7 @@
 		</script>
 		<script type="text/template" id="table-tmpl">
 			<table class="table table-striped table-fixed-header">
+				<!--
 				<thead class="header">
 					<th class="feature">Feature</th>
 					<% _.each(tools,function(toolObj){ %>
@@ -80,10 +81,18 @@
 						</th>
 					<% }); %>
 				</thead>
+				-->
 				<tbody>
 					<% _.each(featureSets,function(featureSet) { %>
 						<tr class="featureset">
-							<th colspan="<%= 1+tools.length %>"><%= featureSet.name %></th>
+							<th><%= featureSet.name %></th>
+							<% _.each(tools,function(toolObj){ %>
+								<% tool = toolObj; %>
+								<th class="toolfeature">
+									<a href="<%= tool.api %>" target="_blank"><%= tool.name %></a>
+									<a class="remove-tool" href="<%= cheatsheet.baseWebUrl + _.difference(_.pluck(tools,'id'),[tool.id]).join('+') %>"><span class="glyphicon glyphicon-remove" id="remove-tool-<%= tool.id %>"></span></a>
+								</th>
+							<% }); %>
 						</tr>
 						<% _.each(featureSet.features, function(feature) { %>
 							<tr>
