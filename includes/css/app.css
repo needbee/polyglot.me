@@ -49,3 +49,17 @@ footer {
 .table-striped > tbody > tr.featureset > th {
 	background-color: rgb(238, 238, 238);
 }
+
+.table {
+	width: inherit;
+	max-width: none;
+	table-layout: fixed;
+}
+
+.feature div.tdwrapper {
+	width: 200px;
+}
+
+.toolfeature div.tdwrapper {
+	width: 350px;
+}

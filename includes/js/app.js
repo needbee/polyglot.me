@@ -175,7 +175,7 @@ requirejs([
 			}));
 
 			// set up now that content there
-			$('.table-fixed-header').fixedHeader();
+			// $('.table-fixed-header').fixedHeader();
 			prettyPrint();
 			cheatsheet.clip = new ZeroClipboard($(".copy"));
 			cheatsheet.clip.on( 'dataRequested', function (client, args) {
