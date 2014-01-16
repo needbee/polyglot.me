@@ -107,7 +107,7 @@
 													%>
 													<% if( _.isArray(tf.code) ) { %>
 														<% _.each( tf.code, function(file) { %>
-															<div><%= file.name %></div>
+															<div><%= file.file %></div>
 															<pre class="prettyprint"><%= _.escape(file.contents) %></pre>
 															<div class="orig"><%= _.escape(file.contents) %></div>
 															<% if( utils.has_flash() ) { %>
