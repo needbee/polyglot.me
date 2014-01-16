@@ -391,10 +391,6 @@
 					}
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html#//apple_ref/doc/uid/TP40011210-CH11-SW3"
-			},
-			"abstract-class": {
-				"code": "",
-				"api": ""
 			}
 		}
 	}
