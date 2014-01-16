@@ -366,24 +366,24 @@
 					"description": "accesses a constant value for a class"
 				},
 				{
-					"id": "define-static-field",
-					"name": "Define Static Field",
-					"description": "defines a field shared across all instances of a class"
+					"id": "define-class-field",
+					"name": "Define class Field",
+					"description": "defines a field shared across all instances of a class (sometimes known as a static field)"
 				},
 				{
-					"id": "access-static-field",
-					"name": "Access Static Field",
-					"description": "access a static field on a class"
+					"id": "access-class-field",
+					"name": "Access Class Field",
+					"description": "access a field on a class (sometimes known as a static field)"
 				},
 				{
-					"id": "define-static-method",
-					"name": "Define Static Method",
-					"description": "define a method called on a class, not an instance of it"
+					"id": "define-class-method",
+					"name": "Define Class Method",
+					"description": "define a method called on a class, not an instance of it (sometimes known as a static method)"
 				},
 				{
-					"id": "call-static-method",
-					"name": "Call Static Method",
-					"description": "call a static method on a class"
+					"id": "call-class-method",
+					"name": "Call Class Method",
+					"description": "call a method on a class (sometimes known as a static method)"
 				},
 				{
 					"id": "constructor",

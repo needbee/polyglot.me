@@ -291,19 +291,19 @@
 				"code": "",
 				"api": ""
 			},
-			"define-static-field": {
+			"define-class-field": {
 				"code": "",
 				"api": ""
 			},
-			"access-static-field": {
+			"access-class-field": {
 				"code": "",
 				"api": ""
 			},
-			"define-static-method": {
+			"define-class-method": {
 				"code": "",
 				"api": ""
 			},
-			"call-static-method": {
+			"call-class-method": {
 				"code": "",
 				"api": ""
 			},

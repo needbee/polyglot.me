@@ -288,37 +288,57 @@
 				"code": "self",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW5"
 			},
-			"define-constant": {
-				"code": "",
+			"define-class-field": {
+				"code": [
+					{
+						"file": "MyClass.m",
+						"contents": "#import \"MyClass.h\"\n\nstatic int mystatic;\n\n…"
+					}
+				],
+				"api": "http://stackoverflow.com/questions/1063229/objective-c-static-class-level-variables"
+			},
+			"access-class-field": {
+				"code": "mystatic",
+				"api": "http://stackoverflow.com/questions/1063229/objective-c-static-class-level-variables"
+			},
+			"define-class-method": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": "@interface MyClass : NSObject\n\n+(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2;\n\n@end"
+					},
+					{
+						"file": "MyClass.m",
+						"contents": "#import \"MyClass.h\"\n\n@implementation MyClass\n\n+(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2 {…}\n\n@end"
+					}
+				],
 				"api": ""
 			},
-			"access-constant": {
-				"code": "",
-				"api": ""
-			},
-			"define-static-field": {
-				"code": "",
-				"api": ""
-			},
-			"access-static-field": {
-				"code": "",
-				"api": ""
-			},
-			"define-static-method": {
-				"code": "",
-				"api": ""
-			},
-			"call-static-method": {
-				"code": "",
-				"api": ""
+			"call-class-method": {
+				"code": "[MyClass myMethodWithArg1:val1 arg2:val2]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2"
 			},
 			"constructor": {
-				"code": "",
-				"api": ""
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": "@interface MyClass : NSObject\n\n-(id)initWithArg1:(int)arg1 arg2:(int)arg2;\n\n@end"
+					},
+					{
+						"file": "MyClass.m",
+						"contents": "#import \"MyClass.h\"\n\n@implementation MyClass\n\n-(id)initWithArg1:(int)arg1 arg2:(int)arg2 {\n\n    self = [super init];\n    if(self) {\n        …\n    }\n\n}\n\n@end"
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW16"
 			},
 			"inheritance": {
-				"code": "",
-				"api": ""
+				"code": [
+					{
+						"file": "MyChildClass.h",
+						"contents": "#import \"MyParentClass.h\"\n\n@interface MyChildClass : MyParentClass\n\n@end"
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW11"
 			},
 			"parent-method": {
 				"code": [
@@ -334,20 +354,25 @@
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW11"
 			},
 			"declare-public": {
-				"code": "",
-				"api": ""
-			},
-			"declare-protected": {
-				"code": "",
-				"api": ""
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": "@interface MyClass : NSObject\n\n@property NSString *myfield;\n\n-(int)myPublicMethod;\n\n@end"
+					},
+					{
+						"file": "MyClass.m",
+						"contents": "#import \"MyClass.h\"\n\n@implementation MyClass\n\n-(int)myPublicMethod {…}\n\n@end"
+					}
+				]
 			},
 			"declare-private": {
-				"code": "",
-				"api": ""
-			},
-			"declare-final": {
-				"code": "",
-				"api": ""
+				"code": [
+					{
+						"file": "MyClass.m",
+						"contents": "@interface MyClass : NSObject ()\n\n@property int myprivateproperty;\n\n-(int)myPrivateMethod;\n\n@end\n\n@implementation MyClass\n\n…\n\n@end"
+					}
+				],
+				"api": "http://swish-movement.blogspot.com/2009/05/private-properties-for-iphone-objective.html"
 			},
 			"declare-interface": {
 				"code": [

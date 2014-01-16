@@ -310,19 +310,19 @@
 				"code": "class MyClass::MYCONSTANT",
 				"api": "http://www.php.net/manual/en/language.oop5.constants.php"
 			},
-			"define-static-field": {
+			"define-class-field": {
 				"code": "class MyClass {\n    public static $mystaticfield = 'default value';\n    …\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
-			"access-static-field": {
+			"access-class-field": {
 				"code": "MyClass::$mystaticfield",
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
-			"define-static-method": {
+			"define-class-method": {
 				"code": "class MyClass {\n    public static function mystaticmethod() {…}\n    …\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
-			"call-static-method": {
+			"call-class-method": {
 				"code": "MyClass::mystaticmethod()",
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
