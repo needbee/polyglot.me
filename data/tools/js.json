@@ -253,6 +253,100 @@
 				"code": "closurevar( $val1, $val2 )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope"
 			}
+		},
+		"objects": {
+			"define-class": {
+				"code": "",
+				"api": ""
+			},
+			"instantiate-class": {
+				"code": "",
+				"api": ""
+			},
+			"define-field": {
+				"code": "",
+				"api": ""
+			},
+			"access-field": {
+				"code": "",
+				"api": ""
+			},
+			"define-method": {
+				"code": "",
+				"api": ""
+			},
+			"call-method": {
+				"code": "",
+				"api": ""
+			},
+			"this": {
+				"code": "",
+				"api": ""
+			},
+			"define-constant": {
+				"code": "",
+				"api": ""
+			},
+			"access-constant": {
+				"code": "",
+				"api": ""
+			},
+			"define-static-field": {
+				"code": "",
+				"api": ""
+			},
+			"access-static-field": {
+				"code": "",
+				"api": ""
+			},
+			"define-static-method": {
+				"code": "",
+				"api": ""
+			},
+			"call-static-method": {
+				"code": "",
+				"api": ""
+			},
+			"constructor": {
+				"code": "",
+				"api": ""
+			},
+			"inheritance": {
+				"code": "",
+				"api": ""
+			},
+			"parent-method": {
+				"code": "",
+				"api": ""
+			},
+			"declare-public": {
+				"code": "",
+				"api": ""
+			},
+			"declare-protected": {
+				"code": "",
+				"api": ""
+			},
+			"declare-private": {
+				"code": "",
+				"api": ""
+			},
+			"declare-final": {
+				"code": "",
+				"api": ""
+			},
+			"declare-interface": {
+				"code": "",
+				"api": ""
+			},
+			"implement-interface": {
+				"code": "",
+				"api": ""
+			},
+			"abstract-class": {
+				"code": "",
+				"api": ""
+			}
 		}
 	}
 }
