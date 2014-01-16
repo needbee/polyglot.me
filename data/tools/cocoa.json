@@ -241,7 +241,7 @@
 				"code": [
 					{
 						"file": "MyClass.h",
-						"contents": "@interface MyClass : NSObject\n\n@end"
+						"contents": "// Note that \"interface\" in Objective C does not mean what it does in most other languages. It just means a class specification.\n@interface MyClass : NSObject\n\n@end"
 					},
 					{
 						"file": "MyClass.m",

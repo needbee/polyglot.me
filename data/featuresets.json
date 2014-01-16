@@ -377,7 +377,7 @@
 				},
 				{
 					"id": "define-class-field",
-					"name": "Define class Field",
+					"name": "Define Class Field",
 					"description": "defines a field shared across all instances of a class (sometimes known as a static field)"
 				},
 				{

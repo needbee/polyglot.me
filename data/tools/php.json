@@ -287,7 +287,7 @@
 				"api": "http://php.net/manual/en/language.operators.type.php"
 			},
 			"define-field": {
-				"code": "class MyClass {\n    var $myfield = 'default value';\n    …\n}",
+				"code": "class MyClass {\n    var $myfield = 'default value';\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
 			},
 			"access-field": {
@@ -295,11 +295,11 @@
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
 			},
 			"define-method": {
-				"code": "class MyClass {\n    function mymethod() {…}\n    …\n}",
+				"code": "class MyClass {\n    function mymethod( $arg1, $arg2 ) {…}\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
 			},
 			"call-method": {
-				"code": "$myinstance->mymethod()",
+				"code": "$myinstance->mymethod( $val1, $val2 )",
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
 			},
 			"this": {

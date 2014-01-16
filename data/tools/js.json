@@ -256,96 +256,64 @@
 		},
 		"objects": {
 			"define-class": {
-				"code": "",
-				"api": ""
+				"code": "function MyClass() {…}",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"instantiate-class": {
-				"code": "",
-				"api": ""
+				"code": "var myinstance = new MyClass();",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
+			},
+			"instance-of": {
+				"code": "myobj instanceof MyClass",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"define-field": {
-				"code": "",
-				"api": ""
+				"code": "function MyClass() {\n    this.myfield = 27;\n}",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"access-field": {
-				"code": "",
-				"api": ""
+				"code": "myobj.myfield",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"define-method": {
-				"code": "",
-				"api": ""
+				"code": "function MyClass() {\n    this.mymethod = function( arg1, arg2 ) {…};\n}",
+				"api": "http://javascript.crockford.com/private.html"
 			},
 			"call-method": {
-				"code": "",
-				"api": ""
+				"code": "myobj.mymethod( val1, val2 )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"this": {
-				"code": "",
-				"api": ""
-			},
-			"define-constant": {
-				"code": "",
-				"api": ""
-			},
-			"access-constant": {
-				"code": "",
-				"api": ""
-			},
-			"define-class-field": {
-				"code": "",
-				"api": ""
-			},
-			"access-class-field": {
-				"code": "",
-				"api": ""
+				"code": "this",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"define-class-method": {
-				"code": "",
-				"api": ""
+				"code": "MyClass.prototype.mymethod = function( arg1, arg2 ) {…} // same as instance method",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"call-class-method": {
-				"code": "",
-				"api": ""
+				"code": "MyClass.prototype.mymethod( val1, val2 )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"constructor": {
-				"code": "",
-				"api": ""
+				"code": "// in js the constructor is the same thing as the class definition\nfunction MyClass() {…}",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"inheritance": {
-				"code": "",
-				"api": ""
+				"code": "function MyChildClass() {…}\nMyChildClass.prototype = new MyParentClass();\nMyChildClass.prototype.constructor = MyChildClass; // otherwise it uses the parent's constructor",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"parent-method": {
-				"code": "",
-				"api": ""
+				"code": "function MyParentClass() {}\nMyParentClass.prototype.mymethod = function(){…};\n\nfunction MyChildClass() {\n    this.parent = this; // whatever the parent class is at time constructor called\n}\nMyChildClass.prototype = new MyParentClass();\nMyChildClass.prototype.constructor = MyChildClass;\nMyChildClass.prototype.mymethod = function() {\n    this.parent.mymethod();\n}",
+				"api": "http://stackoverflow.com/questions/12729824/call-parent-method-in-a-javascript-class"
 			},
 			"declare-public": {
-				"code": "",
-				"api": ""
-			},
-			"declare-protected": {
-				"code": "",
-				"api": ""
+				"code": "function MyClass() {\n    this.mypublicvar = 27;\n\n    // Crockford calls this \"privileged\", but it functions like \"public\" in other languages\n    this.mypublicmethod = function() {…}\n}",
+				"api": "http://javascript.crockford.com/private.html"
 			},
 			"declare-private": {
-				"code": "",
-				"api": ""
-			},
-			"declare-final": {
-				"code": "",
-				"api": ""
-			},
-			"declare-interface": {
-				"code": "",
-				"api": ""
-			},
-			"implement-interface": {
-				"code": "",
-				"api": ""
-			},
-			"abstract-class": {
-				"code": "",
-				"api": ""
+				"code": "function MyClass() {\n    var myprivatevar = 27;\n    var that = this; // allows private method to access this\n    var myprivatemethod = function() {…}\n}",
+				"api": "http://javascript.crockford.com/private.html"
 			}
 		}
 	}
