@@ -117,7 +117,7 @@ requirejs([
 			this.usedToolObjs.on('add remove', this.render, this);
 		},
 		render: function() {
-			console.log('render tools');
+			// console.log('render tools');
 
 			var toolsToUse = this.usedToolObjs.pluck('id');
 			var toolsRemaining = _.difference( this.allToolIds, toolsToUse );
@@ -131,7 +131,7 @@ requirejs([
 			'click a.add-tool': function(e) {
 				e.preventDefault();
 				var id = $(e.target).text();
-				console.log('add tool '+id);
+				// console.log('add tool '+id);
 				cheatsheet.addTool(id);
 				return;
 			}
@@ -146,7 +146,7 @@ requirejs([
 			this.render();
 		},
 		render: function() {
-			console.log('render search');
+			// console.log('render search');
 			this.$el.html( _.template( this.template, {}));
 		},
 		events: {
@@ -168,7 +168,7 @@ requirejs([
 			this.tools.on('add remove', this.render, this);
 		},
 		render: function() {
-			console.log('render table');
+			// console.log('render table');
 			this.$el.html( _.template( this.template, {
 				featureSets: this.featureSets.toJSON(),
 				tools: this.tools.toJSON()
@@ -187,7 +187,7 @@ requirejs([
 			'click a.remove-tool': function(e) {
 				e.preventDefault();
 				var id = e.target.id.substring('remove-tool-'.length);
-				console.log('remove tool '+id);
+				// console.log('remove tool '+id);
 				cheatsheet.removeTool(id);
 			}
 		}
