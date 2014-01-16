@@ -254,6 +254,14 @@
 				"code": "MyClass *myinstance = [[MyClass alloc] init];",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW7"
 			},
+			"instance-of": {
+				"code": "[myobj isKindOfClass:[MyClass class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"exact-instance-of": {
+				"code": "[myobj isMemberOfClass:[MyClass class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCEBEIC"
+			},
 			"define-field": {
 				"code": [
 					{

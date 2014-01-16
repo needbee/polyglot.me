@@ -282,6 +282,10 @@
 				"code": "$myinstance = new MyClass();",
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
 			},
+			"instance-of": {
+				"code": "$myobj instanceof MyClass",
+				"api": "http://php.net/manual/en/language.operators.type.php"
+			},
 			"define-field": {
 				"code": "class MyClass {\n    var $myfield = 'default value';\n    …\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"

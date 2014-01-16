@@ -331,6 +331,16 @@
 					"description": "create a new instance of a class"
 				},
 				{
+					"id": "instance-of",
+					"name": "Instance Of",
+					"description": "indicate whether object myobj is of class MyClass (or a descendant of it)"
+				},
+				{
+					"id": "exact-instance-of",
+					"name": "Exact Instance Of",
+					"description": "indicate whether object myobj is of class MyClass (not including descendants of it)"
+				},
+				{
 					"id": "define-field",
 					"name": "Define Field",
 					"description": "define a member variable/property/attribute/field on a class"
