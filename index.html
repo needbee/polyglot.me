@@ -73,106 +73,129 @@
 			</form>
 		</script>
 		<script type="text/template" id="table-tmpl">
-			<table class="table table-striped table-fixed-header">
-				<!--
-				<thead class="header">
-					<th class="feature">Feature</th>
-					<% _.each(tools,function(toolObj){ %>
-						<% tool = toolObj; %>
-						<th class="toolfeature">
-							<a href="<%= tool.api %>" target="_blank"><%= tool.name %></a>
-							<a class="remove-tool" href="<%= cheatsheet.baseWebUrl + _.difference(_.pluck(tools,'id'),[tool.id]).join('+') %>"><span class="glyphicon glyphicon-remove" id="remove-tool-<%= tool.id %>"></span></a>
-						</th>
+			<% if( !tools.length ) { %>
+				<div class="jumbotron">
+					<h1>Consistent cheat sheets!</h1>
+					<p>To begin, pick a tool you use:</p>
+					<% _.each( allToolIds, function(tool) { %>
+						<a class="btn btn-primary btn-lg add-tool" role="button" href="<%= cheatsheet.baseWebUrl + tool %>"><%= tool %></a>
 					<% }); %>
-				</thead>
-				-->
-				<tbody>
-					<% _.each(featureSets,function(featureSet) { %>
-						<tr class="featureset">
-							<th><%= featureSet.name %></th>
-							<% _.each(tools,function(toolObj){ %>
-								<% tool = toolObj; %>
-								<th class="toolfeature">
-									<a href="<%= tool.api %>" target="_blank"><%= tool.name %></a>
-									<a class="remove-tool" href="<%= cheatsheet.baseWebUrl + _.difference(_.pluck(tools,'id'),[tool.id]).join('+') %>"><span class="glyphicon glyphicon-remove" id="remove-tool-<%= tool.id %>"></span></a>
-								</th>
-							<% }); %>
-						</tr>
-						<% _.each(featureSet.features, function(feature) { %>
-							<tr>
-								<td class="feature">
-									<div class="tdwrapper">
-										<div><strong><%= feature.name %></strong></div>
-										<p class="text-muted small"><%= feature.description %></p>
+				</div>
+			<% } else { %>
+				<table class="table table-striped table-fixed-header">
+					<!--
+					<thead class="header">
+						<th class="feature">Feature</th>
+						<% _.each(tools,function(toolObj){ %>
+							<% tool = toolObj; %>
+							<th class="toolfeature">
+								<a href="<%= tool.api %>" target="_blank"><%= tool.name %></a>
+								<a class="remove-tool" href="<%= cheatsheet.baseWebUrl + _.difference(_.pluck(tools,'id'),[tool.id]).join('+') %>"><span class="glyphicon glyphicon-remove" id="remove-tool-<%= tool.id %>"></span></a>
+							</th>
+						<% }); %>
+					</thead>
+					-->
+					<tbody>
+						<% _.each(featureSets,function(featureSet) { %>
+							<tr class="featureset">
+								<th><%= featureSet.name %></th>
+								<% _.each(tools,function(toolObj){ %>
+									<% tool = toolObj; %>
+									<th class="toolfeature">
+										<a class="remove-tool" href="<%= cheatsheet.baseWebUrl + _.difference(_.pluck(tools,'id'),[tool.id]).join('+') %>"><span class="glyphicon glyphicon-remove" id="remove-tool-<%= tool.id %>"></span></a>
+										<a href="<%= tool.api %>" target="_blank"><%= tool.name %></a>
+									</th>
+								<% }); %>
+								<th class="btncell">
+									<div class="btn-group">
+									  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+									    Add a Tool <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu">
+										<% _.each( toolsRemaining, function(tool) { %>
+											<li><a href="<%= cheatsheet.baseWebUrl + _.union(toolsToUse,[tool]).join('+') %>" class="add-tool"><%= tool %></a></li>
+										<% }); %>
+									  </ul>
 									</div>
-								</td>
-								<% _.each(tools,function(toolObj) { %>
-									<%
-										var tool = toolObj;
-										var toolFeatureSet = tool.featuresets[featureSet.id];
-										var toolFeature = null;
-										if( toolFeatureSet ) {
-											toolFeature = tool.featuresets[featureSet.id][feature.id];
-										}
-									%>
-									<td class="toolfeature">
+								</th>
+							</tr>
+							<% _.each(featureSet.features, function(feature) { %>
+								<tr>
+									<td class="feature">
 										<div class="tdwrapper">
-											<%
-												if( null != toolFeature ) {
-													utils.one_or_many( toolFeature, function(tf) {
-														%>
-														<% if( _.isArray(tf.code) ) { %>
-															<% _.each( tf.code, function(file) { %>
-																<div><%= file.file %></div>
-																<pre class="prettyprint"><%= _.escape(file.contents) %></pre>
-																<div class="orig"><%= _.escape(file.contents) %></div>
-																<% if( utils.has_flash() ) { %>
-																	<div class="code-links small">
-																		<a href="#" class="copy">copy</a>
-																	</div>
-																<% } %>
-															<% }); %>
-															<% if( tf.version ) { %>
-																<div class="text-muted pull-right small">since <%= tf.version %></div>
-															<% } %>
-															<div class="code-links small">
-																<% if( tf.api ) { %>
-																	<a href="<%= tf.api %>" target="_blank">api</a>
-																<% } %>
-																<% if( tf.sample ) { %>
-																	<%= utils.sample_link(tf.sample) %>
-																<% } %>
-															</div>
-														<% } else { %>
-															<pre class="prettyprint"><%= _.escape(tf.code) %></pre>
-															<div class="orig"><%= _.escape(tf.code) %></div>
-															<% if( tf.version ) { %>
-																<div class="text-muted pull-right small">since <%= tf.version %></div>
-															<% } %>
-															<div class="code-links small">
-																<% if( utils.has_flash() ) { %>
-																	<a href="#" class="copy">copy</a>
-																<% } %>
-																<% if( tf.api ) { %>
-																	<a href="<%= tf.api %>" target="_blank">api</a>
-																<% } %>
-																<% if( tf.sample ) { %>
-																	<%= utils.sample_link(tf.sample) %>
-																<% } %>
-															</div>
-														<% } %>
-														<%
-													});
-												}
-											%>
+											<div><strong><%= feature.name %></strong></div>
+											<p class="text-muted small"><%= feature.description %></p>
 										</div>
 									</td>
-								<% }); %>
-							</tr>
+									<% _.each(tools,function(toolObj) { %>
+										<%
+											var tool = toolObj;
+											var toolFeatureSet = tool.featuresets[featureSet.id];
+											var toolFeature = null;
+											if( toolFeatureSet ) {
+												toolFeature = tool.featuresets[featureSet.id][feature.id];
+											}
+										%>
+										<td class="toolfeature">
+											<div class="tdwrapper">
+												<%
+													if( null != toolFeature ) {
+														utils.one_or_many( toolFeature, function(tf) {
+															%>
+															<% if( _.isArray(tf.code) ) { %>
+																<% _.each( tf.code, function(file) { %>
+																	<div><%= file.file %></div>
+																	<pre class="prettyprint"><%= _.escape(file.contents) %></pre>
+																	<div class="orig"><%= _.escape(file.contents) %></div>
+																	<% if( utils.has_flash() ) { %>
+																		<div class="code-links small">
+																			<a href="#" class="copy">copy</a>
+																		</div>
+																	<% } %>
+																<% }); %>
+																<% if( tf.version ) { %>
+																	<div class="text-muted pull-right small">since <%= tf.version %></div>
+																<% } %>
+																<div class="code-links small">
+																	<% if( tf.api ) { %>
+																		<a href="<%= tf.api %>" target="_blank">api</a>
+																	<% } %>
+																	<% if( tf.sample ) { %>
+																		<%= utils.sample_link(tf.sample) %>
+																	<% } %>
+																</div>
+															<% } else { %>
+																<pre class="prettyprint"><%= _.escape(tf.code) %></pre>
+																<div class="orig"><%= _.escape(tf.code) %></div>
+																<% if( tf.version ) { %>
+																	<div class="text-muted pull-right small">since <%= tf.version %></div>
+																<% } %>
+																<div class="code-links small">
+																	<% if( utils.has_flash() ) { %>
+																		<a href="#" class="copy">copy</a>
+																	<% } %>
+																	<% if( tf.api ) { %>
+																		<a href="<%= tf.api %>" target="_blank">api</a>
+																	<% } %>
+																	<% if( tf.sample ) { %>
+																		<%= utils.sample_link(tf.sample) %>
+																	<% } %>
+																</div>
+															<% } %>
+															<%
+														});
+													}
+												%>
+											</div>
+										</td>
+									<% }); %>
+									<td></td>
+								</tr>
+							<% }); %>
 						<% }); %>
-					<% }); %>
-				</tbody>
-			</table>
+					</tbody>
+				</table>
+			<% } %>
 		</script>
 		<footer>
 			<div class="pull-left">

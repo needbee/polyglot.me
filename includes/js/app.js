@@ -106,6 +106,7 @@ requirejs([
 		model: cheatsheet.Tool
 	});
 
+	/*
 	cheatsheet.ToolsView = Backbone.View.extend({
 		el: $('#tools'),
 		template: $('#tools-tmpl').html(),
@@ -137,6 +138,7 @@ requirejs([
 			}
 		}
 	});
+	*/
 
 	cheatsheet.SearchView = Backbone.View.extend({
 		el: $('#search'),
@@ -161,17 +163,25 @@ requirejs([
 	cheatsheet.TableView = Backbone.View.extend({
 		el: $('#table'),
 		template: $('#table-tmpl').html(),
-		initialize: function(featureSets,tools) {
+		initialize: function(featureSets,tools,allToolIds) {
 			this.featureSets = featureSets;
 			this.tools = tools;
+			this.allToolIds = allToolIds;
 			this.render();
 			this.tools.on('add remove', this.render, this);
 		},
 		render: function() {
 			// console.log('render table');
+
+			var toolsToUse = this.tools.pluck('id');
+			var toolsRemaining = _.difference( this.allToolIds, toolsToUse );
+
 			this.$el.html( _.template( this.template, {
 				featureSets: this.featureSets.toJSON(),
-				tools: this.tools.toJSON()
+				tools: this.tools.toJSON(),
+				allToolIds: this.allToolIds,
+				toolsToUse: toolsToUse,
+				toolsRemaining: toolsRemaining
 			}));
 
 			// set up now that content there
@@ -184,6 +194,13 @@ requirejs([
 			});	
 		},
 		events: {
+			'click a.add-tool': function(e) {
+				e.preventDefault();
+				var id = $(e.target).text();
+				// console.log('add tool '+id);
+				cheatsheet.addTool(id);
+				return;
+			},
 			'click a.remove-tool': function(e) {
 				e.preventDefault();
 				var id = e.target.id.substring('remove-tool-'.length);
@@ -248,9 +265,9 @@ requirejs([
 				var id;
 				var tool;
 				cheatsheet.tools = new cheatsheet.ToolCollection(); //[];
-				cheatsheet.toolsView = new cheatsheet.ToolsView(cheatsheet.allTools,cheatsheet.tools);
+				// cheatsheet.toolsView = new cheatsheet.ToolsView(cheatsheet.allTools,cheatsheet.tools);
 				cheatsheet.tableView = new cheatsheet.TableView(
-					cheatsheet.featureSets, cheatsheet.tools
+					cheatsheet.featureSets, cheatsheet.tools, cheatsheet.allTools
 				);
 
 				Backbone.history.start({

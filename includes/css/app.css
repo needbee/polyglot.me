@@ -8,10 +8,6 @@ pre {
 	margin-bottom: 0;
 }
 
-div.code-links {
-	padding-bottom: 10px;
-}
-
 div.code-links a:link,
 div.code-links a:visited {
 	color: #999;
@@ -48,7 +44,7 @@ ul.list-inline {
 */
 
 footer {
-	border-top: solid 1px #999;
+	/*border-top: solid 1px #999;*/
 	padding-top: 20px;
 	margin: 9px;
 	margin-top: 20px;
@@ -69,10 +65,22 @@ footer {
 	table-layout: fixed;
 }
 
+div.tdwrapper {
+	margin: 10px 0;
+}
+
 .feature div.tdwrapper {
 	width: 200px;
 }
 
 .toolfeature div.tdwrapper {
 	width: 350px;
+}
+
+.table>tbody>tr>th {
+	padding-top: 15px;
+}
+
+.table>tbody>tr>th.btncell {
+	padding-top: 8px;
 }
