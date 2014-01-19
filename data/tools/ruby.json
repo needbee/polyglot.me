@@ -47,7 +47,7 @@
 				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-5B-5D"
 			},
 			"concatenate": {
-				"code": "a + b\na",
+				"code": "a + b",
 				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-2B"
 			},
 			"index-of": {
