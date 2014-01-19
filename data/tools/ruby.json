@@ -1,0 +1,351 @@
+{
+	"id": "ruby",
+	"name": "Ruby",
+	"api": "http://www.ruby-doc.org/core-2.1.0/",
+	"featuresets": {
+		"types": {
+			"string-to-int": {
+				"code": "mystr.to_i",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-to_i"
+			},
+			"int-to-string": {
+				"code": "myint.to_s",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Fixnum.html#method-i-to_s"
+			},
+			"string-to-float": {
+				"code": "mystr.to_f",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-to_f"
+			},
+			"float-to-string": {
+				"code": "myfloat.to_s",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Float.html#method-i-to_s"
+			},
+			"float-to-int": {
+				"code": "myfloat.to_i",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Float.html#method-i-to_i"
+			}
+		},
+		"strings": {
+			"length": {
+				"code": "mystring.length",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-length"
+			},
+			"comparison": {
+				"code": "a == b\na.eql? b",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-eql-3F"
+			},
+			"lowercase": {
+				"code": "str.downcase",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-downcase"
+			},
+			"uppercase": {
+				"code": "str.upcase",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-upcase"
+			},
+			"substring": {
+				"code": "str[ start, length ]",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-5B-5D"
+			},
+			"concatenate": {
+				"code": "a + b\na",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-2B"
+			},
+			"index-of": {
+				"code": "str.index( $mysubstring )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-index"
+			},
+			"split-on-string": {
+				"code": "str.split( delim )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-split"
+			},
+			"split-on-regex": {
+				"code": "str.split( myregex )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-split"
+			},
+			"join": {
+				"code": "myarray.join( delim )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-join"
+			},
+			"regex-match": [
+				{
+					"code": "myregex.match( str )",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Regexp.html#method-i-match"
+				},
+				{
+					"code": "/…/ =~ str",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Regexp.html#method-i-3D-7E"
+				}
+			],
+			"regex-find": {
+				"code": "myregex.match( str )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Regexp.html#method-i-match"
+			},
+			"regex-replace": {
+				"code": "str.gsub( myregex, tmpl )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-gsub"
+			}
+		},
+		"math": {
+			"floor": {
+				"code": "myfloat.floor",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Numeric.html#method-i-floor"
+			},
+			"ceiling": {
+				"code": "myfloat.ceil",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Numeric.html#method-i-ceil"
+			},
+			"round": {
+				"code": "myfloat.round",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Numeric.html#method-i-round"
+			},
+			"random": {
+				"code": "Random.rand( min..max )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Random.html#method-i-rand"
+			},
+			"min": {
+				"code": "myarray.each_with_index.min.first",
+				"api": "http://stackoverflow.com/questions/4964256/ruby-how-to-find-the-index-of-the-minimum-array-element"
+			},
+			"max": {
+				"code": "myarray.each_with_index.max.first",
+				"api": "http://stackoverflow.com/questions/4964256/ruby-how-to-find-the-index-of-the-minimum-array-element"
+			}
+		},
+		"dates": {
+			"date-object": {
+				"code": "Time.now",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Time.html#method-c-now"
+			},
+			"timestamp": {
+				"code": "Time.now.to_i",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Time.html#method-i-to_i"
+			},
+			"format": {
+				"code": "mydate.strftime(myformat)",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Time.html#method-i-strftime"
+			},
+			"parse": {
+				"code": "DateTime.parse( datestring )",
+				"api": "http://www.ruby-doc.org/stdlib-2.1.0/libdoc/date/rdoc/DateTime.html#method-c-parse"
+			},
+			"compare": {
+				"code": "$a <=> $b",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Time.html#method-i-3C-3D-3E"
+			},
+			"offset": {
+				"code": "mydate + numseconds",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Time.html#method-i-2B"
+			}
+		},
+		"collections": {
+			"define": {
+				"code": "[1,2,3]",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html"
+			},
+			"define-associative": {
+				"code": "{ \"key1\"=>\"val1\", \"key2\"=>\"val2\", … }\n{ :key1=>\"val1\", :key2=>\"val2\", … }\n",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Hash.html"
+			},
+			"length": {
+				"code": "myarray.count",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-count"
+			},
+			"push": {
+				"code": "myarray.push( myval )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-push"
+			},
+			"pop": {
+				"code": "myarray.pop",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-pop"
+			},
+			"merge": {
+				"code": "a + b",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-2B"
+			},
+			"slice": {
+				"code": "myarray[ start, length]\nmyarray.slice( start, length )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-5B-5D"
+			},
+			"for-each": {
+				"code": "myarray.each { |myval| … }",
+				"api": "http://ruby-doc.org/core-1.9.3/Array.html#method-i-each"
+			},
+			"for-each-associative": {
+				"code": "myhash.each { |mykey, myval| … }",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Hash.html#method-i-each"
+			},
+			"keys": {
+				"code": "myarray.keys",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Hash.html#method-i-keys"
+			},
+			"values": {
+				"code": "myarray.values",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Hash.html#method-i-values"
+			},
+			"contains": {
+				"code": "myarray.include?(val)",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-include-3F"
+			},
+			"index-of": {
+				"code": "myarray.index(val)",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-index"
+			},
+			"filter": [
+				{
+					"code": "myarray.find_all { |val| … }",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Enumerable.html#method-i-find_all"
+				},
+				{
+					"code": "myarray.select { |val| … }",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Enumerable.html#method-i-select"
+				}
+			],
+			"map": [
+				{
+					"code": "myarray.collect { |val| … }",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Enumerable.html#method-i-collect"
+				},
+				{
+					"code": "myarray.map { |val| … }",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Enumerable.html#method-i-map"
+				}
+			],
+			"reduce": [
+				{
+					"code": "myarray.inject(initial) { |accumulator, val| … }",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Enumerable.html#method-i-inject"
+				},
+				{
+					"code": "myarray.reduce(initial) { |accumulator, val| … }",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Enumerable.html#method-i-reduce"
+				}
+			],
+			"sort": {
+				"code": "myarray.sort { |a,b| … }",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-sort"
+			}
+		},
+		"functions": {
+			"define": {
+				"code": "def myfunc arg1, arg2\n    …\nend",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html"
+			},
+			"call": {
+				"code": "myfunc\nmyfunc( val1, val2 )",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/calling_methods_rdoc.html"
+			},
+			"default-arguments": {
+				"code": "def myfunc arg1 = 'default', arg2\n    …\nend",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Default+Values"
+			},
+			"n-arguments": {
+				"code": "def myfunc arg1, *arg2\n    …\nend",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Array%2FHash+Argument"
+			},
+			"named-arguments": {
+				"code": "def myfunc arg1:nil, arg2:nil\n    …\nend\n\nmyfunc(arg1:val1, arg2:val2)",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Keyword+Arguments"
+			},
+			"overloading": [
+				{
+					"code": "def myfunc $arg1, $arg2 = nil\n    …\nend",
+					"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Default+Values"
+				},
+				{
+					"code": "def myfunc *args\n    …\nend",
+					"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Array%2FHash+Argument"
+				}
+			],
+			"define-closure": {
+				"code": "{ … }",
+				"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
+			},
+			"call-closure": {
+				"code": "yield",
+				"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
+			}
+		},
+		"objects": {
+			"define-class": {
+				"code": "class MyClass\n    …\nend",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Defining+a+class"
+			},
+			"instantiate-class": {
+				"code": "myinstance = MyClass.new",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Visibility"
+			},
+			"instance-of": {
+				"code": "myobj.instance_of? MyClass",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Object.html#method-i-instance_of-3F"
+			},
+			"access-field": {
+				"code": "@myfield = 27 // does not need to be declared",
+				"api": "http://www.ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/instancevars.html"
+			},
+			"define-method": {
+				"code": "class MyClass\n    def mymethod\n        …\n    end\nend",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Methods"
+			},
+			"call-method": {
+				"code": "myinstance.mymethod val1, val2",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Methods"
+			},
+			"this": {
+				"code": "self",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-self"
+			},
+			"define-constant": {
+				"code": "class MyClass\n    MYCONSTANT = 'thevalue'\nend",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Constants"
+			},
+			"access-constant": {
+				"code": "MyClass::MYCONSTANT",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Constants"
+			},
+			"define-class-field": {
+				"code": "class MyClass\n\n    @@myclassfield = 27\nend",
+				"api": "http://www.railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/"
+			},
+			"access-class-field": {
+				"code": "@@myclassfield # within MyClass\nMyClass.sides # outside of MyClass",
+				"api": "http://www.railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/"
+			},
+			"define-class-method": {
+				"code": "class MyClass\n    def self.myclassmethod\n        …\n    end\nend",
+				"api": "http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/"
+			},
+			"call-class-method": {
+				"code": "MyClass.myclassmethod",
+				"api": "http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/"
+			},
+			"constructor": {
+				"code": "class MyClass\n    def initialize\n        …\n    end\nend",
+				"api": "http://www.ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/objinitialization.html"
+			},
+			"inheritance": {
+				"code": "class MyChildClass < MyParentClass\n    …\nend",
+				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Defining+a+class"
+			},
+			"parent-method": {
+				"code": "class MyChildClass extends MyParentClass\n    def mymethod\n        super\n    end\nend",
+				"api": "http://ruby-doc.org/docs/keywords/1.9/files/keywords_rb.html#M000034"
+			},
+			"declare-public": {
+				"code": "class MyClass\n    def mymethod\n        …\n    end\nend",
+				"api": "http://rubylearning.com/satishtalim/ruby_access_control.html"
+			},
+			"declare-protected": {
+				"code": "class MyClass\n    protected\n        def mymethod\n            …\n        end\nend",
+				"api": "http://rubylearning.com/satishtalim/ruby_access_control.html"
+			},
+			"declare-private": {
+				"code": "class MyClass\n    private\n        def mymethod\n            …\n        end\nend",
+				"api": "http://rubylearning.com/satishtalim/ruby_access_control.html"
+			},
+			"abstract-class": {
+				"code": "# not really abstract classes, but shared methods\nmodule MyModule\n    def mysharedmethod\n        …\n    end\nend\n\nclass MyClass\n    include MyModule\nend",
+				"api": "http://www.tutorialspoint.com/ruby/ruby_modules.htm"
+			}
+		}
+	}
+}

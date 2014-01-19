@@ -225,7 +225,7 @@
 				"api": "http://www.php.net/manual/en/function.array-map.php"
 			},
 			"reduce": {
-				"code": "array_reduce( $myarray, function($val) {…}, $myinitial )",
+				"code": "array_reduce( $myarray, function($accumulator,$val) {…}, $myinitial )",
 				"version": "4.0.5",
 				"api": "http://www.php.net/manual/en/function.array-reduce.php"
 			},
@@ -311,23 +311,23 @@
 				"api": "http://www.php.net/manual/en/language.oop5.constants.php"
 			},
 			"access-constant": {
-				"code": "class MyClass::MYCONSTANT",
+				"code": "MyClass::MYCONSTANT",
 				"api": "http://www.php.net/manual/en/language.oop5.constants.php"
 			},
 			"define-class-field": {
-				"code": "class MyClass {\n    public static $mystaticfield = 'default value';\n    …\n}",
+				"code": "class MyClass {\n    public static $myclassfield = 'default value';\n    …\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
 			"access-class-field": {
-				"code": "MyClass::$mystaticfield",
+				"code": "MyClass::$myclassfield",
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
 			"define-class-method": {
-				"code": "class MyClass {\n    public static function mystaticmethod() {…}\n    …\n}",
+				"code": "class MyClass {\n    public static function myclassmethod() {…}\n    …\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
 			"call-class-method": {
-				"code": "MyClass::mystaticmethod()",
+				"code": "MyClass::myclassmethod()",
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
 			"constructor": {

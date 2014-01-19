@@ -343,7 +343,7 @@
 				{
 					"id": "define-field",
 					"name": "Define Field",
-					"description": "define a member variable/property/attribute/field on a class"
+					"description": "define a member variable/instance variable/property/attribute/field on a class"
 				},
 				{
 					"id": "access-field",
