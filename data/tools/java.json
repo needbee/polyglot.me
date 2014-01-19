@@ -1,0 +1,307 @@
+{
+	"id": "java",
+	"name": "Java",
+	"api": "http://docs.oracle.com/javase/7/docs/api/",
+	"featuresets": {
+		"types": {
+			"string-to-int": {
+				"code": "Integer.parseInt( mystr )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html#parseInt(java.lang.String)"
+			},
+			"int-to-string": {
+				"code": "Integer.toString( myint )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html#toString(int)"
+			},
+			"string-to-float": {
+				"code": "Float.parseFloat( mystr )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Float.html#parseFloat(java.lang.String)"
+			},
+			"float-to-string": {
+				"code": "Float.toString( myfloat )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Float.html#toString(float)"
+			},
+			"float-to-int": {
+				"code": "(int)myfloat"
+			}
+		},
+		"strings": {
+			"length": {
+				"code": "mystring.length()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#length()"
+			},
+			"comparison": {
+				"code": "a.equals(b)",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#equals(java.lang.Object)"
+			},
+			"lowercase": {
+				"code": "str.toLowerCase()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#toLowerCase()"
+			},
+			"uppercase": {
+				"code": "str.toUpperCase()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#toUpperCase()"
+			},
+			"substring": {
+				"code": "str.substring( start[, end] )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#substring(int, int)"
+			},
+			"concatenate": [
+				{
+					"code": "a + b // only use for two strings max",
+					"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html"
+				},
+				{
+					"code": "StringBuffer buf = new StringBuffer();\nbuf.append(a);\nbuf.append(b);\nbuf.append(c);\nbuf.toString();",
+					"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuffer.html"
+				},
+				{
+					"code": "StringBuilder buf = new StringBuilder();\nbuf.append(a);\nbuf.append(b);\nbuf.append(c);\nbuf.toString();",
+					"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html"
+				}
+			],
+			"index-of": {
+				"code": "str.indexOf( mysubstring )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)"
+			},
+			"split-on-string": {
+				"code": "str.split( delim )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#split(java.lang.String)"
+			},
+			"split-on-regex": {
+				"code": "str.split( myregex )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#split(java.lang.String)"
+			},
+			"regex-match": {
+				"code": "str.matches( myregex )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#matches(java.lang.String)"
+			},
+			"regex-find": {
+				"code": "import java.util.regex.Matcher\nimport java.util.regex.Pattern;\n\n…\nPattern pattern = Pattern.compile(myregex);\nMatcher matcher = pattern.matcher(string);\nwhile( matcher.find() ) {\n    String matchedSubstring = matcher.group();\n}",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/regex/Matcher.html#find()"
+			},
+			"regex-replace": {
+				"code": "str.replaceAll( myregex, tmpl )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#replaceAll(java.lang.String, java.lang.String)"
+			}
+		},
+		"math": {
+			"floor": {
+				"code": "Math.floor(myfloat)",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#floor(double)"
+			},
+			"ceiling": {
+				"code": "Math.ceil(myfloat)",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#ceil(double)"
+			},
+			"round": {
+				"code": "Math.round(myfloat)",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#round(float)"
+			},
+			"random": {
+				"code": "import java.util.Random;\n\n…\nRandom r = new Random(seed);\nmin + r.nextInt(max-min+1);",
+				"api": "http://docs.oracle.com/javase/6/docs/api/java/util/Random.html#nextInt(int)"
+			},
+			"min": {
+				"code": "java.util.Collections.min(mylist)",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#min(java.util.Collection)"
+			},
+			"max": {
+				"code": "java.util.Collections.max(mylist)",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#max(java.util.Collection)"
+			}
+		},
+		"dates": {
+			"date-object": {
+				"code": "new Date()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Date.html#Date()"
+			},
+			"timestamp": {
+				"code": "System.currentTimeMillis()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis()"
+			},
+			"format": {
+				"code": "SimpleDateFormat df = new SimpleDateFormat(myformat);\ndf.format(mydate);",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html"
+			},
+			"parse": {
+				"code": "SimpleDateFormat df = new SimpleDateFormat(myformat);\ndf.parse(mystring);",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html"
+			},
+			"compare": {
+				"code": "a.before(b);\na.after(b);\na.compareTo(b);",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Date.html#compareTo(java.util.Date)"
+			},
+			"offset": {
+				"code": "Calendar cal = Calendar.getInstance();cal.setTime(mydate);\ncal.add( MONTH, 1 );\nDate mydate = cal.getTime();",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#add(int, int)"
+			}
+		},
+		"collections": {
+			"define": {
+				"code": "List mylist = new ArrayList();",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#ArrayList()"
+			},
+			"define-associative": {
+				"code": "Map mymap = new HashMap();",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html#HashMap()"
+			},
+			"length": {
+				"code": "mylist.size()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#size()"
+			},
+			"push": {
+				"code": "Deque deque = new ArrayDeque<type>();\ndeque.push( myval )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html#push(E)"
+			},
+			"pop": {
+				"code": "deque.pop()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html#pop()"
+			},
+			"merge": {
+				"code": "List newlist = new ArrayList(a);\nnewlist.addAll(b);",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#addAll(java.util.Collection)"
+			},
+			"slice": {
+				"code": "mylist.subList( start, end );",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#subList(int, int)"
+			},
+			"for-each": {
+				"code": "for( String elm : mylist ) {…}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html#jls-14.14.2"
+			},
+			"for-each-associative": {
+				"code": "for( String key : mymap.keySet() ) {\n    String value = mymap.get(key);\n    …\n} foreach( $myarray as $mykey => $myval ) {…}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html#jls-14.14.2"
+			},
+			"keys": {
+				"code": "mymap.keySet()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Map.html#keySet()"
+			},
+			"values": {
+				"code": "mymap.values()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Map.html#values()"
+			},
+			"contains": {
+				"code": "mylist.contains(val)",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#contains(java.lang.Object)"
+			},
+			"index-of": {
+				"code": "myarray.indexOf(val)",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#indexOf(java.lang.Object)"
+			},
+			"sort": {
+				"code": "java.util.Collections.sort( mylist,\n    new Comparator<String>() {\n        public int compare (String a, String a ) {…}\n    })",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#sort(java.util.List, java.util.Comparator)"
+			}
+		},
+		"functions": {
+			"n-arguments": {
+				"code": "int mymethod( int...args ) {\n    for( int i : args ) {\n        …\n    }\n}",
+				"version": "5.0",
+				"api": "http://www.java-tips.org/java-se-tips/java.lang/how-to-pass-unspecified-number-of-arguments-to-a-m.html"
+			},
+			"overloading": {
+				"code": "function myfunc( int arg ) {…}\nfunction myfunc( float arg ) {…}\nfunction myfunc( String arg ) {…}\n",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4.9"
+			},
+		},
+		"objects": {
+			"define-class": {
+				"code": "class MyClass {…}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1"
+			},
+			"instantiate-class": {
+				"code": "MyClass myinstance = new MyClass();",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.9"
+			},
+			"instance-of": {
+				"code": "$myobj instanceof MyClass",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.20.2"
+			},
+			"define-field": {
+				"code": "class MyClass {\n    String myfield;\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.2"
+			},
+			"access-field": {
+				"code": "myinstance.myfield",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.11"
+			},
+			"define-method": {
+				"code": "class MyClass {\n    function mymethod( $arg1, $arg2 ) {…}\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4"
+			},
+			"call-method": {
+				"code": "myinstance.mymethod( val1, val2 )",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.12"
+			},
+			"this": {
+				"code": "this",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.8.3"
+			},
+			"define-constant": {
+				"code": "class MyClass {\n    public static final int MYCONSTANT = 27;\n    …\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.12.4"
+			},
+			"access-constant": {
+				"code": "MyClass.MYCONSTANT",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.28"
+			},
+			"define-class-field": {
+				"code": "class MyClass {\n    public static int myclassfield;\n    …\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.3.1.1"
+			},
+			"access-class-field": {
+				"code": "MyClass.myclassfield",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.3.1.1"
+			},
+			"define-class-method": {
+				"code": "class MyClass {\n    public static int myclassmethod() {…}\n    …\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4.3.2"
+			},
+			"call-class-method": {
+				"code": "MyClass.myclassmethod()",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4.3.2"
+			},
+			"constructor": {
+				"code": "class MyClass {\n    MyClass() {…}\n    …\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.8"
+			},
+			"inheritance": {
+				"code": "class MyChildClass extends MyParentClass {…}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.4"
+			},
+			"parent-method": {
+				"code": "class MyChildClass extends MyParentClass {\n    function mymethod() {\n        super.mymethod();\n    }\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.12"
+			},
+			"declare-public": {
+				"code": "class MyClass {\n    public int myfield;\n    public int mymethod() {…}\n    …\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.6"
+			},
+			"declare-protected": {
+				"code": "class MyClass {\n    protected int myfield;\n    protected int mymethod() {…}\n    …\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.6"
+			},
+			"declare-private": {
+				"code": "class MyClass {\n    private int myfield;\n    private int mymethod() {…}\n    …\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.6"
+			},
+			"declare-final": {
+				"code": "class MyClass {\n    public final int mymethod() {…}\n    …\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4.3.3"
+			},
+			"declare-interface": {
+				"code": "interface MyInterface {\n    public function myfunction();\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-9.html#jls-9.1"
+			},
+			"implement-interface": {
+				"code": "class MyClass implements MyInterface {\n    public function myfunction() {…}\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.5"
+			},
+			"abstract-class": {
+				"code": "abstract class MyClass {\n    public abstract function myAbstractFunction();\n\n    public function myConcreteFunction(…);\n}",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.1.1"
+			}
+		}
+	}
+}

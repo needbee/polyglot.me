@@ -1,11 +1,12 @@
 {
 	"tools": [
-		"php",
-		"ruby",
+		"cocoa",
+		"datejs",
+		"java",
 		"js",
 		"jquery",
-		"underscore",
-		"datejs",
-		"cocoa"
+		"php",
+		"ruby",
+		"underscore"
 	]
 }
