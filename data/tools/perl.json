@@ -1,0 +1,311 @@
+{
+	"id": "perl",
+	"name": "Perl",
+	"api": "http://perldoc.perl.org/index-language.html",
+	"featuresets": {
+		"types": {
+			"string-to-int": {
+				"code": "$mystr + 0",
+				"api": "http://stackoverflow.com/questions/288900/how-can-i-convert-a-string-to-a-number-in-perl"
+			},
+			"int-to-string": {
+				"code": "\"$myint\"",
+				"api": "http://progzoo.net/wiki/Perl:Convert_a_Number_to_a_String"
+			},
+			"string-to-float": {
+				"code": "$mystr + 0",
+				"api": "http://stackoverflow.com/questions/288900/how-can-i-convert-a-string-to-a-number-in-perl"
+			},
+			"float-to-string": {
+				"code": "\"$myfloat\"",
+				"api": "http://progzoo.net/wiki/Perl:Convert_a_Number_to_a_String"
+			},
+			"float-to-int": {
+				"code": "int $myfloat",
+				"api": "http://perldoc.perl.org/functions/int.html"
+			}
+		},
+		"strings": {
+			"length": {
+				"code": "length($mystring)",
+				"api": "http://perldoc.perl.org/functions/length.html"
+			},
+			"comparison": {
+				"code": "$a eq $b",
+				"api": "http://perldoc.perl.org/perlop.html#Equality-Operators"
+			},
+			"lowercase": {
+				"code": "lc $str",
+				"api": "http://perldoc.perl.org/functions/lc.html"
+			},
+			"uppercase": {
+				"code": "uc $str",
+				"api": "http://perldoc.perl.org/functions/uc.html"
+			},
+			"substring": {
+				"code": "substr $str, $start[, $length]",
+				"api": "http://perldoc.perl.org/functions/substr.html"
+			},
+			"concatenate": [
+				{
+					"code": "$a . $b",
+					"api": "http://perldoc.perl.org/perlop.html#Additive-Operators"
+				},
+				{
+					"code": "\"fixed text $a $b\"",
+					"api": "http://perldoc.perl.org/perlop.html#Quote-and-Quote-like-Operators"
+				}
+			],
+			"index-of": {
+				"code": "index $str, $mysubstring",
+				"api": "http://perldoc.perl.org/functions/index.html"
+			},
+			"split-on-string": {
+				"code": "split $delim, $str",
+				"api": "http://perldoc.perl.org/functions/split.html"
+			},
+			"split-on-regex": {
+				"code": "split $delim, $str",
+				"api": "http://perldoc.perl.org/functions/split.html"
+			},
+			"join": {
+				"code": "join $delim, $myarray",
+				"api": "http://perldoc.perl.org/functions/join.html"
+			},
+			"regex-match": {
+				"code": "$str =~ $myregex",
+				"api": "http://perldoc.perl.org/perlre.html"
+			},
+			"regex-find": {
+				"code": "while( $str =~ /…/g ) {…}",
+				"api": "http://perldoc.perl.org/perlretut.html#Using-regular-expressions-in-Perl"
+			},
+			"regex-replace": {
+				"code": "$str =~ s/…/…/g",
+				"api": "http://perldoc.perl.org/perlretut.html#Search-and-replace"
+			}
+		},
+		"math": {
+			"floor": {
+				"code": "use POSIX;\nfloor($myfloat)",
+				"api": "http://perldoc.perl.org/POSIX.html#floor"
+			},
+			"ceiling": {
+				"code": "use POSIX;\nceil($myfloat)",
+				"api": "http://perldoc.perl.org/POSIX.html#ceil"
+			},
+			"round": {
+				"code": "printf(\"%.0f\",$myfloat)",
+				"api": "http://perldoc.perl.org/perlfaq4.html#Does-Perl-have-a-round()-function%3f-What-about-ceil()-and-floor()%3f-Trig-functions%3f"
+			},
+			"random": {
+				"code": "min+int(rand(max-min+1))",
+				"api": "http://perldoc.perl.org/functions/rand.html"
+			},
+			"min": {
+				"code": "use List::Util qw(min);\nmin @myarray",
+				"api": "http://search.cpan.org/~pevans/Scalar-List-Utils-1.36/lib/List/Util.pm#$num_=_min_@list"
+			},
+			"max": {
+				"code": "use List::Util qw(max);\nmax @myarray",
+				"api": "http://search.cpan.org/~pevans/Scalar-List-Utils-1.36/lib/List/Util.pm#$num_=_max_@list"
+			}
+		},
+		"dates": {
+			"date-object": {
+				"code": "use DateTime;\nDateTime->now()",
+				"api": "http://search.cpan.org/~drolsky/DateTime-1.06/lib/DateTime.pm#DateTime->now(_..._)"
+			},
+			"timestamp": {
+				"code": "time()",
+				"api": "http://perldoc.perl.org/functions/time.html"
+			},
+			"format": {
+				"code": "$mydate->format($myformat)",
+				"api": "http://search.cpan.org/~drolsky/DateTime-1.06/lib/DateTime.pm#$dt->strftime(_$format,_..._)"
+			},
+			"parse": {
+				"code": "use DateTime::Format::Strptime;\n$strp = DateTime::Format::Strptime->new($myformat)\n$strp->parse_datetime($mystring);\n",
+				"api": "http://search.cpan.org/~drolsky/DateTime-Format-Strptime-1.54/lib/DateTime/Format/Strptime.pm"
+			},
+			"compare": {
+				"code": "$a->compare($b)",
+				"api": "http://search.cpan.org/~drolsky/DateTime-1.06/lib/DateTime.pm#DateTime->compare(_$dt1,_$dt2_),_DateTime->compare_ignore_floating(_$dt1,_$dt2_)"
+			},
+			"offset": {
+				"code": "$mydate->add( months => 5 )",
+				"api": "http://search.cpan.org/~drolsky/DateTime-1.06/lib/DateTime.pm#$dt->add(_DateTime::Duration->new_parameters_)"
+			}
+		},
+		"collections": {
+			"define": {
+				"code": "@myarray = (1,2,3,…)",
+				"api": "http://perldoc.perl.org/perldata.html#List-value-constructors"
+			},
+			"define-associative": {
+				"code": "%myhash = array(\"key1\"=>\"val1\", \"key2\"=>\"val2\",…)",
+				"api": "http://www.zentut.com/perl-tutorial/perl-hash/"
+			},
+			"length": {
+				"code": "scalar(@myarray)",
+				"api": "http://perldoc.perl.org/functions/scalar.html"
+			},
+			"push": {
+				"code": "push $myval, @myarray",
+				"api": "http://perldoc.perl.org/functions/push.html"
+			},
+			"pop": {
+				"code": "pop @myarray",
+				"api": "http://perldoc.perl.org/functions/pop.html"
+			},
+			"merge": {
+				"code": "( @a, @b )",
+				"api": "http://www.perlmonks.org/?node_id=733384"
+			},
+			"slice": {
+				"code": "@myarray[$start..$end]",
+				"api": "http://www.devshed.com/c/a/Perl/Array-Manipulation-in-Perl/7/"
+			},
+			"for-each": {
+				"code": "foreach $myval (@myarray) {…}",
+				"api": "http://perldoc.perl.org/perlsyn.html#Compound-Statements"
+			},
+			"for-each-associative": {
+				"code": "foreach $key (keys @myarray) {\n    $val = $myarray[$key];\n    …\n}",
+				"api": "http://perldoc.perl.org/perlsyn.html#Compound-Statements"
+			},
+			"keys": {
+				"code": "keys @myarray",
+				"api": "http://perldoc.perl.org/functions/keys.html"
+			},
+			"values": {
+				"code": "values @myarray",
+				"api": "http://perldoc.perl.org/functions/values.html"
+			},
+			"contains": {
+				"code": "grep $val, @myarray",
+				"api": "http://perldoc.perl.org/functions/grep.html"
+			},
+			"filter": {
+				"code": "grep {…} @myarray",
+				"api": "http://perldoc.perl.org/functions/grep.html"
+			},
+			"map": {
+				"code": "map {…} @myarray",
+				"api": "http://perldoc.perl.org/functions/map.html"
+			},
+			"reduce": {
+				"code": "use List::Util;\nreduce {…} @myarray",
+				"api": "http://perldoc.perl.org/List/Util.html#reduce-BLOCK-LIST"
+			},
+			"sort": {
+				"code": "sort {…} @array",
+				"api": "http://perldoc.perl.org/functions/sort.html"
+			}
+		},
+		"functions": {
+			"define": {
+				"code": "sub myfunc {\n    my($arg1,$arg2) = @_;\n    …\n}",
+				"api": "http://perldoc.perl.org/perlsub.html#DESCRIPTION"
+			},
+			"call": {
+				"code": "myfunc( $val1, $val2 )",
+				"api": "http://perldoc.perl.org/perlsub.html#DESCRIPTION"
+			},
+			"default-arguments": {
+				"code": "sub myfunc {\n    my $arg1 = shift || 'default'\n    …\n}",
+				"api": "http://www.perlmonks.org/?node_id=161091"
+			},
+			"n-arguments": {
+				"code": "sub myfunc() {\n    @args = @_;\n    …\n}",
+				"api": "http://perldoc.perl.org/perlsub.html#DESCRIPTION"
+			},
+			"named-arguments": {
+				"code": "sub myfunc {\n    my %args = @_;\n    …\n}\n\nmyfunc({arg1=>$val1, arg2=>$val2});",
+				"api": "http://www.devshed.com/c/a/Perl/Subroutines-in-Perl/3/"
+			},
+			"overloading": {
+				"code": "sub myfunc() {\n    @args = @_;\n    …\n}",
+				"api": "http://perldoc.perl.org/perlsub.html#DESCRIPTION"
+			},
+			"define-closure": {
+				"code": "$closurevar = sub {…};",
+				"api": "http://www.perl.com/pub/2002/05/29/closure.html"
+			},
+			"call-closure": {
+				"code": "$closurevar->( $val1, $val2 )",
+				"api": "http://www.perl.com/pub/2002/05/29/closure.html"
+			}
+		},
+		"objects": {
+			"define-class": {
+				"code": "package MyClass;\n\nsub new {\n    my $class = shift;\n    return bless {}, class;\n}",
+				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
+			},
+			"instantiate-class": {
+				"code": "$myinstance = MyClass->new();",
+				"api": "http://perldoc.perl.org/perlobj.html#Method-Invocation"
+			},
+			"instance-of": {
+				"code": "$myobj->isa('MyClass')",
+				"api": "http://perldoc.perl.org/UNIVERSAL.html#%24obj-%3eisa(-TYPE-)"
+			},
+			"define-field": {
+				"code": "package MyClass;\n\nsub new {\n    my $class = shift;\n    return bless {\n        field => 'value',\n    \n}, class;\n}",
+				"api": "http://perldoc.perl.org/perlobj.html#Writing-Constructors"
+			},
+			"access-field": {
+				"code": "$myinstance->myfield",
+				"api": "http://perldoc.perl.org/perlobj.html"
+			},
+			"define-method": {
+				"code": "package MyClass;\n\nsub mymethod {\n    my $self = shift;\n    …;\n}",
+				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
+			},
+			"call-method": {
+				"code": "$myinstance->mymethod( $val1, $val2 )",
+				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
+			},
+			"this": {
+				"code": "package MyClass;\n\nsub mymethod {\n    my $self = shift;\n    …;\n}",
+				"api": "http://perldoc.perl.org/perlobj.html#Writing-Accessors"
+			},
+			"define-class-field": {
+				"code": "package MyClass;\nour $myclassfield = 'default value';",
+				"api": "http://stackoverflow.com/questions/5536784/perl-static-class-properties"
+			},
+			"access-class-field": {
+				"code": "$MyClass::myclassfield",
+				"api": "http://stackoverflow.com/questions/5536784/perl-static-class-properties"
+			},
+			"define-class-method": {
+				"code": "package MyClass;\n\nsub myclassmethod {\n    my $self = shift;\n    …;\n} # same as normal method",
+				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
+			},
+			"call-class-method": {
+				"code": "MyClass->myclassmethod()",
+				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
+			},
+			"constructor": {
+				"code": "package MyClass;\n\nsub new {\n    my $class = shift;\n    return bless {}, class;\n}",
+				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
+			},
+			"inheritance": {
+				"code": "package MyChildClass;\nuse parent MyParentClass;",
+				"api": "http://perldoc.perl.org/perlobj.html#Inheritance"
+			},
+			"parent-method": {
+				"code": "class MyChildClass extends MyParentClass {\n    function mymethod() {\n        my $self = shift;\n        $self->SUPER::mymethod();\n    }\n}",
+				"api": "http://perldoc.perl.org/perlobj.html#Inheritance"
+			},
+			"declare-public": {
+				"code": "package MyClass;\n\nsub mypublicmethod {…}",
+				"api": "http://www.perlmonks.org/?node_id=807145"
+			},
+			"declare-private": {
+				"code": "package MyClass;\n\nmy $myprivatefield = 27;\nmy $myprivatemethod = sub {…};\n# accessed as $self->$myprivatemethod()",
+				"api": "http://www.perlmonks.org/?node_id=807145"
+			}
+		}
+	}
+}
