@@ -21,6 +21,7 @@ ul.list-inline {
 	margin-left: 8px;
 }
 
+/*
 .navbar-default .navbar-nav>li>a:link,
 .navbar-default .navbar-nav>li>a:visited {
 	color: #428bca;
@@ -33,6 +34,18 @@ ul.list-inline {
 	color: #2a6496;
 	text-decoration: underline;
 }
+
+.navbar-default .navbar-nav>li>a.dropdown-toggle:link,
+.navbar-default .navbar-nav>li>a.dropdown-toggle:visited {
+	color: #428bca;
+}
+
+.navbar-default .navbar-nav>li>a.dropdown-toggle:hover,
+.navbar-default .navbar-nav>li>a.dropdown-toggle:focus {
+	color: #2a6496;
+	text-decoration: none;
+}
+*/
 
 footer {
 	border-top: solid 1px #999;

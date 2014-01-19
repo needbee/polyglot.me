@@ -56,11 +56,15 @@
 		<script type="text/template" id="tools-tmpl">
 			<ul class="nav navbar-nav navbar-left">
 				<% if( toolsRemaining.length ) { %>
-					<p class="navbar-text">Choose your tools:</p>
+					<li class="dropdown">
+				        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Add a Tool <b class="caret"></b></a>
+				        <ul class="dropdown-menu">
+							<% _.each( toolsRemaining, function(tool) { %>
+								<li><a href="<%= cheatsheet.baseWebUrl + _.union(toolsToUse,[tool]).join('+') %>" class="add-tool"><%= tool %></a></li>
+							<% }); %>
+				        </ul>
+				    </li>
 				<% } %>
-				<% _.each( toolsRemaining, function(tool) { %>
-					<li><a href="<%= cheatsheet.baseWebUrl + _.union(toolsToUse,[tool]).join('+') %>" class="add-tool"><%= tool %></a></li>
-				<% }); %>
 			</ul>
 		</script>
 		<script type="text/template" id="search-tmpl">
