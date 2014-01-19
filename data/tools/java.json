@@ -56,6 +56,7 @@
 				},
 				{
 					"code": "StringBuilder buf = new StringBuilder();\nbuf.append(a);\nbuf.append(b);\nbuf.append(c);\nbuf.toString();",
+					"version": "1.5",
 					"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html"
 				}
 			],
