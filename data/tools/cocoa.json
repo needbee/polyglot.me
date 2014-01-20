@@ -3,6 +3,11 @@
 	"name": "Cocoa",
 	"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/ObjC_classic/_index.html",
 	"featuresets": {
+		"basics": {
+			"hello-world": {
+				"code": "<html>\n<head>\n</head>\n<body>\n<?php echo \"Hello, World!\"; ?>\n</body>\n</html>"
+			}
+		},
 		"types": {
 			"string-to-int": {
 				"code": "[mystr intValue]",

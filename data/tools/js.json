@@ -3,6 +3,11 @@
 	"name": "JavaScript",
 	"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
 	"featuresets": {
+		"basics": {
+			"hello-world": {
+				"code": "<html>\n<head>\n<script type=\"text/javascript\">\nconsole.log(\"Hello, World!\")\n</script>\n</head>\n<body>\n</body>\n</html>"
+			}
+		},
 		"types": {
 			"string-to-int": {
 				"code": "parseInt( mystr )",

@@ -3,6 +3,12 @@
 	"name": "Java",
 	"api": "http://docs.oracle.com/javase/7/docs/api/",
 	"featuresets": {
+		"basics": {
+			"hello-world": {
+				"code": "class HelloWorldApp {\n    public static void main(String[] args)\n    {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+				"api": "http://docs.oracle.com/javase/tutorial/getStarted/cupojava/unix.html#unix-2a"
+			}
+		},
 		"types": {
 			"string-to-int": {
 				"code": "Integer.parseInt( mystr )",

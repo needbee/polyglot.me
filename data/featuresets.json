@@ -1,6 +1,17 @@
 {
 	"featuresets": [
 		{
+			"id": "basics",
+			"name": "Basics",
+			"features": [
+				{
+					"id": "hello-world",
+					"name": "Hello, World!",
+					"description": "a full program that displays \"Hello, World!\""
+				}
+			]
+		},
+		{
 			"id": "types",
 			"name": "Types",
 			"features": [

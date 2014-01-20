@@ -3,6 +3,11 @@
 	"name": "Ruby",
 	"api": "http://www.ruby-doc.org/core-2.1.0/",
 	"featuresets": {
+		"basics": {
+			"hello-world": {
+				"code": "#!/usr/bin/env ruby\nputs \"Hello, World!\""
+			}
+		},
 		"types": {
 			"string-to-int": {
 				"code": "mystr.to_i",

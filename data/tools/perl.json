@@ -3,6 +3,12 @@
 	"name": "Perl",
 	"api": "http://perldoc.perl.org/index-language.html",
 	"featuresets": {
+		"basics": {
+			"hello-world": {
+				"code": "#!/usr/bin/perl\nprint \"Hello, World!\\n\";",
+				"api": "http://www.troubleshooters.com/codecorn/littperl/perlhelo.htm"
+			}
+		},
 		"types": {
 			"string-to-int": {
 				"code": "$mystr + 0",

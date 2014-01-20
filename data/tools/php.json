@@ -3,6 +3,11 @@
 	"name": "PHP",
 	"api": "http://www.php.net/manual/en/",
 	"featuresets": {
+		"basics": {
+			"hello-world": {
+				"code": "<html>\n<head>\n</head>\n<body>\n<?php echo \"Hello, World!\"; ?>\n</body>\n</html>"
+			}
+		},
 		"types": {
 			"string-to-int": {
 				"code": "intval( $mystr )",
