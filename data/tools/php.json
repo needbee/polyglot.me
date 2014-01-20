@@ -173,6 +173,22 @@
 				"code": "count($myarray)",
 				"api": "http://www.php.net/manual/en/function.count.php"
 			},
+			"set": {
+				"code": "$myarray[$index] = $value",
+				"api": "http://www.php.net/manual/en/language.types.array.php"
+			},
+			"set-associative": {
+				"code": "$myarray[$key] = $value",
+				"api": "http://www.php.net/manual/en/language.types.array.php"
+			},
+			"get": {
+				"code": "$myarray[$index]",
+				"api": "http://www.php.net/manual/en/language.types.array.php"
+			},
+			"get-associative": {
+				"code": "$myarray[$key]",
+				"api": "http://www.php.net/manual/en/language.types.array.php"
+			},
 			"push": {
 				"code": "array_push( $myarray, $myval )",
 				"api": "http://php.net/manual/en/function.array-push.php"

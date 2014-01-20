@@ -150,6 +150,22 @@
 				"code": "myarray.count",
 				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-count"
 			},
+			"set": {
+				"code": "myarray[index] = value",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-5B-5D-3D"
+			},
+			"set-associative": {
+				"code": "myhash[key] = value",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Hash.html#method-i-5B-5D-3D"
+			},
+			"get": {
+				"code": "myarray[index]",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#class-Array-label-Accessing+Elements"
+			},
+			"get-associative": {
+				"code": "myhash[key]",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Hash.html"
+			},
 			"push": {
 				"code": "myarray.push( myval )",
 				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-push"

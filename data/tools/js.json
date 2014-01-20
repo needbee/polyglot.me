@@ -142,6 +142,22 @@
 				"code": "myarray.length",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length"
 			},
+			"set": {
+				"code": "myarray[index] = value",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Accessing_array_elements"
+			},
+			"set-associative": {
+				"code": "myarray[key] = value",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Accessing_array_elements"
+			},
+			"get": {
+				"code": "myarray[index]",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Accessing_array_elements"
+			},
+			"get-associative": {
+				"code": "myarray[key]",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Accessing_array_elements"
+			},
 			"push": {
 				"code": "myarray.push( myval )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"

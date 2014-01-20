@@ -139,16 +139,32 @@
 		},
 		"collections": {
 			"define": {
-				"code": "List mylist = new ArrayList();",
+				"code": "List<type> mylist = new ArrayList<type>();",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html#ArrayList()"
 			},
 			"define-associative": {
-				"code": "Map mymap = new HashMap();",
+				"code": "Map<type> mymap = new HashMap<type>();",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html#HashMap()"
 			},
 			"length": {
 				"code": "mylist.size()",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#size()"
+			},
+			"set": {
+				"code": "mylist.add( index, value )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#add(int, E)"
+			},
+			"set-associative": {
+				"code": "mymap.put( key, value )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Map.html#put(K, V)"
+			},
+			"get": {
+				"code": "mylist.get( index )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#get(int)"
+			},
+			"get-associative": {
+				"code": "mymap.get( key )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Map.html#get(java.lang.Object)"
 			},
 			"push": {
 				"code": "Deque deque = new ArrayDeque<type>();\ndeque.push( myval )",

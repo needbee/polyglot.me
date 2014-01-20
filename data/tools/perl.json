@@ -150,6 +150,22 @@
 				"code": "scalar(@myarray)",
 				"api": "http://perldoc.perl.org/functions/scalar.html"
 			},
+			"set": {
+				"code": "$myarray[$index] = $value",
+				"api": "http://perldoc.perl.org/perldata.html"
+			},
+			"set-associative": {
+				"code": "$myhash{$key} = $value",
+				"api": "http://perldoc.perl.org/perldata.html"
+			},
+			"get": {
+				"code": "$myarray[$index]",
+				"api": "http://perldoc.perl.org/perldata.html#Variable-names"
+			},
+			"get-associative": {
+				"code": "$myhash{$key}",
+				"api": "http://perldoc.perl.org/perldata.html#Variable-names"
+			},
 			"push": {
 				"code": "push $myval, @myarray",
 				"api": "http://perldoc.perl.org/functions/push.html"

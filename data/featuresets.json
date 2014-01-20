@@ -199,6 +199,26 @@
 					"description": "return the number of elements in array myarray (a.k.a. size, count)"
 				},
 				{
+					"id": "get",
+					"name": "Get",
+					"description": "get an element from an array"
+				},
+				{
+					"id": "get-associative",
+					"name": "Get Associative",
+					"description": "get an element from an associative array"
+				},
+				{
+					"id": "set",
+					"name": "Set",
+					"description": "set an element in an array"
+				},
+				{
+					"id": "set-associative",
+					"name": "Set Associative",
+					"description": "set an element in an associative array"
+				},
+				{
 					"id": "push",
 					"name": "Push",
 					"description": "add value myval onto end of array myarray"

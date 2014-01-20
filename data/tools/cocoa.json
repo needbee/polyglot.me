@@ -153,6 +153,22 @@
 				"code": "myarray.count",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABDBHHI"
 			},
+			"set": {
+				"code": "[mymutablearray setObject:value atIndexedSubscript:index]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/doc/uid/20000138-SW7"
+			},
+			"set-associative": {
+				"code": "[mymutabledict setObject:value forKey:key]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableDictionary_Class/Reference/Reference.html#//apple_ref/doc/uid/20000141-BABBDAFD"
+			},
+			"get": {
+				"code": "[myarray objectAtIndex:index]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABDJBFC"
+			},
+			"get-associative": {
+				"code": "[mydict objectForKey:key]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html#//apple_ref/doc/uid/20000140-CBHCDIDJ"
+			},
 			"push": {
 				"code": "[mymutablearray addObject:myval]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/doc/uid/20000138-BABDEFAA"
