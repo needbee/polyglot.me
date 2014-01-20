@@ -106,7 +106,6 @@ requirejs([
 		model: cheatsheet.Tool
 	});
 
-	/*
 	cheatsheet.ToolsView = Backbone.View.extend({
 		el: $('#tools'),
 		template: $('#tools-tmpl').html(),
@@ -138,7 +137,6 @@ requirejs([
 			}
 		}
 	});
-	*/
 
 	cheatsheet.SearchView = Backbone.View.extend({
 		el: $('#search'),
@@ -265,7 +263,7 @@ requirejs([
 				var id;
 				var tool;
 				cheatsheet.tools = new cheatsheet.ToolCollection(); //[];
-				// cheatsheet.toolsView = new cheatsheet.ToolsView(cheatsheet.allTools,cheatsheet.tools);
+				cheatsheet.toolsView = new cheatsheet.ToolsView(cheatsheet.allTools,cheatsheet.tools);
 				cheatsheet.tableView = new cheatsheet.TableView(
 					cheatsheet.featureSets, cheatsheet.tools, cheatsheet.allTools
 				);
