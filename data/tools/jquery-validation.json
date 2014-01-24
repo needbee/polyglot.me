@@ -1,0 +1,13 @@
+{
+	"id": "jquery-validation",
+	"name": "jQuery Validation",
+	"api": "http://jqueryvalidation.org/documentation/",
+	"featuresets": {
+		"mvc": {
+			"validate": {
+				"code": "$('#myform').validate({\n    rules: {\n        myfield: {\n            required:true,\n            maxlength:20\n        }\n    }\n});\n// automatically runs on submit",
+				"api": "http://jqueryvalidation.org/validate"
+			}
+		}
+	}
+}
