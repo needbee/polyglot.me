@@ -1,7 +1,7 @@
 {
 	"id": "rails",
 	"name": "Rails",
-	"api": "http://api.rubyonrails.org/",
+	"api": "http://guides.rubyonrails.org/",
 	"featuresets": {
 		"http-server": {
 			"output": {
@@ -51,6 +51,50 @@
 			"redirect": {
 				"code": "redirect_to url\nredirect_to action:action_name",
 				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-redirect-to"
+			}
+		},
+		"mvc": {
+			"route": {
+				"code": [
+					{
+						"file": "config/routes.rb",
+						"contents": "get '/product/:num', to: 'catalog#product_lookup'"
+					}
+				],
+				"api": "http://guides.rubyonrails.org/routing.html"
+			},
+			"controller-action": {
+				"code": "class SampleController < ApplicationController\n    def myaction\n    end\nend",
+				"api": "http://guides.rubyonrails.org/action_controller_overview.html#methods-and-actions"
+			},
+			"render-view": {
+				"code": "@variable_for_view = 27\nrender 'viewname'\n# if render not called, view with same name as action is rendered by default",
+				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html"
+			},
+			"url": {
+				"code": "action('MyController@myAction', $params);\nroute('routename', $params);",
+				"api": "http://laravel.com/docs/helpers#urls"
+			},
+			"output-form-element": {
+				"code": "<%= form_for :mymodel do |f|\n    <%= f.text_area :myfield %>\n<% end %>",
+				"api": "http://guides.rubyonrails.org/getting_started.html#the-first-form"
+			},
+			"validate": {
+				"code": [
+					{
+						"file": "my_model.rb",
+						"contents": "class My_Model < ActiveRecord::Base\n    validates :myfield, required: true, length: { maximum: 20 }\nend"
+					},
+					{
+						"file": "my_controller.rb",
+						"contents": "if @mymodel.save\n    …\nelse\n    @errors = @mymodel.errors\nend"
+					}
+				],
+				"api": "http://guides.rubyonrails.org/getting_started.html#adding-some-validation"
+			},
+			"log": {
+				"code": "logger.info 'hello, log!'",
+				"api": "http://mikenaberezny.com/2007/02/24/rails-logging-tips/"
 			}
 		}
 	}

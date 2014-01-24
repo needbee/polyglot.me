@@ -48,6 +48,41 @@
 				"code": "Redirect::to(url)\nRedirect::route(mynamedroute,array('param'=>'val'))",
 				"api": "http://laravel.com/docs/responses#redirects"
 			}
+		},
+		"mvc": {
+			"route": {
+				"code": [
+					{
+						"file": "app/routes.php",
+						"contents": "Route::get('product/{num}', 'CatalogController@productLookup');"
+					}
+				],
+				"api": "http://laravel.com/docs/controllers#basic-controllers"
+			},
+			"controller-action": {
+				"code": "class SampleController extends BaseController {\n    public function myaction($id) {…}\n}",
+				"api": "http://laravel.com/docs/controllers#basic-controllers"
+			},
+			"render-view": {
+				"code": "return View::make('viewname', $data)",
+				"api": "http://laravel.com/docs/responses#views"
+			},
+			"url": {
+				"code": "action('MyController@myAction', $params);\nroute('routename', $params);",
+				"api": "http://laravel.com/docs/helpers#urls"
+			},
+			"output-form-element": {
+				"code": "echo Form::model($user, array('route' => array('user.update', $user->id)))\necho Form::text('myfield', 'mydefaultvalue');",
+				"api": "http://laravel.com/docs/html"
+			},
+			"validate": {
+				"code": "$validator = Validator::make($data, array( 'myfield' => 'required|min:8', … ));\nif( $validator->fails() ) {\n    $messages = $validator->messages();\n    …\n}",
+				"api": "http://laravel.com/docs/validation#basic-usage"
+			},
+			"log": {
+				"code": "Log::info('hello, log!')",
+				"api": "http://laravel.com/docs/errors#logging"
+			}
 		}
 	}
 }

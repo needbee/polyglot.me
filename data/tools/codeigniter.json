@@ -48,6 +48,41 @@
 				"code": "$this->load->helper('url');\nredirect( $url );",
 				"api": "http://ellislab.com/codeigniter/user-guide/helpers/url_helper.html"
 			}
+		},
+		"mvc": {
+			"route": {
+				"code": [
+					{
+						"file": "application/config/routes.php",
+						"contents": "$route['product/:num'] = \"catalog/product_lookup\";"
+					}
+				],
+				"api": "http://ellislab.com/codeigniter/user-guide/general/routing.html"
+			},
+			"controller-action": {
+				"code": "class SampleController extends CI_Controller {\n    public function myaction($id) {…}\n}",
+				"api": "http://ellislab.com/codeigniter/user-guide/general/controllers.html#hello"
+			},
+			"render-view": {
+				"code": "$this->load->view('viewname', $data)",
+				"api": "http://ellislab.com/codeigniter/user-guide/general/views.html"
+			},
+			"url": {
+				"code": "$this->load->helper('url');\necho site_url('path/to/action/123');",
+				"api": "http://ellislab.com/codeigniter/user-guide/helpers/url_helper.html"
+			},
+			"output-form-element": {
+				"code": "$this->load->helper('form');\necho form_input(array('name'=>'fieldname', 'value'=>set_value('fieldname','mydefault')));",
+				"api": "http://ellislab.com/codeigniter/user-guide/helpers/form_helper.html"
+			},
+			"validate": {
+				"code": "$this->load->library('form_validation');\n$this->form_validation->set_rules('myfield', 'My Field', 'required|max_length[20]');\nif ($this->form_validation->run() == FALSE) {\n    $myerrors = validation_errors();\n    …\n}",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html"
+			},
+			"log": {
+				"code": "log_message('debug','hello, log!);",
+				"api": "http://ellislab.com/codeigniter/user-guide/general/errors.html"
+			}
 		}
 	}
 }
