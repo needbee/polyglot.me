@@ -1,12 +1,15 @@
 {
 	"tools": [
 		"cocoa",
+		"codeigniter",
 		"datejs",
 		"java",
 		"jquery",
 		"js",
+		"laravel",
 		"perl",
 		"php",
+		"rails",
 		"ruby",
 		"underscore"
 	]

@@ -391,6 +391,56 @@
 				"code": "abstract class MyClass {\n    abstract protected function myAbstractFunction();\n\n    public function myConcreteFunction(…);\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.abstract.php"
 			}
+		},
+		"http-server": {
+			"output": {
+				"code": "echo \"Hello, World!\"",
+				"api": "http://php.net/manual/en/function.echo.php"
+			},
+			"get-data": {
+				"code": "$_GET['myvar']",
+				"api": "http://php.net/manual/en/reserved.variables.get.php"
+			},
+			"post-data-form": {
+				"code": "$_POST['myvar']",
+				"api": "http://www.php.net/manual/en/reserved.variables.post.php"
+			},
+			"post-data-raw": {
+				"code": "file_get_contents(\"php://input\")",
+				"api": "http://us.php.net/manual/en/wrappers.php.php"
+			},
+			"uploaded-file": {
+				"code": "$_FILES['filefieldname']\n// has fields name, type, size, tmp_name, and error\nmove_uploaded_file( $_FILES['filefieldname']['tmp_name'], 'path/to/destination.ext' )",
+				"api": "http://www.php.net/manual/en/reserved.variables.files.php"
+			},
+			"get-cookie": {
+				"code": "$_COOKIE['cookiename']",
+				"api": "http://www.php.net/manual/en/reserved.variables.cookies.php"
+			},
+			"set-cookie": {
+				"code": "setcookie( $name, $value, $expiration_timestamp, $path_restriction, $domain_restriction, $https_only )",
+				"api": "http://php.net/manual/en/function.setcookie.php"
+			},
+			"get-header": {
+				"code": "$_SERVER['headername']",
+				"api": "http://www.php.net/manual/en/reserved.variables.server.php"
+			},
+			"set-header": {
+				"code": "header( $name_and_value )",
+				"api": "http://php.net/manual/en/function.header.php"
+			},
+			"status-code": {
+				"code": "http_response_code( $code )",
+				"api": "http://php.net/manual/en/function.http-response-code.php"
+			},
+			"content-type": {
+				"code": "header( 'Content-type: ' . $type )",
+				"api": "http://php.net/manual/en/function.header.php"
+			},
+			"redirect": {
+				"code": "header( 'Location: '.$url )",
+				"api": "http://php.net/manual/en/function.header.php"
+			}
 		}
 	}
 }

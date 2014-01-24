@@ -477,6 +477,108 @@
 					"description": "declare a class that provides some functionality but leaves other functionality for child classes to implement, and therefore cannot be instantiated itself"
 				}
 			]
+		},
+		{
+			"id": "http-server",
+			"name": "HTTP Server",
+			"features": [
+				{
+					"id": "output",
+					"name": "Output",
+					"description": "outputs data to the client"
+				},
+				{
+					"id": "get-data",
+					"name": "GET Data",
+					"description": "retrieve a GET (query string) field"
+				},
+				{
+					"id": "post-data-form",
+					"name": "POST Data (Form)",
+					"description": "retrieve a POST (form) field"
+				},
+				{
+					"id": "post-data-raw",
+					"name": "POST Data (Raw)",
+					"description": "retrieve the raw POST data, i.e. if it is JSON or XML"
+				},
+				{
+					"id": "uploaded-file",
+					"name": "Uploaded File",
+					"description": "get info and data for an uploaded file"
+				},
+				{
+					"id": "get-cookie",
+					"name": "Get Cookie",
+					"description": "retrieves a cookie sent by the client"
+				},
+				{
+					"id": "set-cookie",
+					"name": "Set Cookie",
+					"description": "sets a cookie to be sent to the client"
+				},
+				{
+					"id": "get-header",
+					"name": "Get Header",
+					"description": "gets a request header sent from the client"
+				},
+				{
+					"id": "set-header",
+					"name": "Set Header",
+					"description": "sets a response header to be sent to the client"
+				},
+				{
+					"id": "status-code",
+					"name": "Status Code",
+					"description": "sets the status code returned"
+				},
+				{
+					"id": "content-type",
+					"name": "Content Type",
+					"description": "sets the content type header"
+				},
+				{
+					"id": "redirect",
+					"name": "Redirect",
+					"description": "redirect to another URL"
+				}
+			]
+		},
+		{
+			"id": "mvc",
+			"name": "Model-View-Controller",
+			"features": [
+				{
+					"id": "route",
+					"name": "Route",
+					"description": "direct a URL to a specific controller action"
+				},
+				{
+					"id": "controller-action",
+					"name": "Controller Action",
+					"description": "run code for a given URL"
+				},
+				{
+					"id": "render-view",
+					"name": "Render View",
+					"description": "generate output to send to the client"
+				},
+				{
+					"id": "output-form-element",
+					"name": "Output Form Element",
+					"description": "outputs HTML for a form element, with initial data and validation errors, if any"
+				},
+				{
+					"id": "validate",
+					"name": "Validate",
+					"description": "validate submitted form data, redisplaying it with errors if any"
+				},
+				{
+					"id": "log",
+					"name": "Log",
+					"description": "write to a log file"
+				}
+			]
 		}
 	]
 }

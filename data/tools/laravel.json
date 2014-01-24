@@ -1,0 +1,53 @@
+{
+	"id": "laravel",
+	"name": "Laravel",
+	"api": "http://laravel.com/docs",
+	"featuresets": {
+		"http-server": {
+			"output": {
+				"code": "return \"Hello, World!\"",
+				"api": "http://laravel.com/docs/quick#routing"
+			},
+			"get-data": {
+				"code": "Input::get('myvar')",
+				"api": "http://laravel.com/docs/requests#basic-input"
+			},
+			"post-data-form": {
+				"code": "Input::get('myvar') // 'get' as in retrieve, not 'get' as in GET method",
+				"api": "http://laravel.com/docs/requests#basic-input"
+			},
+			"uploaded-file": {
+				"code": "Input::file('myfile')->move($destinationPath)",
+				"api": "http://laravel.com/docs/requests#files"
+			},
+			"get-cookie": {
+				"code": "Cookie::get('cookiename')",
+				"api": "http://laravel.com/docs/requests#cookies"
+			},
+			"set-cookie": {
+				"code": "Cookie::queue($name, $value, $minutes)",
+				"api": "http://laravel.com/docs/requests#cookies"
+			},
+			"get-header": {
+				"code": "Request::header('headername')",
+				"api": "http://laravel.com/docs/requests#request-information"
+			},
+			"set-header": {
+				"code": "$response = Response::make($contents, $statusCode);\n$response->header($headername, $value);",
+				"api": "http://laravel.com/docs/responses#basic-responses"
+			},
+			"status-code": {
+				"code": "Response::make($contents, $statusCode)",
+				"api": "http://laravel.com/docs/responses#basic-responses"
+			},
+			"content-type": {
+				"code": "$response = Response::make($contents, $statusCode);\n$response->header('Content-Type', $value);",
+				"api": "http://laravel.com/docs/responses#basic-responses"
+			},
+			"redirect": {
+				"code": "Redirect::to(url)\nRedirect::route(mynamedroute,array('param'=>'val'))",
+				"api": "http://laravel.com/docs/responses#redirects"
+			}
+		}
+	}
+}

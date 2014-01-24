@@ -1,0 +1,53 @@
+{
+	"id": "codeigniter",
+	"name": "CodeIgniter",
+	"api": "http://ellislab.com/codeigniter/user-guide/",
+	"featuresets": {
+		"http-server": {
+			"output": {
+				"code": "$this->output->set_output(\"Hello, World!\")",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/output.html"
+			},
+			"get-data": {
+				"code": "$this->input->get('myvar', true)",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/input.html"
+			},
+			"post-data-form": {
+				"code": "$this->input->post('myvar', true)",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/input.html"
+			},
+			"uploaded-file": {
+				"code": "$config['upload_path'] = './uploads/';\n$config['allowed_types'] = 'gif|jpg|png';\n$config['max_size'] = '100';\n$config['max_width']  = '1024';\n$config['max_height']  = '768';\n$this->load->library('upload', $config);\n\nif ( ! $this->upload->do_upload()) {\n    // error\n} else {\n    $this->upload->data();\n}",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/file_uploading.html"
+			},
+			"get-cookie": {
+				"code": "$this->input->cookie('cookiename')",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/input.html"
+			},
+			"set-cookie": {
+				"code": "$this->input->set_cookie(array( 'name'=>$name, 'value'=>$value, 'expire'=>$seconds_from_now, 'domain'=>$domain, 'path'=>$path, 'prefix'=>$prefix, 'secure'=>$https_only ))",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/input.html"
+			},
+			"get-header": {
+				"code": "$this->input->get_request_header('headername')",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/input.html"
+			},
+			"set-header": {
+				"code": "$this->output->set_header( $name_and_value )",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/output.html"
+			},
+			"status-code": {
+				"code": "$this->output->set_status_header( $code[, $text] )",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/output.html"
+			},
+			"content-type": {
+				"code": "$this->output->set_content_type( $type )",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/output.html"
+			},
+			"redirect": {
+				"code": "$this->load->helper('url');\nredirect( $url );",
+				"api": "http://ellislab.com/codeigniter/user-guide/helpers/url_helper.html"
+			}
+		}
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"id": "rails",
+	"name": "Rails",
+	"api": "http://api.rubyonrails.org/",
+	"featuresets": {
+		"http-server": {
+			"output": {
+				"code": "render text: \"Hello, World!\"",
+				"api": "http://api.rubyonrails.org/classes/AbstractController/Rendering.html#method-i-render"
+			},
+			"get-data": {
+				"code": "params[:myvar]",
+				"api": "http://api.rubyonrails.org/classes/ActionDispatch/Http/Parameters.html#method-i-parameters"
+			},
+			"post-data-form": {
+				"code": "params[:myvar]",
+				"api": "http://api.rubyonrails.org/classes/ActionDispatch/Http/Parameters.html#method-i-parameters"
+			},
+			"post-data-raw": {
+				"code": "request.body.read",
+				"api": "http://api.rubyonrails.org/classes/ActionDispatch/Request.html#method-i-body"
+			},
+			"uploaded-file": {
+				"code": "name =  upload['datafile'].original_filename\ndirectory = \"public/data\"\npath = File.join(directory, name)\nFile.open(path, \"wb\") { |f| f.write(upload['datafile'].read) }",
+				"api": "http://www.tutorialspoint.com/ruby-on-rails/rails-file-uploading.htm"
+			},
+			"get-cookie": {
+				"code": "cookies['cookiename']",
+				"api": "http://api.rubyonrails.org/classes/ActionDispatch/Integration/Session.html#method-i-cookies"
+			},
+			"set-cookie": {
+				"code": "cookies[name] = { :value => value, expires => 1.hour.from_now }",
+				"api": "http://stackoverflow.com/questions/1232174/rails-cookies-set-start-date-and-expire-date"
+			},
+			"get-header": {
+				"code": "request.headers['headername']",
+				"api": "http://api.rubyonrails.org/classes/ActionDispatch/Request.html#method-i-headers"
+			},
+			"set-header": {
+				"code": "headers[header_name] = header_value",
+				"api": "http://stackoverflow.com/questions/6843044/rails-3-response-headers"
+			},
+			"status-code": {
+				"code": "render text:mytext, status: :not_found",
+				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-render"
+			},
+			"content-type": {
+				"code": "render text:mytext, content_type: \"application/json\"",
+				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-render"
+			},
+			"redirect": {
+				"code": "redirect_to url\nredirect_to action:action_name",
+				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-redirect-to"
+			}
+		}
+	}
+}
