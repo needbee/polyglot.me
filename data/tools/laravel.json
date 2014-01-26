@@ -53,7 +53,30 @@
 			"validate": {
 				"code": "$validator = Validator::make($data, array( 'myfield' => 'required|min:8', … ));\nif( $validator->fails() ) {\n    $messages = $validator->messages();\n    …\n}",
 				"api": "http://laravel.com/docs/validation#basic-usage"
-			}
+			},
+			"custom-validator": [
+				{
+					"code": "Validator::extend('my_validator_name', function($attribute, $value, $parameters) {…});",
+					"api": "http://laravel.com/docs/validation#custom-validation-rules"
+				},
+				{
+					"code": "Validator::extend('my_validator_name', 'MyValidatorClass@myValidatorName');",
+					"api": "http://laravel.com/docs/validation#custom-validation-rules"
+				},
+				{
+					"code": [
+						{
+							"file": "MyValidatorClass.php",
+							"contents": "class MyValidatorClass extends Illuminate\\Validation\\Validator {\n    public function my_validator_name( $attribute, $value, $parameters ) {…}\n}"
+						},
+						{
+							"file": "(some file run on start)",
+							"contents": "Validator::resolver(function($translator, $data, $rules, $messages) {\n    return new MyValidatorClass($translator, $data, $rules, $messages);\n});"
+						}
+					],
+					"api": "http://laravel.com/docs/validation#custom-validation-rules"
+				}
+			]
 		},
 		"mvc": {
 			"route": {

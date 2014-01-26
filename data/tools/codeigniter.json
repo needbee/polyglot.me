@@ -53,7 +53,27 @@
 			"validate": {
 				"code": "$this->load->library('form_validation');\n$this->form_validation->set_rules('myfield', 'My Field', 'required|max_length[20]');\nif ($this->form_validation->run() == FALSE) {\n    $myerrors = validation_errors();\n    …\n}",
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html"
-			}
+			},
+			"custom-validator": [
+				{
+					"code": [
+						{
+							"file": "libraries/MY_Form_validation.php",
+							"contents": "<?php\n\nclass MY_Form_validation extends CI_Form_validation {\n    function __construct($config = array())\n    { parent::__construct($config); }\n    function myValidatorName {\n        if(!…) {\n            $this->CI->form_validation->set_message('myValidatorName','This is the error message');\n        }\n        return true;\n    }\n}"
+						}
+					],
+					"api": "http://ellislab.com/forums/viewthread/207257/"
+				},
+				{
+					"code": [
+						{
+							"file": "mycontroller.php",
+							"contents": "public function myAction() {\n    …\n    $this->form_validation->set_rules('username', 'Username', 'callback_myValidatorName');\n    …\n}\n\npublic function myValidatorName() {\n    if(!…) {\n        $this->CI->form_validation->set_message('myValidatorName','This is the error message');\n    }"
+						}
+					],
+					"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#callbacks"
+				}
+			]
 		},
 		"mvc": {
 			"route": {

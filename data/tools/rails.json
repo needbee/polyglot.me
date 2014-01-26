@@ -66,7 +66,26 @@
 					}
 				],
 				"api": "http://guides.rubyonrails.org/getting_started.html#adding-some-validation"
-			}
+			},
+			"custom-validator": [
+				{
+					"code": "class MyModel < ActiveRecord::Base\n    validate :my_validation_method\n\n    def my_validation_method\n        if(…)\n            errors.add(:field_name, \"is not valid for some reason explained here\"\n        end\n    end\nend",
+					"api": "http://guides.rubyonrails.org/active_record_validations.html#custom-methods"
+				},
+				{
+					"code": [
+						{
+							"file": "MyCustomValidator.rb",
+							"contents": "class MyCustomValidator < ActiveModel::Validator\n    def validate(record)\n        unless …\n            record.errors[:field_name] << 'Error message here'\n        end\n    end\nend"
+						},
+						{
+							"file": "My_Model.rb",
+							"contents": "class My_Model < ActiveRecord::Base\n    validates_with MyCustomValidator\nend"
+						}
+					],
+					"api": "http://guides.rubyonrails.org/active_record_validations.html#custom-validators"
+				}
+			]
 		},
 		"mvc": {
 			"route": {

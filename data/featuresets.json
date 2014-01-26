@@ -555,8 +555,8 @@
 				},
 				{
 					"id": "custom-validator",
-					"name": "",
-					"description": ""
+					"name": "Custom Validator",
+					"description": "create a validator that validates using code you provide"
 				},
 				{
 					"id": "required",
