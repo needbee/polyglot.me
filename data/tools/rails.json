@@ -53,6 +53,21 @@
 				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-redirect-to"
 			}
 		},
+		"validation": {
+			"validate": {
+				"code": [
+					{
+						"file": "my_model.rb",
+						"contents": "class My_Model < ActiveRecord::Base\n    validates :myfield, required: true, length: { maximum: 20 }\nend"
+					},
+					{
+						"file": "my_controller.rb",
+						"contents": "if @mymodel.save\n    …\nelse\n    @errors = @mymodel.errors\nend"
+					}
+				],
+				"api": "http://guides.rubyonrails.org/getting_started.html#adding-some-validation"
+			}
+		},
 		"mvc": {
 			"route": {
 				"code": [
@@ -78,19 +93,6 @@
 			"output-form-element": {
 				"code": "<%= form_for :mymodel do |f|\n    <%= f.text_area :myfield %>\n<% end %>",
 				"api": "http://guides.rubyonrails.org/getting_started.html#the-first-form"
-			},
-			"validate": {
-				"code": [
-					{
-						"file": "my_model.rb",
-						"contents": "class My_Model < ActiveRecord::Base\n    validates :myfield, required: true, length: { maximum: 20 }\nend"
-					},
-					{
-						"file": "my_controller.rb",
-						"contents": "if @mymodel.save\n    …\nelse\n    @errors = @mymodel.errors\nend"
-					}
-				],
-				"api": "http://guides.rubyonrails.org/getting_started.html#adding-some-validation"
 			},
 			"log": {
 				"code": "logger.info 'hello, log!'",

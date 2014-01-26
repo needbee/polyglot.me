@@ -49,6 +49,12 @@
 				"api": "http://laravel.com/docs/responses#redirects"
 			}
 		},
+		"validation": {
+			"validate": {
+				"code": "$validator = Validator::make($data, array( 'myfield' => 'required|min:8', … ));\nif( $validator->fails() ) {\n    $messages = $validator->messages();\n    …\n}",
+				"api": "http://laravel.com/docs/validation#basic-usage"
+			}
+		},
 		"mvc": {
 			"route": {
 				"code": [
@@ -74,10 +80,6 @@
 			"output-form-element": {
 				"code": "echo Form::model($user, array('route' => array('user.update', $user->id)))\necho Form::text('myfield', 'mydefaultvalue');",
 				"api": "http://laravel.com/docs/html"
-			},
-			"validate": {
-				"code": "$validator = Validator::make($data, array( 'myfield' => 'required|min:8', … ));\nif( $validator->fails() ) {\n    $messages = $validator->messages();\n    …\n}",
-				"api": "http://laravel.com/docs/validation#basic-usage"
 			},
 			"log": {
 				"code": "Log::info('hello, log!')",

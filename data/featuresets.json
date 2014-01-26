@@ -545,6 +545,237 @@
 			]
 		},
 		{
+			"id": "validation",
+			"name": "Validation",
+			"features": [
+				{
+					"id": "validate",
+					"name": "Validate",
+					"description": "validate data, redisplaying it with errors if any (depending on the tool, it may validate post data, a model object, or any data set)"
+				},
+				{
+					"id": "custom-validator",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "required",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "required-if",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "required-with",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "required-without",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "required-without-all",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "required-absent",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "min-length",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "max-length",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "range-length",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "exact-length",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "phone",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "date",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "date-of-format",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "before-date",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "after-date",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "email",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "url",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "active-url",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "ip-address",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "alphabetic",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "alphanumeric",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "word-character",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "regex",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "number",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "number-of-length",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "number-of-length-range",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "integer",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "positive-integer",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "non-negative-integer",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "greater-than",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "less-than",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "credit-card",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "equals-field",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "not-equals-field",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "equals-value",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "in-list",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "not-in-list",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "accepted",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "confirmed",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "exists-in-database",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "not-exists-in-database",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "file-is-image",
+					"name": "",
+					"description": ""
+				},
+				{
+					"id": "file-is-type",
+					"name": "",
+					"description": ""
+				}
+			]
+		},
+		{
 			"id": "mvc",
 			"name": "Model-View-Controller",
 			"features": [
