@@ -142,8 +142,11 @@
 													<div class="tdwrapper">
 														<%
 															if( null != toolFeature ) {
-																utils.one_or_many( toolFeature, function(tf) {
+																utils.one_or_many( toolFeature, function(tf, idx) {
 																	%>
+																	<% if( idx ) { %>
+																		<p class="text-center"><strong>OR</strong></p>
+																	<% } %>
 																	<% if( _.isArray(tf.code) ) { %>
 																		<% _.each( tf.code, function(file) { %>
 																			<div><%= file.file %></div>

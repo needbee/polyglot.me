@@ -3,7 +3,7 @@ utils.one_or_many = function( maybeArray, callback ) {
 	if( _.isArray(maybeArray) ) {
 		_.each( maybeArray, callback );
 	} else {
-		callback( maybeArray );
+		callback( maybeArray, null );
 	}
 }
 
