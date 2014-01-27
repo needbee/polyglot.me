@@ -76,7 +76,139 @@
 					],
 					"api": "http://laravel.com/docs/validation#custom-validation-rules"
 				}
-			]
+			],
+			"required": {
+				"code": "required",
+				"api": "http://laravel.com/docs/validation#rule-required"
+			},
+			"required-if": {
+				"code": "required_if:field,value",
+				"api": "http://laravel.com/docs/validation#rule-required-if"
+			},
+			"required-with": {
+				"code": "required_with:otherfield1,otherfield2,…",
+				"api": "http://laravel.com/docs/validation#rule-required-with"
+			},
+			"required-without": {
+				"code": "required_without:otherfield1,otherfield2,…",
+				"api": "http://laravel.com/docs/validation#rule-required-without"
+			},
+			"required-without-all": {
+				"code": "required_without_all:otherfield1,otherfield2,…",
+				"api": "http://laravel.com/docs/validation#rule-required-without-all"
+			},
+			"exact-length": {
+				"code": "size:6",
+				"api": "http://laravel.com/docs/validation#rule-size"
+			},
+			"date": {
+				"code": "date",
+				"api": "http://laravel.com/docs/validation#rule-date"
+			},
+			"date-of-format": {
+				"code": "date_format:Y-m-d",
+				"api": "http://laravel.com/docs/validation#rule-date-format"
+			},
+			"before-date": {
+				"code": "before:'2014-01-26'",
+				"api": "http://laravel.com/docs/validation#rule-before"
+			},
+			"after-date": {
+				"code": "after:'2014-01-26'",
+				"api": "http://laravel.com/docs/validation#rule-after"
+			},
+			"email": {
+				"code": "email",
+				"api": "http://laravel.com/docs/validation#rule-email"
+			},
+			"url": {
+				"code": "url",
+				"api": "http://laravel.com/docs/validation#rule-url"
+			},
+			"active-url": {
+				"code": "active_url",
+				"api": "http://laravel.com/docs/validation#rule-active-url"
+			},
+			"ip-address": {
+				"code": "ip",
+				"api": "http://laravel.com/docs/validation#rule-ip"
+			},
+			"alphabetic": {
+				"code": "alpha",
+				"api": "http://laravel.com/docs/validation#rule-alpha"
+			},
+			"alphanumeric": {
+				"code": "alpha_num",
+				"api": "http://laravel.com/docs/validation#rule-alpha-num"
+			},
+			"word-character": {
+				"code": "alpha_dash",
+				"api": "http://laravel.com/docs/validation#rule-alpha-dash"
+			},
+			"regex": {
+				"code": "regex:mypattern",
+				"api": "http://laravel.com/docs/validation#rule-regex"
+			},
+			"number": {
+				"code": "numeric",
+				"api": "http://laravel.com/docs/validation#rule-numeric"
+			},
+			"greater-than": {
+				"code": "min:6",
+				"api": "http://laravel.com/docs/validation#rule-min"
+			},
+			"less-than": {
+				"code": "max:20",
+				"api": "http://laravel.com/docs/validation#rule-max"
+			},
+			"between": {
+				"code": "between:3,12",
+				"api": "http://laravel.com/docs/validation#rule-between"
+			},
+			"equals-field": {
+				"code": "same:otherfieldname",
+				"api": "http://laravel.com/docs/validation#rule-same"
+			},
+			"not-equals-field": {
+				"code": "different:otherfieldname",
+				"api": "http://laravel.com/docs/validation#rule-different"
+			},
+			"in-list": {
+				"code": "in:foo,bar,…",
+				"api": "http://laravel.com/docs/validation#rule-in"
+			},
+			"not-in-list": {
+				"code": "not_in:foo,bar,…",
+				"api": "http://laravel.com/docs/validation#rule-not-in"
+			},
+			"accepted": {
+				"code": "accepted",
+				"api": "http://laravel.com/docs/validation#rule-accepted"
+			},
+			"confirmed": {
+				"code": "confirmed",
+				"api": "http://laravel.com/docs/validation#rule-confirmed"
+			},
+			"exists-in-database": {
+				"code": "exists:tablename,columnname",
+				"api": "http://laravel.com/docs/validation#rule-exists"
+			},
+			"not-exists-in-database": {
+				"code": "unique:tablename,columnname",
+				"api": "http://laravel.com/docs/validation#rule-unique"
+			},
+			"file-is-image": {
+				"code": "image",
+				"api": "http://laravel.com/docs/validation#rule-image"
+			},
+			"file-extension": {
+				"code": "mimes:txt,csv",
+				"api": "http://laravel.com/docs/validation#rule-mimes"
+			},
+			"file-size": {
+				"code": "size:1024",
+				"api": "http://laravel.com/docs/validation#rule-size"
+			}
 		},
 		"mvc": {
 			"route": {

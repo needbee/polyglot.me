@@ -73,7 +73,83 @@
 					],
 					"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#callbacks"
 				}
-			]
+			],
+			"required": {
+				"code": "required",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"min-length": {
+				"code": "min_length[3]",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"max-length": {
+				"code": "max_length[12]",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"exact-length": {
+				"code": "exact_length[6]",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"email": {
+				"code": "valid_email",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"email-list": {
+				"code": "valid_emails",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"ip-address": {
+				"code": "valid_ip",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"base64": {
+				"code": "valid_base64",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"alphabetic": {
+				"code": "alpha",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"alphanumeric": {
+				"code": "alpha_numeric",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"word-character": {
+				"code": "alpha_dash",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"number": {
+				"code": "numeric",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"integer": {
+				"code": "integer",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"positive-integer": {
+				"code": "is_natural_no_zero",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"non-negative-integer": {
+				"code": "is_natural",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"greater-than": {
+				"code": "greater_than[3]",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"less-than": {
+				"code": "less_than[12]",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"equals-field": {
+				"code": "matches",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			},
+			"not-exists-in-database": {
+				"code": "is_unique[tablename.columnname]",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
+			}
 		},
 		"mvc": {
 			"route": {

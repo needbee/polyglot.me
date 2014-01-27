@@ -560,217 +560,262 @@
 				},
 				{
 					"id": "required",
-					"name": "",
+					"name": "Required",
 					"description": ""
 				},
 				{
 					"id": "required-if",
-					"name": "",
+					"name": "Required If",
 					"description": ""
 				},
 				{
 					"id": "required-with",
-					"name": "",
+					"name": "Required With",
 					"description": ""
 				},
 				{
 					"id": "required-without",
-					"name": "",
+					"name": "Required Without",
 					"description": ""
 				},
 				{
 					"id": "required-without-all",
-					"name": "",
+					"name": "Required Without All",
 					"description": ""
 				},
 				{
 					"id": "required-absent",
-					"name": "",
+					"name": "Required to be Absent",
 					"description": ""
 				},
 				{
+					"id": "required-from-group",
+					"name": "Required From Group",
+					"description": "at least n fields in the group must be filled in"
+				},
+				{
 					"id": "min-length",
-					"name": "",
+					"name": "Min Length",
 					"description": ""
 				},
 				{
 					"id": "max-length",
-					"name": "",
+					"name": "Max Length",
 					"description": ""
 				},
 				{
 					"id": "range-length",
-					"name": "",
+					"name": "Range Length",
 					"description": ""
 				},
 				{
 					"id": "exact-length",
-					"name": "",
+					"name": "Exact Length",
 					"description": ""
 				},
 				{
 					"id": "phone",
-					"name": "",
+					"name": "Phone",
 					"description": ""
 				},
 				{
 					"id": "date",
-					"name": "",
+					"name": "Date",
 					"description": ""
 				},
 				{
 					"id": "date-of-format",
-					"name": "",
+					"name": "Date of Format",
 					"description": ""
 				},
 				{
 					"id": "before-date",
-					"name": "",
+					"name": "Before Date",
 					"description": ""
 				},
 				{
 					"id": "after-date",
-					"name": "",
+					"name": "After Date",
 					"description": ""
 				},
 				{
 					"id": "email",
-					"name": "",
+					"name": "Email",
+					"description": ""
+				},
+				{
+					"id": "email-list",
+					"name": "Email List",
 					"description": ""
 				},
 				{
 					"id": "url",
-					"name": "",
+					"name": "URL",
 					"description": ""
 				},
 				{
 					"id": "active-url",
-					"name": "",
+					"name": "Active URL",
 					"description": ""
 				},
 				{
 					"id": "ip-address",
-					"name": "",
+					"name": "IP Address",
+					"description": ""
+				},
+				{
+					"id": "base64",
+					"name": "Base64",
 					"description": ""
 				},
 				{
 					"id": "alphabetic",
-					"name": "",
+					"name": "Alphabetic",
 					"description": ""
 				},
 				{
 					"id": "alphanumeric",
-					"name": "",
+					"name": "Alphanumeric",
 					"description": ""
 				},
 				{
 					"id": "word-character",
-					"name": "",
+					"name": "Word Character",
 					"description": ""
 				},
 				{
 					"id": "regex",
-					"name": "",
+					"name": "Regex",
 					"description": ""
 				},
 				{
 					"id": "number",
-					"name": "",
+					"name": "Number",
 					"description": ""
 				},
 				{
 					"id": "number-of-length",
-					"name": "",
+					"name": "Number of Length",
 					"description": ""
 				},
 				{
 					"id": "number-of-length-range",
-					"name": "",
+					"name": "Number of Length Range",
 					"description": ""
 				},
 				{
 					"id": "integer",
-					"name": "",
+					"name": "Integer",
 					"description": ""
 				},
 				{
 					"id": "positive-integer",
-					"name": "",
+					"name": "Positive Integer",
 					"description": ""
 				},
 				{
 					"id": "non-negative-integer",
-					"name": "",
+					"name": "Non-Negative Integer",
+					"description": ""
+				},
+				{
+					"id": "even",
+					"name": "Even",
+					"description": ""
+				},
+				{
+					"id": "odd",
+					"name": "Even",
 					"description": ""
 				},
 				{
 					"id": "greater-than",
-					"name": "",
+					"name": "Greater Than",
 					"description": ""
 				},
 				{
 					"id": "less-than",
-					"name": "",
+					"name": "Less Than",
+					"description": ""
+				},
+				{
+					"id": "between",
+					"name": "Between",
 					"description": ""
 				},
 				{
 					"id": "credit-card",
-					"name": "",
+					"name": "Credit Card",
 					"description": ""
 				},
 				{
 					"id": "equals-field",
-					"name": "",
+					"name": "Equals Field",
 					"description": ""
 				},
 				{
-					"id": "not-equals-field",
-					"name": "",
+					"id": "does-not-equal-field",
+					"name": "Does Not Equal Field",
 					"description": ""
 				},
 				{
 					"id": "equals-value",
-					"name": "",
+					"name": "Equals Value",
 					"description": ""
 				},
 				{
 					"id": "in-list",
-					"name": "",
+					"name": "In List",
 					"description": ""
 				},
 				{
 					"id": "not-in-list",
-					"name": "",
+					"name": "Not In List",
 					"description": ""
 				},
 				{
 					"id": "accepted",
-					"name": "",
+					"name": "Accepted",
 					"description": ""
 				},
 				{
 					"id": "confirmed",
-					"name": "",
+					"name": "Confirmed",
 					"description": ""
 				},
 				{
 					"id": "exists-in-database",
-					"name": "",
+					"name": "Exists in Database",
 					"description": ""
 				},
 				{
-					"id": "not-exists-in-database",
-					"name": "",
+					"id": "does-not-exist-in-database",
+					"name": "Does Not Exist in Database",
+					"description": ""
+				},
+				{
+					"id": "file-extension",
+					"name": "File Extension",
 					"description": ""
 				},
 				{
 					"id": "file-is-image",
-					"name": "",
+					"name": "File is Image",
 					"description": ""
 				},
 				{
 					"id": "file-is-type",
-					"name": "",
+					"name": "File is Type",
+					"description": ""
+				},
+				{
+					"id": "file-size",
+					"name": "File Size",
+					"description": ""
+				},
+				{
+					"id": "validate-associated",
+					"name": "Validate Associated",
 					"description": ""
 				}
 			]

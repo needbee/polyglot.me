@@ -11,6 +11,86 @@
 			"custom-validator": {
 				"code": "$.validator.addMethod( 'myValidatorName', function( value, element ) {…}, 'This is the error message' );",
 				"api": "http://jqueryvalidation.org/jQuery.validator.addMethod"
+			},
+			"required": {
+				"code": "required: true",
+				"api": "http://jqueryvalidation.org/required-method"
+			},
+			"required-from-group": {
+				"code": "require_from_group: [ 2, '.phone-group' ]\n// at least 2 fields in phone group required",
+				"api": "http://jqueryvalidation.org/require_from_group-method/"
+			},
+			"min-length": {
+				"code": "minlength: 3",
+				"api": "http://jqueryvalidation.org/minlength-method"
+			},
+			"max-length": {
+				"code": "maxlength: 12",
+				"api": "http://jqueryvalidation.org/maxlength-method"
+			},
+			"range-length": {
+				"code": "rangelength: [3, 12]",
+				"api": "http://jqueryvalidation.org/rangelength-method/"
+			},
+			"exact-length": {
+				"code": "rangelength: [6, 6]",
+				"api": "http://jqueryvalidation.org/rangelength-method/"
+			},
+			"date": {
+				"code": "date: true",
+				"api": "http://jqueryvalidation.org/date-method"
+			},
+			"iso-date": {
+				"code": "dateISO: true",
+				"api": "http://jqueryvalidation.org/dateISO-method"
+			},
+			"phone": {
+				"code": "phoneUS: true",
+				"api": "http://jqueryvalidation.org/phoneUS-method"
+			},
+			"email": {
+				"code": "email: true",
+				"api": "http://jqueryvalidation.org/email-method"
+			},
+			"url": {
+				"code": "url: true",
+				"api": "http://jqueryvalidation.org/url-method"
+			},
+			"number": {
+				"code": "number: true",
+				"api": "http://jqueryvalidation.org/number-method"
+			},
+			"integer": {
+				"code": "digits: true",
+				"api": "http://jqueryvalidation.org/digits-method/"
+			},
+			"greater-than": {
+				"code": "min: 3",
+				"api": "http://jqueryvalidation.org/min-method"
+			},
+			"less-than": {
+				"code": "max: 12",
+				"api": "http://jqueryvalidation.org/max-method"
+			},
+			"range": {
+				"code": "range: [3, 12]",
+				"api": "http://jqueryvalidation.org/range-method"
+			},
+			"credit-card": {
+				"code": "creditcard: true",
+				"api": "http://jqueryvalidation.org/creditcard-method"
+			},
+			"equals-field": {
+				"code": "equalTo: '#otherFieldSelector' // any jQuery selector",
+				"api": "http://jqueryvalidation.org/equalTo-method"
+			},
+			"file-extension": {
+				"code": "// requires additional-methods.js\nextension: 'txt,csv'",
+				"api": "http://jqueryvalidation.org/extension-method/"
+			},
+			"file-is-type": {
+				"code": "// requires additional-methods.js\naccept: 'text/plain,text/csv'",
+				"api": "http://jqueryvalidation.org/accept-method/"
 			}
 		}
 	}

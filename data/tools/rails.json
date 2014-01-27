@@ -85,7 +85,87 @@
 					],
 					"api": "http://guides.rubyonrails.org/active_record_validations.html#custom-validators"
 				}
-			]
+			],
+			"required": {
+				"code": "presence: true",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#presence"
+			},
+			"required-absent": {
+				"code": "absence: true",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#absence"
+			},
+			"min-length": {
+				"code": "length: { minimum: 3 }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#length"
+			},
+			"max-length": {
+				"code": "length: { maximum: 12 }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#length"
+			},
+			"range-length": {
+				"code": "length: { in: 3..12 }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#length"
+			},
+			"exact-length": {
+				"code": "length: { is: 6 }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#length"
+			},
+			"regex": {
+				"code": "format: { with: /mypattern/, message: 'This is the error message' }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#format"
+			},
+			"number": {
+				"code": "numericality: true",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
+			},
+			"integer": {
+				"code": "numericality: { only_integer: true }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
+			},
+			"even": {
+				"code": "numericality: { even: true }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
+			},
+			"odd": {
+				"code": "numericality: { odd: true }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
+			},
+			"greater-than": {
+				"code": "numericality: { greater_than: 3 }\nnumericality: { greater_than_or_equal_to: 4 }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
+			},
+			"less-than": {
+				"code": "numericality: { less_than: 12 }\nnumericality: { less_than_or_equal_to: 11 }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
+			},
+			"equals-value": {
+				"code": "numericality: { equal_to: mynum }",
+				"api": "numericality: { greater_than: 3 }\nnumericality: { greater_than_or_equal_to: 4 }"
+			},
+			"in-list": {
+				"code": "inclusion: { in: %w(item1 item2 item3), message: 'This is the error message' }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#inclusion"
+			},
+			"not-in-list": {
+				"code": "exclusion: { in: %w(item1 item2 item3), message: 'This is the error message' }",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#exclusion"
+			},
+			"accepted": {
+				"code": "acceptance: true",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#acceptance"
+			},
+			"confirmed": {
+				"code": "confirmation: true",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#confirmation"
+			},
+			"not-exists-in-database": {
+				"code": "uniqueness: true",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#uniqueness"
+			},
+			"validate-associated": {
+				"code": "validates_associated :books",
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#validates-associated"
+			}
 		},
 		"mvc": {
 			"route": {
