@@ -174,9 +174,17 @@ requirejs([
 			var toolsToUse = this.tools.pluck('id');
 			var toolsRemaining = _.difference( this.allToolIds, toolsToUse );
 
+			var toolsInOrder = []
+			_.each( cheatsheet.params.tools, function(id) {
+				var tool;
+				if( tool = this.tools.get(id) ) {
+					toolsInOrder.push(tool.toJSON());
+				}
+			}, this );
+
 			this.$el.html( _.template( this.template, {
 				featureSets: this.featureSets.toJSON(),
-				tools: this.tools.toJSON(),
+				tools: toolsInOrder,
 				allToolIds: this.allToolIds,
 				toolsToUse: toolsToUse,
 				toolsRemaining: toolsRemaining
