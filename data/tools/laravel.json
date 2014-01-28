@@ -51,7 +51,7 @@
 		},
 		"validation": {
 			"validate": {
-				"code": "$validator = Validator::make($data, array( 'myfield' => 'required|min:8', … ));\nif( $validator->fails() ) {\n    $messages = $validator->messages();\n    …\n}",
+				"code": "$validator = Validator::make($data, array( 'myfield' => array('required','min:8', … )));\nif( $validator->fails() ) {\n    $messages = $validator->messages();\n    …\n}",
 				"api": "http://laravel.com/docs/validation#basic-usage"
 			},
 			"custom-validator": [
@@ -96,6 +96,14 @@
 			"required-without-all": {
 				"code": "required_without_all:otherfield1,otherfield2,…",
 				"api": "http://laravel.com/docs/validation#rule-required-without-all"
+			},
+			"min-length": {
+				"code": "min:3",
+				"api": "http://laravel.com/docs/validation#rule-min"
+			},
+			"max-length": {
+				"code": "max:12",
+				"api": "http://laravel.com/docs/validation#rule-max"
 			},
 			"exact-length": {
 				"code": "size:6",
