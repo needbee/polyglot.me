@@ -1,5 +1,5 @@
 {
-	"id": "js",
+	"id": "javascript",
 	"name": "JavaScript",
 	"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
 	"featuresets": {
