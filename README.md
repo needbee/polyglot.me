@@ -37,7 +37,9 @@ Each tool feature has the following fields:
 To add or modify a feature or tool:
 
 - Fork this repository
-- Make the appropriate changes
+- Make the appropriate changes. If you are adding a new tool, you can
+  generate an empty tool json file by cd'ing to the shell directory and
+  running 'node generate-tool-json.js mytoolname'
 - If you added a new tool, add it to the _list.json file
 - Validate your json using the JsonLint [web site](http://jsonlint.com)
   or [command line tool](https://github.com/zaach/jsonlint)
