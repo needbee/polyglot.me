@@ -395,7 +395,7 @@
 					"id": "has-field",
 					"name": "Has Field",
 					"description": "whether or not an object has a certain field"
-				}
+				},
 				{
 					"id": "define-method",
 					"name": "Define Method",
