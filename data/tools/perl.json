@@ -66,6 +66,10 @@
 				"code": "index $str, $mysubstring",
 				"api": "http://perldoc.perl.org/functions/index.html"
 			},
+			"replace": {
+				"code": "$str =~ s/…/…/g",
+				"api": "http://perldoc.perl.org/perlretut.html#Search-and-replace"
+			},
 			"split-on-string": {
 				"code": "split $delim, $str",
 				"api": "http://perldoc.perl.org/functions/split.html"
@@ -277,8 +281,12 @@
 				"api": "http://perldoc.perl.org/perlobj.html#Writing-Constructors"
 			},
 			"access-field": {
-				"code": "$myinstance->myfield",
+				"code": "$myinstance{'myfield'}",
 				"api": "http://perldoc.perl.org/perlobj.html"
+			},
+			"has-field": {
+				"code": "exists $myinstance{'myfield'}",
+				"api": "http://perldoc.perl.org/functions/exists.html"
 			},
 			"define-method": {
 				"code": "package MyClass;\n\nsub mymethod {\n    my $self = shift;\n    …;\n}",
@@ -287,6 +295,10 @@
 			"call-method": {
 				"code": "$myinstance->mymethod( $val1, $val2 )",
 				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
+			},
+			"has-method": {
+				"code": "$myinstance->can('methodname')",
+				"api": "http://perldoc.perl.org/UNIVERSAL.html"
 			},
 			"this": {
 				"code": "package MyClass;\n\nsub mymethod {\n    my $self = shift;\n    …;\n}",

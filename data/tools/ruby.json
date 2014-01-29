@@ -59,6 +59,10 @@
 				"code": "str.index( $mysubstring )",
 				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-index"
 			},
+			"replace": {
+				"code": "str.gsub( myregex, tmpl )",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-gsub"
+			},
 			"split-on-string": {
 				"code": "str.split( delim )",
 				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-split"
@@ -299,9 +303,17 @@
 				"code": "myobj.instance_of? MyClass",
 				"api": "http://www.ruby-doc.org/core-2.1.0/Object.html#method-i-instance_of-3F"
 			},
+			"class-of": {
+				"code": "myobj.class\nmyobj.class.name",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Object.html#method-i-class"
+			},
 			"access-field": {
 				"code": "@myfield = 27 // does not need to be declared",
 				"api": "http://www.ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/instancevars.html"
+			},
+			"has-field": {
+				"code": "myobj.instance_variable_defined?(:@myvar)",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Object.html#method-i-instance_variable_defined-3F"
 			},
 			"define-method": {
 				"code": "class MyClass\n    def mymethod\n        …\n    end\nend",
@@ -310,6 +322,10 @@
 			"call-method": {
 				"code": "myinstance.mymethod val1, val2",
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Methods"
+			},
+			"has-method": {
+				"code": "myobj.method(:methodname) // may throw NameError\nmyobj.public_method(:methodname)",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Object.html#method-i-method"
 			},
 			"this": {
 				"code": "self",

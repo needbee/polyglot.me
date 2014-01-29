@@ -65,6 +65,10 @@
 				"code": "str.indexOf( mysubstring )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf"
 			},
+			"replace": {
+				"code": "var myregex = /…/g;\nstr.replace(myregex, tmpl);",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"
+			},
 			"split-on-string": {
 				"code": "str.split( delim )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split"
@@ -296,6 +300,10 @@
 				"code": "myobj.myfield",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
+			"has-field": {
+				"code": "myobj.hasOwnProperty('myfield')",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
+			},
 			"define-method": {
 				"code": "function MyClass() {\n    this.mymethod = function( arg1, arg2 ) {…};\n}",
 				"api": "http://javascript.crockford.com/private.html"
@@ -303,6 +311,10 @@
 			"call-method": {
 				"code": "myobj.mymethod( val1, val2 )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
+			},
+			"has-method": {
+				"code": "myobj.hasOwnProperty('mymethod')",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
 			},
 			"this": {
 				"code": "this",

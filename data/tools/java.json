@@ -70,6 +70,10 @@
 				"code": "str.indexOf( mysubstring )",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)"
 			},
+			"replace": {
+				"code": "str.replaceAll( myregex, tmpl )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#replaceAll(java.lang.String, java.lang.String)"
+			},
 			"split-on-string": {
 				"code": "str.split( delim )",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#split(java.lang.String)"
@@ -241,6 +245,10 @@
 				"code": "$myobj instanceof MyClass",
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.20.2"
 			},
+			"class-of": {
+				"code": "myobj.getClass()\nmyobj.getClass().getName()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#getClass()"
+			},
 			"define-field": {
 				"code": "class MyClass {\n    String myfield;\n}",
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.2"
@@ -249,6 +257,10 @@
 				"code": "myinstance.myfield",
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.11"
 			},
+			"has-field": {
+				"code": "myobj.getClass().getField('fieldname') // may throw NoSuchFieldException",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html#getField(java.lang.String)"
+			},
 			"define-method": {
 				"code": "class MyClass {\n    function mymethod( $arg1, $arg2 ) {…}\n}",
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4"
@@ -256,6 +268,10 @@
 			"call-method": {
 				"code": "myinstance.mymethod( val1, val2 )",
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.12"
+			},
+			"has-method": {
+				"code": "Class[] cArg = new Class[1];\ncArg[0] = String.class;\nc.getMethod('mymethod',cArg); // may throw NoSuchMethodException",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html#getMethod(java.lang.String, java.lang.Class...)"
 			},
 			"this": {
 				"code": "this",

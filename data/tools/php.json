@@ -64,6 +64,10 @@
 				"code": "strpos( $str, $mysubstring )",
 				"api": "http://www.php.net/manual/en/function.strpos.php"
 			},
+			"replace": {
+				"code": "str_replace( $old, $new, $str )",
+				"api": "http://php.net/manual/en/function.str-replace.php"
+			},
 			"split-on-string": {
 				"code": "explode( $delim, $str )",
 				"api": "http://www.php.net/manual/en/function.explode.php"
@@ -307,6 +311,10 @@
 				"code": "$myobj instanceof MyClass",
 				"api": "http://php.net/manual/en/language.operators.type.php"
 			},
+			"class-of": {
+				"code": "get_class($myobj)",
+				"api": "http://php.net/manual/en/function.get-class.php"
+			},
 			"define-field": {
 				"code": "class MyClass {\n    var $myfield = 'default value';\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
@@ -315,6 +323,10 @@
 				"code": "$myinstance->myfield",
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
 			},
+			"has-field": {
+				"code": "property_exists( $myinstance, 'myfield' )",
+				"api": "http://php.net/manual/en/function.property-exists.php"
+			},
 			"define-method": {
 				"code": "class MyClass {\n    function mymethod( $arg1, $arg2 ) {…}\n}",
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
@@ -322,6 +334,10 @@
 			"call-method": {
 				"code": "$myinstance->mymethod( $val1, $val2 )",
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
+			},
+			"has-method": {
+				"code": "method_exists( $myinstance, 'myfield' )",
+				"api": "http://php.net/manual/en/function.method-exists.php"
 			},
 			"this": {
 				"code": "$this",

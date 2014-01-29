@@ -59,6 +59,10 @@
 				"code": "[str rangeOfString:mysubstring]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-rangeOfString_"
 			},
+			"replace": {
+				"code": "[str stringByReplacingOccurrencesOfString:str1 withString:str2]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-SW6"
+			},
 			"split-on-string": {
 				"code": "[str componentsSeparatedByString:delim]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-componentsSeparatedByString_"
@@ -278,6 +282,10 @@
 				"code": "[myobj isMemberOfClass:[MyClass class]]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCEBEIC"
 			},
+			"class-of": {
+				"code": "[myobj class]\nNSStringFromClass([myobj class])",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBDHEE"
+			},
 			"define-field": {
 				"code": [
 					{
@@ -290,6 +298,10 @@
 			"access-field": {
 				"code": "myinstance.myfield",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html#//apple_ref/doc/uid/TP40011210-CH5-SW10"
+			},
+			"has-field": {
+				"code": "[myobj respondsToSelector:@selector(myfield)]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCEHCCE"
 			},
 			"define-method": {
 				"code": [
@@ -307,6 +319,10 @@
 			"call-method": {
 				"code": "[myinstance myMethodWithArg1:val1 arg2:val2]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2"
+			},
+			"has-method": {
+				"code": "[myobj respondsToSelector:@selector(mymethod:withArg:)]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCEHCCE"
 			},
 			"this": {
 				"code": "self",

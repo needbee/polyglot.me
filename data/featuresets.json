@@ -82,6 +82,11 @@
 					"description": "find out what position a substring mysubstring is within a string str"
 				},
 				{
+					"id": "replace",
+					"name": "Replace",
+					"description": "replace all occurrences of a substring with another string"
+				},
+				{
 					"id": "split-on-string",
 					"name": "Split on String",
 					"description": "split a string str into multiple strings wherever a delimiter string delim is found"
@@ -372,6 +377,11 @@
 					"description": "indicate whether object myobj is of class MyClass (not including descendants of it)"
 				},
 				{
+					"id": "class-of",
+					"name": "Class Of",
+					"description": "gets the class or class name of an object"
+				},
+				{
 					"id": "define-field",
 					"name": "Define Field",
 					"description": "define a member variable/instance variable/property/attribute/field on a class"
@@ -382,6 +392,11 @@
 					"description": "access a field on an object"
 				},
 				{
+					"id": "has-field",
+					"name": "Has Field",
+					"description": "whether or not an object has a certain field"
+				}
+				{
 					"id": "define-method",
 					"name": "Define Method",
 					"description": "define a member function/method/procedure on a class"
@@ -390,6 +405,11 @@
 					"id": "call-method",
 					"name": "Call Method",
 					"description": "call a method on an object"
+				},
+				{
+					"id": "has-method",
+					"name": "Has Method",
+					"description": "whether or not an object has a certain metohd"
 				},
 				{
 					"id": "this",
