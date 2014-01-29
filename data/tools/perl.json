@@ -344,6 +344,55 @@
 				"code": "package MyClass;\n\nmy $myprivatefield = 27;\nmy $myprivatemethod = sub {…};\n# accessed as $self->$myprivatemethod()",
 				"api": "http://www.perlmonks.org/?node_id=807145"
 			}
+		},
+		"http-server": {
+			"output": {
+				"code": "print \"Hello, World!\"",
+				"api": "http://perldoc.perl.org/functions/print.html"
+			},
+			"get-data": {
+				"code": "use CGI;\nmy $q = CGI->new;\n$q->param('myvar')",
+				"api": "http://perldoc.perl.org/CGI.html#FETCHING-THE-VALUE-OR-VALUES-OF-A-SINGLE-NAMED-PARAMETER%3a"
+			},
+			"post-data-form": {
+				"code": "use CGI;\nmy $q = CGI->new;\n$q->param('myvar')",
+				"api": "http://perldoc.perl.org/CGI.html#FETCHING-THE-VALUE-OR-VALUES-OF-A-SINGLE-NAMED-PARAMETER%3a"
+			},
+			"post-data-raw": {
+				"code": "use CGI;\nmy $q = CGI->new;\n$q->param('POSTDATA')",
+				"api": "http://perldoc.perl.org/CGI.html#HANDLING-NON-URLENCODED-ARGUMENTS"
+			},
+			"uploaded-file": {
+				"code": "use CGI;\n\n$CGI::POST_MAX = 1024 * 5000;\n\nmy $query = new CGI;\nmy $filename = $query->param(\"myfilefield\");\nif ( !$filename ) {\n    print \"There was a problem uploading your photo (try a smaller file).\";\n    exit;\n}\n}\n\nmy $upload_filehandle = $query->upload(\"myfilefield\");",
+				"api": "http://perldoc.perl.org/CGI.html#PROCESSING-A-FILE-UPLOAD-FIELD"
+			},
+			"get-cookie": {
+				"code": "use CGI;\nmy $q = CGI->new;\n$q->cookie('cookiename');",
+				"api": "http://perldoc.perl.org/CGI.html#HTTP-COOKIES"
+			},
+			"set-cookie": {
+				"code": "print header(-cookie=>cookie(\n    -name=>'cookiename',\n    -value=>'cookievalue',\n    -expires=>'+1h',\n    -path=>'/path/restriction',\n    -domain=>'my.domain.com',\n    -secure=>1\n));",
+				"api": "http://perldoc.perl.org/CGI.html#HTTP-COOKIES"
+			},
+			"get-header": {
+				"code": "$ENV{'MY_HEADER_NAME'}",
+				"api": "http://www.perlmonks.org/?node_id=698861"
+			},
+			"set-header": {
+				"code": "print \"Content-Type: text/plain\\n\"; # make sure to do two newlines when content starts"
+			},
+			"status-code": {
+				"code": "print header('text/html', '404 Not Found')",
+				"api": "http://perldoc.perl.org/CGI.html#CREATING-A-STANDARD-HTTP-HEADER%3a"
+			},
+			"content-type": {
+				"code": "print header('text/plain');",
+				"api": "http://perldoc.perl.org/CGI.html#CREATING-A-STANDARD-HTTP-HEADER%3a"
+			},
+			"redirect": {
+				"code": "use CGI;\nmy $q = CGI->new;\nprint $q->redirect($newUrl);",
+				"api": "http://perldoc.perl.org/CGI.html#GENERATING-A-REDIRECTION-HEADER"
+			}
 		}
 	}
 }
