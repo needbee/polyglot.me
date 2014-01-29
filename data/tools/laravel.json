@@ -3,6 +3,56 @@
 	"name": "Laravel",
 	"api": "http://laravel.com/docs",
 	"featuresets": {
+		"collections": {
+			"get": {
+				"code": "$collection->get($mykey)",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_get"
+			},
+			"set": {
+				"code": "$collection->put($mykey,$myvalue)",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_put"
+			},
+			"push": {
+				"code": "$collection->push($myvalue)",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_push"
+			},
+			"pop": {
+				"code": "$collection->pop()",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_pop"
+			},
+			"merge": {
+				"code": "$newcollection = $collection->merge($collectionOrArray)",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_merge"
+			},
+			"slice": {
+				"code": "$collection->slice( $start, $length )",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_slice"
+			},
+			"for-each": {
+				"code": "$collection->each( function($val) {…} )",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_each"
+			},
+			"filter": {
+				"code": "$collection->filter( function($val) {…} )",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_filter"
+			},
+			"map": {
+				"code": "$collection->map( function($val) {…} )",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_map"
+			},
+			"reduce": {
+				"code": "$collection->reduce( function($val,$acc) {…}, $initial )",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_reduce"
+			},
+			"sort": {
+				"code": "$collection->sort( function($a,$b) {…} )",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_sort"
+			},
+			"reverse": {
+				"code": "$collection->reverse()",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_reverse"
+			}
+		},
 		"http-server": {
 			"output": {
 				"code": "return \"Hello, World!\"",

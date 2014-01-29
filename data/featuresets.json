@@ -303,6 +303,11 @@
 					"id": "sort",
 					"name": "Sort",
 					"description": "sorts values in myarray by running a comparison function"
+				},
+				{
+					"id": "reverse",
+					"name": "Reverse",
+					"description": "reverses the order of the array elements"
 				}
 			]
 		},

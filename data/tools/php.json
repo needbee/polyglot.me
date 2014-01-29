@@ -257,6 +257,10 @@
 			"sort": {
 				"code": "usort( $myarray, function($a, $b) {…} )",
 				"api": "http://www.php.net/manual/en/function.usort.php"
+			},
+			"reverse": {
+				"code": "array_reverse( $myarray )",
+				"api": "http://php.net/manual/en/function.array-reverse.php"
 			}
 		},
 		"functions": {

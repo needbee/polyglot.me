@@ -226,6 +226,10 @@
 			"sort": {
 				"code": "[myarray sortedArrayUsingComparator: ^(id a, id b) {…}]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-SW28"
+			},
+			"reverse": {
+				"code": "[[myarray reverseObjectEnumerator] allObjects]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABECCHA"
 			}
 		},
 		"functions": {

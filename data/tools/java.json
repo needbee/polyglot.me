@@ -219,6 +219,10 @@
 			"sort": {
 				"code": "java.util.Collections.sort( mylist,\n    new Comparator<String>() {\n        public int compare (String a, String a ) {…}\n    })",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#sort(java.util.List, java.util.Comparator)"
+			},
+			"reverse": {
+				"code": "java.util.Collections.reverse( mylist )",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#reverse(java.util.List)"
 			}
 		},
 		"functions": {

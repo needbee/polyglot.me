@@ -227,6 +227,10 @@
 			"sort": {
 				"code": "sort {…} @array",
 				"api": "http://perldoc.perl.org/functions/sort.html"
+			},
+			"reverse": {
+				"code": "reverse @array",
+				"api": "http://perldoc.perl.org/functions/reverse.html"
 			}
 		},
 		"functions": {
