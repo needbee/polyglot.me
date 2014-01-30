@@ -97,6 +97,18 @@
 			"redirect": {
 				"code": "Redirect::to(url)\nRedirect::route(mynamedroute,array('param'=>'val'))",
 				"api": "http://laravel.com/docs/responses#redirects"
+			},
+			"get-session-var": {
+				"code": "Session::get('key');",
+				"api": "http://laravel.com/docs/session#session-usage"
+			},
+			"set-session-var": {
+				"code": "Session::put('key', 'value');",
+				"api": "http://laravel.com/docs/session#session-usage"
+			},
+			"remove-session-var": {
+				"code": "Session::forget('key');",
+				"api": "http://laravel.com/docs/session#session-usage"
 			}
 		},
 		"validation": {

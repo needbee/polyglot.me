@@ -460,6 +460,18 @@
 			"redirect": {
 				"code": "header( 'Location: '.$url )",
 				"api": "http://php.net/manual/en/function.header.php"
+			},
+			"get-session-var": {
+				"code": "session_start();\n$_SESSION['key']",
+				"api": "http://www.php.net/manual/en/session.examples.basic.php"
+			},
+			"set-session-var": {
+				"code": "session_start();\n$_SESSION['key'] = $value;",
+				"api": "http://www.php.net/manual/en/session.examples.basic.php"
+			},
+			"remove-session-var": {
+				"code": "session_start();\nunset($_SESSION['key'])",
+				"api": "http://www.php.net/manual/en/session.examples.basic.php"
 			}
 		}
 	}

@@ -392,6 +392,18 @@
 			"redirect": {
 				"code": "use CGI;\nmy $q = CGI->new;\nprint $q->redirect($newUrl);",
 				"api": "http://perldoc.perl.org/CGI.html#GENERATING-A-REDIRECTION-HEADER"
+			},
+			"get-session-var": {
+				"code": "use CGI::Session;\nmy $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});\n$session->param('key');",
+				"api": "http://search.cpan.org/~sherzodr/CGI-Session-3.95/Session.pm"
+			},
+			"set-session-var": {
+				"code": "use CGI::Session;\nmy $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});\n$session->param('key',$value);",
+				"api": "http://search.cpan.org/~sherzodr/CGI-Session-3.95/Session.pm"
+			},
+			"remove-session-var": {
+				"code": "use CGI::Session;\nmy $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});\n$session->clear([\"key\"]);",
+				"api": "http://search.cpan.org/~sherzodr/CGI-Session-3.95/Session.pm"
 			}
 		}
 	}

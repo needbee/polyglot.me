@@ -51,6 +51,18 @@
 			"redirect": {
 				"code": "redirect_to url\nredirect_to action:action_name",
 				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-redirect-to"
+			},
+			"get-session-var": {
+				"code": "session[:key]",
+				"api": "http://guides.rubyonrails.org/action_controller_overview.html#accessing-the-session"
+			},
+			"set-session-var": {
+				"code": "session[:key] = value",
+				"api": "http://guides.rubyonrails.org/action_controller_overview.html#accessing-the-session"
+			},
+			"remove-session-var": {
+				"code": "session[:key] = nil",
+				"api": "http://guides.rubyonrails.org/action_controller_overview.html#accessing-the-session"
 			}
 		},
 		"validation": {

@@ -47,6 +47,18 @@
 			"redirect": {
 				"code": "$this->load->helper('url');\nredirect( $url );",
 				"api": "http://ellislab.com/codeigniter/user-guide/helpers/url_helper.html"
+			},
+			"get-session-var": {
+				"code": "$this->load->library('session');\n$this->session->userdata('item');",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/sessions.html"
+			},
+			"set-session-var": {
+				"code": "$this->load->library('session');\n$this->session->set_userdata($array);",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/sessions.html"
+			},
+			"remove-session-var": {
+				"code": "$this->load->library('session');\n$this->session->unset_userdata($array);",
+				"api": "http://ellislab.com/codeigniter/user-guide/libraries/sessions.html"
 			}
 		},
 		"validation": {

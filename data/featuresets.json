@@ -566,6 +566,21 @@
 					"id": "redirect",
 					"name": "Redirect",
 					"description": "redirect to another URL"
+				},
+				{
+					"id": "get-session-var",
+					"name": "Get Session Var",
+					"description": "retrieves a variable from the session"
+				},
+				{
+					"id": "set-session-var",
+					"name": "Set Session Var",
+					"description": "sets a variable in the session"
+				},
+				{
+					"id": "remove-session-var",
+					"name": "Remove Session Var",
+					"description": "removes a variable from the session"
 				}
 			]
 		},
