@@ -586,32 +586,32 @@
 				{
 					"id": "required",
 					"name": "Required",
-					"description": ""
+					"description": "validates that the field is not empty or blank"
 				},
 				{
 					"id": "required-if",
 					"name": "Required If",
-					"description": ""
+					"description": "validates that the field is not empty or blank, only if a certain other condition is met"
 				},
 				{
 					"id": "required-with",
 					"name": "Required With",
-					"description": ""
+					"description": "validates that the field is not empty or blank if another field is not blank"
 				},
 				{
 					"id": "required-without",
 					"name": "Required Without",
-					"description": ""
+					"description": "validates that the field is not empty or blank if any of a set of other fields is blank"
 				},
 				{
 					"id": "required-without-all",
 					"name": "Required Without All",
-					"description": ""
+					"description": "validates that the field is not empty or blank if all of a set of other fields is blank"
 				},
 				{
 					"id": "required-absent",
 					"name": "Required to be Absent",
-					"description": ""
+					"description": "validates that the field is empty or blank"
 				},
 				{
 					"id": "required-from-group",
@@ -621,227 +621,237 @@
 				{
 					"id": "min-length",
 					"name": "Min Length",
-					"description": ""
+					"description": "validates that the field has at least n characters"
 				},
 				{
 					"id": "max-length",
 					"name": "Max Length",
-					"description": ""
+					"description": "validates that the field has at most n characters"
 				},
 				{
 					"id": "range-length",
 					"name": "Range Length",
-					"description": ""
+					"description": "validates that the field has between m and n characters"
 				},
 				{
 					"id": "exact-length",
 					"name": "Exact Length",
-					"description": ""
+					"description": "validates that the field has exactly n characters"
 				},
 				{
 					"id": "phone",
 					"name": "Phone",
-					"description": ""
+					"description": "validates that the field contains a valid phone number"
 				},
 				{
 					"id": "date",
 					"name": "Date",
-					"description": ""
+					"description": "validates that the field contains a valid date"
 				},
 				{
 					"id": "date-of-format",
 					"name": "Date of Format",
-					"description": ""
+					"description": "validates that the field contains a date in a certain format"
 				},
 				{
 					"id": "before-date",
 					"name": "Before Date",
-					"description": ""
+					"description": "validates that the field contains a date that is before a fixed date"
 				},
 				{
 					"id": "after-date",
 					"name": "After Date",
-					"description": ""
+					"description": "validates that the field contains a date that is after a fixed date"
 				},
 				{
 					"id": "email",
 					"name": "Email",
-					"description": ""
+					"description": "validates that the field contains a valid email address"
 				},
 				{
 					"id": "email-list",
 					"name": "Email List",
-					"description": ""
+					"description": "validates that the field contains a comma-delimited list of valid email addresses"
 				},
 				{
 					"id": "url",
 					"name": "URL",
-					"description": ""
+					"description": "validates that the field contains a valid URL (web address)"
 				},
 				{
 					"id": "active-url",
 					"name": "Active URL",
-					"description": ""
+					"description": "validates that the field contains a valid URL with a domain name that is really in use"
 				},
 				{
 					"id": "ip-address",
 					"name": "IP Address",
-					"description": ""
+					"description": "validates that the field contains a valid IP address"
 				},
 				{
 					"id": "base64",
 					"name": "Base64",
-					"description": ""
+					"description": "validates that the field contains a valid base64 string"
 				},
 				{
 					"id": "alphabetic",
 					"name": "Alphabetic",
-					"description": ""
+					"description": "validates that the field contains only letters"
 				},
 				{
 					"id": "alphanumeric",
 					"name": "Alphanumeric",
-					"description": ""
+					"description": "validates that the field contains only letters and numbers"
 				},
 				{
 					"id": "word-character",
 					"name": "Word Character",
-					"description": ""
+					"description": "validates that the field contains only letters, numbers, hyphens, and underscores"
 				},
 				{
 					"id": "regex",
 					"name": "Regex",
-					"description": ""
+					"description": "validates that the field matches a given regular expression"
 				},
 				{
 					"id": "number",
 					"name": "Number",
-					"description": ""
+					"description": "validates that the field contains a number (integer or decimal)"
 				},
 				{
 					"id": "number-of-length",
 					"name": "Number of Length",
-					"description": ""
+					"description": "validates that the field contains a number of n digits"
 				},
 				{
 					"id": "number-of-length-range",
 					"name": "Number of Length Range",
-					"description": ""
+					"description": "validates that the field contains a number of m to n digits"
 				},
 				{
 					"id": "integer",
 					"name": "Integer",
-					"description": ""
+					"description": "validates that the field contains an integer number (negative or positive)"
 				},
 				{
 					"id": "positive-integer",
 					"name": "Positive Integer",
-					"description": ""
+					"description": "validates that the field contains an integer greater than or equal to 0"
 				},
 				{
 					"id": "non-negative-integer",
 					"name": "Non-Negative Integer",
-					"description": ""
+					"description": "validates that the field contains a number greater than 0"
 				},
 				{
 					"id": "even",
 					"name": "Even",
-					"description": ""
+					"description": "validates that the field contains an even integer"
 				},
 				{
 					"id": "odd",
-					"name": "Even",
-					"description": ""
+					"name": "Odd",
+					"description": "validates that the field contains an odd integer"
 				},
 				{
 					"id": "greater-than",
 					"name": "Greater Than",
-					"description": ""
+					"description": "validates that the field contains a number greater than a fixed number"
 				},
 				{
 					"id": "less-than",
 					"name": "Less Than",
-					"description": ""
+					"description": "validates that the field contains a number less than a fixed number"
 				},
 				{
 					"id": "between",
 					"name": "Between",
-					"description": ""
+					"description": "validates that the field contains a number between two fixed numbers"
 				},
 				{
 					"id": "credit-card",
 					"name": "Credit Card",
-					"description": ""
+					"description": "validates that the field contains a valid credit card number"
 				},
 				{
 					"id": "equals-field",
 					"name": "Equals Field",
-					"description": ""
+					"description": "validates that the field's value is the same as another field's"
 				},
 				{
 					"id": "does-not-equal-field",
 					"name": "Does Not Equal Field",
-					"description": ""
+					"description": "validates that the field's value is the different from another field's"
 				},
 				{
 					"id": "equals-value",
 					"name": "Equals Value",
-					"description": ""
+					"description": "validates that the field's value is equal to a fixed value"
 				},
 				{
 					"id": "in-list",
 					"name": "In List",
-					"description": ""
+					"description": "validates that the field's value is in a fixed list of values"
 				},
 				{
 					"id": "not-in-list",
 					"name": "Not In List",
-					"description": ""
+					"description": "validates that the field's value is not in a fixed list of values"
 				},
 				{
 					"id": "accepted",
 					"name": "Accepted",
-					"description": ""
+					"description": "validates that the field's value is 'yes', 'on', or 1"
 				},
 				{
 					"id": "confirmed",
 					"name": "Confirmed",
-					"description": ""
+					"description": "validates that there is another field with the same name plus '_confirmation' at the end, with the same value"
 				},
 				{
 					"id": "exists-in-database",
 					"name": "Exists in Database",
-					"description": ""
+					"description": "validates that the value of this field exists in a certain database column"
 				},
 				{
 					"id": "does-not-exist-in-database",
 					"name": "Does Not Exist in Database",
-					"description": ""
+					"description": "validates that the value of this field does not exist in a certain database column; i.e. that it is unique"
 				},
 				{
 					"id": "file-extension",
 					"name": "File Extension",
-					"description": ""
+					"description": "validates that the file uploaded in this field has one of the given set of extensions"
 				},
 				{
 					"id": "file-is-image",
 					"name": "File is Image",
-					"description": ""
+					"description": "validates that the file uploaded in this field is an image"
 				},
 				{
 					"id": "file-is-type",
 					"name": "File is Type",
-					"description": ""
+					"description": "validates that the file uploaded in this field has one of the given set of MIME content types"
 				},
 				{
 					"id": "file-size",
 					"name": "File Size",
-					"description": ""
+					"description": "validates that the file uploaded in this field has exactly the given size"
+				},
+				{
+					"id": "file-min-size",
+					"name": "File Min Size",
+					"description": "validates that the file uploaded in this field has a size less than the given value"
+				},
+				{
+					"id": "file-max-size",
+					"name": "File Max Size",
+					"description": "validates that the file uploaded in this field has a size greater than the given value"
 				},
 				{
 					"id": "validate-associated",
 					"name": "Validate Associated",
-					"description": ""
+					"description": "runs validations on an associated model"
 				}
 			]
 		},

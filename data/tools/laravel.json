@@ -266,6 +266,14 @@
 			"file-size": {
 				"code": "size:1024",
 				"api": "http://laravel.com/docs/validation#rule-size"
+			},
+			"file-min-size": {
+				"code": "size:1024",
+				"api": "http://laravel.com/docs/validation#rule-size"
+			},
+			"file-max-size": {
+				"code": "size:1024",
+				"api": "http://laravel.com/docs/validation#rule-size"
 			}
 		},
 		"mvc": {
