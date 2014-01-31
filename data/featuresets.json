@@ -581,6 +581,21 @@
 					"id": "remove-session-var",
 					"name": "Remove Session Var",
 					"description": "removes a variable from the session"
+				},
+				{
+					"id": "get-flash-var",
+					"name": "Get Flash Var",
+					"description": "retrieves a variable from the flash (storage over one request)"
+				},
+				{
+					"id": "set-flash-var",
+					"name": "Set Flash Var",
+					"description": "sets a variable in the flash (storage over one request)"
+				},
+				{
+					"id": "keep-flash-var",
+					"name": "Keep Flash Var",
+					"description": "preserves the variable in the flash for an additional request"
 				}
 			]
 		},

@@ -63,6 +63,18 @@
 			"remove-session-var": {
 				"code": "session[:key] = nil",
 				"api": "http://guides.rubyonrails.org/action_controller_overview.html#accessing-the-session"
+			},
+			"get-flash-var": {
+				"code": "flash[:key]",
+				"api": "http://guides.rubyonrails.org/action_controller_overview.html#the-flash"
+			},
+			"set-flash-var": {
+				"code": "flash[:key] = value",
+				"api": "http://guides.rubyonrails.org/action_controller_overview.html#the-flash"
+			},
+			"keep-flash-var": {
+				"code": "flash.keep",
+				"api": "http://guides.rubyonrails.org/action_controller_overview.html#the-flash"
 			}
 		},
 		"validation": {

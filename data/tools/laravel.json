@@ -109,6 +109,18 @@
 			"remove-session-var": {
 				"code": "Session::forget('key');",
 				"api": "http://laravel.com/docs/session#session-usage"
+			},
+			"get-flash-var": {
+				"code": "Session::get('key');\n// same as normal session get",
+				"api": "http://laravel.com/docs/session#flash-data"
+			},
+			"set-flash-var": {
+				"code": "Session::flash('key', 'value');",
+				"api": "http://laravel.com/docs/session#flash-data"
+			},
+			"remove-flash-var": {
+				"code": "Session::keep(array('item1','item2',…));",
+				"api": "http://laravel.com/docs/session#flash-data"
 			}
 		},
 		"validation": {
