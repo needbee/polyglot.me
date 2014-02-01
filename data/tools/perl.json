@@ -405,6 +405,36 @@
 				"code": "use CGI::Session;\nmy $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});\n$session->clear([\"key\"]);",
 				"api": "http://search.cpan.org/~sherzodr/CGI-Session-3.95/Session.pm"
 			}
+		},
+		"database": {
+			"connect": {
+				"code": "use DBI;\n$dbh = DBI->connect($data_source, $username, $auth);",
+				"api": "http://search.cpan.org/~timb/DBI/DBI.pm#connect"
+			},
+			"disconnect": {
+				"code": "$dbh->disconnect",
+				"api": "http://search.cpan.org/~timb/DBI/DBI.pm#disconnect"
+			},
+			"execute-hardcoded": {
+				"code": "$dbh->do(\"SELECT * FROM mytable WHERE status = 'live'\")",
+				"api": "http://search.cpan.org/~timb/DBI/DBI.pm#do"
+			},
+			"execute-dynamic": {
+				"code": "$sth = $dbh->prepare(\"SELECT * FROM mytable WHERE status = ? and author = ?\");\n$sth->execute( $status, $author );",
+				"api": "http://search.cpan.org/~timb/DBI/DBI.pm#prepare"
+			},
+			"retrieve-row": {
+				"code": "while ( @row = $sth->fetchrow_array ) {…}",
+				"api": "http://search.cpan.org/~timb/DBI/DBI.pm#fetchrow_array"
+			},
+			"retrieve-all-rows": {
+				"code": "$arrayRef = $sth->fetchall_arrayref()",
+				"api": "http://search.cpan.org/~timb/DBI/DBI.pm#fetchall_arrayref"
+			},
+			"new-row-id": {
+				"code": "$dbh->last_insert_id( $catalog, $schema, $table, $field ) // all 4 can usually be undef",
+				"api": "http://search.cpan.org/~timb/DBI/DBI.pm#last_insert_id"
+			}
 		}
 	}
 }

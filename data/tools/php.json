@@ -473,6 +473,40 @@
 				"code": "session_start();\nunset($_SESSION['key'])",
 				"api": "http://www.php.net/manual/en/session.examples.basic.php"
 			}
+		},
+		"database": {
+			"connect": {
+				"code": "$dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass)",
+				"api": "http://www.php.net/manual/en/pdo.connections.php"
+			},
+			"disconnect": {
+				"code": "$dbh = null",
+				"api": "http://www.php.net/manual/en/pdo.connections.php"
+			},
+			"execute-hardcoded": {
+				"code": "$dbh->exec(\"SELECT * FROM mytable WHERE status = 'live'\");",
+				"api": "http://www.php.net/manual/en/pdo.transactions.php"
+			},
+			"execute-dynamic": {
+				"code": "$stmt = $dbh->prepare(\"INSERT INTO REGISTRY (name, value) VALUES (:name, :value)\");\n$stmt->bindParam(':name', $name);\n$stmt->bindParam(':value', $value);\n$stmt->execute();",
+				"api": "http://www.php.net/manual/en/pdo.prepared-statements.php"
+			},
+			"row-count": {
+				"code": "$stmt->rowCount()",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/results.html"
+			},
+			"retrieve-row": {
+				"code": "while ($row = $stmt->fetch()) {…}",
+				"api": "http://www.php.net/manual/en/pdostatement.fetch.php"
+			},
+			"retrieve-all-rows": {
+				"code": "$stmt->fetchAll()",
+				"api": "http://www.php.net/manual/en/pdostatement.fetchall.php"
+			},
+			"new-row-id": {
+				"code": "PDO::lastInsertId",
+				"api": "http://php.net/manual/en/pdo.lastinsertid.php"
+			}
 		}
 	}
 }

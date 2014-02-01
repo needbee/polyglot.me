@@ -300,6 +300,32 @@
 				"api": "http://laravel.com/docs/validation#rule-size"
 			}
 		},
+		"database": {
+			"connect": {
+				"code": "$this->load->database()\n",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/connecting.html"
+			},
+			"disconnect": {
+				"code": "$this->db->close()",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/connecting.html"
+			},
+			"execute-hardcoded": {
+				"code": "DB::select(\"SELECT * FROM mytable WHERE status = 'live'\");\nDB::insert(…);\nDB::update(…);\nDB::delete(…);\nDB::statement(…);",
+				"api": "http://laravel.com/docs/database#running-queries"
+			},
+			"execute-dynamic": {
+				"code": "DB::select(\"SELECT * FROM mytable WHERE status = ? and author = ?\", array($status, $author))",
+				"api": "http://laravel.com/docs/database#running-queries"
+			},
+			"row-count": {
+				"code": "$allRows = DB::select(…); count($allRows);",
+				"api": "http://laravel.com/docs/database#running-queries"
+			},
+			"retrieve-all-rows": {
+				"code": "$allRows = DB::select(…)",
+				"api": "http://laravel.com/docs/database#running-queries"
+			}
+		},
 		"mvc": {
 			"route": {
 				"code": [

@@ -886,6 +886,52 @@
 			]
 		},
 		{
+			"id": "database",
+			"name": "Database",
+			"features": [
+				{
+					"id": "connect",
+					"name": "Connect",
+					"description": "open a db connection"
+				},
+				{
+					"id": "disconnect",
+					"name": "Disconnect",
+					"description": "close a db connection"
+				},
+				{
+					"id": "execute-hardcoded",
+					"name": "Execute Hardcoded",
+					"description": "runs a hard-coded query with no user-provided data (WARNING: do not directly inject variables; this is a security risk. See the Execute Dynamic feature instead)"
+				},
+				{
+					"id": "execute-dynamic",
+					"name": "Execute Dynamic",
+					"description": "runs a query with user-provided data"
+				},
+				{
+					"id": "row-count",
+					"name": "Row Count",
+					"description": "retrieve the number of records returned"
+				},
+				{
+					"id": "retrieve-row",
+					"name": "Retrieve Row",
+					"description": "retrieve one row of data"
+				},
+				{
+					"id": "retrieve-all-rows",
+					"name": "Retrieve All Rows",
+					"description": "retrieve all rows of data"
+				},
+				{
+					"id": "new-row-id",
+					"name": "New Row ID",
+					"description": "retrieves the ID of the last record created"
+				}
+			]
+		},
+		{
 			"id": "mvc",
 			"name": "Model-View-Controller",
 			"features": [

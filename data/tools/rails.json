@@ -191,6 +191,24 @@
 				"api": "http://guides.rubyonrails.org/active_record_validations.html#validates-associated"
 			}
 		},
+		"database": {
+			"connect": {
+				"code": "@conn = ActiveRecord::Base.establish_connection(\n    :adapter => \"mysql2\",\n    :host => \"localhost\",\n    :database => \"siteconfig_development\",\n    :username => \"root\",\n    :password => \"root123\"\n)",
+				"api": "http://stackoverflow.com/questions/15408285/rails-3-execute-custom-sql-query-without-a-model"
+			},
+			"execute-hardcoded": {
+				"code": "@result = @connection.connection.execute(\"SELECT * FROM mytable WHERE status = 'live'\")",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/queries.html"
+			},
+			"retrieve-row": {
+				"code": "@result.each(:as => :hash) do |row|\n    …\nend",
+				"api": "http://stackoverflow.com/questions/15408285/rails-3-execute-custom-sql-query-without-a-model"
+			},
+			"retrieve-all-rows": {
+				"code": "@result.each(:as => :hash) do |row|\n    …\nend",
+				"api": "http://stackoverflow.com/questions/15408285/rails-3-execute-custom-sql-query-without-a-model"
+			}
+		},
 		"mvc": {
 			"route": {
 				"code": [

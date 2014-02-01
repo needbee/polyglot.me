@@ -175,6 +175,40 @@
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#rulereference"
 			}
 		},
+		"database": {
+			"connect": {
+				"code": "$this->load->database()\n",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/connecting.html"
+			},
+			"disconnect": {
+				"code": "$this->db->close()",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/connecting.html"
+			},
+			"execute-hardcoded": {
+				"code": "$sql = \"SELECT * FROM mytable WHERE status = 'live'\";\n$query = $this->db->query($sql);",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/queries.html"
+			},
+			"execute-dynamic": {
+				"code": "$sql = \"SELECT * FROM mytable WHERE status = ? and author = ?\";\n$query = $this->db->query($sql, array($status, $author));",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/queries.html"
+			},
+			"row-count": {
+				"code": "$query->num_rows()",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/results.html"
+			},
+			"retrieve-row": {
+				"code": "$row = $query->row();\n$row->myfield;",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/results.html"
+			},
+			"retrieve-all-rows": {
+				"code": "foreach( $query->result() as $row ) {\n    $row->myfield;\n}",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/results.html"
+			},
+			"new-row-id": {
+				"code": "$this->db->insert_id()",
+				"api": "http://ellislab.com/codeigniter/user-guide/database/helpers.html"
+			}
+		},
 		"mvc": {
 			"route": {
 				"code": [
