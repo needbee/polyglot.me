@@ -135,7 +135,12 @@
 		"collections": {
 			"define": [
 				{
-					"code": "[NSArray arrayWithObjects:…, nil]",
+					"code": "@[ @\"1\", @\"2\", @\"3\" ]",
+					"version": "OS X 10.8, iOS 6",
+					"api": "http://cocoaheads.tumblr.com/post/17757846453/objective-c-literals-for-nsdictionary-nsarray-and"
+				},
+				{
+					"code": "[NSArray arrayWithObjects:@\"1\", @\"2\", @\"3\", nil]",
 					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABEADJJ"
 				},
 				{
@@ -144,6 +149,11 @@
 				}
 			],
 			"define-associative": [
+				{
+					"code": "@{ @\"key1\": @\"val1\", @\"key2\": @\"val2\" }",
+					"version": "OS X 10.8, iOS 6",
+					"api": "http://cocoaheads.tumblr.com/post/17757846453/objective-c-literals-for-nsdictionary-nsarray-and"
+				},
 				{
 					"code": "[NSDictionary dictionaryWithObjectsAndKeys:@\"val1\", @\"key1\", @\"val2\", @\"key2\",…,nil]",
 					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html#//apple_ref/doc/uid/20000140-CBHCIFDD"
