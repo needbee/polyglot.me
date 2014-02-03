@@ -3,6 +3,10 @@
 	"name": "jQuery",
 	"api": "http://api.jquery.com/",
 	"featuresets": {
+		"strings": {
+			"trim": "$.trim(str)",
+			"api": "http://api.jquery.com/jQuery.trim/"
+		},
 		"collections": {
 			"merge": {
 				"code": "$.merge( [], a, b )",

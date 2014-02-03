@@ -70,6 +70,10 @@
 				"code": "str.indexOf( mysubstring )",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)"
 			},
+			"trim": {
+				"code": "str.trim()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#trim()"
+			},
 			"replace": {
 				"code": "str.replaceAll( myregex, tmpl )",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#replaceAll(java.lang.String, java.lang.String)"

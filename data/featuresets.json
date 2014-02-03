@@ -82,6 +82,11 @@
 					"description": "find out what position a substring mysubstring is within a string str"
 				},
 				{
+					"id": "trim",
+					"name": "Trim",
+					"description": "removes whitespace from the start and end of the string"
+				},
+				{
 					"id": "replace",
 					"name": "Replace",
 					"description": "replace all occurrences of a substring with another string"

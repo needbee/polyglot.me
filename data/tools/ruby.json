@@ -59,6 +59,10 @@
 				"code": "str.index( $mysubstring )",
 				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-index"
 			},
+			"trim": {
+				"code": "str.trim",
+				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-strip"
+			},
 			"replace": {
 				"code": "str.gsub( myregex, tmpl )",
 				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-gsub"

@@ -64,6 +64,10 @@
 				"code": "strpos( $str, $mysubstring )",
 				"api": "http://www.php.net/manual/en/function.strpos.php"
 			},
+			"trim": {
+				"code": "trim($str)",
+				"api": "http://php.net/manual/en/function.trim.php"
+			},
 			"replace": {
 				"code": "str_replace( $old, $new, $str )",
 				"api": "http://php.net/manual/en/function.str-replace.php"

@@ -59,6 +59,10 @@
 				"code": "[str rangeOfString:mysubstring]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-rangeOfString_"
 			},
+			"trim": {
+				"code": "[text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-CJBJFBGC"
+			},
 			"replace": {
 				"code": "[str stringByReplacingOccurrencesOfString:str1 withString:str2]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-SW6"

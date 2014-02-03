@@ -65,6 +65,11 @@
 				"code": "str.indexOf( mysubstring )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf"
 			},
+			"trim": {
+				"code": "str.trim()",
+				"version": "1.8.1",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
+			},
 			"replace": {
 				"code": "var myregex = /…/g;\nstr.replace(myregex, tmpl);",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"

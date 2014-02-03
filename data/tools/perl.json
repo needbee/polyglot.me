@@ -66,6 +66,10 @@
 				"code": "index $str, $mysubstring",
 				"api": "http://perldoc.perl.org/functions/index.html"
 			},
+			"trim": {
+				"code": "for ($string) {\n    s/^\\s+//;\n    s/\\s+$//;\n}",
+				"api": "http://www.perlmonks.org/?node_id=602"
+			},
 			"replace": {
 				"code": "$str =~ s/…/…/g",
 				"api": "http://perldoc.perl.org/perlretut.html#Search-and-replace"
