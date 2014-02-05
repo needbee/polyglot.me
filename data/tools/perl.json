@@ -409,6 +409,16 @@
 				"code": "use CGI::Session;\nmy $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});\n$session->clear([\"key\"]);",
 				"api": "http://search.cpan.org/~sherzodr/CGI-Session-3.95/Session.pm"
 			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": "use LWP::Simple;\n$content = get(\"http://www.sn.no/\");",
+				"api": "http://search.cpan.org/~gaas/libwww-perl-6.05/lib/LWP/Simple.pm"
+			},
+			"full-request": {
+				"code": "require LWP::UserAgent;\nmy $ua = LWP::UserAgent->new;\n$ua->default_header('Content-Type' => 'text/json');\nmy $response = $ua->post('http://search.cpan.org/', Content => $body); // or get(), put(), or delete()\n if ($response->is_success) {\n     print $response->decoded_content;\n} else {\n    die $response->status_line;\n}",
+				"api": "http://search.cpan.org/~gaas/libwww-perl-6.05/lib/LWP/UserAgent.pm"
+			}
 		}
 	}
 }

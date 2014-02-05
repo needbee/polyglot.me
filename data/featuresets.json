@@ -605,6 +605,22 @@
 			]
 		},
 		{
+			"id": "http-client",
+			"name": "HTTP Client",
+			"features": [
+				{
+					"id": "simple-request",
+					"name": "Simple Request",
+					"description": "send a simple GET request"
+				},
+				{
+					"id": "full-request",
+					"name": "Full Request",
+					"description": "send an HTTP request with all configuration parameters"
+				}
+			]
+		},
+		{
 			"id": "validation",
 			"name": "Validation",
 			"features": [

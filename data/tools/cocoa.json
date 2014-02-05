@@ -450,6 +450,26 @@
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html#//apple_ref/doc/uid/TP40011210-CH11-SW3"
 			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": "@interface MyClass : NSObject <NSURLConnectionDelegate>\n{\n    NSMutableData *_responseData;\n}"
+
+					},
+					{
+						"file": "MyClass.m",
+						"contents": "@implementation MyClass\n\n…- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {\n    _responseData = [[NSMutableData alloc] init];\n}\n\n- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {\n    [_responseData appendData:data];\n}\n\n- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse*)cachedResponse {\n    return nil;\n}\n\n- (void)connectionDidFinishLoading:(NSURLConnection *)connection {\n    // request complete, can parse data now\n}\n\n- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {…}\n\n…\n\n    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@\"http://google.com\"]];\n    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];\n\n@end"
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSURLConnection_Class/Reference/Reference.html"
+			},
+			"full-request": {
+				"code": "NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];\n[request setURL:theUrl];\n[request setValue:@\"text/json\" forHTTPHeaderField:@\"Content-Type\"];[request setHTTPMethod:@\"PUT\"];\nNSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];\n\n…\n\n[(NSHTTPURLResponse *)response allHeaderFields];",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableURLRequest_Class/Reference/Reference.html#//apple_ref/doc/uid/20001696-canBeConvertedToEncoding_"
+			}
 		}
 	}
 }

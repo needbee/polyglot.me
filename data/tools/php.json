@@ -477,6 +477,16 @@
 				"code": "session_start();\nunset($_SESSION['key'])",
 				"api": "http://www.php.net/manual/en/session.examples.basic.php"
 			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": "$ch = curl_init('http://www.example.com/');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);\n$output = curl_exec($ch);\ncurl_close($ch);",
+				"api": "http://php.net/manual/en/curl.examples.php"
+			},
+			"full-request": {
+				"code": "$ch = curl_init('http://www.example.com/');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);\ncurl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); // or PUT or DELETE, \ncurl_setopt($ch, CURLOPT_PORT, 1234);\nculr_setopt($ch, CURLOPT_HTTPHEADER, $headerArray);\ncurl_setopt($ch, CURLOPT_COOKIE, $mycookie);\ncurl_setopt($ch, CURLOPT_POSTFIELDS, $dataArray);\n$output = curl_exec($ch);\ncurl_close($ch);",
+				"api": "http://www.php.net/manual/en/function.curl-setopt.php"
+			}
 		}
 	}
 }

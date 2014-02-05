@@ -37,6 +37,16 @@
 				"code": "$.map( myarray, function(val) {…} )",
 				"api": "http://api.jquery.com/jQuery.map/"
 			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": "$.get('path/on/server', function(data) {…})",
+				"api": "http://api.jquery.com/jQuery.get/"
+			},
+			"full-request": {
+				"code": "$.ajax('path/on/server', {\n    accepts: mimeType,\n    cache: false,\n    contentType: requestDataContentType,\n    data: requestData,\n    dataType: responseDataParsingType,\n    error: errorHandler,\n    headers: headerMap,\n    statusCode: statusCodeHandlerMap,\n    success: successHandler,\n    type: httpVerbString\n});",
+				"api": "http://api.jquery.com/jQuery.ajax/"
+			}
 		}
 	}
 }

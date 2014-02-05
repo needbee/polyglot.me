@@ -391,6 +391,16 @@
 				"code": "# not really abstract classes, but shared methods\nmodule MyModule\n    def mysharedmethod\n        …\n    end\nend\n\nclass MyClass\n    include MyModule\nend",
 				"api": "http://www.tutorialspoint.com/ruby/ruby_modules.htm"
 			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": "require \"net/http\"\nrequire \"uri\"\n\nuri = URI.parse(\"http://google.com/\")\nresponse = Net::HTTP.get_response(uri)",
+				"api": "http://ruby-doc.org/stdlib-2.1.0/libdoc/net/http/rdoc/Net/HTTP.html#method-c-get_response"
+			},
+			"full-request": {
+				"code": "require \"net/http\"\n\nhttp = Net::HTTP.new(\"api.restsite.com\")\nrequest = Net::HTTP::Post.new(\"/users\")\nrequest[\"Content-Type\"] = \"text/json\"\nrequest.body = '{\"username\":\"quentin\"}'\nresponse = http.request(request)\nresponse[\"Content-Type\"]",
+				"api": "http://ruby-doc.org/stdlib-2.1.0/libdoc/net/http/rdoc/Net/HTTP/Post.html"
+			}
 		}
 	}
 }

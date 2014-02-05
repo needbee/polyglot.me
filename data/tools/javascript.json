@@ -357,6 +357,16 @@
 				"code": "function MyClass() {\n    var myprivatevar = 27;\n    var that = this; // allows private method to access this\n    var myprivatemethod = function() {…}\n}",
 				"api": "http://javascript.crockford.com/private.html"
 			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": "request = new XMLHttpRequest();\nrequest.open('GET', '/my/url', true);\nrequest.send();\nrequest.onload = function() {\n    this.response;\n}",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
+			},
+			"full-request": {
+				"code": "$.ajax('path/on/server', {\n    accepts: mimeType,\n    cache: false,\n    contentType: requestDataContentType,\n    data: requestData,\n    dataType: responseDataParsingType,\n    error: errorHandler,\n    headers: headerMap,\n    statusCode: statusCodeHandlerMap,\n    success: successHandler,\n    type: httpVerbString\n});",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
+			}
 		}
 	}
 }
