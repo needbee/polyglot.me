@@ -88,7 +88,7 @@
 						<th class="feature">Feature</th>
 						<% _.each(tools,function(toolObj){ %>
 							<% tool = toolObj; %>
-							<th class="toolfeature">
+							<th class="toolfeature-fixed">
 								<a href="<%= tool.api %>" target="_blank"><%= tool.name %></a>
 								<a class="remove-tool" href="<%= cheatsheet.baseWebUrl + _.difference(_.pluck(tools,'id'),[tool.id]).join('+') %>"><span class="glyphicon glyphicon-remove" id="remove-tool-<%= tool.id %>"></span></a>
 							</th>
@@ -102,7 +102,7 @@
 									<th><%= featureSet.name %></th>
 									<% _.each(tools,function(toolObj){ %>
 										<% tool = toolObj; %>
-										<th class="toolfeature">
+										<th class="<% if(tools.length > 2) { %>toolfeature-fixed<% } %>">
 											<a class="remove-tool" href="<%= cheatsheet.baseWebUrl + _.difference(_.pluck(tools,'id'),[tool.id]).join('+') %>"><span class="glyphicon glyphicon-remove" id="remove-tool-<%= tool.id %>"></span></a>
 											<a href="<%= tool.api %>" target="_blank"><%= tool.name %></a>
 										</th>
@@ -138,7 +138,7 @@
 														toolFeature = tool.featuresets[featureSet.id][feature.id];
 													}
 												%>
-												<td class="toolfeature">
+												<td class="<% if(tools.length > 2) { %>toolfeature-fixed<% } %>">
 													<div class="tdwrapper">
 														<%
 															if( null != toolFeature ) {
