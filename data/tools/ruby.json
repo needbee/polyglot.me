@@ -116,12 +116,12 @@
 				"api": "http://www.ruby-doc.org/core-2.1.0/Random.html#method-i-rand"
 			},
 			"min": {
-				"code": "myarray.each_with_index.min.first",
-				"api": "http://stackoverflow.com/questions/4964256/ruby-how-to-find-the-index-of-the-minimum-array-element"
+				"code": "myarray.min",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Enumerable.html#method-i-min"
 			},
 			"max": {
-				"code": "myarray.each_with_index.max.first",
-				"api": "http://stackoverflow.com/questions/4964256/ruby-how-to-find-the-index-of-the-minimum-array-element"
+				"code": "myarray.max",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Enumerable.html#method-i-max"
 			}
 		},
 		"dates": {
