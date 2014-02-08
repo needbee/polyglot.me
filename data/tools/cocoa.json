@@ -4,6 +4,30 @@
 	"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/ObjC_classic/_index.html",
 	"featuresets": {
 		"types": {
+			"is-string": {
+				"code": "[myobj isKindOfClass:[NSString class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-date": {
+				"code": "[myobj isKindOfClass:[NSDate class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-regex": {
+				"code": "[myobj isKindOfClass:[NSRegularExpression class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-array": {
+				"code": "[myobj isKindOfClass:[NSArray class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-associative-array": {
+				"code": "[myobj isKindOfClass:[NSDictionary class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-null": {
+				"code": "nil == myobj",
+				"api": "http://stackoverflow.com/questions/6177719/testing-for-nil-in-objective-c-ifx-nil-vs-ifx"
+			},
 			"string-to-int": {
 				"code": "[mystr intValue]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-intValue"

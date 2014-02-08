@@ -3,6 +3,28 @@
 	"name": "jQuery",
 	"api": "http://api.jquery.com/",
 	"featuresets": {
+		"types": {
+			"is-int": {
+				"code": "$.isNumeric(myvar) && (myvar % 1 == 0)",
+				"api": "http://api.jquery.com/jQuery.isNumeric/"
+			},
+			"is-float": {
+				"code": "$.isNumeric(myvar) && (myvar % 1 != 0)",
+				"api": "http://api.jquery.com/jQuery.isNumeric/"
+			},
+			"is-array": {
+				"code": "$.isArray(myvar) // or associative",
+				"api": "http://api.jquery.com/jQuery.isArray/"
+			},
+			"is-associative-array": {
+				"code": "$.isArray(myvar) // or non-associative",
+				"api": "http://api.jquery.com/jQuery.isArray/"
+			},
+			"is-function": {
+				"code": "$.isFunction(myvar)",
+				"api": "http://api.jquery.com/jQuery.isFunction/"
+			}
+		},
 		"strings": {
 			"trim": "$.trim(str)",
 			"api": "http://api.jquery.com/jQuery.trim/"

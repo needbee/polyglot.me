@@ -9,6 +9,69 @@
 			}
 		},
 		"types": {
+			"is-boolean": {
+				"code": "typeof myvar === 'boolean'",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-int": {
+				"code": "typeof myvar === 'number' && (myvar % 1 != 0)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-float": {
+				"code": "typeof myvar === 'number' && (myvar % 1 != 0)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-string": {
+				"code": "typeof myvar === 'string'",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-date": {
+				"code": "myvar instanceof Date",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"
+			},
+			"is-regex": {
+				"code": "myvar instanceof RegExp",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"
+			},
+			"is-array": [
+				{
+					"code": "Array.isArray(myvar) // includes associative",
+					"version": "1.8.5",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray"
+				},
+				{
+					"code": [
+						"myvar instanceof Array // includes non-associative",
+						"// NOTE: doesn't work cross-window"
+					],
+					"api": "http://web.mit.edu/jwalden/www/isArray.html"
+				}
+			],
+			"is-associative-array": [
+				{
+					"code": "Array.isArray(myvar) // includes associative",
+					"version": "1.8.5",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray"
+				},
+				{
+					"code": [
+						"myvar instanceof Array // includes non-associative",
+						"// NOTE: doesn't work cross-window"
+					],
+					"api": "http://web.mit.edu/jwalden/www/isArray.html"
+				}
+			],
+			"is-function": {
+				"code": "typeof myvar === 'function'",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-null": {
+				"code": "null == myvar"
+			},
+			"is-undefined": {
+				"code": "typeof myvar === 'undefined'",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
 			"string-to-int": {
 				"code": "parseInt( mystr )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt"

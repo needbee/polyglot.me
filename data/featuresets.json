@@ -16,6 +16,66 @@
 			"name": "Types",
 			"features": [
 				{
+					"id": "is-boolean",
+					"name": "Is Boolean",
+					"description": "returns true if the variable is a boolean"
+				},
+				{
+					"id": "is-int",
+					"name": "Is Integer",
+					"description": "returns true if the variable is an integer"
+				},
+				{
+					"id": "is-float",
+					"name": "Is Float",
+					"description": "returns true if the variable is a floating point number"
+				},
+				{
+					"id": "is-string",
+					"name": "Is String",
+					"description": "returns true if the variable is a string"
+				},
+				{
+					"id": "is-date",
+					"name": "Is Date",
+					"description": "returns true if the variable is a date"
+				},
+				{
+					"id": "is-regex",
+					"name": "Is Regex",
+					"description": "returns true if the variable is a regular expression"
+				},
+				{
+					"id": "is-array",
+					"name": "Is Array",
+					"description": "returns true if the variable is an array"
+				},
+				{
+					"id": "is-associative-array",
+					"name": "Is Associative Array",
+					"description": "returns true if the variable is an associative array"
+				},
+				{
+					"id": "is-object",
+					"name": "Is Object",
+					"description": "returns true if the variable is an object"
+				},
+				{
+					"id": "is-function",
+					"name": "Is Function",
+					"description": "returns true if the variable is a function/closure"
+				},
+				{
+					"id": "is-null",
+					"name": "Is Null",
+					"description": "returns true if the variable is null/nil"
+				},
+				{
+					"id": "is-undefined",
+					"name": "Is Undefined",
+					"description": "returns true if the variable is undefined"
+				},
+				{
 					"id": "string-to-int",
 					"name": "String to Integer",
 					"description": "converts string mystr into an integer"

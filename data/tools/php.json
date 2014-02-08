@@ -9,6 +9,50 @@
 			}
 		},
 		"types": {
+			"is-boolean": {
+				"code": "is_bool($myvar)",
+				"api": "http://php.net/manual/en/function.is-bool.php"
+			},
+			"is-int": {
+				"code": "is_int($myvar)",
+				"api": "http://php.net/manual/en/function.is-int.php"
+			},
+			"is-float": {
+				"code": "is_float($myvar)",
+				"api": "http://php.net/manual/en/function.is-float.php"
+			},
+			"is-string": {
+				"code": "is_string($myvar)",
+				"api": "http://php.net/manual/en/function.is-string.php"
+			},
+			"is-date": {
+				"code": "$myvar instanceof DateTime",
+				"api": "http://php.net/manual/en/language.operators.type.php"
+			},
+			"is-array": {
+				"code": "is_array($myvar) // includes associative",
+				"api": "http://www.php.net/manual/en/function.is-array.php"
+			},
+			"is-associative-array": {
+				"code": "is_array($myvar) // includes non-associative",
+				"api": "http://www.php.net/manual/en/function.is-array.php"
+			},
+			"is-object": {
+				"code": "is_object($myvar)",
+				"api": "http://www.php.net/manual/en/function.is-object.php"
+			},
+			"is-function": {
+				"code": "is_callable($myvar) // includes function name strings",
+				"api": "http://www.php.net/manual/en/function.is-callable.php"
+			},
+			"is-null": {
+				"code": "is_null($myvar)",
+				"api": "http://www.php.net/manual/en/function.is-null.php"
+			},
+			"is-undefined": {
+				"code": "isset($myvar) // also matches null",
+				"api": "http://www.php.net/manual/en/function.isset.php"
+			},
 			"string-to-int": {
 				"code": "intval( $mystr )",
 				"api": "http://php.net/manual/en/function.intval.php"

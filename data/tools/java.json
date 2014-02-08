@@ -10,6 +10,30 @@
 			}
 		},
 		"types": {
+			"is-string": {
+				"code": "myobj instanceof String",
+				"api": "http://www.java2s.com/Tutorial/Java/0060__Operators/TheinstanceofKeyword.htm"
+			},
+			"is-date": {
+				"code": "myobj instanceof Date",
+				"api": "http://www.java2s.com/Tutorial/Java/0060__Operators/TheinstanceofKeyword.htm"
+			},
+			"is-regex": {
+				"code": "myobj instanceof java.util.regex.Pattern",
+				"api": "http://www.java2s.com/Tutorial/Java/0060__Operators/TheinstanceofKeyword.htm"
+			},
+			"is-array": {
+				"code": "myobj instanceof java.util.List",
+				"api": "http://www.java2s.com/Tutorial/Java/0060__Operators/TheinstanceofKeyword.htm"
+			},
+			"is-associative-array": {
+				"code": "myobj instanceof java.util.Map",
+				"api": "http://www.java2s.com/Tutorial/Java/0060__Operators/TheinstanceofKeyword.htm"
+			},
+			"is-null": {
+				"code": "null == myobj",
+				"api": "http://www.java2s.com/Tutorial/Java/0060__Operators/TheinstanceofKeyword.htm"
+			},
 			"string-to-int": {
 				"code": "Integer.parseInt( mystr )",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html#parseInt(java.lang.String)"

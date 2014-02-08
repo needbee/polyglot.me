@@ -9,6 +9,42 @@
 			}
 		},
 		"types": {
+			"is-boolean": {
+				"code": "myvar.is_a? TrueClass || myvar.is_a? FalseClass",
+				"api": "http://ruby-doc.org/core-2.1.0/Object.html#method-i-is_a-3F"
+			},
+			"is-int": {
+				"code": "myvar.is_a? Integer",
+				"api": "http://ruby-doc.org/core-2.1.0/Object.html#method-i-is_a-3F"
+			},
+			"is-float": {
+				"code": "myvar.is_a? Float",
+				"api": "http://ruby-doc.org/core-2.1.0/Object.html#method-i-is_a-3F"
+			},
+			"is-string": {
+				"code": "myvar.is_a? String",
+				"api": "http://ruby-doc.org/core-2.1.0/Object.html#method-i-is_a-3F"
+			},
+			"is-date": {
+				"code": "myvar.is_a? Time",
+				"api": "http://ruby-doc.org/core-2.1.0/Object.html#method-i-is_a-3F"
+			},
+			"is-regex": {
+				"code": "myvar.is_a? Regexp",
+				"api": "http://ruby-doc.org/core-2.1.0/Object.html#method-i-is_a-3F"
+			},
+			"is-array": {
+				"code": "myvar.is_a? Array # including associative",
+				"api": "http://ruby-doc.org/core-2.1.0/Object.html#method-i-is_a-3F"
+			},
+			"is-associative-array": {
+				"code": "myvar.is_a? Array # including non-associative",
+				"api": "http://ruby-doc.org/core-2.1.0/Object.html#method-i-is_a-3F"
+			},
+			"is-null": {
+				"code": "myvar.nil?",
+				"api": "http://ruby-doc.org/core-2.1.0/Object.html#method-i-nil-3F"
+			},
 			"string-to-int": {
 				"code": "mystr.to_i",
 				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-to_i"

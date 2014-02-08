@@ -3,6 +3,56 @@
 	"name": "Underscore.js",
 	"api": "http://underscorejs.org/",
 	"featuresets": {
+		"types": {
+			"is-boolean": {
+				"code": "_.isBoolean(myvar)",
+				"api": "http://underscorejs.org/#isBoolean"
+			},
+			"is-int": {
+				"code": "_.isNumber(myvar) && (myvar % 1 == 0)",
+				"api": "http://underscorejs.org/#isNumber"
+			},
+			"is-float": {
+				"code": "_.isNumber(myvar) && (myvar % 1 != 0)",
+				"api": "http://underscorejs.org/#isNumber"
+			},
+			"is-string": {
+				"code": "_.isString(myvar)",
+				"api": "http://underscorejs.org/#isString"
+			},
+			"is-date": {
+				"code": "_.isDate(myvar)",
+				"api": "http://underscorejs.org/#isDate"
+			},
+			"is-regex": {
+				"code": "_.isRegExp(myvar)",
+				"api": "http://underscorejs.org/#isRegExp"
+			},
+			"is-array": {
+				"code": "_.isArray(myvar) // includes associative",
+				"api": "http://underscorejs.org/#isArray"
+			},
+			"is-associative-array": {
+				"code": "_.isArray(myvar) // includes non-associative",
+				"api": "http://underscorejs.org/#isArray"
+			},
+			"is-object": {
+				"code": "_.isObject(myvar) // including arrays",
+				"api": "http://underscorejs.org/#isArray"
+			},
+			"is-function": {
+				"code": "_.isFunction(myvar)",
+				"api": "http://underscorejs.org/#isFunction"
+			},
+			"is-null": {
+				"code": "_.isNull(myvar)",
+				"api": "http://underscorejs.org/#isNull"
+			},
+			"is-undefined": {
+				"code": "_.isUndefined(myvar)",
+				"api": "http://underscorejs.org/#isUndefined"
+			}
+		},
 		"collections": {
 			"for-each":
 			{
