@@ -9,6 +9,50 @@
 			}
 		},
 		"types": {
+			"is-boolean": {
+				"code": "is_bool($myvar)",
+				"api": "http://php.net/manual/en/function.is-bool.php"
+			},
+			"is-int": {
+				"code": "is_int($myvar)",
+				"api": "http://php.net/manual/en/function.is-int.php"
+			},
+			"is-float": {
+				"code": "is_float($myvar)",
+				"api": "http://php.net/manual/en/function.is-float.php"
+			},
+			"is-string": {
+				"code": "is_string($myvar)",
+				"api": "http://php.net/manual/en/function.is-string.php"
+			},
+			"is-date": {
+				"code": "$myvar instanceof DateTime",
+				"api": "http://php.net/manual/en/language.operators.type.php"
+			},
+			"is-array": {
+				"code": "is_array($myvar) // includes associative",
+				"api": "http://www.php.net/manual/en/function.is-array.php"
+			},
+			"is-associative-array": {
+				"code": "is_array($myvar) // includes non-associative",
+				"api": "http://www.php.net/manual/en/function.is-array.php"
+			},
+			"is-object": {
+				"code": "is_object($myvar)",
+				"api": "http://www.php.net/manual/en/function.is-object.php"
+			},
+			"is-function": {
+				"code": "is_callable($myvar) // includes function name strings",
+				"api": "http://www.php.net/manual/en/function.is-callable.php"
+			},
+			"is-null": {
+				"code": "is_null($myvar)",
+				"api": "http://www.php.net/manual/en/function.is-null.php"
+			},
+			"is-undefined": {
+				"code": "isset($myvar) // also matches null",
+				"api": "http://www.php.net/manual/en/function.isset.php"
+			},
 			"string-to-int": {
 				"code": "intval( $mystr )",
 				"api": "http://php.net/manual/en/function.intval.php"
@@ -63,6 +107,10 @@
 			"index-of": {
 				"code": "strpos( $str, $mysubstring )",
 				"api": "http://www.php.net/manual/en/function.strpos.php"
+			},
+			"trim": {
+				"code": "trim($str)",
+				"api": "http://php.net/manual/en/function.trim.php"
 			},
 			"replace": {
 				"code": "str_replace( $old, $new, $str )",
@@ -412,6 +460,23 @@
 				"api": "http://www.php.net/manual/en/language.oop5.abstract.php"
 			}
 		},
+		"serialization": {
+			"json-encode": {
+				"code": "json_encode( $myObjOrArray )",
+				"api": "http://www.php.net/manual/en/function.json-encode.php"
+			},
+			"json-decode": {
+				"code": "json_decode( $myJsonString )",
+				"api": "http://www.php.net/manual/en/function.json-decode.php"
+			},
+			"xml-decode": {
+				"code": [
+					"$rootElement = new SimpleXMLElement( $myXmlString );",
+					"$rootElement->myChildElement[2]"
+				],
+				"api": "http://www.php.net/manual/en/simplexml.examples-basic.php"
+			}
+		},
 		"http-server": {
 			"output": {
 				"code": "echo \"Hello, World!\"",
@@ -506,6 +571,16 @@
 			"new-row-id": {
 				"code": "PDO::lastInsertId",
 				"api": "http://php.net/manual/en/pdo.lastinsertid.php"
+			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": "$ch = curl_init('http://www.example.com/');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);\n$output = curl_exec($ch);\ncurl_close($ch);",
+				"api": "http://php.net/manual/en/curl.examples.php"
+			},
+			"full-request": {
+				"code": "$ch = curl_init('http://www.example.com/');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);\ncurl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); // or PUT or DELETE, \ncurl_setopt($ch, CURLOPT_PORT, 1234);\nculr_setopt($ch, CURLOPT_HTTPHEADER, $headerArray);\ncurl_setopt($ch, CURLOPT_COOKIE, $mycookie);\ncurl_setopt($ch, CURLOPT_POSTFIELDS, $dataArray);\n$output = curl_exec($ch);\ncurl_close($ch);",
+				"api": "http://www.php.net/manual/en/function.curl-setopt.php"
 			}
 		}
 	}

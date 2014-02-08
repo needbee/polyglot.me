@@ -3,6 +3,32 @@
 	"name": "jQuery",
 	"api": "http://api.jquery.com/",
 	"featuresets": {
+		"types": {
+			"is-int": {
+				"code": "$.isNumeric(myvar) && (myvar % 1 == 0)",
+				"api": "http://api.jquery.com/jQuery.isNumeric/"
+			},
+			"is-float": {
+				"code": "$.isNumeric(myvar) && (myvar % 1 != 0)",
+				"api": "http://api.jquery.com/jQuery.isNumeric/"
+			},
+			"is-array": {
+				"code": "$.isArray(myvar) // or associative",
+				"api": "http://api.jquery.com/jQuery.isArray/"
+			},
+			"is-associative-array": {
+				"code": "$.isArray(myvar) // or non-associative",
+				"api": "http://api.jquery.com/jQuery.isArray/"
+			},
+			"is-function": {
+				"code": "$.isFunction(myvar)",
+				"api": "http://api.jquery.com/jQuery.isFunction/"
+			}
+		},
+		"strings": {
+			"trim": "$.trim(str)",
+			"api": "http://api.jquery.com/jQuery.trim/"
+		},
 		"collections": {
 			"merge": {
 				"code": "$.merge( [], a, b )",
@@ -32,6 +58,39 @@
 			"map": {
 				"code": "$.map( myarray, function(val) {…} )",
 				"api": "http://api.jquery.com/jQuery.map/"
+			}
+		},
+		"serialization": {
+			"json-decode": {
+				"code": "$.parseJSON( myJsonString )",
+				"api": "http://api.jquery.com/jQuery.parseJSON/"
+			},
+			"xml-decode": {
+				"code": "$.parseXML( myXmlString )",
+				"api": "http://api.jquery.com/jQuery.parseXML/"
+			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": "$.get('path/on/server', function(data) {…})",
+				"api": "http://api.jquery.com/jQuery.get/"
+			},
+			"full-request": {
+				"code": [
+					"$.ajax('path/on/server', {",
+					"    accepts: mimeType,",
+					"    cache: false,",
+					"    contentType: requestDataContentType,",
+					"    data: requestData,",
+					"    dataType: responseDataParsingType,",
+					"    error: errorHandler,",
+					"    headers: headerMap,",
+					"    statusCode: statusCodeHandlerMap,",
+					"    success: successHandler,",
+					"    type: httpVerbString",
+					"});"
+				],
+				"api": "http://api.jquery.com/jQuery.ajax/"
 			}
 		}
 	}

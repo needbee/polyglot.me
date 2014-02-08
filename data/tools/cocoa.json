@@ -4,6 +4,30 @@
 	"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/ObjC_classic/_index.html",
 	"featuresets": {
 		"types": {
+			"is-string": {
+				"code": "[myobj isKindOfClass:[NSString class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-date": {
+				"code": "[myobj isKindOfClass:[NSDate class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-regex": {
+				"code": "[myobj isKindOfClass:[NSRegularExpression class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-array": {
+				"code": "[myobj isKindOfClass:[NSArray class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-associative-array": {
+				"code": "[myobj isKindOfClass:[NSDictionary class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"is-null": {
+				"code": "nil == myobj",
+				"api": "http://stackoverflow.com/questions/6177719/testing-for-nil-in-objective-c-ifx-nil-vs-ifx"
+			},
 			"string-to-int": {
 				"code": "[mystr intValue]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-intValue"
@@ -59,6 +83,10 @@
 				"code": "[str rangeOfString:mysubstring]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-rangeOfString_"
 			},
+			"trim": {
+				"code": "[text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-CJBJFBGC"
+			},
 			"replace": {
 				"code": "[str stringByReplacingOccurrencesOfString:str1 withString:str2]",
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/20000154-SW6"
@@ -76,15 +104,28 @@
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABDECEE"
 			},
 			"regex-match": {
-				"code": "NSError *error = NULL;\nNSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:myregex options:0 error:&error];\n[regex numberOfMatchesInString:str options:0 range:NSMakeRange(0, str.length)];",
+				"code": [
+					"NSError *error = NULL;",
+					"NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:myregex options:0 error:&error];",
+					"[regex numberOfMatchesInString:str options:0 range:NSMakeRange(0, str.length)];"
+				],
 				"api": "https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSRegularExpression_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40009708-CH1-SW7"
 			},
 			"regex-find": {
-				"code": "NSError *error = NULL;\nNSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:myregex options:0 error:&error];\n[regex matchesInString:str options:0 range:NSMakeRange(0, str.length)];",
+				"code": [
+					"NSError *error = NULL;",
+					"NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:myregex options:0 error:&error];",
+					"[regex matchesInString:str options:0 range:NSMakeRange(0, str.length)];"
+				],
 				"api": "https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSRegularExpression_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40009708-CH1-SW6"
 			},
 			"regex-replace": {
-				"code": "NSError *error = NULL;\nNSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:myregex options:0 error:&error];\nNSMutableString *mutstr = [str mutableCopyWithZone:nil];\n[regex replaceMatchesInString:mutstr options:0 range:NSMakeRange(0, str.length) withTemplate:tmpl];",
+				"code": [
+					"NSError *error = NULL;",
+					"NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:myregex options:0 error:&error];",
+					"NSMutableString *mutstr = [str mutableCopyWithZone:nil];",
+					"[regex replaceMatchesInString:mutstr options:0 range:NSMakeRange(0, str.length) withTemplate:tmpl];"
+				],
 				"api": "https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSRegularExpression_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40009708-CH1-SW12"
 			}
 		},
@@ -102,7 +143,10 @@
 				"api": "http://stackoverflow.com/questions/12119399/how-do-i-seed-the-rand-function-in-objective-c"
 			},
 			"fraction-part": {
-				"code": "int intval;\nmodf( mynum, &intval );",
+				"code": [
+					"int intval;",
+					"modf( mynum, &intval );"
+				],
 				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.7.html#modf"
 			}
 		},
@@ -116,15 +160,28 @@
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/doc/uid/20000188-SW15"
 			},
 			"format": {
-				"code": "NSDateFormatter formatter = [[NSDateFormatter alloc] init];\n[formatter setDateFormat:myformat];\n[formatter stringFromDate:mydate];",
+				"code": [
+					"NSDateFormatter formatter = [[NSDateFormatter alloc] init];",
+					"[formatter setDateFormat:myformat];",
+					"[formatter stringFromDate:mydate];"
+				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html#//apple_ref/doc/uid/20000447-CJBEDIHH"
 			},
 			"parse": {
-				"code": "NSDateFormatter formatter = [[NSDateFormatter alloc] init];\n[formatter setDateFormat:myformat];\n[formatter dateFromString:datestring];",
+				"code": [
+					"NSDateFormatter formatter = [[NSDateFormatter alloc] init];",
+					"[formatter setDateFormat:myformat];",
+					"[formatter dateFromString:datestring];"
+				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html#//apple_ref/doc/uid/20000447-CJBEDIHH"
 			},
 			"compare": {
-				"code": "[a isEqualToDate:b]\n[a earlierDate:b]\n[a laterDate:b]\n[a compare:b]",
+				"code": [
+					"[a isEqualToDate:b]",
+					"[a earlierDate:b]",
+					"[a laterDate:b]",
+					"[a compare:b]"
+				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/doc/uid/20000188-compare_"
 			},
 			"offset": {
@@ -135,7 +192,12 @@
 		"collections": {
 			"define": [
 				{
-					"code": "[NSArray arrayWithObjects:…, nil]",
+					"code": "@[ @\"1\", @\"2\", @\"3\" ]",
+					"version": "OS X 10.8, iOS 6",
+					"api": "http://cocoaheads.tumblr.com/post/17757846453/objective-c-literals-for-nsdictionary-nsarray-and"
+				},
+				{
+					"code": "[NSArray arrayWithObjects:@\"1\", @\"2\", @\"3\", nil]",
 					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html#//apple_ref/doc/uid/20000137-BABEADJJ"
 				},
 				{
@@ -144,6 +206,11 @@
 				}
 			],
 			"define-associative": [
+				{
+					"code": "@{ @\"key1\": @\"val1\", @\"key2\": @\"val2\" }",
+					"version": "OS X 10.8, iOS 6",
+					"api": "http://cocoaheads.tumblr.com/post/17757846453/objective-c-literals-for-nsdictionary-nsarray-and"
+				},
 				{
 					"code": "[NSDictionary dictionaryWithObjectsAndKeys:@\"val1\", @\"key1\", @\"val2\", @\"key2\",…,nil]",
 					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html#//apple_ref/doc/uid/20000140-CBHCIFDD"
@@ -178,7 +245,10 @@
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/doc/uid/20000138-BABDEFAA"
 			},
 			"pop": {
-				"code": "id elm = [mymutablearray lastObject];\n[myarray removeLastObject];",
+				"code": [
+					"id elm = [mymutablearray lastObject];",
+					"[myarray removeLastObject];"
+				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/doc/uid/20000138-BABCACEB"
 			},
 			"merge": {
@@ -242,7 +312,19 @@
 				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/1.3.html"
 			},
 			"n-arguments": {
-				"code": "#include <stdarg.h>\nfunction myfunc( int argcount, ... ) {\n    va_list ap;\n    int j;\n    va_start(ap, count); /* Requires the last fixed parameter (to get the address) */\n    for(j = 0; j < count; j++) {\n        va_arg(ap,j);\n        …\n    }\n    va_end(ap);\n}",
+				"code": [
+					"#include <stdarg.h>",
+					"function myfunc( int argcount, ... ) {",
+					"    va_list ap;",
+					"    int j;",
+					"    va_start(ap, count); /* Requires the last fixed parameter (to get the address) */",
+					"    for(j = 0; j < count; j++) {",
+					"        va_arg(ap,j);",
+					"        …",
+					"    }",
+					"    va_end(ap);",
+					"}"
+				],
 				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.10.html"
 			},
 			"define-closure": [
@@ -265,11 +347,22 @@
 				"code": [
 					{
 						"file": "MyClass.h",
-						"contents": "// Note that \"interface\" in Objective C does not mean what it does in most other languages. It just means a class specification.\n@interface MyClass : NSObject\n\n@end"
+						"contents": [
+							"// Note that \"interface\" in Objective C does not mean what it does in most other languages. It just means a class specification.",
+							"@interface MyClass : NSObject",
+							"",
+							"@end"
+						]
 					},
 					{
 						"file": "MyClass.m",
-						"contents": "#import \"MyClass.h\"\n\n@implementation MyClass\n\n@end"
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"@end"
+						]
 					}
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/DefiningClasses/DefiningClasses.html#//apple_ref/doc/uid/TP40011210-CH3-SW5"
@@ -287,14 +380,22 @@
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCEBEIC"
 			},
 			"class-of": {
-				"code": "[myobj class]\nNSStringFromClass([myobj class])",
+				"code": [
+					"[myobj class]",
+					"NSStringFromClass([myobj class])"
+				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBDHEE"
 			},
 			"define-field": {
 				"code": [
 					{
 						"file": "MyClass.h",
-						"contents": "@interface MyClass : NSObject\n\n@property NSString *myfield;\n\n@end"
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"@property NSString *myfield;",
+							"@end"
+						]
 					}
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/DefiningClasses/DefiningClasses.html#//apple_ref/doc/uid/TP40011210-CH3-SW7"
@@ -311,11 +412,25 @@
 				"code": [
 					{
 						"file": "MyClass.h",
-						"contents": "@interface MyClass : NSObject\n\n-(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2;\n\n@end"
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"-(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2;",
+							"",
+							"@end"
+						]
 					},
 					{
 						"file": "MyClass.m",
-						"contents": "#import \"MyClass.h\"\n\n@implementation MyClass\n\n-(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2 {…}\n\n@end"
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"-(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2 {…}",
+							"",
+							"@end"
+						]
 					}
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/DefiningClasses/DefiningClasses.html#//apple_ref/doc/uid/TP40011210-CH3-SW8"
@@ -336,7 +451,13 @@
 				"code": [
 					{
 						"file": "MyClass.m",
-						"contents": "#import \"MyClass.h\"\n\nstatic int mystatic;\n\n…"
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"static int mystatic;",
+							"",
+							"…"
+						]
 					}
 				],
 				"api": "http://stackoverflow.com/questions/1063229/objective-c-static-class-level-variables"
@@ -349,11 +470,25 @@
 				"code": [
 					{
 						"file": "MyClass.h",
-						"contents": "@interface MyClass : NSObject\n\n+(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2;\n\n@end"
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"+(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2;",
+							"",
+							"@end"
+						]
 					},
 					{
 						"file": "MyClass.m",
-						"contents": "#import \"MyClass.h\"\n\n@implementation MyClass\n\n+(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2 {…}\n\n@end"
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"+(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2 {…}",
+							"",
+							"@end"
+						]
 					}
 				],
 				"api": ""
@@ -366,11 +501,32 @@
 				"code": [
 					{
 						"file": "MyClass.h",
-						"contents": "@interface MyClass : NSObject\n\n-(id)initWithArg1:(int)arg1 arg2:(int)arg2;\n\n@end"
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"-(id)initWithArg1:(int)arg1 arg2:(int)arg2;",
+							"",
+							"@end"
+						]
 					},
 					{
 						"file": "MyClass.m",
-						"contents": "#import \"MyClass.h\"\n\n@implementation MyClass\n\n-(id)initWithArg1:(int)arg1 arg2:(int)arg2 {\n\n    self = [super init];\n    if(self) {\n        …\n    }\n\n}\n\n@end"
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"-(id)initWithArg1:(int)arg1 arg2:(int)arg2 {",
+							"",
+							"    self = [super init];",
+							"    if(self) {",
+							"        …",
+							"    }",
+							"",
+							"}",
+							"",
+							"@end"
+						]
 					}
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW16"
@@ -379,7 +535,13 @@
 				"code": [
 					{
 						"file": "MyChildClass.h",
-						"contents": "#import \"MyParentClass.h\"\n\n@interface MyChildClass : MyParentClass\n\n@end"
+						"contents": [
+							"#import \"MyParentClass.h\"",
+							"",
+							"@interface MyChildClass : MyParentClass",
+							"",
+							"@end"
+						]
 					}
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW11"
@@ -388,11 +550,25 @@
 				"code": [
 					{
 						"file": "MyChildClass.h",
-						"contents": "#import \"MyParentClass.h\"\n\n@interface MyChildClass : MyParentClass\n\n@end"
+						"contents": [
+							"#import \"MyParentClass.h\"",
+							"",
+							"@interface MyChildClass : MyParentClass",
+							"",
+							"@end"
+						]
 					},
 					{
 						"file": "MyChildClass.m",
-						"contents": "#import \"MyChildClass.h\"\n\n@implementation MyChildClass\n\n-(void)mymethod { [super mymethod]; }\n\n@end"
+						"contents": [
+							"#import \"MyChildClass.h\"",
+							"",
+							"@implementation MyChildClass",
+							"",
+							"-(void)mymethod { [super mymethod]; }",
+							"",
+							"@end"
+						]
 					}
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW11"
@@ -401,11 +577,27 @@
 				"code": [
 					{
 						"file": "MyClass.h",
-						"contents": "@interface MyClass : NSObject\n\n@property NSString *myfield;\n\n-(int)myPublicMethod;\n\n@end"
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"@property NSString *myfield;",
+							"",
+							"-(int)myPublicMethod;",
+							"",
+							"@end"
+						]
 					},
 					{
 						"file": "MyClass.m",
-						"contents": "#import \"MyClass.h\"\n\n@implementation MyClass\n\n-(int)myPublicMethod {…}\n\n@end"
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"-(int)myPublicMethod {…}",
+							"",
+							"@end"
+						]
 					}
 				]
 			},
@@ -413,7 +605,21 @@
 				"code": [
 					{
 						"file": "MyClass.m",
-						"contents": "@interface MyClass : NSObject ()\n\n@property int myprivateproperty;\n\n-(int)myPrivateMethod;\n\n@end\n\n@implementation MyClass\n\n…\n\n@end"
+						"contents": [
+							"@interface MyClass : NSObject ()",
+							"",
+							"@property int myprivateproperty;",
+							"",
+							"-(int)myPrivateMethod;",
+							"",
+							"@end",
+							"",
+							"@implementation MyClass",
+							"",
+							"…",
+							"",
+							"@end"
+						]
 					}
 				],
 				"api": "http://swish-movement.blogspot.com/2009/05/private-properties-for-iphone-objective.html"
@@ -422,7 +628,13 @@
 				"code": [
 					{
 						"file": "MyProtocol.h",
-						"contents": "@protocol MyProtocol\n\n-(int)mymethod;\n\n@end"
+						"contents": [
+							"@protocol MyProtocol",
+							"",
+							"-(int)mymethod;",
+							"",
+							"@end"
+						]
 					}
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html#//apple_ref/doc/uid/TP40011210-CH11-SW2"
@@ -431,10 +643,78 @@
 				"code": [
 					{
 						"file": "MyClass.h",
-						"contents": "#import \"MyProtocol.h\"\n\n@interface MyClass : NSObject <MyProtocol>\n\n@end"
+						"contents": [
+							"#import \"MyProtocol.h\"",
+							"",
+							"@interface MyClass : NSObject <MyProtocol>",
+							"",
+							"@end"
+						]
 					}
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html#//apple_ref/doc/uid/TP40011210-CH11-SW3"
+			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": [
+							"@interface MyClass : NSObject <NSURLConnectionDelegate>",
+							"{",
+							"    NSMutableData *_responseData;",
+							"}"
+						]
+
+					},
+					{
+						"file": "MyClass.m",
+						"contents": [
+							"@implementation MyClass",
+							"",
+							"…- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {"
+							,"    _responseData = [[NSMutableData alloc] init];",
+							"}",
+							"",
+							"- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {",
+							"    [_responseData appendData:data];",
+							"}",
+							"",
+							"- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse*)cachedResponse {",
+							"    return nil;",
+							"}",
+							"",
+							"- (void)connectionDidFinishLoading:(NSURLConnection *)connection {",
+							"    // request complete, can parse data now",
+							"}",
+							"",
+							"- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {…}",
+							"",
+							"…",
+							"",
+							"    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@\"http://google.com\"]];",
+							"    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];",
+							"",
+							"@end"
+							]
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSURLConnection_Class/Reference/Reference.html"
+			},
+			"full-request": {
+				"code": [
+					"NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];",
+					"[request setURL:theUrl];",
+					"[request setValue:@\"text/json\" forHTTPHeaderField:@\"Content-Type\"];",
+					"[request setHTTPMethod:@\"PUT\"];",
+					"NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];",
+					"",
+					"…",
+					"",
+					"[(NSHTTPURLResponse *)response allHeaderFields];"
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableURLRequest_Class/Reference/Reference.html#//apple_ref/doc/uid/20001696-canBeConvertedToEncoding_"
 			}
 		}
 	}

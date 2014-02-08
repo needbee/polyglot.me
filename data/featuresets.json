@@ -16,6 +16,66 @@
 			"name": "Types",
 			"features": [
 				{
+					"id": "is-boolean",
+					"name": "Is Boolean",
+					"description": "returns true if the variable is a boolean"
+				},
+				{
+					"id": "is-int",
+					"name": "Is Integer",
+					"description": "returns true if the variable is an integer"
+				},
+				{
+					"id": "is-float",
+					"name": "Is Float",
+					"description": "returns true if the variable is a floating point number"
+				},
+				{
+					"id": "is-string",
+					"name": "Is String",
+					"description": "returns true if the variable is a string"
+				},
+				{
+					"id": "is-date",
+					"name": "Is Date",
+					"description": "returns true if the variable is a date"
+				},
+				{
+					"id": "is-regex",
+					"name": "Is Regex",
+					"description": "returns true if the variable is a regular expression"
+				},
+				{
+					"id": "is-array",
+					"name": "Is Array",
+					"description": "returns true if the variable is an array"
+				},
+				{
+					"id": "is-associative-array",
+					"name": "Is Associative Array",
+					"description": "returns true if the variable is an associative array"
+				},
+				{
+					"id": "is-object",
+					"name": "Is Object",
+					"description": "returns true if the variable is an object"
+				},
+				{
+					"id": "is-function",
+					"name": "Is Function",
+					"description": "returns true if the variable is a function/closure"
+				},
+				{
+					"id": "is-null",
+					"name": "Is Null",
+					"description": "returns true if the variable is null/nil"
+				},
+				{
+					"id": "is-undefined",
+					"name": "Is Undefined",
+					"description": "returns true if the variable is undefined"
+				},
+				{
 					"id": "string-to-int",
 					"name": "String to Integer",
 					"description": "converts string mystr into an integer"
@@ -80,6 +140,11 @@
 					"id": "index-of",
 					"name": "Index of Substring",
 					"description": "find out what position a substring mysubstring is within a string str"
+				},
+				{
+					"id": "trim",
+					"name": "Trim",
+					"description": "removes whitespace from the start and end of the string"
 				},
 				{
 					"id": "replace",
@@ -504,6 +569,32 @@
 			]
 		},
 		{
+			"id": "serialization",
+			"name": "Serialization",
+			"features": [
+				{
+					"id": "json-encode",
+					"name": "JSON Encode",
+					"description": "convert data into a JSON string"
+				},
+				{
+					"id": "json-decode",
+					"name": "JSON Decode",
+					"description": "convert a JSON string into objects and arrays"
+				},
+				{
+					"id": "xml-encode",
+					"name": "XML Encode",
+					"description": "convert data into an XML string"
+				},
+				{
+					"id": "xml-decode",
+					"name": "XML Decode",
+					"description": "convert an XML string into objects and arrays"
+				}
+			]
+		},
+		{
 			"id": "http-server",
 			"name": "HTTP Server",
 			"features": [
@@ -596,6 +687,22 @@
 					"id": "keep-flash-var",
 					"name": "Keep Flash Var",
 					"description": "preserves the variable in the flash for an additional request"
+				}
+			]
+		},
+		{
+			"id": "http-client",
+			"name": "HTTP Client",
+			"features": [
+				{
+					"id": "simple-request",
+					"name": "Simple Request",
+					"description": "send a simple GET request"
+				},
+				{
+					"id": "full-request",
+					"name": "Full Request",
+					"description": "send an HTTP request with all configuration parameters"
 				}
 			]
 		},

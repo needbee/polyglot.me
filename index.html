@@ -88,7 +88,7 @@
 						<th class="feature">Feature</th>
 						<% _.each(tools,function(toolObj){ %>
 							<% tool = toolObj; %>
-							<th class="toolfeature">
+							<th class="toolfeature-fixed">
 								<a href="<%= tool.api %>" target="_blank"><%= tool.name %></a>
 								<a class="remove-tool" href="<%= cheatsheet.baseWebUrl + _.difference(_.pluck(tools,'id'),[tool.id]).join('+') %>"><span class="glyphicon glyphicon-remove" id="remove-tool-<%= tool.id %>"></span></a>
 							</th>
@@ -102,7 +102,7 @@
 									<th><%= featureSet.name %></th>
 									<% _.each(tools,function(toolObj){ %>
 										<% tool = toolObj; %>
-										<th class="toolfeature">
+										<th class="<% if(tools.length > 2) { %>toolfeature-fixed<% } %>">
 											<a class="remove-tool" href="<%= cheatsheet.baseWebUrl + _.difference(_.pluck(tools,'id'),[tool.id]).join('+') %>"><span class="glyphicon glyphicon-remove" id="remove-tool-<%= tool.id %>"></span></a>
 											<a href="<%= tool.api %>" target="_blank"><%= tool.name %></a>
 										</th>
@@ -138,7 +138,7 @@
 														toolFeature = tool.featuresets[featureSet.id][feature.id];
 													}
 												%>
-												<td class="toolfeature">
+												<td class="<% if(tools.length > 2) { %>toolfeature-fixed<% } %>">
 													<div class="tdwrapper">
 														<%
 															if( null != toolFeature ) {
@@ -147,10 +147,14 @@
 																	<% if( idx ) { %>
 																		<p class="text-center"><strong>OR</strong></p>
 																	<% } %>
-																	<% if( _.isArray(tf.code) ) { %>
+																	<% if( _.isArray(tf.code) && tf.code.length > 0 && _.isObject(tf.code[0]) ) { %>
 																		<% _.each( tf.code, function(file) { %>
 																			<div><%= file.file %></div>
-																			<pre class="prettyprint"><%= _.escape(file.contents) %></pre>
+																			<% if( _.isArray(file.contents) ) { %>
+																				<pre class="prettyprint"><% _.each(file.contents, function(line){%><%= _.escape(line) + "\n" %><% }) %></pre>
+																			<% } else { %>
+																				<pre class="prettyprint"><%= _.escape(file.contents) %></pre>
+																			<% } %>
 																			<div class="orig"><%= _.escape(file.contents) %></div>
 																			<% if( utils.has_flash() ) { %>
 																				<div class="code-links small">
@@ -170,7 +174,11 @@
 																			<% } %>
 																		</div>
 																	<% } else { %>
-																		<pre class="prettyprint"><%= _.escape(tf.code) %></pre>
+																		<% if( _.isArray(tf.code) ) { %>
+																			<pre class="prettyprint"><% _.each(tf.code, function(line){%><%= _.escape(line) + "\n" %><% }) %></pre>
+																		<% } else { %>
+																			<pre class="prettyprint"><%= _.escape(tf.code) %></pre>
+																		<% } %>
 																		<div class="orig"><%= _.escape(tf.code) %></div>
 																		<% if( tf.version ) { %>
 																			<div class="text-muted pull-right small">since <%= tf.version %></div>

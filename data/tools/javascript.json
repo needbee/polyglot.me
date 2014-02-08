@@ -5,10 +5,83 @@
 	"featuresets": {
 		"basics": {
 			"hello-world": {
-				"code": "<html>\n<head>\n<script type=\"text/javascript\">\nconsole.log(\"Hello, World!\")\n</script>\n</head>\n<body>\n</body>\n</html>"
+				"code": [
+					"<html>",
+					"<head>",
+					"<script type=\"text/javascript\">",
+					"console.log(\"Hello, World!\");",
+					"</script>",
+					"</head>",
+					"<body>",
+					"</body>",
+					"</html>"
+				]
 			}
 		},
 		"types": {
+			"is-boolean": {
+				"code": "typeof myvar === 'boolean'",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-int": {
+				"code": "typeof myvar === 'number' && (myvar % 1 != 0)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-float": {
+				"code": "typeof myvar === 'number' && (myvar % 1 != 0)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-string": {
+				"code": "typeof myvar === 'string'",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-date": {
+				"code": "myvar instanceof Date",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"
+			},
+			"is-regex": {
+				"code": "myvar instanceof RegExp",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"
+			},
+			"is-array": [
+				{
+					"code": "Array.isArray(myvar) // includes associative",
+					"version": "1.8.5",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray"
+				},
+				{
+					"code": [
+						"myvar instanceof Array // includes non-associative",
+						"// NOTE: doesn't work cross-window"
+					],
+					"api": "http://web.mit.edu/jwalden/www/isArray.html"
+				}
+			],
+			"is-associative-array": [
+				{
+					"code": "Array.isArray(myvar) // includes associative",
+					"version": "1.8.5",
+					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray"
+				},
+				{
+					"code": [
+						"myvar instanceof Array // includes non-associative",
+						"// NOTE: doesn't work cross-window"
+					],
+					"api": "http://web.mit.edu/jwalden/www/isArray.html"
+				}
+			],
+			"is-function": {
+				"code": "typeof myvar === 'function'",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
+			"is-null": {
+				"code": "null == myvar"
+			},
+			"is-undefined": {
+				"code": "typeof myvar === 'undefined'",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+			},
 			"string-to-int": {
 				"code": "parseInt( mystr )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt"
@@ -65,8 +138,16 @@
 				"code": "str.indexOf( mysubstring )",
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf"
 			},
+			"trim": {
+				"code": "str.trim()",
+				"version": "1.8.1",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
+			},
 			"replace": {
-				"code": "var myregex = /…/g;\nstr.replace(myregex, tmpl);",
+				"code": [
+					"var myregex = /…/g;",
+					"str.replace(myregex, tmpl);"
+				],
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"
 			},
 			"split-on-string": {
@@ -82,15 +163,24 @@
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
 			},
 			"regex-match": {
-				"code": "var myregex = //;\nmyregex.test(str)",
+				"code": [
+					"var myregex = //;",
+					"myregex.test(str)"
+				],
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test"
 			},
 			"regex-find": {
-				"code": "var myregex = /…/g;\nwhile( match = myregex.exec(str) ) { … }",
+				"code": [
+					"var myregex = /…/g;",
+					"while( match = myregex.exec(str) ) { … }"
+				],
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec"
 			},
 			"regex-replace": {
-				"code": "var myregex = /…/g;\nstr.replace(myregex, tmpl);",
+				"code": [
+					"var myregex = /…/g;",
+					"str.replace(myregex, tmpl);"
+				],
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"
 			}
 		},
@@ -134,7 +224,11 @@
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime"
 			},
 			"compare": {
-				"code": "a < b\na > b\n+a == +b // convert to millisecond so doesn't do object equality",
+				"code": [
+					"a < b",
+					"a > b",
+					"+a == +b // convert to millisecond so doesn't do object equality"
+				],
 				"api": "http://stackoverflow.com/questions/492994/compare-dates-with-javascript"
 			}
 		},
@@ -254,23 +348,47 @@
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope"
 			},
 			"default-arguments": {
-				"code": "function myfunc( arg1, arg2 ) {\n    if( !arg1 ) { arg1 = 'default'; }\n    …\n}",
+				"code": [
+					"function myfunc( arg1, arg2 ) {",
+					"    if( !arg1 ) { arg1 = 'default'; }",
+					"    …",
+					"}"
+				],
 				"api": "http://www.openjs.com/articles/optional_function_arguments.php"
 			},
 			"n-arguments": {
-				"code": "function myfunc() {\n    for( var i = 0; i < arguments.length; i++ ) {…}\n    …\n}",
+				"code": [
+					"function myfunc() {",
+					"    for( var i = 0; i < arguments.length; i++ ) {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://www.openjs.com/articles/optional_function_arguments.php"
 			},
 			"named-arguments": {
-				"code": "function myfunc( arg_associative_array ) {…}\n\nmyfunc({ foo: 27, bar:\"baz\"});"
+				"code": [
+					"function myfunc( arg_associative_array ) {…}",
+					"",
+					"myfunc({ foo: 27, bar:\"baz\"});"
+				]
 			},
 			"overloading": [
 				{
-					"code": "function myfunc( arg1, arg2 ) {\n    if( !arg1 ) { arg1 = 'default'; }\n    …\n}",
+					"code": [
+						"function myfunc( arg1, arg2 ) {",
+						"    if( !arg1 ) { arg1 = 'default'; }",
+						"    …",
+						"}"
+					],
 					"api": "http://www.openjs.com/articles/optional_function_arguments.php"
 				},
 				{
-					"code": "function myfunc() {\n    for( var i = 0; i < arguments.length; i++ ) {…}\n    …\n}",
+					"code": [
+						"function myfunc() {",
+						"    for( var i = 0; i < arguments.length; i++ ) {…}",
+						"    …",
+						"}"
+					],
 					"api": "http://www.openjs.com/articles/optional_function_arguments.php"
 				}
 			],
@@ -297,7 +415,11 @@
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"define-field": {
-				"code": "function MyClass() {\n    this.myfield = 27;\n}",
+				"code": [
+					"function MyClass() {",
+					"    this.myfield = 27;",
+					"}"
+				],
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"access-field": {
@@ -309,7 +431,11 @@
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
 			},
 			"define-method": {
-				"code": "function MyClass() {\n    this.mymethod = function( arg1, arg2 ) {…};\n}",
+				"code": [
+					"function MyClass() {",
+					"    this.mymethod = function( arg1, arg2 ) {…};",
+					"}"
+				],
 				"api": "http://javascript.crockford.com/private.html"
 			},
 			"call-method": {
@@ -333,24 +459,96 @@
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"constructor": {
-				"code": "// in js the constructor is the same thing as the class definition\nfunction MyClass() {…}",
+				"code": [
+					"// in js the constructor is the same thing as the class definition",
+					"function MyClass() {…}"
+				],
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"inheritance": {
-				"code": "function MyChildClass() {…}\nMyChildClass.prototype = new MyParentClass();\nMyChildClass.prototype.constructor = MyChildClass; // otherwise it uses the parent's constructor",
+				"code": [
+					"function MyChildClass() {…}",
+					"MyChildClass.prototype = new MyParentClass();",
+					"MyChildClass.prototype.constructor = MyChildClass; // otherwise it uses the parent's constructor"
+				],
 				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript"
 			},
 			"parent-method": {
-				"code": "function MyParentClass() {}\nMyParentClass.prototype.mymethod = function(){…};\n\nfunction MyChildClass() {\n    this.parent = this; // whatever the parent class is at time constructor called\n}\nMyChildClass.prototype = new MyParentClass();\nMyChildClass.prototype.constructor = MyChildClass;\nMyChildClass.prototype.mymethod = function() {\n    this.parent.mymethod();\n}",
+				"code": [
+					"function MyParentClass() {}",
+					"MyParentClass.prototype.mymethod = function(){…};",
+					"",
+					"function MyChildClass() {",
+					"    this.parent = this; // whatever the parent class is at time constructor called",
+					"}",
+					"MyChildClass.prototype = new MyParentClass();",
+					"MyChildClass.prototype.constructor = MyChildClass;",
+					"MyChildClass.prototype.mymethod = function() {",
+					"    this.parent.mymethod();",
+					"}"
+				],
 				"api": "http://stackoverflow.com/questions/12729824/call-parent-method-in-a-javascript-class"
 			},
 			"declare-public": {
-				"code": "function MyClass() {\n    this.mypublicvar = 27;\n\n    // Crockford calls this \"privileged\", but it functions like \"public\" in other languages\n    this.mypublicmethod = function() {…}\n}",
+				"code": [
+					"function MyClass() {",
+					"    this.mypublicvar = 27;",
+					"",
+					"    // Crockford calls this \"privileged\", but it functions like \"public\" in other languages",
+					"    this.mypublicmethod = function() {…}\n}"
+				],
 				"api": "http://javascript.crockford.com/private.html"
 			},
 			"declare-private": {
-				"code": "function MyClass() {\n    var myprivatevar = 27;\n    var that = this; // allows private method to access this\n    var myprivatemethod = function() {…}\n}",
+				"code": [
+					"function MyClass() {",
+					"    var myprivatevar = 27;",
+					"    var that = this; // allows private method to access this",
+					"    var myprivatemethod = function() {…}",
+					"}"
+				],
 				"api": "http://javascript.crockford.com/private.html"
+			}
+		},
+		"serialization": {
+			"json-encode": {
+				"code": "JSON.stringify( myObjOrArray )",
+				"version": "1.7",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"
+			},
+			"json-decode": {
+				"code": "JSON.parse( myJsonString )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse"
+			}
+		},
+		"http-client": {
+			"simple-request": {
+				"code": [
+					"request = new XMLHttpRequest();",
+					"request.open('GET', '/my/url', true);",
+					"request.send();",
+					"request.onload = function() {",
+					"    this.response;",
+					"}"
+				],
+				"api": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
+			},
+			"full-request": {
+				"code": [
+					"$.ajax('path/on/server', {",
+					"    accepts: mimeType,",
+					"    cache: false,",
+					"    contentType: requestDataContentType,",
+					"    data: requestData,",
+					"    dataType: responseDataParsingType,",
+					"    error: errorHandler,",
+					"    headers: headerMap,",
+					"    statusCode: statusCodeHandlerMap,",
+					"    success: successHandler,",
+					"    type: httpVerbString",
+					"});"
+				],
+				"api": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
 			}
 		}
 	}

@@ -17,7 +17,21 @@
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/input.html"
 			},
 			"uploaded-file": {
-				"code": "$config['upload_path'] = './uploads/';\n$config['allowed_types'] = 'gif|jpg|png';\n$config['max_size'] = '100';\n$config['max_width']  = '1024';\n$config['max_height']  = '768';\n$this->load->library('upload', $config);\n\nif ( ! $this->upload->do_upload()) {\n    // error\n} else {\n    $this->upload->data();\n}",
+				"code": [
+					"$config['upload_path'] = './uploads/';",
+					"$config['allowed_types'] = 'gif|jpg|png';",
+					"$config['max_size'] = '100';",
+					"$config['max_width']  = '1024';",
+					"",
+					"$config['max_height']  = '768';",
+					"$this->load->library('upload', $config);",
+					"",
+					"if ( ! $this->upload->do_upload()) {",
+					"    // error",
+					"} else {",
+					"    $this->upload->data();",
+					"}"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/file_uploading.html"
 			},
 			"get-cookie": {
@@ -45,37 +59,67 @@
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/output.html"
 			},
 			"redirect": {
-				"code": "$this->load->helper('url');\nredirect( $url );",
+				"code": [
+					"$this->load->helper('url');",
+					"redirect( $url );"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/helpers/url_helper.html"
 			},
 			"get-session-var": {
-				"code": "$this->load->library('session');\n$this->session->userdata('item');",
+				"code": [
+					"$this->load->library('session');",
+					"$this->session->userdata('item');"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/sessions.html"
 			},
 			"set-session-var": {
-				"code": "$this->load->library('session');\n$this->session->set_userdata('item','value');\n$this->session->set_userdata(array('item1'=>'value1','item2'=>'value2',…));",
+				"code": [
+					"$this->load->library('session');",
+					"$this->session->set_userdata('item','value');",
+					"$this->session->set_userdata(array('item1'=>'value1','item2'=>'value2',…));"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/sessions.html"
 			},
 			"remove-session-var": {
-				"code": "$this->load->library('session');\n$this->session->unset_userdata('item');\n$this->session->set_userdata(array('item1'=>'','item2'=>'',…));",
+				"code": [
+					"$this->load->library('session');",
+					"$this->session->unset_userdata('item');",
+					"$this->session->set_userdata(array('item1'=>'','item2'=>'',…));"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/sessions.html"
 			},
 			"get-flash-var": {
-				"code": "$this->load->library('session');\n$this->session->flashdata('item');",
+				"code": [
+					"$this->load->library('session');",
+					"$this->session->flashdata('item');"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/sessions.html"
 			},
 			"set-flash-var": {
-				"code": "$this->load->library('session');\n$this->session->set_flashdata('item','value');",
+				"code": [
+					"$this->load->library('session');",
+					"$this->session->set_flashdata('item','value');"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/sessions.html"
 			},
 			"keep-flash-var": {
-				"code": "$this->load->library('session');\n$this->session->keep_flashdata('item');",
+				"code": [
+					"$this->load->library('session');",
+					"$this->session->keep_flashdata('item');"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/sessions.html"
 			}
 		},
 		"validation": {
 			"validate": {
-				"code": "$this->load->library('form_validation');\n$this->form_validation->set_rules('myfield', 'My Field', 'required|max_length[20]');\nif ($this->form_validation->run() == FALSE) {\n    $myerrors = validation_errors();\n    …\n}",
+				"code": [
+					"$this->load->library('form_validation');",
+					"$this->form_validation->set_rules('myfield', 'My Field', 'required|max_length[20]');",
+					"if ($this->form_validation->run() == FALSE) {",
+					"    $myerrors = validation_errors();",
+					"    …",
+					"}"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html"
 			},
 			"custom-validator": [
@@ -83,7 +127,21 @@
 					"code": [
 						{
 							"file": "libraries/MY_Form_validation.php",
-							"contents": "<?php\n\nclass MY_Form_validation extends CI_Form_validation {\n    function __construct($config = array())\n    { parent::__construct($config); }\n    function myValidatorName {\n        if(!…) {\n            $this->CI->form_validation->set_message('myValidatorName','This is the error message');\n        }\n        return true;\n    }\n}"
+							"contents": [
+								"<?php",
+								"",
+								"class MY_Form_validation extends CI_Form_validation {",
+								"    function __construct($config = array()) {",
+								"        parent::__construct($config);",
+								"    }",
+								"    function myValidatorName {",
+								"        if(!…) {",
+								"            $this->CI->form_validation->set_message('myValidatorName','This is the error message');",
+								"        }",
+								"        return true;",
+								"    }",
+								"}"
+							]
 						}
 					],
 					"api": "http://ellislab.com/forums/viewthread/207257/"
@@ -92,7 +150,19 @@
 					"code": [
 						{
 							"file": "mycontroller.php",
-							"contents": "public function myAction() {\n    …\n    $this->form_validation->set_rules('username', 'Username', 'callback_myValidatorName');\n    …\n}\n\npublic function myValidatorName() {\n    if(!…) {\n        $this->CI->form_validation->set_message('myValidatorName','This is the error message');\n    }"
+							"contents": [
+								"public function myAction() {",
+								"    …",
+								"    $this->form_validation->set_rules('username', 'Username', 'callback_myValidatorName');",
+								"    …",
+								"}",
+								"",
+								"public function myValidatorName() {",
+								"    if(!…) {",
+								"        $this->CI->form_validation->set_message('myValidatorName','This is the error message');",
+								"    }",
+								"}"
+							]
 						}
 					],
 					"api": "http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html#callbacks"
@@ -220,7 +290,11 @@
 				"api": "http://ellislab.com/codeigniter/user-guide/general/routing.html"
 			},
 			"controller-action": {
-				"code": "class SampleController extends CI_Controller {\n    public function myaction($id) {…}\n}",
+				"code": [
+					"class SampleController extends CI_Controller {",
+					"    public function myaction($id) {…}",
+					"}"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/general/controllers.html#hello"
 			},
 			"render-view": {
@@ -228,11 +302,17 @@
 				"api": "http://ellislab.com/codeigniter/user-guide/general/views.html"
 			},
 			"url": {
-				"code": "$this->load->helper('url');\necho site_url('path/to/action/123');",
+				"code": [
+					"$this->load->helper('url');",
+					"echo site_url('path/to/action/123');"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/helpers/url_helper.html"
 			},
 			"output-form-element": {
-				"code": "$this->load->helper('form');\necho form_input(array('name'=>'fieldname', 'value'=>set_value('fieldname','mydefault')));",
+				"code": [
+					"$this->load->helper('form');",
+					"echo form_input(array('name'=>'fieldname', 'value'=>set_value('fieldname','mydefault')));"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/helpers/form_helper.html"
 			},
 			"log": {

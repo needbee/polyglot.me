@@ -5,7 +5,17 @@
 	"featuresets": {
 		"validation": {
 			"validate": {
-				"code": "$('#myform').validate({\n    rules: {\n        myfield: {\n            required:true,\n            maxlength:20\n        }\n    }\n});\n// automatically runs on submit",
+				"code": [
+					"$('#myform').validate({",
+					"    rules: {",
+					"        myfield: {",
+					"            required:true,",
+					"            maxlength:20",
+					"        }",
+					"    }",
+					"});",
+					"// automatically runs on submit"
+				],
 				"api": "http://jqueryvalidation.org/validate"
 			},
 			"custom-validator": {
@@ -17,7 +27,10 @@
 				"api": "http://jqueryvalidation.org/required-method"
 			},
 			"required-from-group": {
-				"code": "require_from_group: [ 2, '.phone-group' ]\n// at least 2 fields in phone group required",
+				"code": [
+					"require_from_group: [ 2, '.phone-group' ]",
+					"// at least 2 fields in phone group required"
+				],
 				"api": "http://jqueryvalidation.org/require_from_group-method/"
 			},
 			"min-length": {
@@ -85,7 +98,10 @@
 				"api": "http://jqueryvalidation.org/equalTo-method"
 			},
 			"file-extension": {
-				"code": "// requires additional-methods.js\nextension: 'txt,csv'",
+				"code": [
+					"// requires additional-methods.js",
+					"extension: 'txt,csv'"
+				],
 				"api": "http://jqueryvalidation.org/extension-method/"
 			},
 			"file-is-type": {
