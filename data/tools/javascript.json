@@ -421,6 +421,17 @@
 				"api": "http://javascript.crockford.com/private.html"
 			}
 		},
+		"serialization": {
+			"json-encode": {
+				"code": "JSON.stringify( myObjOrArray )",
+				"version": "1.7",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"
+			},
+			"json-decode": {
+				"code": "JSON.parse( myJsonString )",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse"
+			}
+		},
 		"http-client": {
 			"simple-request": {
 				"code": "request = new XMLHttpRequest();\nrequest.open('GET', '/my/url', true);\nrequest.send();\nrequest.onload = function() {\n    this.response;\n}",

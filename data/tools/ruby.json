@@ -428,6 +428,24 @@
 				"api": "http://www.tutorialspoint.com/ruby/ruby_modules.htm"
 			}
 		},
+		"serialization": {
+			"json-encode": {
+				"code": "require 'json'\nJSON.generate(myObjOrArray)",
+				"api": "http://flori.github.io/json/doc/index.html"
+			},
+			"json-decode": {
+				"code": "require 'json'\nJSON.parse(myJsonString)",
+				"api": "http://flori.github.io/json/doc/index.html"
+			},
+			"xml-decode": {
+				"code": [
+					"require 'rexml/document'",
+					"doc = REXML::Document.new(xml_data)",
+					"doc.elements.each('mytagname') do |elm| {…}‘"
+				],
+				"api": "http://developer.yahoo.com/ruby/ruby-xml.html#rexml"
+			}
+		},
 		"http-client": {
 			"simple-request": {
 				"code": "require \"net/http\"\nrequire \"uri\"\n\nuri = URI.parse(\"http://google.com/\")\nresponse = Net::HTTP.get_response(uri)",

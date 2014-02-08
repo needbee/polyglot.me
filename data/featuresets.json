@@ -569,6 +569,32 @@
 			]
 		},
 		{
+			"id": "serialization",
+			"name": "Serialization",
+			"features": [
+				{
+					"id": "json-encode",
+					"name": "JSON Encode",
+					"description": "convert data into a JSON string"
+				},
+				{
+					"id": "json-decode",
+					"name": "JSON Decode",
+					"description": "convert a JSON string into objects and arrays"
+				},
+				{
+					"id": "xml-encode",
+					"name": "XML Encode",
+					"description": "convert data into an XML string"
+				},
+				{
+					"id": "xml-decode",
+					"name": "XML Decode",
+					"description": "convert an XML string into objects and arrays"
+				}
+			]
+		},
+		{
 			"id": "http-server",
 			"name": "HTTP Server",
 			"features": [

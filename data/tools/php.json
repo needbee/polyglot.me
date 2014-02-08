@@ -460,6 +460,23 @@
 				"api": "http://www.php.net/manual/en/language.oop5.abstract.php"
 			}
 		},
+		"serialization": {
+			"json-encode": {
+				"code": "json_encode( $myObjOrArray )",
+				"api": "http://www.php.net/manual/en/function.json-encode.php"
+			},
+			"json-decode": {
+				"code": "json_decode( $myJsonString )",
+				"api": "http://www.php.net/manual/en/function.json-decode.php"
+			},
+			"xml-decode": {
+				"code": [
+					"$rootElement = new SimpleXMLElement( $myXmlString );",
+					"$rootElement->myChildElement[2]"
+				],
+				"api": "http://www.php.net/manual/en/simplexml.examples-basic.php"
+			}
+		},
 		"http-server": {
 			"output": {
 				"code": "echo \"Hello, World!\"",

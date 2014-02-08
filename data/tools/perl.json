@@ -349,6 +349,16 @@
 				"api": "http://www.perlmonks.org/?node_id=807145"
 			}
 		},
+		"serialization": {
+			"json-encode": {
+				"code": "use JSON;\nencode_json $myObjOrArray",
+				"api": "http://perldoc.net/JSON.pm#encode_json"
+			},
+			"json-decode": {
+				"code": "use JSON;\ndecode_json $myJsonString",
+				"api": "http://perldoc.net/JSON.pm#decode_json"
+			}
+		},
 		"http-server": {
 			"output": {
 				"code": "print \"Hello, World!\"",

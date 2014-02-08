@@ -60,6 +60,16 @@
 				"api": "http://api.jquery.com/jQuery.map/"
 			}
 		},
+		"serialization": {
+			"json-decode": {
+				"code": "$.parseJSON( myJsonString )",
+				"api": "http://api.jquery.com/jQuery.parseJSON/"
+			},
+			"xml-decode": {
+				"code": "$.parseXML( myXmlString )",
+				"api": "http://api.jquery.com/jQuery.parseXML/"
+			}
+		},
 		"http-client": {
 			"simple-request": {
 				"code": "$.get('path/on/server', function(data) {…})",
