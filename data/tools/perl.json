@@ -5,7 +5,11 @@
 	"featuresets": {
 		"basics": {
 			"hello-world": {
-				"code": "#!/usr/bin/perl\nprint \"Hello, World!\\n\";",
+				"code": [
+					"#!/usr/bin/perl",
+					"print \"Hello, World!\"",
+					"\";"
+				],
 				"api": "http://www.troubleshooters.com/codecorn/littperl/perlhelo.htm"
 			}
 		},
@@ -67,7 +71,12 @@
 				"api": "http://perldoc.perl.org/functions/index.html"
 			},
 			"trim": {
-				"code": "for ($string) {\n    s/^\\s+//;\n    s/\\s+$//;\n}",
+				"code": [
+					"for ($string) {",
+					"    s/^\\s+//;",
+					"    s/\\s+$//;",
+					"}"
+				],
 				"api": "http://www.perlmonks.org/?node_id=602"
 			},
 			"replace": {
@@ -101,11 +110,17 @@
 		},
 		"math": {
 			"floor": {
-				"code": "use POSIX;\nfloor($myfloat)",
+				"code": [
+					"use POSIX;",
+					"floor($myfloat)"
+				],
 				"api": "http://perldoc.perl.org/POSIX.html#floor"
 			},
 			"ceiling": {
-				"code": "use POSIX;\nceil($myfloat)",
+				"code": [
+					"use POSIX;",
+					"ceil($myfloat)"
+				],
 				"api": "http://perldoc.perl.org/POSIX.html#ceil"
 			},
 			"round": {
@@ -117,17 +132,26 @@
 				"api": "http://perldoc.perl.org/functions/rand.html"
 			},
 			"min": {
-				"code": "use List::Util qw(min);\nmin @myarray",
+				"code": [
+					"use List::Util qw(min);",
+					"min @myarray"
+				],
 				"api": "http://search.cpan.org/~pevans/Scalar-List-Utils-1.36/lib/List/Util.pm#$num_=_min_@list"
 			},
 			"max": {
-				"code": "use List::Util qw(max);\nmax @myarray",
+				"code": [
+					"use List::Util qw(max);",
+					"max @myarray"
+				],
 				"api": "http://search.cpan.org/~pevans/Scalar-List-Utils-1.36/lib/List/Util.pm#$num_=_max_@list"
 			}
 		},
 		"dates": {
 			"date-object": {
-				"code": "use DateTime;\nDateTime->now()",
+				"code": [
+					"use DateTime;",
+					"DateTime->now()"
+				],
 				"api": "http://search.cpan.org/~drolsky/DateTime-1.06/lib/DateTime.pm#DateTime->now(_..._)"
 			},
 			"timestamp": {
@@ -139,7 +163,11 @@
 				"api": "http://search.cpan.org/~drolsky/DateTime-1.06/lib/DateTime.pm#$dt->strftime(_$format,_..._)"
 			},
 			"parse": {
-				"code": "use DateTime::Format::Strptime;\n$strp = DateTime::Format::Strptime->new($myformat)\n$strp->parse_datetime($mystring);\n",
+				"code": [
+					"use DateTime::Format::Strptime;",
+					"$strp = DateTime::Format::Strptime->new($myformat);",
+					"$strp->parse_datetime($mystring);"
+				],
 				"api": "http://search.cpan.org/~drolsky/DateTime-Format-Strptime-1.54/lib/DateTime/Format/Strptime.pm"
 			},
 			"compare": {
@@ -201,7 +229,12 @@
 				"api": "http://perldoc.perl.org/perlsyn.html#Compound-Statements"
 			},
 			"for-each-associative": {
-				"code": "foreach $key (keys @myarray) {\n    $val = $myarray[$key];\n    …\n}",
+				"code": [
+					"foreach $key (keys @myarray) {",
+					"    $val = $myarray[$key];",
+					"    …",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlsyn.html#Compound-Statements"
 			},
 			"keys": {
@@ -225,7 +258,10 @@
 				"api": "http://perldoc.perl.org/functions/map.html"
 			},
 			"reduce": {
-				"code": "use List::Util;\nreduce {…} @myarray",
+				"code": [
+					"use List::Util;",
+					"reduce {…} @myarray"
+				],
 				"api": "http://perldoc.perl.org/List/Util.html#reduce-BLOCK-LIST"
 			},
 			"sort": {
@@ -239,7 +275,12 @@
 		},
 		"functions": {
 			"define": {
-				"code": "sub myfunc {\n    my($arg1,$arg2) = @_;\n    …\n}",
+				"code": [
+					"sub myfunc {",
+					"    my($arg1,$arg2) = @_;",
+					"    …",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlsub.html#DESCRIPTION"
 			},
 			"call": {
@@ -247,19 +288,41 @@
 				"api": "http://perldoc.perl.org/perlsub.html#DESCRIPTION"
 			},
 			"default-arguments": {
-				"code": "sub myfunc {\n    my $arg1 = shift || 'default'\n    …\n}",
+				"code": [
+					"sub myfunc {",
+					"    my $arg1 = shift || 'default';",
+					"    …",
+					"}"
+				],
 				"api": "http://www.perlmonks.org/?node_id=161091"
 			},
 			"n-arguments": {
-				"code": "sub myfunc() {\n    @args = @_;\n    …\n}",
+				"code": [
+					"sub myfunc() {",
+					"    @args = @_;",
+					"    …",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlsub.html#DESCRIPTION"
 			},
 			"named-arguments": {
-				"code": "sub myfunc {\n    my %args = @_;\n    …\n}\n\nmyfunc({arg1=>$val1, arg2=>$val2});",
+				"code": [
+					"sub myfunc {",
+					"    my %args = @_;",
+					"    …",
+					"}",
+					"",
+					"myfunc({arg1=>$val1, arg2=>$val2});"
+				],
 				"api": "http://www.devshed.com/c/a/Perl/Subroutines-in-Perl/3/"
 			},
 			"overloading": {
-				"code": "sub myfunc() {\n    @args = @_;\n    …\n}",
+				"code": [
+					"sub myfunc() {",
+					"    @args = @_;",
+					"    …",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlsub.html#DESCRIPTION"
 			},
 			"define-closure": {
@@ -273,7 +336,14 @@
 		},
 		"objects": {
 			"define-class": {
-				"code": "package MyClass;\n\nsub new {\n    my $class = shift;\n    return bless {}, class;\n}",
+				"code": [
+					"package MyClass;",
+					"",
+					"sub new {",
+					"    my $class = shift;",
+					"    return bless {}, $class;",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
 			},
 			"instantiate-class": {
@@ -285,7 +355,17 @@
 				"api": "http://perldoc.perl.org/UNIVERSAL.html#%24obj-%3eisa(-TYPE-)"
 			},
 			"define-field": {
-				"code": "package MyClass;\n\nsub new {\n    my $class = shift;\n    return bless {\n        field => 'value',\n    \n}, class;\n}",
+				"code": [
+					"package MyClass;",
+					"",
+					"sub new {",
+					"    my $class = shift;",
+					"    return bless {",
+					"        field => 'value',",
+					"        …",
+					"    }, $class;",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlobj.html#Writing-Constructors"
 			},
 			"access-field": {
@@ -297,7 +377,14 @@
 				"api": "http://perldoc.perl.org/functions/exists.html"
 			},
 			"define-method": {
-				"code": "package MyClass;\n\nsub mymethod {\n    my $self = shift;\n    …;\n}",
+				"code": [
+					"package MyClass;",
+					"",
+					"sub mymethod {",
+					"    my $self = shift;",
+					"    …;",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
 			},
 			"call-method": {
@@ -309,11 +396,21 @@
 				"api": "http://perldoc.perl.org/UNIVERSAL.html"
 			},
 			"this": {
-				"code": "package MyClass;\n\nsub mymethod {\n    my $self = shift;\n    …;\n}",
+				"code": [
+					"package MyClass;",
+					"",
+					"sub mymethod {",
+					"    my $self = shift;",
+					"    …;",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlobj.html#Writing-Accessors"
 			},
 			"define-class-field": {
-				"code": "package MyClass;\nour $myclassfield = 'default value';",
+				"code": [
+					"package MyClass;",
+					"our $myclassfield = 'default value';"
+				],
 				"api": "http://stackoverflow.com/questions/5536784/perl-static-class-properties"
 			},
 			"access-class-field": {
@@ -321,7 +418,14 @@
 				"api": "http://stackoverflow.com/questions/5536784/perl-static-class-properties"
 			},
 			"define-class-method": {
-				"code": "package MyClass;\n\nsub myclassmethod {\n    my $self = shift;\n    …;\n} # same as normal method",
+				"code": [
+					"package MyClass;",
+					"",
+					"sub myclassmethod {",
+					"    my $self = shift;",
+					"    …;",
+					"} # same as normal method"
+				],
 				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
 			},
 			"call-class-method": {
@@ -329,33 +433,64 @@
 				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
 			},
 			"constructor": {
-				"code": "package MyClass;\n\nsub new {\n    my $class = shift;\n    return bless {}, class;\n}",
+				"code": [
+					"package MyClass;",
+					"",
+					"sub new {",
+					"    my $class = shift;",
+					"    return bless {}, $class;",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlobj.html#An-Object-is-Simply-a-Data-Structure"
 			},
 			"inheritance": {
-				"code": "package MyChildClass;\nuse parent MyParentClass;",
+				"code": [
+					"package MyChildClass;",
+					"use parent MyParentClass;"
+				],
 				"api": "http://perldoc.perl.org/perlobj.html#Inheritance"
 			},
 			"parent-method": {
-				"code": "class MyChildClass extends MyParentClass {\n    function mymethod() {\n        my $self = shift;\n        $self->SUPER::mymethod();\n    }\n}",
+				"code": [
+					"sub mymethod() {",
+					"    my $self = shift;",
+					"    $self->SUPER::mymethod();",
+					"}"
+				],
 				"api": "http://perldoc.perl.org/perlobj.html#Inheritance"
 			},
 			"declare-public": {
-				"code": "package MyClass;\n\nsub mypublicmethod {…}",
+				"code": [
+					"package MyClass;",
+					"",
+					"sub mypublicmethod {…}"
+				],
 				"api": "http://www.perlmonks.org/?node_id=807145"
 			},
 			"declare-private": {
-				"code": "package MyClass;\n\nmy $myprivatefield = 27;\nmy $myprivatemethod = sub {…};\n# accessed as $self->$myprivatemethod()",
+				"code": [
+					"package MyClass;",
+					"",
+					"my $myprivatefield = 27;",
+					"my $myprivatemethod = sub {…};",
+					"# accessed as $self->$myprivatemethod()"
+				],
 				"api": "http://www.perlmonks.org/?node_id=807145"
 			}
 		},
 		"serialization": {
 			"json-encode": {
-				"code": "use JSON;\nencode_json $myObjOrArray",
+				"code": [
+					"use JSON;",
+					"encode_json $myObjOrArray"
+				],
 				"api": "http://perldoc.net/JSON.pm#encode_json"
 			},
 			"json-decode": {
-				"code": "use JSON;\ndecode_json $myJsonString",
+				"code": [
+					"use JSON;",
+					"decode_json $myJsonString"
+				],
 				"api": "http://perldoc.net/JSON.pm#decode_json"
 			}
 		},
@@ -365,27 +500,64 @@
 				"api": "http://perldoc.perl.org/functions/print.html"
 			},
 			"get-data": {
-				"code": "use CGI;\nmy $q = CGI->new;\n$q->param('myvar')",
+				"code": [
+					"use CGI;",
+					"my $q = CGI->new;",
+					"$q->param('myvar')"
+				],
 				"api": "http://perldoc.perl.org/CGI.html#FETCHING-THE-VALUE-OR-VALUES-OF-A-SINGLE-NAMED-PARAMETER%3a"
 			},
 			"post-data-form": {
-				"code": "use CGI;\nmy $q = CGI->new;\n$q->param('myvar')",
+				"code": [
+					"use CGI;",
+					"my $q = CGI->new;",
+					"$q->param('myvar')"
+				],
 				"api": "http://perldoc.perl.org/CGI.html#FETCHING-THE-VALUE-OR-VALUES-OF-A-SINGLE-NAMED-PARAMETER%3a"
 			},
 			"post-data-raw": {
-				"code": "use CGI;\nmy $q = CGI->new;\n$q->param('POSTDATA')",
+				"code": [
+					"use CGI;",
+					"my $q = CGI->new;",
+					"$q->param('POSTDATA')"
+				],
 				"api": "http://perldoc.perl.org/CGI.html#HANDLING-NON-URLENCODED-ARGUMENTS"
 			},
 			"uploaded-file": {
-				"code": "use CGI;\n\n$CGI::POST_MAX = 1024 * 5000;\n\nmy $query = new CGI;\nmy $filename = $query->param(\"myfilefield\");\nif ( !$filename ) {\n    print \"There was a problem uploading your photo (try a smaller file).\";\n    exit;\n}\n}\n\nmy $upload_filehandle = $query->upload(\"myfilefield\");",
+				"code": [
+					"use CGI;",
+					"",
+					"$CGI::POST_MAX = 1024 * 5000;",
+					"my $query = new CGI;",
+					"my $filename = $query->param(\"myfilefield\");",
+					"if ( !$filename ) {",
+					"    print \"There was a problem uploading your photo (try a smaller file).\";",
+					"    exit;",
+					"}",
+					"",
+					"my $upload_filehandle = $query->upload(\"myfilefield\");"
+				],
 				"api": "http://perldoc.perl.org/CGI.html#PROCESSING-A-FILE-UPLOAD-FIELD"
 			},
 			"get-cookie": {
-				"code": "use CGI;\nmy $q = CGI->new;\n$q->cookie('cookiename');",
+				"code": [
+					"use CGI;",
+					"my $q = CGI->new;",
+					"$q->cookie('cookiename');"
+				],
 				"api": "http://perldoc.perl.org/CGI.html#HTTP-COOKIES"
 			},
 			"set-cookie": {
-				"code": "print header(-cookie=>cookie(\n    -name=>'cookiename',\n    -value=>'cookievalue',\n    -expires=>'+1h',\n    -path=>'/path/restriction',\n    -domain=>'my.domain.com',\n    -secure=>1\n));",
+				"code": [
+					"print header(-cookie=>cookie(",
+					"    -name=>'cookiename',",
+					"    -value=>'cookievalue',",
+					"    -expires=>'+1h',",
+					"    -path=>'/path/restriction',",
+					"    -domain=>'my.domain.com',",
+					"    -secure=>1",
+					"));"
+				],
 				"api": "http://perldoc.perl.org/CGI.html#HTTP-COOKIES"
 			},
 			"get-header": {
@@ -404,29 +576,58 @@
 				"api": "http://perldoc.perl.org/CGI.html#CREATING-A-STANDARD-HTTP-HEADER%3a"
 			},
 			"redirect": {
-				"code": "use CGI;\nmy $q = CGI->new;\nprint $q->redirect($newUrl);",
+				"code": [
+					"use CGI;",
+					"my $q = CGI->new;",
+					"print $q->redirect($newUrl);"
+				],
 				"api": "http://perldoc.perl.org/CGI.html#GENERATING-A-REDIRECTION-HEADER"
 			},
 			"get-session-var": {
-				"code": "use CGI::Session;\nmy $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});\n$session->param('key');",
+				"code": [
+					"use CGI::Session;",
+					"my $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});",
+					"$session->param('key');"
+				],
 				"api": "http://search.cpan.org/~sherzodr/CGI-Session-3.95/Session.pm"
 			},
 			"set-session-var": {
-				"code": "use CGI::Session;\nmy $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});\n$session->param('key',$value);",
+				"code": [
+					"use CGI::Session;",
+					"my $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});",
+					"$session->param('key',$value);"
+				],
 				"api": "http://search.cpan.org/~sherzodr/CGI-Session-3.95/Session.pm"
 			},
 			"remove-session-var": {
-				"code": "use CGI::Session;\nmy $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});\n$session->clear([\"key\"]);",
+				"code": [
+					"use CGI::Session;",
+					"my $session = new CGI::Session(\"driver:File\", undef, {Directory=>'/tmp'});",
+					"$session->clear([\"key\"]);"
+				],
 				"api": "http://search.cpan.org/~sherzodr/CGI-Session-3.95/Session.pm"
 			}
 		},
 		"http-client": {
 			"simple-request": {
-				"code": "use LWP::Simple;\n$content = get(\"http://www.sn.no/\");",
+				"code": [
+					"use LWP::Simple;",
+					"$content = get(\"http://www.sn.no/\");"
+				],
 				"api": "http://search.cpan.org/~gaas/libwww-perl-6.05/lib/LWP/Simple.pm"
 			},
 			"full-request": {
-				"code": "require LWP::UserAgent;\nmy $ua = LWP::UserAgent->new;\n$ua->default_header('Content-Type' => 'text/json');\nmy $response = $ua->post('http://search.cpan.org/', Content => $body); // or get(), put(), or delete()\n if ($response->is_success) {\n     print $response->decoded_content;\n} else {\n    die $response->status_line;\n}",
+				"code": [
+					"require LWP::UserAgent;",
+					"my $ua = LWP::UserAgent->new;",
+					"$ua->default_header('Content-Type' => 'text/json');",
+					"my $response = $ua->post('http://search.cpan.org/', Content => $body); // or get(), put(), or delete()",
+					"if ($response->is_success) {",
+					"     print $response->decoded_content;",
+					"} else {",
+					"    die $response->status_line;",
+					"}"
+				],
 				"api": "http://search.cpan.org/~gaas/libwww-perl-6.05/lib/LWP/UserAgent.pm"
 			}
 		}

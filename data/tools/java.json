@@ -5,7 +5,14 @@
 	"featuresets": {
 		"basics": {
 			"hello-world": {
-				"code": "class HelloWorldApp {\n    public static void main(String[] args)\n    {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+				"code": [
+					"class HelloWorldApp {",
+					"    public static void main(String[] args)",
+					"    {",
+					"        System.out.println(\"Hello, World!\");",
+					"    }",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/tutorial/getStarted/cupojava/unix.html#unix-2a"
 			}
 		},
@@ -81,11 +88,23 @@
 					"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html"
 				},
 				{
-					"code": "StringBuffer buf = new StringBuffer();\nbuf.append(a);\nbuf.append(b);\nbuf.append(c);\nbuf.toString();",
+					"code": [
+						"StringBuffer buf = new StringBuffer();",
+						"buf.append(a);",
+						"buf.append(b);",
+						"buf.append(c);",
+						"buf.toString();"
+					],
 					"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuffer.html"
 				},
 				{
-					"code": "StringBuilder buf = new StringBuilder();\nbuf.append(a);\nbuf.append(b);\nbuf.append(c);\nbuf.toString();",
+					"code": [
+						"StringBuilder buf = new StringBuilder();",
+						"buf.append(a);",
+						"buf.append(b);",
+						"buf.append(c);",
+						"buf.toString();"
+					],
 					"version": "1.5",
 					"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html"
 				}
@@ -115,7 +134,17 @@
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#matches(java.lang.String)"
 			},
 			"regex-find": {
-				"code": "import java.util.regex.Matcher\nimport java.util.regex.Pattern;\n\n…\nPattern pattern = Pattern.compile(myregex);\nMatcher matcher = pattern.matcher(string);\nwhile( matcher.find() ) {\n    String matchedSubstring = matcher.group();\n}",
+				"code": [
+					"import java.util.regex.Matcher;",
+					"import java.util.regex.Pattern;",
+					"",
+					"…",
+					"Pattern pattern = Pattern.compile(myregex);",
+					"Matcher matcher = pattern.matcher(string);",
+					"while( matcher.find() ) {",
+					"    String matchedSubstring = matcher.group();",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/regex/Matcher.html#find()"
 			},
 			"regex-replace": {
@@ -137,7 +166,13 @@
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#round(float)"
 			},
 			"random": {
-				"code": "import java.util.Random;\n\n…\nRandom r = new Random(seed);\nmin + r.nextInt(max-min+1);",
+				"code": [
+					"import java.util.Random;",
+					"",
+					"…",
+					"Random r = new Random(seed);",
+					"min + r.nextInt(max-min+1);"
+				],
 				"api": "http://docs.oracle.com/javase/6/docs/api/java/util/Random.html#nextInt(int)"
 			},
 			"min": {
@@ -159,19 +194,34 @@
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis()"
 			},
 			"format": {
-				"code": "SimpleDateFormat df = new SimpleDateFormat(myformat);\ndf.format(mydate);",
+				"code": [
+					"SimpleDateFormat df = new SimpleDateFormat(myformat);",
+					"df.format(mydate);"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html"
 			},
 			"parse": {
-				"code": "SimpleDateFormat df = new SimpleDateFormat(myformat);\ndf.parse(mystring);",
+				"code": [
+					"SimpleDateFormat df = new SimpleDateFormat(myformat);",
+					"df.parse(mystring);"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html"
 			},
 			"compare": {
-				"code": "a.before(b);\na.after(b);\na.compareTo(b);",
+				"code": [
+					"a.before(b);",
+					"a.after(b);",
+					"a.compareTo(b);"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Date.html#compareTo(java.util.Date)"
 			},
 			"offset": {
-				"code": "Calendar cal = Calendar.getInstance();cal.setTime(mydate);\ncal.add( MONTH, 1 );\nDate mydate = cal.getTime();",
+				"code": [
+					"Calendar cal = Calendar.getInstance();",
+					"cal.setTime(mydate);",
+					"cal.add( MONTH, 1 );",
+					"Date mydate = cal.getTime();"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#add(int, int)"
 			}
 		},
@@ -205,7 +255,10 @@
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Map.html#get(java.lang.Object)"
 			},
 			"push": {
-				"code": "Deque deque = new ArrayDeque<type>();\ndeque.push( myval )",
+				"code": [
+					"Deque deque = new ArrayDeque<type>();",
+					"deque.push( myval )"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html#push(E)"
 			},
 			"pop": {
@@ -213,7 +266,10 @@
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html#pop()"
 			},
 			"merge": {
-				"code": "List newlist = new ArrayList(a);\nnewlist.addAll(b);",
+				"code": [
+					"List newlist = new ArrayList(a);",
+					"newlist.addAll(b);"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#addAll(java.util.Collection)"
 			},
 			"slice": {
@@ -225,7 +281,12 @@
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html#jls-14.14.2"
 			},
 			"for-each-associative": {
-				"code": "for( String key : mymap.keySet() ) {\n    String value = mymap.get(key);\n    …\n} foreach( $myarray as $mykey => $myval ) {…}",
+				"code": [
+					"for( String key : mymap.keySet() ) {",
+					"    String value = mymap.get(key);",
+					"    …",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html#jls-14.14.2"
 			},
 			"keys": {
@@ -245,7 +306,13 @@
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#indexOf(java.lang.Object)"
 			},
 			"sort": {
-				"code": "java.util.Collections.sort( mylist,\n    new Comparator<String>() {\n        public int compare (String a, String a ) {…}\n    })",
+				"code": [
+					"java.util.Collections.sort( mylist,",
+					"    new Comparator<String>() {",
+					"        public int compare (String a, String a ) {…}",
+					"    }",
+					")"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#sort(java.util.List, java.util.Comparator)"
 			},
 			"reverse": {
@@ -255,12 +322,22 @@
 		},
 		"functions": {
 			"n-arguments": {
-				"code": "int mymethod( int...args ) {\n    for( int i : args ) {\n        …\n    }\n}",
+				"code": [
+					"int mymethod( int... args ) {",
+					"    for( int i : args ) {",
+					"        …",
+					"    }",
+					"}"
+				],
 				"version": "5.0",
 				"api": "http://www.java-tips.org/java-se-tips/java.lang/how-to-pass-unspecified-number-of-arguments-to-a-m.html"
 			},
 			"overloading": {
-				"code": "function myfunc( int arg ) {…}\nfunction myfunc( float arg ) {…}\nfunction myfunc( String arg ) {…}\n",
+				"code": [
+					"function myfunc( int arg ) {…}",
+					"function myfunc( float arg ) {…}",
+					"function myfunc( String arg ) {…}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4.9"
 			}
 		},
@@ -278,11 +355,18 @@
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.20.2"
 			},
 			"class-of": {
-				"code": "myobj.getClass()\nmyobj.getClass().getName()",
+				"code": [
+					"myobj.getClass()",
+					"myobj.getClass().getName()"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#getClass()"
 			},
 			"define-field": {
-				"code": "class MyClass {\n    String myfield;\n}",
+				"code": [
+					"class MyClass {",
+					"    String myfield;",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.2"
 			},
 			"access-field": {
@@ -294,7 +378,11 @@
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html#getField(java.lang.String)"
 			},
 			"define-method": {
-				"code": "class MyClass {\n    function mymethod( $arg1, $arg2 ) {…}\n}",
+				"code": [
+					"class MyClass {",
+					"    function mymethod( $arg1, $arg2 ) {…}",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4"
 			},
 			"call-method": {
@@ -302,7 +390,11 @@
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.12"
 			},
 			"has-method": {
-				"code": "Class[] cArg = new Class[1];\ncArg[0] = String.class;\nc.getMethod('mymethod',cArg); // may throw NoSuchMethodException",
+				"code": [
+					"Class[] cArg = new Class[1];",
+					"cArg[0] = String.class;",
+					"c.getMethod('mymethod',cArg); // may throw NoSuchMethodException"
+				],
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html#getMethod(java.lang.String, java.lang.Class...)"
 			},
 			"this": {
@@ -310,7 +402,12 @@
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.8.3"
 			},
 			"define-constant": {
-				"code": "class MyClass {\n    public static final int MYCONSTANT = 27;\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    public static final int MYCONSTANT = 27;",
+					"    …",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.12.4"
 			},
 			"access-constant": {
@@ -318,7 +415,12 @@
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.28"
 			},
 			"define-class-field": {
-				"code": "class MyClass {\n    public static int myclassfield;\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    public static int myclassfield;",
+					"    …",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.3.1.1"
 			},
 			"access-class-field": {
@@ -326,7 +428,12 @@
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.3.1.1"
 			},
 			"define-class-method": {
-				"code": "class MyClass {\n    public static int myclassmethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    public static int myclassmethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4.3.2"
 			},
 			"call-class-method": {
@@ -334,7 +441,12 @@
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4.3.2"
 			},
 			"constructor": {
-				"code": "class MyClass {\n    MyClass() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    MyClass() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.8"
 			},
 			"inheritance": {
@@ -342,35 +454,77 @@
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.4"
 			},
 			"parent-method": {
-				"code": "class MyChildClass extends MyParentClass {\n    function mymethod() {\n        super.mymethod();\n    }\n}",
+				"code": [
+					"class MyChildClass extends MyParentClass {",
+					"    function mymethod() {",
+					"        super.mymethod();",
+					"    }",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.12"
 			},
 			"declare-public": {
-				"code": "class MyClass {\n    public int myfield;\n    public int mymethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    public int myfield;",
+					"    public int mymethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.6"
 			},
 			"declare-protected": {
-				"code": "class MyClass {\n    protected int myfield;\n    protected int mymethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    protected int myfield;",
+					"    protected int mymethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.6"
 			},
 			"declare-private": {
-				"code": "class MyClass {\n    private int myfield;\n    private int mymethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    private int myfield;",
+					"    private int mymethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.6"
 			},
 			"declare-final": {
-				"code": "class MyClass {\n    public final int mymethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    public final int mymethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4.3.3"
 			},
 			"declare-interface": {
-				"code": "interface MyInterface {\n    public function myfunction();\n}",
+				"code": [
+					"interface MyInterface {",
+					"    public function myfunction();",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-9.html#jls-9.1"
 			},
 			"implement-interface": {
-				"code": "class MyClass implements MyInterface {\n    public function myfunction() {…}\n}",
+				"code": [
+					"class MyClass implements MyInterface {",
+					"    public function myfunction() {…}",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.5"
 			},
 			"abstract-class": {
-				"code": "abstract class MyClass {\n    public abstract function myAbstractFunction();\n\n    public function myConcreteFunction(…);\n}",
+				"code": [
+					"abstract class MyClass {",
+					"    public abstract function myAbstractFunction();",
+					"    public function myConcreteFunction(…);",
+					"}"
+				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.1.1"
 			}
 		}

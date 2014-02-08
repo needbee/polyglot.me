@@ -13,7 +13,12 @@
 				"api": "https://code.google.com/p/datejs/wiki/APIDocumentation#parse"
 			},
 			"compare": {
-				"code": "a.equals(b)\na.isBefore(b)\na.isAfter(b)\na.compareTo(b)",
+				"code": [
+					"a.equals(b)",
+					"a.isBefore(b)",
+					"a.isAfter(b)",
+					"a.compareTo(b)"
+				],
 				"api": "https://code.google.com/p/datejs/wiki/APIDocumentation#compareTo"
 			},
 			"offset": {

@@ -83,7 +83,10 @@
 				"api": "http://laravel.com/docs/requests#request-information"
 			},
 			"set-header": {
-				"code": "$response = Response::make($contents, $statusCode);\n$response->header($headername, $value);",
+				"code": [
+					"$response = Response::make($contents, $statusCode);",
+					"$response->header($headername, $value);"
+				],
 				"api": "http://laravel.com/docs/responses#basic-responses"
 			},
 			"status-code": {
@@ -91,11 +94,17 @@
 				"api": "http://laravel.com/docs/responses#basic-responses"
 			},
 			"content-type": {
-				"code": "$response = Response::make($contents, $statusCode);\n$response->header('Content-Type', $value);",
+				"code": [
+					"$response = Response::make($contents, $statusCode);",
+					"$response->header('Content-Type', $value);"
+				],
 				"api": "http://laravel.com/docs/responses#basic-responses"
 			},
 			"redirect": {
-				"code": "Redirect::to(url)\nRedirect::route(mynamedroute,array('param'=>'val'))",
+				"code": [
+					"Redirect::to(url)",
+					"Redirect::route(mynamedroute,array('param'=>'val'))"
+				],
 				"api": "http://laravel.com/docs/responses#redirects"
 			},
 			"get-session-var": {
@@ -111,7 +120,10 @@
 				"api": "http://laravel.com/docs/session#session-usage"
 			},
 			"get-flash-var": {
-				"code": "Session::get('key');\n// same as normal session get",
+				"code": [
+					"Session::get('key');",
+					"// same as normal session get"
+				],
 				"api": "http://laravel.com/docs/session#flash-data"
 			},
 			"set-flash-var": {
@@ -125,7 +137,13 @@
 		},
 		"validation": {
 			"validate": {
-				"code": "$validator = Validator::make($data, array( 'myfield' => array('required','min:8', … )));\nif( $validator->fails() ) {\n    $messages = $validator->messages();\n    …\n}",
+				"code": [
+					"$validator = Validator::make($data, array( 'myfield' => array('required','min:8', … )));",
+					"if( $validator->fails() ) {",
+					"    $messages = $validator->messages();",
+					"    …",
+					"}"
+				],
 				"api": "http://laravel.com/docs/validation#basic-usage"
 			},
 			"custom-validator": [
@@ -141,11 +159,19 @@
 					"code": [
 						{
 							"file": "MyValidatorClass.php",
-							"contents": "class MyValidatorClass extends Illuminate\\Validation\\Validator {\n    public function my_validator_name( $attribute, $value, $parameters ) {…}\n}"
+							"contents": [
+								"class MyValidatorClass extends Illuminate\\Validation\\Validator {",
+								"    public function my_validator_name( $attribute, $value, $parameters ) {…}",
+								"}"
+							]
 						},
 						{
 							"file": "(some file run on start)",
-							"contents": "Validator::resolver(function($translator, $data, $rules, $messages) {\n    return new MyValidatorClass($translator, $data, $rules, $messages);\n});"
+							"contents": [
+								"Validator::resolver(function($translator, $data, $rules, $messages) {",
+								"    return new MyValidatorClass($translator, $data, $rules, $messages);",
+								"});"
+							]
 						}
 					],
 					"api": "http://laravel.com/docs/validation#custom-validation-rules"
@@ -311,7 +337,11 @@
 				"api": "http://laravel.com/docs/controllers#basic-controllers"
 			},
 			"controller-action": {
-				"code": "class SampleController extends BaseController {\n    public function myaction($id) {…}\n}",
+				"code": [
+					"class SampleController extends BaseController {",
+					"    public function myaction($id) {…}",
+					"}"
+				],
 				"api": "http://laravel.com/docs/controllers#basic-controllers"
 			},
 			"render-view": {
@@ -319,11 +349,17 @@
 				"api": "http://laravel.com/docs/responses#views"
 			},
 			"url": {
-				"code": "action('MyController@myAction', $params);\nroute('routename', $params);",
+				"code": [
+					"action('MyController@myAction', $params);",
+					"route('routename', $params);"
+				],
 				"api": "http://laravel.com/docs/helpers#urls"
 			},
 			"output-form-element": {
-				"code": "echo Form::model($user, array('route' => array('user.update', $user->id)))\necho Form::text('myfield', 'mydefaultvalue');",
+				"code": [
+					"echo Form::model($user, array('route' => array('user.update', $user->id)))",
+					"echo Form::text('myfield', 'mydefaultvalue');"
+				],
 				"api": "http://laravel.com/docs/html"
 			},
 			"log": {

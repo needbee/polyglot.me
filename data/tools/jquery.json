@@ -76,7 +76,20 @@
 				"api": "http://api.jquery.com/jQuery.get/"
 			},
 			"full-request": {
-				"code": "$.ajax('path/on/server', {\n    accepts: mimeType,\n    cache: false,\n    contentType: requestDataContentType,\n    data: requestData,\n    dataType: responseDataParsingType,\n    error: errorHandler,\n    headers: headerMap,\n    statusCode: statusCodeHandlerMap,\n    success: successHandler,\n    type: httpVerbString\n});",
+				"code": [
+					"$.ajax('path/on/server', {",
+					"    accepts: mimeType,",
+					"    cache: false,",
+					"    contentType: requestDataContentType,",
+					"    data: requestData,",
+					"    dataType: responseDataParsingType,",
+					"    error: errorHandler,",
+					"    headers: headerMap,",
+					"    statusCode: statusCodeHandlerMap,",
+					"    success: successHandler,",
+					"    type: httpVerbString",
+					"});"
+				],
 				"api": "http://api.jquery.com/jQuery.ajax/"
 			}
 		}
