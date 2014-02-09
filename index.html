@@ -127,6 +127,11 @@
 												<div class="tdwrapper">
 													<div><strong><%= feature.name %></strong></div>
 													<p class="text-muted small"><%= feature.description %></p>
+													<% if( feature.reference ) { %>
+														<div class="code-links small">
+															<a href="<%= feature.reference %>" target="_blank">reference</a>
+														</div>
+													<% } %>
 												</div>
 											</td>
 											<% _.each(tools,function(toolObj) { %>
