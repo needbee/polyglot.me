@@ -105,7 +105,10 @@
 				"api": "http://jqueryvalidation.org/extension-method/"
 			},
 			"file-is-type": {
-				"code": "// requires additional-methods.js\naccept: 'text/plain,text/csv'",
+				"code": [
+					"// requires additional-methods.js",
+					"accept: 'text/plain,text/csv'"
+				],
 				"api": "http://jqueryvalidation.org/accept-method/"
 			}
 		}

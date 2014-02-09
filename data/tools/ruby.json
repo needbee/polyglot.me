@@ -5,7 +5,10 @@
 	"featuresets": {
 		"basics": {
 			"hello-world": {
-				"code": "#!/usr/bin/env ruby\nputs \"Hello, World!\""
+				"code": [
+					"#!/usr/bin/env ruby",
+					"puts \"Hello, World!\""
+				]
 			}
 		},
 		"types": {
@@ -72,7 +75,10 @@
 				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-length"
 			},
 			"comparison": {
-				"code": "a == b\na.eql? b",
+				"code": [
+					"a == b",
+					"a.eql? b"
+				],
 				"api": "http://www.ruby-doc.org/core-2.1.0/String.html#method-i-eql-3F"
 			},
 			"lowercase": {
@@ -192,7 +198,10 @@
 				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html"
 			},
 			"define-associative": {
-				"code": "{ \"key1\"=>\"val1\", \"key2\"=>\"val2\", … }\n{ :key1=>\"val1\", :key2=>\"val2\", … }\n",
+				"code": [
+					"{ \"key1\"=>\"val1\", \"key2\"=>\"val2\", … }",
+					"{ :key1=>\"val1\", :key2=>\"val2\", … }"
+				],
 				"api": "http://www.ruby-doc.org/core-2.1.0/Hash.html"
 			},
 			"length": {
@@ -228,7 +237,10 @@
 				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-2B"
 			},
 			"slice": {
-				"code": "myarray[ start, length]\nmyarray.slice( start, length )",
+				"code": [
+					"myarray[ start, length]",
+					"myarray.slice( start, length )"
+				],
 				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-5B-5D"
 			},
 			"for-each": {
@@ -296,32 +308,61 @@
 		},
 		"functions": {
 			"define": {
-				"code": "def myfunc arg1, arg2\n    …\nend",
+				"code": [
+					"def myfunc arg1, arg2",
+					"    …",
+					"end"
+				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html"
 			},
 			"call": {
-				"code": "myfunc\nmyfunc( val1, val2 )",
+				"code": [
+					"myfunc",
+					"myfunc( val1, val2 )"
+				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/calling_methods_rdoc.html"
 			},
 			"default-arguments": {
-				"code": "def myfunc arg1 = 'default', arg2\n    …\nend",
+				"code": [
+					"def myfunc arg1 = 'default', arg2",
+					"    …",
+					"end"
+				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Default+Values"
 			},
 			"n-arguments": {
-				"code": "def myfunc arg1, *arg2\n    …\nend",
+				"code": [
+					"def myfunc arg1, *arg2",
+					"    …",
+					"end"
+				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Array%2FHash+Argument"
 			},
 			"named-arguments": {
-				"code": "def myfunc arg1:nil, arg2:nil\n    …\nend\n\nmyfunc(arg1:val1, arg2:val2)",
+				"code": [
+					"def myfunc arg1:nil, arg2:nil",
+					"    …",
+					"end",
+					"",
+					"myfunc(arg1:val1, arg2:val2)"
+				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Keyword+Arguments"
 			},
 			"overloading": [
 				{
-					"code": "def myfunc $arg1, $arg2 = nil\n    …\nend",
+					"code": [
+						"def myfunc $arg1, $arg2 = nil",
+						"    …",
+						"end"
+					],
 					"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Default+Values"
 				},
 				{
-					"code": "def myfunc *args\n    …\nend",
+					"code": [
+						"def myfunc *args",
+						"    …",
+						"end"
+					],
 					"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Array%2FHash+Argument"
 				}
 			],
@@ -336,7 +377,11 @@
 		},
 		"objects": {
 			"define-class": {
-				"code": "class MyClass\n    …\nend",
+				"code": [
+					"class MyClass",
+					"    …",
+					"end"
+				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Defining+a+class"
 			},
 			"instantiate-class": {
@@ -348,7 +393,10 @@
 				"api": "http://www.ruby-doc.org/core-2.1.0/Object.html#method-i-instance_of-3F"
 			},
 			"class-of": {
-				"code": "myobj.class\nmyobj.class.name",
+				"code": [
+					"myobj.class",
+					"myobj.class.name"
+				],
 				"api": "http://www.ruby-doc.org/core-2.1.0/Object.html#method-i-class"
 			},
 			"access-field": {
@@ -360,7 +408,13 @@
 				"api": "http://www.ruby-doc.org/core-2.1.0/Object.html#method-i-instance_variable_defined-3F"
 			},
 			"define-method": {
-				"code": "class MyClass\n    def mymethod\n        …\n    end\nend",
+				"code": [
+					"class MyClass",
+					"    def mymethod",
+					"        …",
+					"    end",
+					"end"
+				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Methods"
 			},
 			"call-method": {
@@ -368,7 +422,10 @@
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Methods"
 			},
 			"has-method": {
-				"code": "myobj.method(:methodname) // may throw NameError\nmyobj.public_method(:methodname)",
+				"code": [
+					"myobj.method(:methodname) // may throw NameError",
+					"myobj.public_method(:methodname)"
+				],
 				"api": "http://www.ruby-doc.org/core-2.1.0/Object.html#method-i-method"
 			},
 			"this": {
@@ -376,7 +433,11 @@
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-self"
 			},
 			"define-constant": {
-				"code": "class MyClass\n    MYCONSTANT = 'thevalue'\nend",
+				"code": [
+					"class MyClass",
+					"    MYCONSTANT = 'thevalue'",
+					"end"
+				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Constants"
 			},
 			"access-constant": {
@@ -384,15 +445,29 @@
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Constants"
 			},
 			"define-class-field": {
-				"code": "class MyClass\n\n    @@myclassfield = 27\nend",
+				"code": [
+					"class MyClass",
+					"",
+					"    @@myclassfield = 27",
+					"end"
+				],
 				"api": "http://www.railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/"
 			},
 			"access-class-field": {
-				"code": "@@myclassfield # within MyClass\nMyClass.sides # outside of MyClass",
+				"code": [
+					"@@myclassfield # within MyClass",
+					"MyClass.sides # outside of MyClass"
+				],
 				"api": "http://www.railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/"
 			},
 			"define-class-method": {
-				"code": "class MyClass\n    def self.myclassmethod\n        …\n    end\nend",
+				"code": [
+					"class MyClass",
+					"    def self.myclassmethod",
+					"        …",
+					"    end",
+					"end"
+				],
 				"api": "http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/"
 			},
 			"call-class-method": {
@@ -400,41 +475,94 @@
 				"api": "http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/"
 			},
 			"constructor": {
-				"code": "class MyClass\n    def initialize\n        …\n    end\nend",
+				"code": [
+					"class MyClass",
+					"    def initialize",
+					"        …",
+					"    end",
+					"end"
+				],
 				"api": "http://www.ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/objinitialization.html"
 			},
 			"inheritance": {
-				"code": "class MyChildClass < MyParentClass\n    …\nend",
+				"code": [
+					"class MyChildClass < MyParentClass",
+					"    …",
+					"end"
+				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/modules_and_classes_rdoc.html#label-Defining+a+class"
 			},
 			"parent-method": {
-				"code": "class MyChildClass extends MyParentClass\n    def mymethod\n        super\n    end\nend",
+				"code": [
+					"class MyChildClass extends MyParentClass",
+					"    def mymethod",
+					"        super",
+					"    end",
+					"end"
+				],
 				"api": "http://ruby-doc.org/docs/keywords/1.9/files/keywords_rb.html#M000034"
 			},
 			"declare-public": {
-				"code": "class MyClass\n    def mymethod\n        …\n    end\nend",
+				"code": [
+					"class MyClass",
+					"    def mymethod",
+					"        …",
+					"    end",
+					"end"
+				],
 				"api": "http://rubylearning.com/satishtalim/ruby_access_control.html"
 			},
 			"declare-protected": {
-				"code": "class MyClass\n    protected\n        def mymethod\n            …\n        end\nend",
+				"code": [
+					"class MyClass",
+					"    protected",
+					"        def mymethod",
+					"            …",
+					"        end",
+					"end"
+				],
 				"api": "http://rubylearning.com/satishtalim/ruby_access_control.html"
 			},
 			"declare-private": {
-				"code": "class MyClass\n    private\n        def mymethod\n            …\n        end\nend",
+				"code": [
+					"class MyClass",
+					"    private",
+					"        def mymethod",
+					"            …",
+					"        end",
+					"end"
+				],
 				"api": "http://rubylearning.com/satishtalim/ruby_access_control.html"
 			},
 			"abstract-class": {
-				"code": "# not really abstract classes, but shared methods\nmodule MyModule\n    def mysharedmethod\n        …\n    end\nend\n\nclass MyClass\n    include MyModule\nend",
+				"code": [
+					"# not really abstract classes, but shared methods",
+					"module MyModule",
+					"    def mysharedmethod",
+					"        …",
+					"    end",
+					"end",
+					"",
+					"class MyClass",
+					"    include MyModule",
+					"end"
+				],
 				"api": "http://www.tutorialspoint.com/ruby/ruby_modules.htm"
 			}
 		},
 		"serialization": {
 			"json-encode": {
-				"code": "require 'json'\nJSON.generate(myObjOrArray)",
+				"code": [
+					"require 'json'",
+					"JSON.generate(myObjOrArray)"
+				],
 				"api": "http://flori.github.io/json/doc/index.html"
 			},
 			"json-decode": {
-				"code": "require 'json'\nJSON.parse(myJsonString)",
+				"code": [
+					"require 'json'",
+					"JSON.parse(myJsonString)"
+				],
 				"api": "http://flori.github.io/json/doc/index.html"
 			},
 			"xml-decode": {
@@ -448,11 +576,26 @@
 		},
 		"http-client": {
 			"simple-request": {
-				"code": "require \"net/http\"\nrequire \"uri\"\n\nuri = URI.parse(\"http://google.com/\")\nresponse = Net::HTTP.get_response(uri)",
+				"code": [
+					"require \"net/http\"",
+					"require \"uri\"",
+					"",
+					"uri = URI.parse(\"http://google.com/\")",
+					"response = Net::HTTP.get_response(uri)"
+				],
 				"api": "http://ruby-doc.org/stdlib-2.1.0/libdoc/net/http/rdoc/Net/HTTP.html#method-c-get_response"
 			},
 			"full-request": {
-				"code": "require \"net/http\"\n\nhttp = Net::HTTP.new(\"api.restsite.com\")\nrequest = Net::HTTP::Post.new(\"/users\")\nrequest[\"Content-Type\"] = \"text/json\"\nrequest.body = '{\"username\":\"quentin\"}'\nresponse = http.request(request)\nresponse[\"Content-Type\"]",
+				"code": [
+					"require \"net/http\"",
+					"",
+					"http = Net::HTTP.new(\"api.restsite.com\")",
+					"request = Net::HTTP::Post.new(\"/users\")",
+					"request[\"Content-Type\"] = \"text/json\"",
+					"request.body = '{\"username\":\"quentin\"}'",
+					"response = http.request(request)",
+					"response[\"Content-Type\"]"
+				],
 				"api": "http://ruby-doc.org/stdlib-2.1.0/libdoc/net/http/rdoc/Net/HTTP/Post.html"
 			}
 		}

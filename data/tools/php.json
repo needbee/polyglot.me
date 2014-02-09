@@ -5,7 +5,15 @@
 	"featuresets": {
 		"basics": {
 			"hello-world": {
-				"code": "<html>\n<head>\n</head>\n<body>\n<?php echo \"Hello, World!\"; ?>\n</body>\n</html>"
+				"code": [
+					"<html>",
+					"<head>",
+					"</head>",
+					"<body>",
+					"<?php echo \"Hello, World!\"; ?>",
+					"</body>",
+					"</html>"
+				]
 			}
 		},
 		"types": {
@@ -325,11 +333,20 @@
 				"api": "http://www.php.net/manual/en/functions.arguments.php"
 			},
 			"n-arguments": {
-				"code": "function myfunc() {\n    $args = func_get_args();\n    …\n}",
+				"code": [
+					"function myfunc() {",
+					"    $args = func_get_args();",
+					"    …",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/function.func-get-args.php"
 			},
 			"named-arguments": {
-				"code": "function myfunc( $arg_associative_array ) {…}\n\nmyfunc( array( \"foo\"=>27, \"bar\"=>\"baz\" ) );"
+				"code": [
+					"function myfunc( $arg_associative_array ) {…}",
+					"",
+					"myfunc( array( \"foo\"=>27, \"bar\"=>\"baz\" ) );"
+				]
 			},
 			"overloading": [
 				{
@@ -337,7 +354,12 @@
 					"api": "http://www.php.net/manual/en/functions.arguments.php"
 				},
 				{
-					"code": "function myfunc() {\n    $args = func_get_args();\n    …\n}",
+					"code": [
+						"function myfunc() {",
+						"    $args = func_get_args();",
+						"    …",
+						"}"
+					],
 					"api": "http://www.php.net/manual/en/function.func-get-args.php"
 				}
 			],
@@ -368,7 +390,11 @@
 				"api": "http://php.net/manual/en/function.get-class.php"
 			},
 			"define-field": {
-				"code": "class MyClass {\n    var $myfield = 'default value';\n}",
+				"code": [
+					"class MyClass {",
+					"    var $myfield = 'default value';",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
 			},
 			"access-field": {
@@ -380,7 +406,11 @@
 				"api": "http://php.net/manual/en/function.property-exists.php"
 			},
 			"define-method": {
-				"code": "class MyClass {\n    function mymethod( $arg1, $arg2 ) {…}\n}",
+				"code": [
+					"class MyClass {",
+					"    function mymethod( $arg1, $arg2 ) {…}",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
 			},
 			"call-method": {
@@ -396,7 +426,12 @@
 				"api": "http://www.php.net/manual/en/language.oop5.basic.php"
 			},
 			"define-constant": {
-				"code": "class MyClass {\n    const MYCONSTANT = 'thevalue';\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    const MYCONSTANT = 'thevalue';",
+					"    …",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.constants.php"
 			},
 			"access-constant": {
@@ -404,7 +439,12 @@
 				"api": "http://www.php.net/manual/en/language.oop5.constants.php"
 			},
 			"define-class-field": {
-				"code": "class MyClass {\n    public static $myclassfield = 'default value';\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    public static $myclassfield = 'default value';",
+					"    …",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
 			"access-class-field": {
@@ -412,7 +452,12 @@
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
 			"define-class-method": {
-				"code": "class MyClass {\n    public static function myclassmethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    public static function myclassmethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
 			"call-class-method": {
@@ -420,7 +465,12 @@
 				"api": "http://www.php.net/manual/en/language.oop5.static.php"
 			},
 			"constructor": {
-				"code": "class MyClass {\n    function __construct() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    function __construct() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.decon.php"
 			},
 			"inheritance": {
@@ -428,35 +478,78 @@
 				"api": "http://www.php.net/manual/en/language.oop5.inheritance.php"
 			},
 			"parent-method": {
-				"code": "class MyChildClass extends MyParentClass {\n    function mymethod() {\n        parent::mymethod();\n    }\n}",
+				"code": [
+					"class MyChildClass extends MyParentClass {",
+					"    function mymethod() {",
+					"        parent::mymethod();",
+					"    }",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.paamayim-nekudotayim.php"
 			},
 			"declare-public": {
-				"code": "class MyClass {\n    public $myfield;\n    public function mymethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    public $myfield;",
+					"    public function mymethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.visibility.php"
 			},
 			"declare-protected": {
-				"code": "class MyClass {\n    protected $myfield;\n    protected function mymethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    protected $myfield;",
+					"    protected function mymethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.visibility.php"
 			},
 			"declare-private": {
-				"code": "class MyClass {\n    private $myfield;\n    private function mymethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    private $myfield;",
+					"    private function mymethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.visibility.php"
 			},
 			"declare-final": {
-				"code": "class MyClass {\n    final public function mymethod() {…}\n    …\n}",
+				"code": [
+					"class MyClass {",
+					"    final public function mymethod() {…}",
+					"    …",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.final.php"
 			},
 			"declare-interface": {
-				"code": "interface MyInterface {\n    public function myfunction();\n}",
+				"code": [
+					"interface MyInterface {",
+					"    public function myfunction();",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.interfaces.php"
 			},
 			"implement-interface": {
-				"code": "class MyClass implements MyInterface {\n    public function myfunction() {…}\n}",
+				"code": [
+					"class MyClass implements MyInterface {",
+					"    public function myfunction() {…}",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.interfaces.php"
 			},
 			"abstract-class": {
-				"code": "abstract class MyClass {\n    abstract protected function myAbstractFunction();\n\n    public function myConcreteFunction(…);\n}",
+				"code": [
+					"abstract class MyClass {",
+					"    abstract protected function myAbstractFunction();",
+					"",
+					"    public function myConcreteFunction(…);",
+					"}"
+				],
 				"api": "http://www.php.net/manual/en/language.oop5.abstract.php"
 			}
 		},
@@ -495,7 +588,11 @@
 				"api": "http://us.php.net/manual/en/wrappers.php.php"
 			},
 			"uploaded-file": {
-				"code": "$_FILES['filefieldname']\n// has fields name, type, size, tmp_name, and error\nmove_uploaded_file( $_FILES['filefieldname']['tmp_name'], 'path/to/destination.ext' )",
+				"code": [
+					"$_FILES['filefieldname']",
+					"// has fields name, type, size, tmp_name, and error",
+					"move_uploaded_file( $_FILES['filefieldname']['tmp_name'], 'path/to/destination.ext' )"
+				],
 				"api": "http://www.php.net/manual/en/reserved.variables.files.php"
 			},
 			"get-cookie": {
@@ -527,15 +624,24 @@
 				"api": "http://php.net/manual/en/function.header.php"
 			},
 			"get-session-var": {
-				"code": "session_start();\n$_SESSION['key']",
+				"code": [
+					"session_start();",
+					"$_SESSION['key']"
+				],
 				"api": "http://www.php.net/manual/en/session.examples.basic.php"
 			},
 			"set-session-var": {
-				"code": "session_start();\n$_SESSION['key'] = $value;",
+				"code": [
+					"session_start();",
+					"$_SESSION['key'] = $value;"
+				],
 				"api": "http://www.php.net/manual/en/session.examples.basic.php"
 			},
 			"remove-session-var": {
-				"code": "session_start();\nunset($_SESSION['key'])",
+				"code": [
+					"session_start();",
+					"unset($_SESSION['key'])"
+				],
 				"api": "http://www.php.net/manual/en/session.examples.basic.php"
 			}
 		},
@@ -553,7 +659,12 @@
 				"api": "http://www.php.net/manual/en/pdo.transactions.php"
 			},
 			"execute-dynamic": {
-				"code": "$stmt = $dbh->prepare(\"INSERT INTO REGISTRY (name, value) VALUES (:name, :value)\");\n$stmt->bindParam(':name', $name);\n$stmt->bindParam(':value', $value);\n$stmt->execute();",
+				"code": [
+					"$stmt = $dbh->prepare(\"INSERT INTO REGISTRY (name, value) VALUES (:name, :value)\");",
+					"$stmt->bindParam(':name', $name);",
+					"$stmt->bindParam(':value', $value);",
+					"$stmt->execute();"
+				],
 				"api": "http://www.php.net/manual/en/pdo.prepared-statements.php"
 			},
 			"row-count": {
@@ -575,11 +686,26 @@
 		},
 		"http-client": {
 			"simple-request": {
-				"code": "$ch = curl_init('http://www.example.com/');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);\n$output = curl_exec($ch);\ncurl_close($ch);",
+				"code": [
+					"$ch = curl_init('http://www.example.com/');",
+					"curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);",
+					"$output = curl_exec($ch);",
+					"curl_close($ch);"
+				],
 				"api": "http://php.net/manual/en/curl.examples.php"
 			},
 			"full-request": {
-				"code": "$ch = curl_init('http://www.example.com/');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);\ncurl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); // or PUT or DELETE, \ncurl_setopt($ch, CURLOPT_PORT, 1234);\nculr_setopt($ch, CURLOPT_HTTPHEADER, $headerArray);\ncurl_setopt($ch, CURLOPT_COOKIE, $mycookie);\ncurl_setopt($ch, CURLOPT_POSTFIELDS, $dataArray);\n$output = curl_exec($ch);\ncurl_close($ch);",
+				"code": [
+					"$ch = curl_init('http://www.example.com/');",
+					"curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);",
+					"curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); // or PUT or DELETE",
+					"curl_setopt($ch, CURLOPT_PORT, 1234);",
+					"curl_setopt($ch, CURLOPT_HTTPHEADER, $headerArray);",
+					"curl_setopt($ch, CURLOPT_COOKIE, $mycookie);",
+					"curl_setopt($ch, CURLOPT_POSTFIELDS, $dataArray);",
+					"$output = curl_exec($ch);",
+					"curl_close($ch);"
+				],
 				"api": "http://www.php.net/manual/en/function.curl-setopt.php"
 			}
 		}

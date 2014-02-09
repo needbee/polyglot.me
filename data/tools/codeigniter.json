@@ -247,7 +247,7 @@
 		},
 		"database": {
 			"connect": {
-				"code": "$this->load->database()\n",
+				"code": "$this->load->database()",
 				"api": "http://ellislab.com/codeigniter/user-guide/database/connecting.html"
 			},
 			"disconnect": {
@@ -255,11 +255,17 @@
 				"api": "http://ellislab.com/codeigniter/user-guide/database/connecting.html"
 			},
 			"execute-hardcoded": {
-				"code": "$sql = \"SELECT * FROM mytable WHERE status = 'live'\";\n$query = $this->db->query($sql);",
+				"code": [
+					"$sql = \"SELECT * FROM mytable WHERE status = 'live'\";",
+					"$query = $this->db->query($sql);"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/database/queries.html"
 			},
 			"execute-dynamic": {
-				"code": "$sql = \"SELECT * FROM mytable WHERE status = ? and author = ?\";\n$query = $this->db->query($sql, array($status, $author));",
+				"code": [
+					"$sql = \"SELECT * FROM mytable WHERE status = ? and author = ?\";",
+					"$query = $this->db->query($sql, array($status, $author));"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/database/queries.html"
 			},
 			"row-count": {
@@ -267,11 +273,18 @@
 				"api": "http://ellislab.com/codeigniter/user-guide/database/results.html"
 			},
 			"retrieve-row": {
-				"code": "$row = $query->row();\n$row->myfield;",
+				"code": [
+					"$row = $query->row();",
+					"$row->myfield;"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/database/results.html"
 			},
 			"retrieve-all-rows": {
-				"code": "foreach( $query->result() as $row ) {\n    $row->myfield;\n}",
+				"code": [
+					"foreach( $query->result() as $row ) {",
+					"    $row->myfield;",
+					"}"
+				],
 				"api": "http://ellislab.com/codeigniter/user-guide/database/results.html"
 			},
 			"new-row-id": {

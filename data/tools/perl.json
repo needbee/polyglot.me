@@ -7,8 +7,7 @@
 			"hello-world": {
 				"code": [
 					"#!/usr/bin/perl",
-					"print \"Hello, World!\"",
-					"\";"
+					"print \"Hello, World!\";"
 				],
 				"api": "http://www.troubleshooters.com/codecorn/littperl/perlhelo.htm"
 			}

@@ -21,7 +21,12 @@
 				"api": "http://api.rubyonrails.org/classes/ActionDispatch/Request.html#method-i-body"
 			},
 			"uploaded-file": {
-				"code": "name =  upload['datafile'].original_filename\ndirectory = \"public/data\"\npath = File.join(directory, name)\nFile.open(path, \"wb\") { |f| f.write(upload['datafile'].read) }",
+				"code": [
+					"name =  upload['datafile'].original_filename",
+					"directory = \"public/data\"",
+					"path = File.join(directory, name)",
+					"File.open(path, \"wb\") { |f| f.write(upload['datafile'].read) }"
+				],
 				"api": "http://www.tutorialspoint.com/ruby-on-rails/rails-file-uploading.htm"
 			},
 			"get-cookie": {
@@ -49,7 +54,10 @@
 				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-render"
 			},
 			"redirect": {
-				"code": "redirect_to url\nredirect_to action:action_name",
+				"code": [
+					"redirect_to url",
+					"redirect_to action:action_name"
+				],
 				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-redirect-to"
 			},
 			"get-session-var": {
@@ -82,29 +90,61 @@
 				"code": [
 					{
 						"file": "my_model.rb",
-						"contents": "class My_Model < ActiveRecord::Base\n    validates :myfield, required: true, length: { maximum: 20 }\nend"
+						"contents": [
+							"class My_Model < ActiveRecord::Base",
+							"    validates :myfield, required: true, length: { maximum: 20 }",
+							"end"
+						]
 					},
 					{
 						"file": "my_controller.rb",
-						"contents": "if @mymodel.save\n    …\nelse\n    @errors = @mymodel.errors\nend"
+						"contents": [
+							"if @mymodel.save",
+							"    …",
+							"else",
+							"    @errors = @mymodel.errors",
+							"end"
+						]
 					}
 				],
 				"api": "http://guides.rubyonrails.org/getting_started.html#adding-some-validation"
 			},
 			"custom-validator": [
 				{
-					"code": "class MyModel < ActiveRecord::Base\n    validate :my_validation_method\n\n    def my_validation_method\n        if(…)\n            errors.add(:field_name, \"is not valid for some reason explained here\"\n        end\n    end\nend",
+					"code": [
+						"class MyModel < ActiveRecord::Base",
+						"    validate :my_validation_method",
+						"",
+						"    def my_validation_method",
+						"        if(…)",
+						"            errors.add(:field_name, \"is not valid for some reason explained here\"",
+						"        end",
+						"    end",
+						"end"
+					],
 					"api": "http://guides.rubyonrails.org/active_record_validations.html#custom-methods"
 				},
 				{
 					"code": [
 						{
 							"file": "MyCustomValidator.rb",
-							"contents": "class MyCustomValidator < ActiveModel::Validator\n    def validate(record)\n        unless …\n            record.errors[:field_name] << 'Error message here'\n        end\n    end\nend"
+							"contents": [
+								"class MyCustomValidator < ActiveModel::Validator",
+								"    def validate(record)",
+								"        unless …",
+								"            record.errors[:field_name] << 'Error message here'",
+								"        end",
+								"    end",
+								"end"
+							]
 						},
 						{
 							"file": "My_Model.rb",
-							"contents": "class My_Model < ActiveRecord::Base\n    validates_with MyCustomValidator\nend"
+							"contents": [
+								"class My_Model < ActiveRecord::Base",
+								"    validates_with MyCustomValidator",
+								"end"
+							]
 						}
 					],
 					"api": "http://guides.rubyonrails.org/active_record_validations.html#custom-validators"
@@ -155,16 +195,22 @@
 				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
 			},
 			"greater-than": {
-				"code": "numericality: { greater_than: 3 }\nnumericality: { greater_than_or_equal_to: 4 }",
+				"code": [
+					"numericality: { greater_than: 3 }",
+					"numericality: { greater_than_or_equal_to: 4 }"
+				],
 				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
 			},
 			"less-than": {
-				"code": "numericality: { less_than: 12 }\nnumericality: { less_than_or_equal_to: 11 }",
+				"code": [
+					"numericality: { less_than: 12 }",
+					"numericality: { less_than_or_equal_to: 11 }"
+				],
 				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
 			},
 			"equals-value": {
 				"code": "numericality: { equal_to: mynum }",
-				"api": "numericality: { greater_than: 3 }\nnumericality: { greater_than_or_equal_to: 4 }"
+				"api": "http://guides.rubyonrails.org/active_record_validations.html#numericality"
 			},
 			"in-list": {
 				"code": "inclusion: { in: %w(item1 item2 item3), message: 'This is the error message' }",
@@ -193,7 +239,15 @@
 		},
 		"database": {
 			"connect": {
-				"code": "@conn = ActiveRecord::Base.establish_connection(\n    :adapter => \"mysql2\",\n    :host => \"localhost\",\n    :database => \"siteconfig_development\",\n    :username => \"root\",\n    :password => \"root123\"\n)",
+				"code": [
+					"@conn = ActiveRecord::Base.establish_connection(",
+					"    :adapter => \"mysql2\",",
+					"    :host => \"localhost\",",
+					"    :database => \"siteconfig_development\",",
+					"    :username => \"root\",",
+					"    :password => \"root123\"",
+					")"
+				],
 				"api": "http://stackoverflow.com/questions/15408285/rails-3-execute-custom-sql-query-without-a-model"
 			},
 			"execute-hardcoded": {
@@ -201,11 +255,19 @@
 				"api": "http://ellislab.com/codeigniter/user-guide/database/queries.html"
 			},
 			"retrieve-row": {
-				"code": "@result.each(:as => :hash) do |row|\n    …\nend",
+				"code": [
+					"@result.each(:as => :hash) do |row|",
+					"    …",
+					"end"
+				],
 				"api": "http://stackoverflow.com/questions/15408285/rails-3-execute-custom-sql-query-without-a-model"
 			},
 			"retrieve-all-rows": {
-				"code": "@result.each(:as => :hash) do |row|\n    …\nend",
+				"code": [
+					"@result.each(:as => :hash) do |row|",
+					"    …",
+					"end"
+				],
 				"api": "http://stackoverflow.com/questions/15408285/rails-3-execute-custom-sql-query-without-a-model"
 			}
 		},
@@ -220,19 +282,35 @@
 				"api": "http://guides.rubyonrails.org/routing.html"
 			},
 			"controller-action": {
-				"code": "class SampleController < ApplicationController\n    def myaction\n    end\nend",
+				"code": [
+					"class SampleController < ApplicationController",
+					"    def myaction",
+					"    end",
+					"end"
+				],
 				"api": "http://guides.rubyonrails.org/action_controller_overview.html#methods-and-actions"
 			},
 			"render-view": {
-				"code": "@variable_for_view = 27\nrender 'viewname'\n# if render not called, view with same name as action is rendered by default",
+				"code": [
+					"@variable_for_view = 27",
+					"render 'viewname'",
+					"# if render not called, view with same name as action is rendered by default"
+				],
 				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html"
 			},
 			"url": {
-				"code": "action('MyController@myAction', $params);\nroute('routename', $params);",
+				"code": [
+					"action('MyController@myAction', $params);",
+					"route('routename', $params);"
+				],
 				"api": "http://laravel.com/docs/helpers#urls"
 			},
 			"output-form-element": {
-				"code": "<%= form_for :mymodel do |f|\n    <%= f.text_area :myfield %>\n<% end %>",
+				"code": [
+					"<%= form_for :mymodel do |f|",
+					"    <%= f.text_area :myfield %>",
+					"<% end %>"
+				],
 				"api": "http://guides.rubyonrails.org/getting_started.html#the-first-form"
 			},
 			"log": {

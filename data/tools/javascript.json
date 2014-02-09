@@ -495,7 +495,8 @@
 					"    this.mypublicvar = 27;",
 					"",
 					"    // Crockford calls this \"privileged\", but it functions like \"public\" in other languages",
-					"    this.mypublicmethod = function() {…}\n}"
+					"    this.mypublicmethod = function() {…}",
+					"}"
 				],
 				"api": "http://javascript.crockford.com/private.html"
 			},

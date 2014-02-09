@@ -328,7 +328,7 @@
 		},
 		"database": {
 			"connect": {
-				"code": "$this->load->database()\n",
+				"code": "$this->load->database()",
 				"api": "http://ellislab.com/codeigniter/user-guide/database/connecting.html"
 			},
 			"disconnect": {
@@ -336,7 +336,13 @@
 				"api": "http://ellislab.com/codeigniter/user-guide/database/connecting.html"
 			},
 			"execute-hardcoded": {
-				"code": "DB::select(\"SELECT * FROM mytable WHERE status = 'live'\");\nDB::insert(…);\nDB::update(…);\nDB::delete(…);\nDB::statement(…);",
+				"code": [
+					"DB::select(\"SELECT * FROM mytable WHERE status = 'live'\");",
+					"DB::insert(…);",
+					"DB::update(…);",
+					"DB::delete(…);",
+					"DB::statement(…);"
+				],
 				"api": "http://laravel.com/docs/database#running-queries"
 			},
 			"execute-dynamic": {
