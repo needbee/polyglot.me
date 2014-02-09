@@ -271,6 +271,155 @@
 				"api": "http://stackoverflow.com/questions/15408285/rails-3-execute-custom-sql-query-without-a-model"
 			}
 		},
+		"orm": {
+			"define-table": {
+				"code": [
+					"class Product < ActiveRecord::Base",
+					"    self.table_name = \"PRODUCT\" # optional",
+					"end"
+				],
+				"api": "http://guides.rubyonrails.org/active_record_basics.html#creating-active-record-models"
+			},
+			"one-to-many": {
+				"code": [
+					{
+						"file": "Customer.rb",
+						"contents": [
+							"class Customer < ActiveRecord::Base",
+							"    has_many :orders, dependent: :destroy",
+							"end"
+						]
+					},
+					{
+						"file": "Order.rb",
+						"contents": [
+							"class Order < ActiveRecord::Base",
+							"    belongs_to :customer",
+							"end"
+						]
+					}
+				],
+				"api": "http://guides.rubyonrails.org/association_basics.html#why-associations-questionmark"
+			},
+			"many-to-many": [
+				{
+					"code": [
+						{
+							"file": "Assembly.rb",
+							"contents": [
+								"class Assembly < ActiveRecord::Base",
+								"    has_and_belongs_to_many :parts",
+								"end"
+							]
+						},
+						{
+							"file": "Part.rb",
+							"contents": [
+								"class Part < ActiveRecord::Base",
+								"    has_and_belongs_to_many :assemblies",
+								"end"
+							]
+						}
+					],
+					"api": "http://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association"
+				},
+				{
+					"code": [
+						{
+							"file": "Physician.rb",
+							"contents": [
+								"class Physician < ActiveRecord::Base",
+								"    has_many :appointments",
+								"    has_many :patients, through: :appointments",
+								"end"
+							]
+						},
+						{
+							"file": "Appointment.rb",
+							"contents": [
+								"class Appointment < ActiveRecord::Base",
+								"    belongs_to :physician",
+								"    belongs_to :patient",
+								"end"
+							]
+						},
+						{
+							"file": "Patient.rb",
+							"contents": [
+								"class Patient < ActiveRecord::Base",
+								"    has_many :appointments",
+								"    has_many :physicians, through: :appointments",
+								"end"
+							]
+						}
+					],
+					"api": "http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association"
+				}
+			],
+			"insert": [
+				{
+					"code": [
+						"user = User.new",
+						"user.name = 'David'",
+						"user.save"
+					],
+					"api": "http://guides.rubyonrails.org/active_record_basics.html#create"
+				},
+				{
+					"code": "user = User.create(name: \"David\")",
+					"api": "http://guides.rubyonrails.org/active_record_basics.html#create"
+				}
+			],
+			"update": {
+				"code": [
+					"user = User.find(1)",
+					"user.name = 'Dave'",
+					"user.save"
+				],
+				"api": "http://guides.rubyonrails.org/active_record_basics.html#update"
+			},
+			"delete": {
+				"code": [
+					"user = User.find(1)",
+					"user.destroy"
+				],
+				"api": "http://guides.rubyonrails.org/active_record_basics.html#delete"
+			},
+			"find-by-id": {
+				"code": "user = User.find(1)",
+				"api": "http://guides.rubyonrails.org/active_record_basics.html#read"
+			},
+			"find-one": {
+				"code": "user = User.find_by(name: 'David');",
+				"api": "http://guides.rubyonrails.org/active_record_basics.html#read"
+			},
+			"find-many": [
+				{
+					"code": "Post.where(author: author)",
+					"api": "http://guides.rubyonrails.org/active_record_querying.html#hash-conditions"
+				},
+				{
+					"code": "clients = Client.find([1, 10])",
+					"api": "http://guides.rubyonrails.org/active_record_querying.html#retrieving-multiple-objects"
+				},
+				{
+					"code": "clients = Client.find(1, 10)",
+					"api": "http://guides.rubyonrails.org/active_record_querying.html#retrieving-multiple-objects"
+				}
+			],
+			"find-by-custom-sql": {
+				"code": "Client.where(\"orders_count = ? AND locked = ?\", params[:orders], false)",
+				"api": "http://guides.rubyonrails.org/active_record_querying.html#array-conditions"
+			},
+			"all": {
+				"code": "users = User.all",
+				"api": "http://guides.rubyonrails.org/active_record_basics.html#read"
+			},
+			"count": {
+				"code": "Client.where(first_name: 'Ryan').count",
+				"api": "http://guides.rubyonrails.org/active_record_querying.html#calculations"
+			}
+		},
 		"mvc": {
 			"route": {
 				"code": [

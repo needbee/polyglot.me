@@ -1039,6 +1039,82 @@
 			]
 		},
 		{
+			"id": "orm",
+			"name": "Object-Relational Mapping",
+			"features": [
+				{
+					"id": "define-table",
+					"name": "Define Table",
+					"description": "sets up a table and its fields for use in app"
+				},
+				{
+					"id": "one-to-many",
+					"name": "One-to-Many",
+					"description": "sets up a one-to-many relationship between tables"
+				},
+				{
+					"id": "many-to-many",
+					"name": "Many-to-Many",
+					"description": "sets up a many-to-many relationship through a join table"
+				},
+				{
+					"id": "insert",
+					"name": "Insert",
+					"description": "creates a new record"
+				},
+				{
+					"id": "update",
+					"name": "Update One",
+					"description": "updates fields in an existing record"
+				},
+				{
+					"id": "update-many",
+					"name": "Update Many",
+					"description": "updates the fields in multiple existing records"
+				},
+				{
+					"id": "delete",
+					"name": "Delete",
+					"description": "deletes an existing record"
+				},
+				{
+					"id": "delete-many",
+					"name": "Delete Many",
+					"description": "deletes multiple existing records"
+				},
+				{
+					"id": "find-by-id",
+					"name": "Find by ID",
+					"description": "loads a record by its primary key"
+				},
+				{
+					"id": "find-one",
+					"name": "Find One",
+					"description": "loads one record based on search fields"
+				},
+				{
+					"id": "find-many",
+					"name": "Find Many",
+					"description": "loads multiple records based on search fields"
+				},
+				{
+					"id": "find-by-custom-sql",
+					"name": "Find By Custom SQL",
+					"description": "loads multiple records based on a custom SQL where clause"
+				},
+				{
+					"id": "all",
+					"name": "All",
+					"description": "loads all records of this type"
+				},
+				{
+					"id": "count",
+					"name": "Count",
+					"description": "count records matching search fields"
+				}
+			]
+		},
+		{
 			"id": "mvc",
 			"name": "Model-View-Controller",
 			"features": [

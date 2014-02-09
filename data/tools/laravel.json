@@ -358,6 +358,149 @@
 				"api": "http://laravel.com/docs/database#running-queries"
 			}
 		},
+		"orm": {
+			"define-table": {
+				"code": [
+					"class User extends Eloquent {",
+					"    protected $table = 'my_users'; // optional",
+					"}"
+				],
+				"api": "http://laravel.com/docs/eloquent#basic-usage"
+			},
+			"one-to-many": {
+				"code": [
+					{
+						"file": "Post.php",
+						"contents": [
+							"class Post extends Eloquent {",
+							"    public function comments() {",
+							"        return $this->hasMany('Comment');",
+							"    }",
+							"}"
+						]
+					},
+					{
+						"file": "Comment.php",
+						"contents": [
+							"class Comment extends Eloquent {",
+							"    // optional, only if you need the many-to-one",
+							"    public function post() {",
+							"        return $this->belongsTo('Post');",
+							"    }",
+							"}"
+						]
+					},
+					{
+						"contents": [
+							"$comments = Post::find(1)->comments;"
+						]
+					}
+				],
+				"api": "http://laravel.com/docs/eloquent#one-to-many"
+			},
+			"many-to-many": {
+				"code": [
+					{
+						"file": "User.php",
+						"contents": [
+							"class User extends Eloquent {",
+							"    public function roles() {",
+							"        return $this->belongsToMany('Role');",
+							"    }",
+							"}"
+						]
+					},
+					{
+						"file": "Role.php",
+						"contents": [
+							"class Role extends Eloquent {",
+							"    // optional, only if you need the reverse relation",
+							"    public function users() {",
+							"        return $this->belongsToMany('User');",
+							"    }",
+							"}"
+						]
+					},
+					{
+						"contents": "$roles = User::find(1)->roles;"
+					}
+				],
+				"api": "http://laravel.com/docs/eloquent#many-to-many-polymorphic-relations"
+			},
+			"insert": [
+				{
+					"code": [
+						"$user = new User;",
+						"$user->name = 'John';",
+						"$user->save();"
+					],
+					"api": "http://laravel.com/docs/eloquent#insert-update-delete"
+				},
+				{
+					"code": "$user = User::create(array('name' => 'John'));",
+					"api": "http://laravel.com/docs/eloquent#insert-update-delete"
+				}
+			],
+			"update": {
+				"code": [
+					"$user = User::find(1);",
+					"$user->email = 'john@foo.com';",
+					"$user->save();"
+				],
+				"api": "http://laravel.com/docs/eloquent#insert-update-delete"
+			},
+			"update-many": {
+				"code": "$affectedRows = User::where('votes', '>', 100)->update(array('status' => 2));",
+				"api": "http://laravel.com/docs/eloquent#insert-update-delete"
+			},
+			"delete": [
+				{
+					"code": [
+						"$user = User::find(1);",
+						"$user->delete();"
+					],
+					"api": "http://laravel.com/docs/eloquent#insert-update-delete"
+				},
+				{
+					"code": "User::destroy(1);",
+					"api": "http://laravel.com/docs/eloquent#insert-update-delete"
+				}
+			],
+			"delete-many": [
+				{
+					"code": "User::destroy(1, 2, 3);",
+					"api": "http://laravel.com/docs/eloquent#insert-update-delete"
+				},
+				{
+					"code": "User::destroy(array(1, 2, 3));",
+					"api": "http://laravel.com/docs/eloquent#insert-update-delete"
+				},
+				{
+					"code": "$affectedRows = User::where('votes', '>', 100)->delete();",
+					"api": "http://laravel.com/docs/eloquent#insert-update-delete"
+				}
+			],
+			"find-by-id": {
+				"code": "$user = User::find(1);",
+				"api": "http://laravel.com/docs/eloquent#basic-usage"
+			},
+			"find-many": {
+				"code": "$users = User::where('votes', '>', 100)->get();",
+				"api": "http://laravel.com/docs/eloquent#basic-usage"
+			},
+			"find-by-custom-sql": {
+				"code": "$users = User::whereRaw('age > ? and votes = 100', array(25))->get();",
+				"api": "http://laravel.com/docs/eloquent#basic-usage"
+			},
+			"all": {
+				"code": "$users = User::all();",
+				"api": "http://laravel.com/docs/eloquent#basic-usage"
+			},
+			"count": {
+				"code": "$count = User::where('votes', '>', 100)->count();",
+				"api": "http://laravel.com/docs/eloquent#basic-usage"
+			}
+		},
 		"mvc": {
 			"route": {
 				"code": [
