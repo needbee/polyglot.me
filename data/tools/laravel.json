@@ -501,6 +501,115 @@
 				"api": "http://laravel.com/docs/eloquent#basic-usage"
 			}
 		},
+		"templating": {
+			"render-to-browser": {
+				"code": [
+					"// within controller action",
+					"return View::make('greeting', $data)"
+				],
+				"api": "http://laravel.com/docs/responses#views"
+			},
+			"render-to-variable": {
+				"code": "$output = View::make('greeting', $data)",
+				"api": "http://laravel.com/docs/responses#views"
+			},
+			"output-raw": {
+				"code": "{{ $userGenHtml }}",
+				"api": "http://laravel.com/docs/templates#other-blade-control-structures"
+			},
+			"output-escape-html": {
+				"code": "{{{ $name }}}",
+				"api": "http://laravel.com/docs/templates#other-blade-control-structures"
+			},
+			"if": {
+				"code": [
+					"@if (count($records) === 1)",
+					"    I have one record!",
+					"@elseif(count($records) > 1)",
+					"    I have multiple records!",
+					"@else",
+					"    I don't have any records!",
+					"@endif"
+				],
+				"api": "http://laravel.com/docs/templates#other-blade-control-structures"
+			},
+			"while": {
+				"code": [
+					"@while (true)",
+					"    I'm looping forever.",
+					"@endwhile"
+				],
+				"api": "http://laravel.com/docs/templates#other-blade-control-structures"
+			},
+			"for": {
+				"code": [
+					"@for ($i = 0; $i < 10; $i++)",
+					"    The current value is {{ $i }}",
+					"@endfor"
+				],
+				"api": "http://laravel.com/docs/templates#other-blade-control-structures"
+			},
+			"for-each": {
+				"code": [
+					"@foreach ($users as $user)",
+					"    <p>This is user {{ $user->id }}</p>",
+					"@endforeach"
+				],
+				"api": "http://laravel.com/docs/templates#other-blade-control-structures"
+			},
+			"comment": {
+				"code": "{{-- This comment will not be in the rendered HTML --}}",
+				"api": "http://laravel.com/docs/templates#other-blade-control-structures"
+			},
+			"execute-code": {
+				"code": [
+					"{{{ myfunction($var) }}}",
+					"{{-- note: always outputs --}}"
+				],
+				"api": "http://laravel.com/docs/templates#other-blade-control-structures"
+			},
+			"subview": {
+				"code": "@include('view.name', array('some'=>'data'))",
+				"api": "http://laravel.com/docs/templates#other-blade-control-structures"
+			},
+			"layout": {
+				"code": [
+					{
+						"file": "app/views/layouts/master.blade.php",
+						"contents": [
+							"<html>",
+							"    <body>",
+							"        @section('sidebar')",
+							"            This is the master sidebar.",
+							"        @show",
+							"",
+							"        <div class='container'>",
+							"            @yield('content')",
+							"        </div>",
+							"    </body>",
+							"</html>"
+						]
+					},
+					{
+						"file": "app/views/yourview.blade.php",
+						"contents": [
+							"@extends('layouts.master')",
+							"",
+							"@section('sidebar')",
+							"    @parent",
+							"",
+							"    <p>This is appended to the master sidebar.</p>",
+							"@stop",
+							"",
+							"@section('content')",
+							"    <p>This is my body content.</p>",
+							"@stop"
+						]
+					}
+				],
+				"api": "http://laravel.com/docs/templates#blade-templating"
+			}
+		},
 		"mvc": {
 			"route": {
 				"code": [

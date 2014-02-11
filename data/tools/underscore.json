@@ -95,6 +95,99 @@
 				"code": "_.sortBy( myarray, function(a,b) {…} )",
 				"api": "http://underscorejs.org/#sortBy"
 			}
+		},
+		"tempating": {
+			"render-to-variable": [
+				{
+					"code": "var output = _.template( templateString, data );",
+					"api": "http://underscorejs.org/#template"
+				},
+				{
+					"code": [
+						"<script type='text/template' id='mytemplate'>",
+						"    Hello, <%= _.escape(name) %>!",
+						"</script>",
+						"<script type='text/javascript'>",
+						"    // requires jquery",
+						"    $(function(){",
+						"        var output = _.template( $('#mytemplate').html(), data );",
+						"    });",
+						"</script>"
+					],
+					"api": "http://underscorejs.org/#template"
+				}
+			],
+			"output-raw": {
+				"code": "<%= userGenHtml %>",
+				"api": "http://underscorejs.org/#template"
+			},
+			"output-escape-html": {
+				"code": "<%= _.escape(name) %>",
+				"api": "http://underscorejs.org/#escape"
+			},
+			"if": {
+				"code": [
+					"<% if (records.length === 1) { %>",
+					"    I have one record!",
+					"<% } else if(records.length > 1) { %>",
+					"    I have multiple records!",
+					"<% } else { %>",
+					"    I don't have any records!",
+					"<% } %>"
+				],
+				"api": "http://underscorejs.org/#template"
+			},
+			"while": {
+				"code": [
+					"<% while(true) { %>",
+					"    I'm looping forever.",
+					"<% } %>"
+				],
+				"api": "http://underscorejs.org/#template"
+			},
+			"for": {
+				"code": [
+					"<% for (i = 0; i < 10; i++) { %>",
+					"    The current value is <%= i %>",
+					"<% } %>"
+				],
+				"api": "http://underscorejs.org/#template"
+			},
+			"for-each": {
+				"code": [
+					"<% _.each( users, function(user) { %>",
+					"    <p>This is user {{ $user->id }}</p>",
+					"<% }) %>"
+				],
+				"api": "http://underscorejs.org/#template"
+			},
+			"execute-code": {
+				"code": [
+					"<% myfunction($var) %>"
+				],
+				"api": "http://underscorejs.org/#template"
+			},
+			"subview": {
+				"code": [
+					"<script type='text/template' id='mysubtemplate'>",
+					"    <% _.each( users, function(u) {",
+					"        <%= _.template( subtemplate, { user: u } ) %>",
+					"    <% }) %>",
+					"</script>",
+					"<script type='text/template' id='mysubtemplate'>",
+					"    Hello, <%= _.escape(user.name) %>!",
+					"</script>",
+					"<script type='text/javascript'>",
+					"    // requires jquery",
+					"    $(function(){",
+					"        var output = _.template( $('#mytemplate').html(), {",
+					"            users: users,",
+					"            subtemplate: $('#mysubtemplate').html()",
+					"        });",
+					"    });",
+					"</script>"
+				]
+			}
 		}
 	}
 }

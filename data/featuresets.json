@@ -1162,6 +1162,72 @@
 			]
 		},
 		{
+			"id": "templating",
+			"name": "Templating",
+			"features": [
+				{
+					"id": "render-to-browser",
+					"name": "Render to Browser",
+					"description": "cause a template to be rendered and returned to the browser"
+				},
+				{
+					"id": "render-to-variable",
+					"name": "Render to Variable",
+					"description": "cause a template to be rendered and stored in a variable, i.e. for use in emails"
+				},
+				{
+					"id": "output-raw",
+					"name": "Output Raw",
+					"description": "outputs a variable without any escaping"
+				},
+				{
+					"id": "output-escape-html",
+					"name": "Output Escape HTML",
+					"description": "outputs a variable, escaped for HTML"
+				},
+				{
+					"id": "if",
+					"name": "If",
+					"description": "displays content conditionally"
+				},
+				{
+					"id": "while",
+					"name": "While",
+					"description": "loops while a condition is true"
+				},
+				{
+					"id": "for",
+					"name": "For",
+					"description": "loops for certain values"
+				},
+				{
+					"id": "for-each",
+					"name": "For Each",
+					"description": "loops over items in a collection"
+				},
+				{
+					"id": "comment",
+					"name": "Comment",
+					"description": "a comment that will not be included in the rendered HTML"
+				},
+				{
+					"id": "execute-code",
+					"name": "Execute Code",
+					"description": "executes arbitrary code"
+				},
+				{
+					"id": "subview",
+					"name": "Subview",
+					"description": "include a subview"
+				},
+				{
+					"id": "layout",
+					"name": "Layout",
+					"description": "use a layout file to wrap the specific template to show"
+				}
+			]
+		},
+		{
 			"id": "mvc",
 			"name": "Model-View-Controller",
 			"features": [

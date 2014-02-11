@@ -420,6 +420,70 @@
 				"api": "http://guides.rubyonrails.org/active_record_querying.html#calculations"
 			}
 		},
+		"templating": {
+			"render-to-browser": [
+				{
+					"code": [
+						"# by default, a controller action renders the view with the same name as it"
+					],
+					"api": "http://guides.rubyonrails.org/getting_started.html#laying-down-the-ground-work"
+				},
+				{
+					"code": "render \"viewname\"",
+					"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-render"
+				}
+			],
+			"output-raw": {
+				"code": "<%raw userGenHtml %>",
+				"api": "http://stackoverflow.com/questions/4576932/ruby-on-rails-how-to-render-a-string-as-html"
+			},
+			"output-escape-html": {
+				"code": "<%= name %>",
+				"api": "http://guides.rubyonrails.org/getting_started.html#the-first-form"
+			},
+			"subview": {
+				"code": "<%= render \"subview\" %>",
+				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials"
+			},
+			"layout": {
+				"code": [
+					{
+						"file": "app/controllers/YourController.rb",
+						"contents": [
+							"class YourController < ApplicationController",
+							"    layout \"master\"",
+							"    …",
+							"end"
+						]
+					},
+					{
+						"file": "app/views/layouts/master.html.erb",
+						"contents": [
+							"<html>",
+							"    <body>",
+							"        <%= yield :sidebar %>",
+							"",
+							"        <div class='container'>",
+							"            <%= yield %>",
+							"        </div>",
+							"    </body>",
+							"</html>"
+						]
+					},
+					{
+						"file": "app/views/yourview.html.erb",
+						"contents": [
+							"<% content_for :sidebar do %>",
+							"    <p>This is the sidebar.</p>",
+							"<% end %>",
+							"",
+							"<p>This is my body content.</p>"
+						]
+					}
+				],
+				"api": "http://guides.rubyonrails.org/layouts_and_rendering.html#understanding-yield"
+			}
+		},
 		"mvc": {
 			"route": {
 				"code": [
