@@ -161,6 +161,8 @@ requirejs([
 	cheatsheet.TableView = Backbone.View.extend({
 		el: $('#table'),
 		template: $('#table-tmpl').html(),
+		featureTemplate: $('#feature-tmpl').html(),
+		codeSnippetTemplate: $('#code-snippet-tmpl').html(),
 		initialize: function(featureSets,tools,allToolIds) {
 			this.featureSets = featureSets;
 			this.tools = tools;
@@ -187,7 +189,9 @@ requirejs([
 				tools: toolsInOrder,
 				allToolIds: this.allToolIds,
 				toolsToUse: toolsToUse,
-				toolsRemaining: toolsRemaining
+				toolsRemaining: toolsRemaining,
+				featureTemplate: this.featureTemplate,
+				codeSnippetTemplate: this.codeSnippetTemplate
 			}));
 
 			// set up now that content there

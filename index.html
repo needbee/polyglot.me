@@ -145,65 +145,10 @@
 												%>
 												<td class="<% if(tools.length > 2) { %>toolfeature-fixed<% } %>">
 													<div class="tdwrapper">
-														<%
-															if( null != toolFeature ) {
-																utils.one_or_many( toolFeature, function(tf, idx) {
-																	%>
-																	<% if( idx ) { %>
-																		<p class="text-center"><strong>OR</strong></p>
-																	<% } %>
-																	<% if( _.isArray(tf.code) && tf.code.length > 0 && _.isObject(tf.code[0]) ) { %>
-																		<% _.each( tf.code, function(file) { %>
-																			<div><%= file.file %></div>
-																			<% if( _.isArray(file.contents) ) { %>
-																				<pre class="prettyprint"><% _.each(file.contents, function(line){%><%= _.escape(line) + "\n" %><% }) %></pre>
-																			<% } else { %>
-																				<pre class="prettyprint"><%= _.escape(file.contents) %></pre>
-																			<% } %>
-																			<div class="orig"><%= _.escape(file.contents) %></div>
-																			<% if( utils.has_flash() ) { %>
-																				<div class="code-links small">
-																					<a href="#" class="copy">copy</a>
-																				</div>
-																			<% } %>
-																		<% }); %>
-																		<% if( tf.version ) { %>
-																			<div class="text-muted pull-right small">since <%= tf.version %></div>
-																		<% } %>
-																		<div class="code-links small">
-																			<% if( tf.api ) { %>
-																				<a href="<%= tf.api %>" target="_blank">api</a>
-																			<% } %>
-																			<% if( tf.sample ) { %>
-																				<%= utils.sample_link(tf.sample) %>
-																			<% } %>
-																		</div>
-																	<% } else { %>
-																		<% if( _.isArray(tf.code) ) { %>
-																			<pre class="prettyprint"><% _.each(tf.code, function(line){%><%= _.escape(line) + "\n" %><% }) %></pre>
-																		<% } else { %>
-																			<pre class="prettyprint"><%= _.escape(tf.code) %></pre>
-																		<% } %>
-																		<div class="orig"><%= _.escape(tf.code) %></div>
-																		<% if( tf.version ) { %>
-																			<div class="text-muted pull-right small">since <%= tf.version %></div>
-																		<% } %>
-																		<div class="code-links small">
-																			<% if( utils.has_flash() ) { %>
-																				<a href="#" class="copy">copy</a>
-																			<% } %>
-																			<% if( tf.api ) { %>
-																				<a href="<%= tf.api %>" target="_blank">api</a>
-																			<% } %>
-																			<% if( tf.sample ) { %>
-																				<%= utils.sample_link(tf.sample) %>
-																			<% } %>
-																		</div>
-																	<% } %>
-																	<%
-																});
-															}
-														%>
+														<%= _.template( featureTemplate, {
+															toolFeature: toolFeature,
+															codeSnippetTemplate: codeSnippetTemplate
+														}) %>
 													</div>
 												</td>
 											<% }); %>
@@ -216,6 +161,65 @@
 					</tbody>
 				</table>
 			<% } %>
+		</script>
+		<script type="text/template" id="feature-tmpl">
+			<%
+				if( null != toolFeature ) {
+					utils.one_or_many( toolFeature, function(tf, idx) {
+						%>
+						<% if( idx ) { %>
+							<p class="text-center"><strong>OR</strong></p>
+						<% } %>
+						<% if( _.isArray(tf.code) && tf.code.length > 0 && _.isObject(tf.code[0]) ) { %>
+							<% _.each( tf.code, function(file) { %>
+								<div><%= file.file %></div>
+								<%= _.template( codeSnippetTemplate, { code: file.contents }) %>
+								<% if( utils.has_flash() ) { %>
+									<div class="code-links small">
+										<a href="#" class="copy">copy</a>
+									</div>
+								<% } %>
+							<% }); %>
+							<% if( tf.version ) { %>
+								<div class="text-muted pull-right small">since <%= tf.version %></div>
+							<% } %>
+							<div class="code-links small">
+								<% if( tf.api ) { %>
+									<a href="<%= tf.api %>" target="_blank">api</a>
+								<% } %>
+								<% if( tf.sample ) { %>
+									<%= utils.sample_link(tf.sample) %>
+								<% } %>
+							</div>
+						<% } else { %>
+							<%= _.template( codeSnippetTemplate, { code: tf.code }) %>
+							<% if( tf.version ) { %>
+								<div class="text-muted pull-right small">since <%= tf.version %></div>
+							<% } %>
+							<div class="code-links small">
+								<% if( utils.has_flash() ) { %>
+									<a href="#" class="copy">copy</a>
+								<% } %>
+								<% if( tf.api ) { %>
+									<a href="<%= tf.api %>" target="_blank">api</a>
+								<% } %>
+								<% if( tf.sample ) { %>
+									<%= utils.sample_link(tf.sample) %>
+								<% } %>
+							</div>
+						<% } %>
+						<%
+					});
+				}
+			%>
+		</script>
+		<script type="text/template" id="code-snippet-tmpl">
+			<% if( _.isArray(code) ) { %>
+				<pre class="prettyprint"><% _.each(code, function(line){%><%= _.escape(line) + "\n" %><% }) %></pre>
+			<% } else { %>
+				<pre class="prettyprint"><%= _.escape(code) %></pre>
+			<% } %>
+			<div class="orig"><%= _.escape(code) %></div>
 		</script>
 		<footer>
 			<div class="pull-left">
