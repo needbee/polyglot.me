@@ -271,6 +271,56 @@
 				"api": "http://stackoverflow.com/questions/15408285/rails-3-execute-custom-sql-query-without-a-model"
 			}
 		},
+		"migrations": {
+			"create-migration": {
+				"code": "rails generate migration AddPartNumberToProducts",
+				"api": "http://guides.rubyonrails.org/migrations.html#creating-a-standalone-migration"
+			},
+			"create-table": {
+				"code": [
+					"create_table :products do |t|",
+					"  t.string :name",
+					"end"
+				],
+				"api": "http://guides.rubyonrails.org/migrations.html#creating-a-table"
+			},
+			"drop-table": {
+				"code": "drop_table :products",
+				"api": "http://guides.rubyonrails.org/migrations.html"
+			},
+			"add-column": {
+				"code": [
+					"add_column :users, :home_page_url, :string"
+				],
+				"api": "http://guides.rubyonrails.org/migrations.html"
+			},
+			"drop-column": {
+				"code": [
+					"remove_column :users, :home_page_url"
+				],
+				"api": "http://guides.rubyonrails.org/migrations.html"
+			},
+			"add-index": {
+				"code": "add_index :products, :part_number",
+				"api": "http://guides.rubyonrails.org/migrations.html"
+			},
+			"run-migrations": {
+				"code": "rake db:migrate",
+				"api": "http://guides.rubyonrails.org/migrations.html#running-migrations"
+			},
+			"rollback-last-migration": {
+				"code": "rake db:rollback",
+				"api": "http://laravel.com/docs/migrations"
+			},
+			"rollback-all-migrations": {
+				"code": "php artisan migrate:reset",
+				"api": "http://laravel.com/docs/migrations"
+			},
+			"rerun-migrations": {
+				"code": "rake db:reset",
+				"api": "http://laravel.com/docs/migrations"
+			}
+		},
 		"orm": {
 			"define-table": {
 				"code": [

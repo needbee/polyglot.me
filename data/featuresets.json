@@ -1102,6 +1102,82 @@
 			]
 		},
 		{
+			"id": "migrations",
+			"name": "Migrations",
+			"features": [
+				{
+					"id": "create-migration",
+					"name": "Create Migration",
+					"description": "creates a new migration file"
+				},
+				{
+					"id": "create-table",
+					"name": "Create Table",
+					"description": "creates a table"
+				},
+				{
+					"id": "drop-table",
+					"name": "Drop Table",
+					"description": "deletes a table"
+				},
+				{
+					"id": "add-column",
+					"name": "Add Column",
+					"description": "adds a column to a table"
+				},
+				{
+					"id": "change-column",
+					"name": "Add Column",
+					"description": "adds a column to a table"
+				},
+				{
+					"id": "drop-column",
+					"name": "Drop Column",
+					"description": "deletes a column from a table"
+				},
+				{
+					"id": "add-index",
+					"name": "Add Index",
+					"description": "adds an index to a table"
+				},
+				{
+					"id": "drop-index",
+					"name": "Drop Index",
+					"description": "deletes an index from a table"
+				},
+				{
+					"id": "add-foreign-key",
+					"name": "Add Foreign Key",
+					"description": "adds foreign key constraint to a table"
+				},
+				{
+					"id": "drop-foreign-key",
+					"name": "Drop Foreign Key",
+					"description": "deletes a foreign key constraint from a table"
+				},
+				{
+					"id": "run-migrations",
+					"name": "Run Migration",
+					"description": "run all migrations that have not yet been run"
+				},
+				{
+					"id": "rollback-last-migration",
+					"name": "Rollback Last Migration",
+					"description": "rolls back the last set of migrations that were run"
+				},
+				{
+					"id": "rollback-all-migrations",
+					"name": "Rollback All Migration",
+					"description": "rolls back all migrations"
+				},
+				{
+					"id": "rerun-migrations",
+					"name": "Rerun Migrations",
+					"description": "rolls back all migrations and re-runs them"
+				}
+			]
+		},
+		{
 			"id": "orm",
 			"name": "Object-Relational Mapping",
 			"features": [

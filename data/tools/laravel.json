@@ -358,6 +358,94 @@
 				"api": "http://laravel.com/docs/database#running-queries"
 			}
 		},
+		"migrations": {
+			"create-migration": {
+				"code": "php artisan migrate:make create_users_table",
+				"api": "http://laravel.com/docs/migrations"
+			},
+			"create-table": {
+				"code": [
+					"Schema::create('users', function($table)",
+					"{",
+					"    $table->increments('id');",
+					"});"
+				],
+				"api": "http://laravel.com/docs/schema#creating-and-dropping-tables"
+			},
+			"drop-table": {
+				"code": "Schema::drop('users');",
+				"api": "http://laravel.com/docs/migrations"
+			},
+			"add-column": {
+				"code": [
+					"Schema::table('users', function($table)",
+					"{",
+					"    $table->string('email');",
+					"});"
+				],
+				"api": "http://laravel.com/docs/schema#adding-columns"
+			},
+			"drop-column": {
+				"code": [
+					"Schema::table('users', function($table)",
+					"{",
+					"    $table->dropColumn('votes', 'avatar', 'location');",
+					"});"
+				],
+				"api": "http://laravel.com/docs/schema#dropping-columns"
+			},
+			"add-index": [
+				{
+					"code": "$table->string('email')->unique();",
+					"api": "http://laravel.com/docs/schema#adding-indexes"
+				},
+				{
+					"code": [
+						"$table->primary('id');",
+						"$table->primary(array('first', 'last'));",
+						"$table->unique('email');",
+						"$table->index('state');"
+					],
+					"api": "http://laravel.com/docs/schema#adding-indexes"
+				}
+			],
+			"drop-index": {
+				"code": [
+					"$table->dropPrimary('users_id_primary');",
+					"$table->dropUnique('users_email_unique');",
+					"$table->dropIndex('geo_state_index');"
+				],
+				"api": "http://laravel.com/docs/schema#dropping-indexes"
+			},
+			"add-foreign-key": {
+				"code": [
+					"$table->foreign('user_id')",
+					"    ->references('id')->on('users')",
+					"    ->onDelete('cascade');"
+				],
+				"api": "http://laravel.com/docs/schema#foreign-keys"
+			},
+			"drop-foreign-key": {
+				"code": "$table->dropForeign('posts_user_id_foreign');",
+				"api": "http://laravel.com/docs/schema#foreign-keys"
+			},
+			"run-migrations": {
+				"code": "php artisan migrate",
+				"api": "http://laravel.com/docs/migrations"
+			},
+			"rollback-last-migration": {
+				"code": "php artisan migrate:rollback",
+				"api": "http://laravel.com/docs/migrations"
+			},
+			"rollback-all-migrations": {
+				"code": "php artisan migrate:reset",
+				"api": "http://laravel.com/docs/migrations"
+			},
+			"rerun-migrations": {
+				"code": "php artisan migrate:refresh",
+				"api": "http://laravel.com/docs/migrations"
+			}
+		},
 		"orm": {
 			"define-table": {
 				"code": [
