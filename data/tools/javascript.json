@@ -511,6 +511,22 @@
 				"api": "http://javascript.crockford.com/private.html"
 			}
 		},
+		"exceptions": {
+			"throw-exception": {
+				"code": "throw new Error(message)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw"
+			},
+			"catch-exception": {
+				"code": [
+					"try {",
+					"    …",
+					"} catch( e ) {",
+					"    …",
+					"}"
+				],
+				"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"
+			}
+		},
 		"serialization": {
 			"json-encode": {
 				"code": "JSON.stringify( myObjOrArray )",

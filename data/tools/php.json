@@ -553,6 +553,22 @@
 				"api": "http://www.php.net/manual/en/language.oop5.abstract.php"
 			}
 		},
+		"exceptions": {
+			"throw-exception": {
+				"code": "throw new Exception($message)",
+				"api": "http://php.net/manual/en/language.exceptions.php"
+			},
+			"catch-exception": {
+				"code": [
+					"try {",
+					"    …",
+					"} catch( Exception $e ) {",
+					"    …",
+					"}"
+				],
+				"api": "http://php.net/manual/en/language.exceptions.php"
+			}
+		},
 		"serialization": {
 			"json-encode": {
 				"code": "json_encode( $myObjOrArray )",
@@ -719,7 +735,7 @@
 			"code": [
 				"ob_start();",
 				"include 'viewview.php';",
-				"$html = ob_get_clean();",
+				"$html = ob_get_clean();"
 			],
 			"api": "http://www.php.net/manual/en/function.ob-get-clean.php"
 		},

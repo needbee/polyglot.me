@@ -527,6 +527,24 @@
 				],
 				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.1.1"
 			}
+		},
+		"exceptions": {
+			"throw-exception": {
+				"code": "throw new Exception($message)",
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html#jls-14.18"
+			},
+			"catch-exception": {
+				"code": [
+					"try {",
+					"    …",
+					"} catch( SpecificTypeOfException e ) {",
+					"    …",
+					"} catch( AnotherTypeOfException e ) {",
+					"    …",
+					"}"
+				],
+				"api": "http://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html#jls-14.20"
+			}
 		}
 	}
 }

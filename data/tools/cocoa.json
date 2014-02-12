@@ -655,6 +655,28 @@
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html#//apple_ref/doc/uid/TP40011210-CH11-SW3"
 			}
 		},
+		"exceptions": {
+			"throw-exception": {
+				"code": [
+					"NSException* myException = [NSException",
+					"    exceptionWithName:@\"FileNotFoundException\"",
+					"    reason:@\"File Not Found on System\"",
+					"    userInfo:nil];",
+					"@throw myException;"
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Exceptions/Tasks/RaisingExceptions.html#//apple_ref/doc/uid/20000058-BBCCFIBF"
+			},
+			"catch-exception": {
+				"code": [
+					"@try {",
+					"    …",
+					"} @catch( NSException *e ) {",
+					"    …",
+					"}"
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Exceptions/Tasks/HandlingExceptions.html#//apple_ref/doc/uid/20000059-SW1"
+			}
+		},
 		"http-client": {
 			"simple-request": {
 				"code": [

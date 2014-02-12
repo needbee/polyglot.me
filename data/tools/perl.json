@@ -477,6 +477,26 @@
 				"api": "http://www.perlmonks.org/?node_id=807145"
 			}
 		},
+		"exceptions": {
+			"throw-exception": {
+				"code": [
+					"# within the context of an eval{}",
+					"die MyExceptionClass->new($message);"
+				],
+				"api": "http://www.perl.com/pub/2002/11/14/exception.html"
+			},
+			"catch-exception": {
+				"code": [
+					"eval {",
+					"    …",
+					"}",
+					"if( $@ ) {",
+					"    …",
+					"}"
+				],
+				"api": "http://www.perl.com/pub/2002/11/14/exception.html"
+			}
+		},
 		"serialization": {
 			"json-encode": {
 				"code": [

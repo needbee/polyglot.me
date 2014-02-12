@@ -592,6 +592,24 @@
 			]
 		},
 		{
+			"id": "exceptions",
+			"name": "Exceptions",
+			"features": [
+				{
+					"id": "throw-exception",
+					"name": "Throw Exception",
+					"description": "creates an exception and causes it to propagate up the call stack",
+					"reference": "http://en.wikipedia.org/wiki/Exception_handling"
+				},
+				{
+					"id": "catch-exception",
+					"name": "Catch Exception",
+					"description": "handles an exception",
+					"reference": "http://en.wikipedia.org/wiki/Exception_handling"
+				}
+			]
+		},
+		{
 			"id": "serialization",
 			"name": "Serialization",
 			"features": [

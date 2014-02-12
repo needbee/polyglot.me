@@ -550,6 +550,25 @@
 				"api": "http://www.tutorialspoint.com/ruby/ruby_modules.htm"
 			}
 		},
+		"exceptions": {
+			"throw-exception": {
+				"code": [
+					"raise \"My exception message\"",
+					"raise MyErrorClass, \"My exception message\""
+				],
+				"api": "http://www.ruby-doc.org/core-2.1.0/Kernel.html#method-i-raise"
+			},
+			"catch-exception": {
+				"code": [
+					"begin",
+					"    …",
+					"rescue => myexception",
+					"    …",
+					"end"
+				],
+				"api": "http://www.ruby-doc.org/core-2.1.0/doc/syntax/exceptions_rdoc.html"
+			}
+		},
 		"serialization": {
 			"json-encode": {
 				"code": [
