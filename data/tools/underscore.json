@@ -96,7 +96,7 @@
 				"api": "http://underscorejs.org/#sortBy"
 			}
 		},
-		"tempating": {
+		"templating": {
 			"render-to-variable": [
 				{
 					"code": "var output = _.template( templateString, data );",
