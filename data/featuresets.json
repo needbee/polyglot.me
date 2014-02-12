@@ -1265,6 +1265,11 @@
 					"id": "log",
 					"name": "Log",
 					"description": "write to a log file"
+				},
+				{
+					"id": "csrf-protection",
+					"name": "CSRF Protection",
+					"description": "prevents cross-site request forgery attacks, where another site sends a user to a URL on your site that performs an action they do not intend; prevention usually entails sending a token in POSTs"
 				}
 			]
 		}

@@ -529,6 +529,17 @@
 			"log": {
 				"code": "logger.info 'hello, log!'",
 				"api": "http://mikenaberezny.com/2007/02/24/rails-logging-tips/"
+			},
+			"csrf-protection": {
+				"code": [
+					{
+						"file": "ApplicationController.rb",
+						"contents": [
+							"…",
+							"protect_from_forgery secret: \"123456789012…\" # random string"
+						]
+					}
+				]
 			}
 		}
 	}

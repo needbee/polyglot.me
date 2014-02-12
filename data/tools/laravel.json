@@ -649,6 +649,27 @@
 			"log": {
 				"code": "Log::info('hello, log!')",
 				"api": "http://laravel.com/docs/errors#logging"
+			},
+			"csrf-protection": {
+				"code": [
+					{
+						"file": "app/routes.php",
+						"contents": [
+							"Route::post('users/create', array(",
+							"    'before'=>'csrf',",
+							"    'uses' => 'UsersController@create',",
+							"    'as' => 'security.csrf'",
+							"));"
+						]
+					},
+					{
+						"file": "app/views/yourview.blade.php",
+						"contents": [
+							"{{ Form::open() }}",
+							"<!-- includes CSRF token -->"
+						]
+					}
+				]
 			}
 		}
 	}

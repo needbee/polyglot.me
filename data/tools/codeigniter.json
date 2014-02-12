@@ -331,6 +331,21 @@
 			"log": {
 				"code": "log_message('debug','hello, log!);",
 				"api": "http://ellislab.com/codeigniter/user-guide/general/errors.html"
+			},
+			"csrf-protection": {
+				"code": [
+					{
+						"file": "application/config/config.php",
+						"contents": "$config['csrf_protection'] = TRUE;"
+					},
+					{
+						"file": "yourview.php",
+						"contents": [
+							"<?php echo form_open() ?>",
+							"<!-- includes CSRF token -->"
+						]
+					}
+				]
 			}
 		}
 	}
