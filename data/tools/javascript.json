@@ -51,7 +51,7 @@
 				},
 				{
 					"code": [
-						"myvar instanceof Array // includes non-associative",
+						"myvar instanceof Array // includes associative",
 						"// NOTE: doesn't work cross-window"
 					],
 					"api": "http://web.mit.edu/jwalden/www/isArray.html"
@@ -59,7 +59,7 @@
 			],
 			"is-associative-array": [
 				{
-					"code": "Array.isArray(myvar) // includes associative",
+					"code": "Array.isArray(myvar) // includes non-associative",
 					"version": "1.8.5",
 					"api": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray"
 				},
