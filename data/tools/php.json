@@ -709,5 +709,90 @@
 				"api": "http://www.php.net/manual/en/function.curl-setopt.php"
 			}
 		}
+	},
+	"templating": {
+		"render-to-browser": {
+			"code": "include 'viewfile.php'",
+			"api": "http://www.php.net/manual/en/function.include.php"
+		},
+		"render-to-variable": {
+			"code": [
+				"ob_start();",
+				"include 'viewview.php';",
+				"$html = ob_get_clean();",
+			],
+			"api": "http://www.php.net/manual/en/function.ob-get-clean.php"
+		},
+		"output-raw": [
+			{
+				"code": "<?php echo $userGenHtml ?>",
+				"api": "http://www.php.net/manual/en/function.echo.php"
+			},
+			{
+				"code": [
+					"<?= $userGenHtml ?>",
+					"// note: only sometimes on in PHP < 5.4"
+				],
+				"api": "http://www.php.net/manual/en/function.echo.php"
+			}
+		],
+		"output-escape-html": {
+			"code": "<?php echo htmlspecialchars($var, ENT_QUOTES, 'UTF-8') ?>",
+			"api": "http://www.php.net/manual/en/function.htmlspecialchars.php"
+		},
+		"if": {
+			"code": [
+				"<?php if (count($records) === 1): ?>",
+				"    I have one record!",
+				"<?php elseif(count($records) > 1): ?>",
+				"    I have multiple records!",
+				"<?php else: ?>",
+				"    I don't have any records!",
+				"<?php endif ?>"
+			],
+			"api": "http://www.php.net/manual/en/control-structures.alternative-syntax.php"
+		},
+		"while": {
+			"code": [
+				"<?php while (true): ?>",
+				"    I'm looping forever.",
+				"<?php endwhile ?>"
+			],
+			"api": "http://www.php.net/manual/en/control-structures.while.php"
+		},
+		"for": {
+			"code": [
+				"<?php for ($i = 0; $i < 10; $i++): ?>",
+				"    The current value is {{ $i }}",
+				"<? endfor ?>"
+			],
+			"api": "http://www.php.net/manual/en/control-structures.for.php"
+		},
+		"for-each": {
+			"code": [
+				"<? foreach ($users as $user): ?>",
+				"    <p>This is user {{ $user->id }}</p>",
+				"<? endforeach ?>"
+			],
+			"api": "http://www.php.net/manual/en/control-structures.foreach.php"
+		},
+		"comment": {
+			"code": "<?php /* This comment will not be in the rendered HTML *? ?>",
+			"api": "http://www.php.net/manual/en/language.basic-syntax.comments.php"
+		},
+		"execute-code": {
+			"code": [
+				"<?php myfunction($var) ?>",
+				"<?php",
+				"    // multi",
+				"    // lines",
+				"?>"
+			],
+			"api": "http://www.php.net/manual/en/language.basic-syntax.phptags.php"
+		},
+		"subview": {
+			"code": "<?php include 'subviewfile.php' ?>",
+			"api": "http://www.php.net/manual/en/function.include.php"
+		}
 	}
 }
