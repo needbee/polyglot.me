@@ -1322,6 +1322,162 @@
 			]
 		},
 		{
+			"id": "dom",
+			"name": "Document Object Model",
+			"features": [
+				{
+					"id": "get-by-id",
+					"name": "Get By ID",
+					"description": "gets the node with the provided ID"
+				},
+				{
+					"id": "find",
+					"name": "Find",
+					"description": "find nodes by a selector"
+				},
+				{
+					"id": "find-descendants",
+					"name": "Find Descendants",
+					"description": "finds descendants of an ancestor node matching a selector"
+				},
+				{
+					"id": "has-descendant",
+					"name": "Has Descendant",
+					"description": "filters a list of nodes to only those that have a descendant matching a selector"
+				},
+				{
+					"id": "get-parent",
+					"name": "Get Parent",
+					"description": "gets the parent node of this child node"
+				},
+				{
+					"id": "get-ancenstors",
+					"name": "Get Ancestors",
+					"description": "gets all ancestor nodes of this descendant node"
+				},
+				{
+					"id": "get-siblings",
+					"name": "Get Siblings",
+					"description": "get all siblings of this node"
+				},
+				{
+					"id": "get-next-sibling",
+					"name": "Get Next Sibling",
+					"description": "gets the sibling after this node"
+				},
+				{
+					"id": "get-previous-sibling",
+					"name": "Get Previous Sibling",
+					"description": "gets the sibling after this node"
+				},
+				{
+					"id": "get-children",
+					"name": "Get Children",
+					"description": "gets all child nodes of a parent node, not including text nodes"
+				},
+				{
+					"id": "get-content-nodes",
+					"name": "Get Content Nodes",
+					"description": "gets all child nodes of a parent node, including text nodes"
+				},
+				{
+					"id": "get-content-html",
+					"name": "Get Content HTML",
+					"description": "gets the content of a node as HTML"
+				},
+				{
+					"id": "set-content-html",
+					"name": "Set Content HTML",
+					"description": "set the content of a node as HTML"
+				},
+				{
+					"id": "get-content-text",
+					"name": "Get Content Text",
+					"description": "gets the content of a node as text"
+				},
+				{
+					"id": "add-child",
+					"name": "Add Child",
+					"description": "adds/appends a node as the last child of another node"
+				},
+				{
+					"id": "prepend-child",
+					"name": "Prepend",
+					"description": "adds a node as the first child of another node"
+				},
+				{
+					"id": "remove",
+					"name": "Remove",
+					"description": "remove a node from the DOM"
+				},
+				{
+					"id": "remove-children",
+					"name": "Remove Children",
+					"description": "removes all child nodes of a parent node"
+				},
+				{
+					"id": "get-attribute",
+					"name": "Get Attribute",
+					"description": "gets the value of an attribute for a node"
+				},
+				{
+					"id": "set-attribute",
+					"name": "Set Attribute",
+					"description": "sets the value of an attribute for a node"
+				},
+				{
+					"id": "get-property",
+					"name": "Get Property",
+					"description": "gets the value of a property for a node"
+				},
+				{
+					"id": "set-property",
+					"name": "Set Property",
+					"description": "sets the value of a property for a node"
+				},
+				{
+					"id": "has-class",
+					"name": "Has Class",
+					"description": "checks whether a node has a class"
+				},
+				{
+					"id": "add-class",
+					"name": "Add Class",
+					"description": "adds a class to a node"
+				},
+				{
+					"id": "remove-class",
+					"name": "Remove Class",
+					"description": "removes a class from a node"
+				},
+				{
+					"id": "toggle-class",
+					"name": "Toggle Class",
+					"description": "adds or removes a class from the node, depending on whether the node already has that class"
+				},
+				{
+					"id": "get-style",
+					"name": "Get Style",
+					"description": "gets the value of a style property for a node"
+				},
+				{
+					"id": "set-style",
+					"name": "Set Style",
+					"description": "sets the value of a style property for a node"
+				},
+				{
+					"id": "get-form-value",
+					"name": "Get Form Value",
+					"description": "gets the form value of a form element node"
+				},
+				{
+					"id": "set-form-value",
+					"name": "Get Form Value",
+					"description": "gets the form value of a form element node"
+				}
+			]
+		},
+		{
 			"id": "mvc",
 			"name": "Model-View-Controller",
 			"features": [

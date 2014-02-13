@@ -92,6 +92,132 @@
 				],
 				"api": "http://api.jquery.com/jQuery.ajax/"
 			}
+		},
+		"dom": {
+			"get-by-id": {
+				"code": "$('#id')",
+				"api": "http://api.jquery.com/jQuery/"
+			},
+			"find": {
+				"code": "$('.my #awesome selector');",
+				"api": "http://youmightnotneedjquery.com/#finding_elements"
+			},
+			"find-descendants": {
+				"code": "$(el).find(selector);",
+				"api": "http://youmightnotneedjquery.com/#finding_children"
+			},
+			"has-descendant": {
+				"code": "$(el).find(selector).length",
+				"api": "http://youmightnotneedjquery.com/#contains_selector"
+			},
+			"get-parent": {
+				"code": "$(el).parent();",
+				"api": "http://youmightnotneedjquery.com/#parent"
+			},
+			"get-ancenstors": {
+				"code": "$(el).parents();",
+				"api": "http://api.jquery.com/parents/"
+			},
+			"get-siblings": {
+				"code": "$(el).siblings();",
+				"api": "http://youmightnotneedjquery.com/#siblings"
+			},
+			"get-next-sibling": {
+				"code": "$(el).next();",
+				"api": "http://youmightnotneedjquery.com/#next"
+			},
+			"get-previous-sibling": {
+				"code": "$(el).prev();",
+				"api": "http://youmightnotneedjquery.com/#prev"
+			},
+			"get-children": {
+				"code": "$(el).children();",
+				"api": "http://youmightnotneedjquery.com/#children"
+			},
+			"get-content-nodes": {
+				"code": "$(el).contents();",
+				"api": "http://api.jquery.com/contents/"
+			},
+			"get-content-html": {
+				"code": "$(el).html();",
+				"api": "http://youmightnotneedjquery.com/#getting_html"
+			},
+			"set-content-html": {
+				"code": "$(el).html(string);",
+				"api": "http://youmightnotneedjquery.com/#setting_html"
+			},
+			"get-content-text": {
+				"code": "$(el).text();",
+				"api": "http://youmightnotneedjquery.com/#getting_text"
+			},
+			"add-child": {
+				"code": "$(parent).append(el);",
+				"api": "http://youmightnotneedjquery.com/#append"
+			},
+			"add-child": {
+				"code": "parent.appendChild(el)",
+				"api": "http://youmightnotneedjquery.com/#append"
+			},
+			"prepend-child": {
+				"code": "$(parent).prepend(el);",
+				"api": "http://youmightnotneedjquery.com/#prepend"
+			},
+			"remove": {
+				"code": "$(el).remove();",
+				"api": "http://youmightnotneedjquery.com/#remove"
+			},
+			"remove-children": {
+				"code": "$(el).empty();",
+				"api": "http://youmightnotneedjquery.com/#empty"
+			},
+			"get-attribute": {
+				"code": "$(el).attr('tabindex');",
+				"api": "http://youmightnotneedjquery.com/#getting_attributes"
+			},
+			"set-attribute": {
+				"code": "$(el).attr('tabindex', 3);",
+				"api": "http://youmightnotneedjquery.com/#setting_attributes"
+			},
+			"get-property": {
+				"code": "$(el).prop('checked')",
+				"api": "http://api.jquery.com/prop/"
+			},
+			"set-property": {
+				"code": "$(el).prop('checked',true)",
+				"api": "http://api.jquery.com/prop/"
+			},
+			"has-class": {
+				"code": "$(el).hasClass(className);",
+				"api": "http://youmightnotneedjquery.com/#has_class"
+			},
+			"add-class": {
+				"code": "$(el).addClass(className);",
+				"api": "http://youmightnotneedjquery.com/#add_class"
+			},
+			"remove-class": {
+				"code": "$(el).removeClass(className);",
+				"api": "http://youmightnotneedjquery.com/#remove_class"
+			},
+			"toggle-class": {
+				"code": "$(el).toggleClass(className);",
+				"api": "http://youmightnotneedjquery.com/#toggle_class"
+			},
+			"get-style": {
+				"code": "$(el).css(ruleName);",
+				"api": "http://youmightnotneedjquery.com/#get_style"
+			},
+			"set-style": {
+				"code": "$(el).css('border-width', '20px');",
+				"api": "http://youmightnotneedjquery.com/#set_style"
+			},
+			"get-form-value": {
+				"code": "$(el).val()",
+				"api": "http://api.jquery.com/val/"
+			},
+			"set-form-value": {
+				"code": "$(el).val('hello')",
+				"api": "http://api.jquery.com/val/"
+			}
 		}
 	}
 }

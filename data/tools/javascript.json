@@ -567,6 +567,137 @@
 				],
 				"api": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
 			}
+		},
+		"dom": {
+			"get-by-id": {
+				"code": "document.getElementById(id)",
+				"api": "https://developer.mozilla.org/en-US/docs/Web/API/Document.getElementById"
+			},
+			"find": {
+				"code": "document.querySelectorAll('.my #awesome selector');",
+				"api": "http://youmightnotneedjquery.com/#finding_elements"
+			},
+			"find-descendants": {
+				"code": "el.querySelectorAll(selector);",
+				"api": "http://youmightnotneedjquery.com/#finding_children"
+			},
+			"has-descendant": {
+				"code": "el.querySelector(selector) !== null",
+				"api": "http://youmightnotneedjquery.com/#contains_selector"
+			},
+			"get-parent": {
+				"code": "el.parentNode",
+				"api": "http://youmightnotneedjquery.com/#parent"
+			},
+			"get-siblings": {
+				"code": [
+					"Array.prototype.filter.call(el.parentNode.children, function(child){",
+					"    return child !== el;",
+					"});"
+				],
+				"api": "http://youmightnotneedjquery.com/#siblings"
+			},
+			"get-next-sibling": {
+				"code": "el.nextElementSibling",
+				"api": "http://youmightnotneedjquery.com/#next"
+			},
+			"get-previous-sibling": {
+				"code": "el.previousElementSibling",
+				"api": "http://youmightnotneedjquery.com/#prev"
+			},
+			"get-children": {
+				"code": "el.children",
+				"api": "http://youmightnotneedjquery.com/#children"
+			},
+			"get-content-html": {
+				"code": "el.innerHTML",
+				"api": "http://youmightnotneedjquery.com/#getting_html"
+			},
+			"set-content-html": {
+				"code": "el.innerHTML = string;",
+				"api": "http://youmightnotneedjquery.com/#setting_html"
+			},
+			"get-content-text": {
+				"code": "el.textContent",
+				"api": "http://youmightnotneedjquery.com/#getting_text"
+			},
+			"add-child": {
+				"code": "parent.appendChild(el)",
+				"api": "http://youmightnotneedjquery.com/#append"
+			},
+			"prepend-child": {
+				"code": "parent.insertBefore(el, parent.firstChild);",
+				"api": "http://youmightnotneedjquery.com/#prepend"
+			},
+			"remove": {
+				"code": "el.parentNode.removeChild(el);",
+				"api": "http://youmightnotneedjquery.com/#remove"
+			},
+			"remove-children": {
+				"code": "el.innerHTML = '';",
+				"api": "http://youmightnotneedjquery.com/#empty"
+			},
+			"get-attribute": {
+				"code": "el.getAttribute('tabindex');",
+				"api": "http://youmightnotneedjquery.com/#getting_attributes"
+			},
+			"set-attribute": {
+				"code": "el.setAttribute('tabindex', 3);",
+				"api": "http://youmightnotneedjquery.com/#setting_attributes"
+			},
+			"has-class": {
+				"code": [
+					"if (el.classList)",
+					"    el.classList.contains(className);",
+					"else",
+					"    new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);"
+				],
+				"api": "http://youmightnotneedjquery.com/#has_class"
+			},
+			"add-class": {
+				"code": [
+					"if (el.classList)",
+					"    el.classList.add(className);",
+					"else",
+					"    el.className += ' ' + className;"
+				],
+				"api": "http://youmightnotneedjquery.com/#add_class"
+			},
+			"remove-class": {
+				"code": [
+					"if (el.classList)",
+					"    el.classList.remove(className);",
+					"else",
+					"    el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');"
+				],
+				"api": "http://youmightnotneedjquery.com/#remove_class"
+			},
+			"toggle-class": {
+				"code": [
+					"if (el.classList) {",
+					"    el.classList.toggle(className);",
+					"} else {",
+					"    var classes = el.className.split(' ');",
+					"    var existingIndex = classes.indexOf(className);",
+					"",
+					"    if (existingIndex >= 0)",
+					"        classes.splice(existingIndex, 1);",
+					"    else",
+					"        classes.push(className);",
+					"",
+					"    el.className = classes.join(' ');",
+					"}"
+				],
+				"api": "http://youmightnotneedjquery.com/#toggle_class"
+			},
+			"get-style": {
+				"code": "getComputedStyle(el)[ruleName]",
+				"api": "http://youmightnotneedjquery.com/#get_style"
+			},
+			"set-style": {
+				"code": "el.style.borderWidth = '20px';",
+				"api": "http://youmightnotneedjquery.com/#set_style"
+			}
 		}
 	}
 }
