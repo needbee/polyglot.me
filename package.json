@@ -5,5 +5,9 @@
 		"requirejs": "2.1.x",
 		"jquery": "2.x",
 		"backbone": "1.1.x"
+	},
+	"devDependencies": {
+		"grunt": "~0.4.2",
+		"grunt-jsonlint": "1.0.x"
 	}
 }
