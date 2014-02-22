@@ -178,8 +178,6 @@
 			"compare": {
 				"code": [
 					"[a isEqualToDate:b]",
-					"[a earlierDate:b]",
-					"[a laterDate:b]",
 					"[a compare:b]"
 				],
 				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/doc/uid/20000188-compare_"
