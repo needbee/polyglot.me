@@ -161,7 +161,7 @@
 			},
 			"format": {
 				"code": [
-					"NSDateFormatter formatter = [[NSDateFormatter alloc] init];",
+					"NSDateFormatter *formatter = [[NSDateFormatter alloc] init];",
 					"[formatter setDateFormat:myformat];",
 					"[formatter stringFromDate:mydate];"
 				],
@@ -169,7 +169,7 @@
 			},
 			"parse": {
 				"code": [
-					"NSDateFormatter formatter = [[NSDateFormatter alloc] init];",
+					"NSDateFormatter *formatter = [[NSDateFormatter alloc] init];",
 					"[formatter setDateFormat:myformat];",
 					"[formatter dateFromString:datestring];"
 				],
