@@ -208,6 +208,10 @@
 				"code": "myarray.count",
 				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-count"
 			},
+			"empty": {
+				"code": "myarray.empty?",
+				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-empty-3F"
+			},
 			"set": {
 				"code": "myarray[index] = value",
 				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-5B-5D-3D"

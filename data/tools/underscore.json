@@ -54,8 +54,11 @@
 			}
 		},
 		"collections": {
-			"for-each":
-			{
+			"empty":	{
+				"code": "_.empty( myarray )",
+				"api": "http://underscorejs.org/#isEmpty"
+			},
+			"for-each":	{
 				"code": "_.each( myarray, function( myval ) {…} )",
 				"api": "http://underscorejs.org/#each"
 			},
@@ -92,7 +95,7 @@
 				"api": "http://underscorejs.org/#reduce"
 			},
 			"sort": {
-				"code": "_.sortBy( myarray, function(a,b) {…} )",
+				"code": "_.sortBy( myarray, function(a) {…} )",
 				"api": "http://underscorejs.org/#sortBy"
 			}
 		},

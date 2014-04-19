@@ -295,6 +295,11 @@
 					"description": "return the number of elements in array myarray (a.k.a. size, count)"
 				},
 				{
+					"id": "empty",
+					"name": "Empty",
+					"description": "returns whether the array is empty"
+				},
+				{
 					"id": "get",
 					"name": "Get",
 					"description": "get an element from an array"

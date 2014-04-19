@@ -238,6 +238,10 @@
 				"code": "mylist.size()",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#size()"
 			},
+			"empty": {
+				"code": "mylist.isEmpty()",
+				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#isEmpty%28%29"
+			},
 			"set": {
 				"code": "mylist.add( index, value )",
 				"api": "http://docs.oracle.com/javase/7/docs/api/java/util/List.html#add(int, E)"

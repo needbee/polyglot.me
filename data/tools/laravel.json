@@ -4,6 +4,14 @@
 	"api": "http://laravel.com/docs",
 	"featuresets": {
 		"collections": {
+			"length": {
+				"code": "$collection->count()",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_count"
+			},
+			"empty": {
+				"code": "$collection->isEmpty()",
+				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_isEmpty"
+			},
 			"get": {
 				"code": "$collection->get($mykey)",
 				"api": "http://laravel.com/api/4.1/Illuminate/Support/Collection.html#method_get"

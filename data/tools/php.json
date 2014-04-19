@@ -238,6 +238,10 @@
 				"code": "count($myarray)",
 				"api": "http://www.php.net/manual/en/function.count.php"
 			},
+			"empty": {
+				"code": "empty($myarray)",
+				"api": "http://www.php.net/manual/en/function.empty.php"
+			},
 			"set": {
 				"code": "$myarray[$index] = $value",
 				"api": "http://www.php.net/manual/en/language.types.array.php"
