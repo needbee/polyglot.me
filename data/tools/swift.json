@@ -1,0 +1,133 @@
+{
+	"id": "swift",
+	"name": "Swift",
+	"api": "https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html",
+	"featuresets": {
+		"basics": {
+			"hello-world": {
+				"code": "println(\"Hello, world\")",
+				"api": "https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1"
+			}
+		},
+		"types": {
+			"int-to-string": {
+				"code": "String(myint)",
+				"api": "https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1"
+			}
+		},
+		"strings": {
+			"concatenate": [
+				{
+					"code": "a + b",
+					"api": "https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1"
+				},
+				{
+					"code": "\"\\(a) + \\(b)\"",
+					"api": "https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1"
+				}
+			]
+		},
+		"collections": {
+			"define": {
+				"code": "[\"a\",\"b\",\"c\"]",
+				"api": "https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1"
+			},
+			"define-associative": {
+				"code": "[\"foo\": \"bar\", \"baz\": \"qux\"]"
+			},
+			"get": {
+				"code": "myarray[index]"
+			},
+			"for-each": [
+				{
+					"code": "for myval in myarray {…}"
+				},
+				{
+					"code": "for (key,value) in mydictionary {…}"
+				}
+			]
+		},
+		"functions": {
+			"define": [
+				{
+					"code": "func myfunc( arg1: Int, arg2: Int ) -> Int {…}"
+				},
+				{
+					"code": "func myfunc( withFirstThing arg1: Int, andSecondThing arg2: Int ) -> Int {…}"
+				}
+			],
+			"call": {
+				"code": "myfunc( val1, val2 )"
+			},
+			"default-arguments": {
+				"code": "function myfunc( arg1: String = 'default', $arg2: String = null ) {…}"
+			},
+			"n-arguments": {
+				"code": "myfunc( args: Int... ) -> Int {…}"
+			},
+			"define-closure": {
+				"code": [
+					"let myclosure = {( arg1: Int, arg2: Int ) -> Int in",
+					"    …",
+					"}"
+				],
+				"api": "https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html#//apple_ref/doc/uid/TP40014097-CH11-XID_117"
+			},
+			"call-closure": {
+				"code": "myclosure( val1, val2 )",
+				"api": "https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html#//apple_ref/doc/uid/TP40014097-CH11-XID_117"
+			}
+		},
+		"objects": {
+			"define-class": {
+				"code": "class MyClass {…}"
+			},
+			"instantiate-class": {
+				"code": "var myinstance = MyClass()"
+			},
+			"define-field": {
+				"code": [
+					"class MyClass {",
+					"    var myfield: Int",
+					"}"
+				]
+			},
+			"access-field": {
+				"code": "myinstance.myfield"
+			},
+			"define-method": {
+				"code": [
+					"class MyClass {",
+					"    func myMethod( arg1: Int, arg2: Int ) -> Int {…}",
+					"}"
+				]
+			},
+			"call-method": {
+				"code": "myinstance.mymethod( val1, val2 )"
+			},
+			"this": {
+				"code": "self"
+			},
+			"constructor": {
+				"code": [
+					"class MyClass {",
+					"    init( arg1: Int, arg2: Int ) {…}",
+					"}"
+				]
+			},
+			"inheritance": {
+				"code": "class MyChildClass : MyParentClass {…}"
+			},
+			"declare-interface": {
+				"code": [
+					"protocol MyProtocol {",
+					"    func mymethod()",
+					"}"
+				]
+			},
+			"implement-interface": {
+				"code": "class MyClass : MyProtocol {…}"
+			}
+		}
+	}
+}
