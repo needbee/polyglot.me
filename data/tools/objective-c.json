@@ -1,0 +1,390 @@
+{
+	"id": "objective-c",
+	"name": "Objective-C",
+	"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/ObjC_classic/_index.html",
+	"featuresets": {
+		"types": {
+			"is-null": {
+				"code": "nil == myobj",
+				"api": "http://stackoverflow.com/questions/6177719/testing-for-nil-in-objective-c-ifx-nil-vs-ifx"
+			},
+			"float-to-int": {
+				"code": "(int)myfloat"
+			}
+		},
+		"math": {
+			"floor": {
+				"code": "floor(myfloat)",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.7.html#floor"
+			},
+			"ceiling": {
+				"code": "ceil(myfloat)",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.7.html#ceil"
+			},
+			"random": {
+				"code": "arc4random_uniform( max - min + 1 ) + min;",
+				"api": "http://stackoverflow.com/questions/12119399/how-do-i-seed-the-rand-function-in-objective-c"
+			},
+			"fraction-part": {
+				"code": [
+					"int intval;",
+					"modf( mynum, &intval );"
+				],
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.7.html#modf"
+			}
+		},
+		"functions": {
+			"define": {
+				"code": "int myfunc( int arg1, int arg2 ) {…}",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/1.3.html"
+			},
+			"call": {
+				"code": "myfunc( val1, val2 )",
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/1.3.html"
+			},
+			"n-arguments": {
+				"code": [
+					"#include <stdarg.h>",
+					"function myfunc( int argcount, ... ) {",
+					"    va_list ap;",
+					"    int j;",
+					"    va_start(ap, count); /* Requires the last fixed parameter (to get the address) */",
+					"    for(j = 0; j < count; j++) {",
+					"        va_arg(ap,j);",
+					"        …",
+					"    }",
+					"    va_end(ap);",
+					"}"
+				],
+				"api": "http://www.acm.uiuc.edu/webmonkeys/book/c_guide/2.10.html"
+			},
+			"define-closure": [
+				{
+					"code": "void (^myfunc)(void) = ^{…}",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html#//apple_ref/doc/uid/TP40011210-CH8-SW1"
+				},
+				{
+					"code": "int (^myfunc)(int, int) = ^ (int arg1, int arg2) {…}",
+					"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html#//apple_ref/doc/uid/TP40011210-CH8-SW1"
+				}
+			],
+			"call-closure": {
+				"code": "myfunc( val1, val2 )",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html#//apple_ref/doc/uid/TP40011210-CH8-SW1"
+			}
+		},
+		"objects": {
+			"define-class": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": [
+							"// Note that \"interface\" in Objective C does not mean what it does in most other languages. It just means a class specification.",
+							"@interface MyClass : NSObject",
+							"",
+							"@end"
+						]
+					},
+					{
+						"file": "MyClass.m",
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"@end"
+						]
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/DefiningClasses/DefiningClasses.html#//apple_ref/doc/uid/TP40011210-CH3-SW5"
+			},
+			"instantiate-class": {
+				"code": "MyClass *myinstance = [[MyClass alloc] init];",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW7"
+			},
+			"instance-of": {
+				"code": "[myobj isKindOfClass:[MyClass class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBFBDJ"
+			},
+			"exact-instance-of": {
+				"code": "[myobj isMemberOfClass:[MyClass class]]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCEBEIC"
+			},
+			"class-of": {
+				"code": [
+					"[myobj class]",
+					"NSStringFromClass([myobj class])"
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCBDHEE"
+			},
+			"define-field": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"@property NSString *myfield;",
+							"@end"
+						]
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/DefiningClasses/DefiningClasses.html#//apple_ref/doc/uid/TP40011210-CH3-SW7"
+			},
+			"access-field": {
+				"code": "myinstance.myfield",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html#//apple_ref/doc/uid/TP40011210-CH5-SW10"
+			},
+			"has-field": {
+				"code": "[myobj respondsToSelector:@selector(myfield)]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCEHCCE"
+			},
+			"define-method": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"-(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2;",
+							"",
+							"@end"
+						]
+					},
+					{
+						"file": "MyClass.m",
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"-(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2 {…}",
+							"",
+							"@end"
+						]
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/DefiningClasses/DefiningClasses.html#//apple_ref/doc/uid/TP40011210-CH3-SW8"
+			},
+			"call-method": {
+				"code": "[myinstance myMethodWithArg1:val1 arg2:val2]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2"
+			},
+			"has-method": {
+				"code": "[myobj respondsToSelector:@selector(mymethod:withArg:)]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/doc/uid/20000052-BBCEHCCE"
+			},
+			"this": {
+				"code": "self",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW5"
+			},
+			"define-class-field": {
+				"code": [
+					{
+						"file": "MyClass.m",
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"static int mystatic;",
+							"",
+							"…"
+						]
+					}
+				],
+				"api": "http://stackoverflow.com/questions/1063229/objective-c-static-class-level-variables"
+			},
+			"access-class-field": {
+				"code": "mystatic",
+				"api": "http://stackoverflow.com/questions/1063229/objective-c-static-class-level-variables"
+			},
+			"define-class-method": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"+(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2;",
+							"",
+							"@end"
+						]
+					},
+					{
+						"file": "MyClass.m",
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"+(int)myMethodWithArg1:(int)arg1 arg2:(int)arg2 {…}",
+							"",
+							"@end"
+						]
+					}
+				],
+				"api": ""
+			},
+			"call-class-method": {
+				"code": "[MyClass myMethodWithArg1:val1 arg2:val2]",
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2"
+			},
+			"constructor": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"-(id)initWithArg1:(int)arg1 arg2:(int)arg2;",
+							"",
+							"@end"
+						]
+					},
+					{
+						"file": "MyClass.m",
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"-(id)initWithArg1:(int)arg1 arg2:(int)arg2 {",
+							"",
+							"    self = [super init];",
+							"    if(self) {",
+							"        …",
+							"    }",
+							"",
+							"}",
+							"",
+							"@end"
+						]
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW16"
+			},
+			"inheritance": {
+				"code": [
+					{
+						"file": "MyChildClass.h",
+						"contents": [
+							"#import \"MyParentClass.h\"",
+							"",
+							"@interface MyChildClass : MyParentClass",
+							"",
+							"@end"
+						]
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW11"
+			},
+			"parent-method": {
+				"code": [
+					{
+						"file": "MyChildClass.h",
+						"contents": [
+							"#import \"MyParentClass.h\"",
+							"",
+							"@interface MyChildClass : MyParentClass",
+							"",
+							"@end"
+						]
+					},
+					{
+						"file": "MyChildClass.m",
+						"contents": [
+							"#import \"MyChildClass.h\"",
+							"",
+							"@implementation MyChildClass",
+							"",
+							"-(void)mymethod { [super mymethod]; }",
+							"",
+							"@end"
+						]
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW11"
+			},
+			"declare-public": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": [
+							"@interface MyClass : NSObject",
+							"",
+							"@property NSString *myfield;",
+							"",
+							"-(int)myPublicMethod;",
+							"",
+							"@end"
+						]
+					},
+					{
+						"file": "MyClass.m",
+						"contents": [
+							"#import \"MyClass.h\"",
+							"",
+							"@implementation MyClass",
+							"",
+							"-(int)myPublicMethod {…}",
+							"",
+							"@end"
+						]
+					}
+				]
+			},
+			"declare-private": {
+				"code": [
+					{
+						"file": "MyClass.m",
+						"contents": [
+							"@interface MyClass : NSObject ()",
+							"",
+							"@property int myprivateproperty;",
+							"",
+							"-(int)myPrivateMethod;",
+							"",
+							"@end",
+							"",
+							"@implementation MyClass",
+							"",
+							"…",
+							"",
+							"@end"
+						]
+					}
+				],
+				"api": "http://swish-movement.blogspot.com/2009/05/private-properties-for-iphone-objective.html"
+			},
+			"declare-interface": {
+				"code": [
+					{
+						"file": "MyProtocol.h",
+						"contents": [
+							"@protocol MyProtocol",
+							"",
+							"-(int)mymethod;",
+							"",
+							"@end"
+						]
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html#//apple_ref/doc/uid/TP40011210-CH11-SW2"
+			},
+			"implement-interface": {
+				"code": [
+					{
+						"file": "MyClass.h",
+						"contents": [
+							"#import \"MyProtocol.h\"",
+							"",
+							"@interface MyClass : NSObject <MyProtocol>",
+							"",
+							"@end"
+						]
+					}
+				],
+				"api": "https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html#//apple_ref/doc/uid/TP40011210-CH11-SW3"
+			}
+		}
+	}
+}
