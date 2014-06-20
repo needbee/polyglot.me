@@ -1,13 +1,15 @@
 {
-	"name": "cheatsheet",
-	"version": "0.0.1",
-	"dependencies": {
-		"requirejs": "2.1.x",
-		"jquery": "2.x",
-		"backbone": "1.1.x"
-	},
-	"devDependencies": {
-		"grunt": "~0.4.2",
-		"grunt-jsonlint": "1.0.x"
-	}
+  "name": "cheatsheet",
+  "version": "0.0.1",
+  "dependencies": {
+    "requirejs": "2.1.x",
+    "jquery": "2.x",
+    "backbone": "1.1.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-jsonlint": "1.0.x",
+    "grunt-notify": "~0.3.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
 }

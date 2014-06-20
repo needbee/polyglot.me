@@ -2,18 +2,28 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+
     pkg: grunt.file.readJSON('package.json'),
+
     jsonlint: {
       sample: {
         src: ['data/featuresets.json','data/tools/*.json']
       }
+    },
+
+    watch: {
+      json: {
+        files: ['data/**/*.json'],
+        tasks: ['jsonlint']
+      }
     }
+
   });
 
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-jsonlint');
+  grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Default task(s).
-  grunt.registerTask('default', ['jsonlint']);
+  grunt.registerTask('default', ['jsonlint','watch']);
 
 };
