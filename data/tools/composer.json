@@ -1,0 +1,31 @@
+{
+	"id": "composer",
+	"name": "Composer",
+	"api": "https://getcomposer.org/doc/",
+	"featuresets": {
+		"package-management": {
+			"specify-dependency": {
+				"code": [
+					"\"require\": {",
+					"    \"creator/package\": \"1.2.*\"",
+					"}"
+				],
+				"api": "https://getcomposer.org/doc/01-basic-usage.md"
+			},
+			"env-dependency": {
+				"code": [
+					"\"require-dev\": {",
+					"    \"creator/package\": \"1.2.*\"",
+					"}"
+				],
+				"api": "https://getcomposer.org/doc/01-basic-usage.md"
+			},
+			"install-dependencies": {
+				"code": "# composer install"
+			},
+			"update-dependencies": {
+				"code": "# composer update"
+			}
+		}
+	}
+}

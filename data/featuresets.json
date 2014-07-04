@@ -1527,6 +1527,32 @@
 					"description": "prevents cross-site request forgery attacks, where another site sends a user to a URL on your site that performs an action they do not intend; prevention usually entails sending a token in POSTs"
 				}
 			]
+		},
+		{
+			"id": "package-management",
+			"name": "Package Management",
+			"features": [
+				{
+					"id": "specify-dependency",
+					"name": "Specify Dependency",
+					"description": "indicate that a library is required for this app"
+				},
+				{
+					"id": "env-dependency",
+					"name": "Environment Dependency",
+					"description": "dependency that is only needed for one environment"
+				},
+				{
+					"id": "install-dependencies",
+					"name": "Install Dependencies",
+					"description": "downloads the required libraries"
+				},
+				{
+					"id": "update-dependencies",
+					"name": "Update Dependencies",
+					"description": "updates libraries to the latest available version"
+				}
+			]
 		}
 	]
 }

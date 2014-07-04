@@ -1,0 +1,25 @@
+{
+	"id": "gem",
+	"name": "Gem",
+	"api": "http://guides.rubygems.org/",
+	"featuresets": {
+		"package-management": {
+			"specify-dependency": {
+				"code": "gem 'package', '1.2.*'"
+			},
+			"env-dependency": {
+				"code": [
+					"group :development do",
+					"    gem 'package', '1.2.*'",
+					"end"
+				]
+			},
+			"install-dependencies": {
+				"code": "# bundle install"
+			},
+			"update-dependencies": {
+				"code": "# bundle update"
+			}
+		}
+	}
+}

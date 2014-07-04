@@ -1,0 +1,29 @@
+{
+	"id": "npm",
+	"name": "NPM",
+	"api": "https://www.npmjs.org/doc/",
+	"featuresets": {
+		"package-management": {
+			"specify-dependency": {
+				"code": [
+					"\"dependencies\": {",
+					"    \"package\": \"1.2.*\"",
+					"}"
+				]
+			},
+			"env-dependency": {
+				"code": [
+					"\"devDependencies\": {",
+					"    \"creator/package\": \"1.2.*\"",
+					"}"
+				]
+			},
+			"install-dependencies": {
+				"code": "# npm install"
+			},
+			"update-dependencies": {
+				"code": "# npm update"
+			}
+		}
+	}
+}
