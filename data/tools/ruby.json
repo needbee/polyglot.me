@@ -517,16 +517,29 @@
 				],
 				"api": "http://ruby-doc.org/docs/keywords/1.9/files/keywords_rb.html#M000034"
 			},
-			"declare-public": {
-				"code": [
-					"class MyClass",
-					"    def mymethod",
-					"        …",
-					"    end",
-					"end"
-				],
-				"api": "http://rubylearning.com/satishtalim/ruby_access_control.html"
-			},
+			"declare-public": [
+				{
+					"code": [
+						"class MyClass",
+						"    def mymethod",
+						"        …",
+						"    end",
+						"end"
+					],
+					"api": "http://rubylearning.com/satishtalim/ruby_access_control.html"
+				},
+				{
+					"code": [
+						"class MyClass",
+						"    public",
+						"        def mymethod",
+						"            …",
+						"        end",
+						"end"
+					],
+					"api": "http://rubylearning.com/satishtalim/ruby_access_control.html"
+				}
+			],
 			"declare-protected": {
 				"code": [
 					"class MyClass",
