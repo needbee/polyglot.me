@@ -198,10 +198,16 @@
 			}
 		},
 		"collections": {
-			"define": {
-				"code": "[1,2,3]",
-				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html"
-			},
+			"define": [
+				{
+					"code": "[1,2,3]",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Array.html"
+				},
+				{
+					"code": "Array.new",
+					"api": "http://www.ruby-doc.org/core-2.1.0/Array.html"
+				}
+			],
 			"define-associative": {
 				"code": [
 					"{ \"key1\"=>\"val1\", \"key2\"=>\"val2\", … }",
