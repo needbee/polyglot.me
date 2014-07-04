@@ -251,13 +251,21 @@
 				"code": "a + b",
 				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-2B"
 			},
-			"slice": {
-				"code": [
-					"myarray[ start, length]",
-					"myarray.slice( start, length )"
-				],
-				"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-5B-5D"
-			},
+			"slice": [
+				{
+					"code": [
+						"myarray[ start, length]",
+						"myarray.slice( start, length )"
+					],
+					"api": "http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-5B-5D"
+				},
+				{
+					"code": [
+						"myarray[ start..end ]",
+						"myarray[ start...endPlusOne ]"
+					]
+				}
+			]
 			"for-each": {
 				"code": "myarray.each { |myval| … }",
 				"api": "http://ruby-doc.org/core-1.9.3/Array.html#method-i-each"
