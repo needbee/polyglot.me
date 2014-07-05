@@ -396,7 +396,27 @@
 					"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
 				},
 				{
+					"code": "{ |arg1, arg2| … }",
+					"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
+				},
+				{
 					"code": "proc { … }"
+				},
+				{
+					"code": [
+						"do",
+						"    …",
+						"end"
+					],
+					"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
+				},
+				{
+					"code": [
+						"do |arg1, arg2|",
+						"    …",
+						"end"
+					],
+					"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
 				}
 			],
 			"call-closure": [
