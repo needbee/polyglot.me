@@ -390,14 +390,24 @@
 					"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/methods_rdoc.html#label-Array%2FHash+Argument"
 				}
 			],
-			"define-closure": {
-				"code": "{ … }",
-				"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
-			},
-			"call-closure": {
-				"code": "yield",
-				"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
-			}
+			"define-closure": [
+				{
+					"code": "{ … }",
+					"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
+				},
+				{
+					"code": "proc { … }"
+				}
+			],
+			"call-closure": [
+				{
+					"code": "yield",
+					"api": "http://rubylearning.com/satishtalim/ruby_blocks.html"
+				},
+				{
+					"code": "myproc.call( arg1 )"
+				}
+			]
 		},
 		"objects": {
 			"define-class": {
