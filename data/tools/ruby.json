@@ -642,6 +642,8 @@
 						"    …",
 						"rescue ExceptionClass1, ExceptionClass2 => myexception",
 						"    …",
+						"rescue ExceptionClass3 => myexception",
+						"    …",
 						"end"
 					],
 					"api": "http://www.ruby-doc.org/core-2.1.0/doc/syntax/exceptions_rdoc.html"
