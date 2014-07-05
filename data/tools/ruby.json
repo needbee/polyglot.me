@@ -625,16 +625,28 @@
 				],
 				"api": "http://www.ruby-doc.org/core-2.1.0/Kernel.html#method-i-raise"
 			},
-			"catch-exception": {
-				"code": [
-					"begin",
-					"    …",
-					"rescue => myexception",
-					"    …",
-					"end"
-				],
-				"api": "http://www.ruby-doc.org/core-2.1.0/doc/syntax/exceptions_rdoc.html"
-			}
+			"catch-exception": [
+				{
+					"code": [
+						"begin",
+						"    …",
+						"rescue => myexception",
+						"    …",
+						"end"
+					],
+					"api": "http://www.ruby-doc.org/core-2.1.0/doc/syntax/exceptions_rdoc.html"
+				},
+				{
+					"code": [
+						"begin",
+						"    …",
+						"rescue ExceptionClass1, ExceptionClass2 => myexception",
+						"    …",
+						"end"
+					],
+					"api": "http://www.ruby-doc.org/core-2.1.0/doc/syntax/exceptions_rdoc.html"
+				}
+			]
 		},
 		"serialization": {
 			"json-encode": {
