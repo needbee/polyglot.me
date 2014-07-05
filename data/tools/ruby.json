@@ -341,6 +341,7 @@
 			"call": {
 				"code": [
 					"myfunc",
+					"myfunc val1, val2",
 					"myfunc( val1, val2 )"
 				],
 				"api": "http://ruby-doc.org/core-2.1.0/doc/syntax/calling_methods_rdoc.html"
