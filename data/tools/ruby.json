@@ -265,7 +265,7 @@
 						"myarray[ start...endPlusOne ]"
 					]
 				}
-			]
+			],
 			"for-each": {
 				"code": "myarray.each { |myval| … }",
 				"api": "http://ruby-doc.org/core-1.9.3/Array.html#method-i-each"
