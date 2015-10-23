@@ -201,7 +201,7 @@ requirejs([
 			cheatsheet.clip.on( 'dataRequested', function (client, args) {
 				var code = $(this).parents('td').find('div.orig').text();
 				client.setText(code);
-			});	
+			});
 		},
 		events: {
 			'click a.add-tool': function(e) {
@@ -264,7 +264,7 @@ requirejs([
 		}
 
 		cheatsheet.firstFeatureSetLoad = false;
-		$.ajax(cheatsheet.baseUrl+'tools/_list.json'+cheatsheet.bustCache(), {
+		$.ajax(cheatsheet.baseUrl+'tools/list.json'+cheatsheet.bustCache(), {
 			type: 'GET',
 			dataType: 'json',
 			success: function(response) {
