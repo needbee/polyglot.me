@@ -5,46 +5,7 @@
  * Released under the MIT License. See the file LICENSE
  */
 var cheatsheet = cheatsheet || {};
-requirejs.config({
-	baseUrl: 'node_modules',
-    paths:{
-        'jquery':'jquery/dist/jquery.min',
-        'underscore':'underscore/underscore-min',
-        'backbone':'backbone/backbone-min',
-		'google-code-prettify': '../includes/js/google-code-prettify/prettify',
-		'zeroclipboard': '../includes/js/zeroclipboard/ZeroClipboard-min',
-		'bootstrap': '../includes/js/bootstrap-min',
-		'bootstrap-table-fixed-header': '../includes/js/bootstrap-table-fixed-header/bootstrap-table-fixed-header',
-		'utils': '../includes/js/utils'
-    },
-    shim: {
-        'backbone': {
-            deps: ['underscore','jquery'],
-            exports: 'Backbone'
-        },
-        'bootstrap': {
-        	deps: ['jquery']
-        },
-        'bootstrap-table-fixed-header': {
-        	deps: ['jquery']
-        },
-        'zeroclipboard': {
-        	exports: 'ZeroClipboard'
-        },
-        'underscore': {
-            exports: '_'
-        }
-    }
-});
-requirejs([
-	'jquery',
-	'backbone',
-	'google-code-prettify',
-	'bootstrap',
-	'bootstrap-table-fixed-header',
-	'utils'
-	// "zeroclipboard" // loaded normally
-],function(){
+$(function() {
 	cheatsheet.baseWebUrl = '/';
 	cheatsheet.baseUrl = cheatsheet.baseWebUrl+'data/';
 
