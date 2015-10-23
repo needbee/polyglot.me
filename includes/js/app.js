@@ -125,7 +125,8 @@ requirejs([
 			var toolsToUse = this.usedToolObjs.pluck('id');
 			var toolsRemaining = _.difference( this.allToolIds, toolsToUse );
 
-			this.$el.html( _.template( this.template, {
+            var template = _.template( this.template );
+			this.$el.html( template({
 				toolsToUse: toolsToUse,
 				toolsRemaining: toolsRemaining
 			}));
@@ -150,7 +151,8 @@ requirejs([
 		},
 		render: function() {
 			// console.log('render search');
-			this.$el.html( _.template( this.template, {}));
+            var template = _.template( this.template );
+            this.$el.html( template({}) );
 		},
 		events: {
 			"keyup": function(e){
@@ -187,7 +189,8 @@ requirejs([
 				}
 			}, this );
 
-			this.$el.html( _.template( this.template, {
+            var template = _.template( this.template );
+            this.$el.html( template({
 				featureSets: this.featureSets.toJSON(),
 				tools: toolsInOrder,
 				allToolIds: this.allToolIds,

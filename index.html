@@ -145,7 +145,8 @@
 												%>
 												<td class="<% if(tools.length > 2) { %>toolfeature-fixed<% } %>">
 													<div class="tdwrapper">
-														<%= _.template( featureTemplate, {
+                            <% template = _.template(featureTemplate) %>
+														<%= template({
 															toolFeature: toolFeature,
 															codeSnippetTemplate: codeSnippetTemplate
 														}) %>
@@ -173,7 +174,8 @@
 						<% if( _.isArray(tf.code) && tf.code.length > 0 && _.isObject(tf.code[0]) ) { %>
 							<% _.each( tf.code, function(file) { %>
 								<div><%= file.file %></div>
-								<%= _.template( codeSnippetTemplate, { code: file.contents }) %>
+                <% template = _.template(codeSnippetTemplate) %>
+								<%= template({ code: file.contents }) %>
 								<% if( utils.has_flash() ) { %>
 									<div class="code-links small">
 										<a href="#" class="copy">copy</a>
@@ -192,7 +194,8 @@
 								<% } %>
 							</div>
 						<% } else { %>
-							<%= _.template( codeSnippetTemplate, { code: tf.code }) %>
+              <% template = _.template(codeSnippetTemplate) %>
+							<%= template({ code: tf.code }) %>
 							<% if( tf.version ) { %>
 								<div class="text-muted pull-right small">since <%= tf.version %></div>
 							<% } %>
