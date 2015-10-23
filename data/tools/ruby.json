@@ -548,7 +548,7 @@
 			},
 			"parent-method": {
 				"code": [
-					"class MyChildClass extends MyParentClass",
+					"class MyChildClass < MyParentClass",
 					"    def mymethod",
 					"        super",
 					"    end",
