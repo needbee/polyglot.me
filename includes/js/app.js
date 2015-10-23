@@ -9,7 +9,7 @@ requirejs.config({
 	baseUrl: 'node_modules',
     paths:{
         'jquery':'jquery/dist/jquery.min',
-        'underscore':'backbone/node_modules/underscore/underscore-min',
+        'underscore':'underscore/underscore-min',
         'backbone':'backbone/backbone-min',
 		'google-code-prettify': '../includes/js/google-code-prettify/prettify',
 		'zeroclipboard': '../includes/js/zeroclipboard/ZeroClipboard-min',
@@ -30,6 +30,9 @@ requirejs.config({
         },
         'zeroclipboard': {
         	exports: 'ZeroClipboard'
+        },
+        'underscore': {
+            exports: '_'
         }
     }
 });
