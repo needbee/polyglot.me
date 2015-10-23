@@ -4,7 +4,8 @@
   "dependencies": {
     "jquery": "2.x",
     "backbone": "1.1.x",
-    "underscore": "1.8.x"
+    "underscore": "1.8.x",
+    "bootstrap": "3.3.x"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
