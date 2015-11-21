@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "jquery": "2.x",
-    "backbone": "1.1.x"
+    "backbone": "1.1.x",
+    "underscore": "1.5.x"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
