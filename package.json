@@ -2,7 +2,6 @@
   "name": "cheatsheet",
   "version": "0.0.1",
   "dependencies": {
-    "requirejs": "2.1.x",
     "jquery": "2.x",
     "backbone": "1.1.x"
   },

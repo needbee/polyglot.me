@@ -12,14 +12,15 @@
 		<link rel="stylesheet" type="text/css" href="includes/css/app.css" />
 
 		<!-- require seems to have trouble loading ZeroClipboard -->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="node_modules/backbone/backbone-min.js"></script>
+    <script type="text/javascript" src="includes/js/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="includes/js/bootstrap-min.js"></script>
+    <script type="text/javascript" src="includes/js/bootstrap-table-fixed-header/bootstrap-table-fixed-header.js"></script>
+    <script type="text/javascript" src="includes/js/utils.js"></script>
 		<script type="text/javascript" src="includes/js/zeroclipboard/ZeroClipboard-min.js"></script>
-		<script type="text/javascript">
-			var require = {
-		        waitSeconds: 15,
-		        urlArgs : "bust="+new Date().getTime()
-		    };
-		</script>
-		<script type="text/javascript" src="node_modules/requirejs/require.js" data-main="includes/js/app"></script>
+    <script type="text/javascript" src="includes/js/app.js"></script>
 	</head>
 	<body>
 		<script>
