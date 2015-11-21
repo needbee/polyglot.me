@@ -192,7 +192,7 @@ $(function() {
 	  },
 
 	  tools: function(tools) {
-	    if( typeof tools === 'undefined' ) {
+	    if( typeof tools === 'undefined' || null == tools ) {
 	    	tools = '';
 	    }
 	    cheatsheet.params.tools = tools.split('+');
